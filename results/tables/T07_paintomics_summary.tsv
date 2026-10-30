@@ -1,9 +1,9 @@
-# Jobs: job1 = first study oK2h66740Q (OSD-522 genes + proteins + 21 predicted compounds); A = 6kBOS7AN5K (same genes + proteins + reference layer); B = JfVZ1L37PY (OSD-678 light genes + layer); C = wgT3IPi7U2 (OSD-678 dark genes + layer). The reference layer is a ground carbon-starvation reference, not flight measurements.
-quantity	job1	A	B	C
-pathways tested	232	232	232	232
-pathways at BH q < 0.05	6	6	24	10
-hub compounds tested	15	32	32	32
-hub compounds at FDR < 0.05	7	11	17	5
+# Jobs: job1 = first study oK2h66740Q (OSD-522 genes + proteins + 21 predicted compounds); A = 6kBOS7AN5K (same genes + proteins + reference layer); B = JfVZ1L37PY (OSD-678 light genes + layer); C = wgT3IPi7U2 (OSD-678 dark genes + layer); D = Es6j23q40o (OSD-38 genes + membrane proteins + layer). The reference layer is a ground carbon-starvation reference, not flight measurements.
+quantity	job1	A	B	C	D
+pathways tested	232	232	232	232	232
+pathways at BH q < 0.05	6	6	24	10	25
+hub compounds tested	15	32	32	32	32
+hub compounds at FDR < 0.05	7	11	17	5	21
 
 quantity	value
 A vs job1: Spearman rho of combined p	0.9529
@@ -19,5 +19,12 @@ B and C at q < 0.05	Biosynthesis of secondary metabolites; Carbon fixation by Ca
 hubs B only (light)	2-Oxoglutarate; Adenine; Adenosine; Guanosine; L-Aspartate; L-Glutamate; L-Isoleucine; L-Leucine; L-Tryptophan; L-Valine; Pantothenate; Riboflavin
 hubs C only (dark)	none
 hubs B and C	(S)-Malate; FAD; FMN; NAD+; alpha-Isopropylmalate
+A vs D (lit BRIC-LED vs dark BRIC-PDFU): Spearman rho of combined p	0.2051
+A only (lit) at q < 0.05	Biotic Stress; Cellular response overview; Glucosinolate biosynthesis; Plant hormone signal transduction; Protein processing in endoplasmic reticulum
+D only (dark) at q < 0.05	AA TCA; Aminoacyl-tRNA biosynthesis; Ascorbate and aldarate metabolism; Biosynthesis of cofactors; Biosynthesis of secondary metabolites; ChloroPlast CustomArray CUSTOM MAPPING; Chloroplast PlasTi-microarray pathway; DNA replication; Histidine metabolism; Metabolic pathways; Metabolism overview; Overview; Pentose and glucuronate interconversions; Porphyrin metabolism; Prokaryotic Ribosome LSU assembly; Ribosomal proteins overview; Ribosome; Secondary Metabolism; Seed custom arabidopsis Seed; Starch and sucrose metabolism; Sucrose-Starch; Valine, leucine and isoleucine degradation; Volatile Carotenoid; photosynthesis
+A and D at q < 0.05	Large enzyme families overview
+hubs A only (lit)	Glucobrassicin; Glutathione; L-Ascorbate; L-Valine; gamma-L-Glutamyl-L-cysteine
+hubs D only (dark)	Adenine; Adenosine; FAD; FMN; Guanosine; L-Arginine; L-Aspartate; L-Tryptophan; N-Acetyl-L-glutamate; NAD+; Nicotinamide; Pantothenate; Quercitrin; Riboflavin; UDP-alpha-D-galactose
+hubs A and D	(S)-Malate; 2-Oxoglutarate; L-Glutamate; L-Isoleucine; L-Leucine; alpha-Isopropylmalate
 layer: intended IDs not used (A)	0
 layer: used IDs not intended (A)	1

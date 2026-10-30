@@ -56,6 +56,11 @@ JOBS = {
     "C": ([{**GENES, "file": "osd678_dark_genes_values.tab",
             "relevant_file": "osd678_dark_genes_relevant.tab"}, METABOLITES],
           f"OSD-678 CARA Arabidopsis leaves, dark, flight vs ground: OSDR transcriptome with a {LAYER}"),
+    "D": ([{**GENES, "file": "osd38_genes_values.tab", "relevant_file": "osd38_genes_relevant.tab"},
+           {**PROTEINS, "file": "osd38_membrane_proteins_values.tab",
+            "relevant_file": "osd38_membrane_proteins_relevant.tab"}, METABOLITES],
+          f"OSD-38 BRIC-20 dark-grown Arabidopsis seedlings, flight vs ground: OSDR transcriptome + membrane "
+          f"proteome with a {LAYER}"),
 }
 
 

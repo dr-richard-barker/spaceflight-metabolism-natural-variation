@@ -1,11 +1,12 @@
-"""Tables and figures from the vendored PaintOmics records: jobs A, B, C and the first study's job 1.
+"""Tables and figures from the vendored PaintOmics records: jobs A-D and the first study's job 1.
 
-  T04  every pathway: combined Fisher p, BH q within each job, rank, and per-omic p, for all four jobs
+  T04  every pathway: combined Fisher p, BH q within each job, rank, and per-omic p, for every job
   T05  metabolite hubs: best adjusted p per compound and job, with the pre-registered mechanistic check
        (raw hub p identical in job 1 and job A for every compound and step the two share)
   T06  layer matching: the KEGG IDs PaintOmics used for the submitted names, against the intended ones
   T07  summary: pathway counts at FDR < 0.05, gained and lost, rank agreement, light vs dark
-  fig02 job A vs job 1; fig03 job B (OSD-678 light) vs job C (OSD-678 dark)
+  fig02 job A vs job 1; fig03 job B (OSD-678 light) vs job C (OSD-678 dark); fig07 job A (OSD-522, lit
+        BRIC-LED) vs job D (OSD-38, dark BRIC-PDFU), both genes + proteins + the same layer
 
 Record formats follow the first study's scripts/06_paintomics_tables.py: a pathway's combined p is
 combinedSignificancePvalues.Fisher, per-omic p is globalOmicPvalues, and a hub compound's result is its
@@ -26,7 +27,8 @@ from paths import DATA, FIGURES, PAINTOMICS_RAW, PHOTORESP, TABLES
 JOBS = {"job1": PHOTORESP / "job1_oK2h66740Q_full.json.gz",
         "A": PAINTOMICS_RAW / "jobA_6kBOS7AN5K_full.json.gz",
         "B": PAINTOMICS_RAW / "jobB_JfVZ1L37PY_full.json.gz",
-        "C": PAINTOMICS_RAW / "jobC_wgT3IPi7U2_full.json.gz"}
+        "C": PAINTOMICS_RAW / "jobC_wgT3IPi7U2_full.json.gz",
+        "D": PAINTOMICS_RAW / "jobD_Es6j23q40o_full.json.gz"}
 OMICS = {"gene": "Gene expression", "protein": "Proteomics", "metabolite": "Metabolomics"}
 ALPHA = 0.05
 
@@ -90,7 +92,7 @@ def main():
     # T06 layer matching
     key = pd.read_csv(DATA / "paintomics_upload" / "metabolomics_key.tsv", sep="\t")
     rows = []
-    for tag in ("A", "B", "C"):
+    for tag in ("A", "B", "C", "D"):
         used = set(jobs[tag]["exprssionMetabolites"])
         intended = set(key.kegg_id)
         rows += [{"job": tag, "kegg_id": k, "status": "intended, used" if k in used else "intended, NOT used"}
@@ -105,6 +107,7 @@ def main():
     hubsig = {k: set(t5.index[t5[f"{k}_pvalue_adjust"] < ALPHA]) for k in JOBS}
     rho_1a = stats.spearmanr(t4.job1_p, t4.A_p).correlation
     rho_bc = stats.spearmanr(t4.B_p, t4.C_p).correlation
+    rho_ad = stats.spearmanr(t4.A_p, t4.D_p).correlation
     s = [("pathways tested", *(len(t4) for _ in JOBS)),
          ("pathways at BH q < 0.05", *(len(sig[k]) for k in JOBS)),
          ("hub compounds tested", *(int(t5[f"{k}_pvalue_adjust"].notna().sum()) for k in JOBS)),
@@ -125,13 +128,21 @@ def main():
         ("hubs B only (light)", "; ".join(sorted(names.get(c, c) for c in hubsig["B"] - hubsig["C"])) or "none"),
         ("hubs C only (dark)", "; ".join(sorted(names.get(c, c) for c in hubsig["C"] - hubsig["B"])) or "none"),
         ("hubs B and C", "; ".join(sorted(names.get(c, c) for c in hubsig["B"] & hubsig["C"])) or "none"),
+        ("A vs D (lit BRIC-LED vs dark BRIC-PDFU): Spearman rho of combined p", round(rho_ad, 4)),
+        ("A only (lit) at q < 0.05", "; ".join(sorted(sig["A"] - sig["D"])) or "none"),
+        ("D only (dark) at q < 0.05", "; ".join(sorted(sig["D"] - sig["A"])) or "none"),
+        ("A and D at q < 0.05", "; ".join(sorted(sig["A"] & sig["D"])) or "none"),
+        ("hubs A only (lit)", "; ".join(sorted(names.get(c, c) for c in hubsig["A"] - hubsig["D"])) or "none"),
+        ("hubs D only (dark)", "; ".join(sorted(names.get(c, c) for c in hubsig["D"] - hubsig["A"])) or "none"),
+        ("hubs A and D", "; ".join(sorted(names.get(c, c) for c in hubsig["A"] & hubsig["D"])) or "none"),
         ("layer: intended IDs not used (A)", int((t6[(t6.job == 'A')].status == "intended, NOT used").sum())),
         ("layer: used IDs not intended (A)", int((t6[(t6.job == 'A')].status == "used, not intended").sum())),
     ], columns=["quantity", "value"])
     with open(TABLES / "T07_paintomics_summary.tsv", "w") as fh:
         fh.write("# Jobs: job1 = first study oK2h66740Q (OSD-522 genes + proteins + 21 predicted compounds); "
                  "A = 6kBOS7AN5K (same genes + proteins + reference layer); B = JfVZ1L37PY (OSD-678 light "
-                 "genes + layer); C = wgT3IPi7U2 (OSD-678 dark genes + layer). The reference layer is a ground "
+                 "genes + layer); C = wgT3IPi7U2 (OSD-678 dark genes + layer); D = Es6j23q40o (OSD-38 genes + membrane "
+                 "proteins + layer). The reference layer is a ground "
                  "carbon-starvation reference, not flight measurements.\n")
         t7.to_csv(fh, sep="\t", index=False)
         fh.write("\n")
@@ -146,7 +157,7 @@ def figures(t4, t5, names):
     import matplotlib.pyplot as plt
     from matplotlib.lines import Line2D
 
-    def scatter(ax, x, y, qx, qy, labels, xl, yl):
+    def scatter(ax, x, y, qx, qy, labels, xl, yl, stagger=False):
         lx, ly = -np.log10(x), -np.log10(y)
         both, onlyx, onlyy = (qx < ALPHA) & (qy < ALPHA), (qx < ALPHA) & (qy >= ALPHA), (qx >= ALPHA) & (qy < ALPHA)
         rest = ~(both | onlyx | onlyy)
@@ -158,11 +169,13 @@ def figures(t4, t5, names):
         ax.plot([0, m], [0, m], color=style.GREY, lw=0.8, ls="--", zorder=0)
         ax.set_xlim(0, m)
         ax.set_ylim(0, m)
-        for sel, key in ((onlyx, lx - ly), (onlyy, ly - lx)):
+        steps = ((-6, 14), (6, -14)) if stagger else ((0, 0), (0, 0))
+        for (sel, key), step in zip(((onlyx, lx - ly), (onlyy, ly - lx)), steps):
             idx = np.flatnonzero(sel)
-            for i in idx[np.argsort(-key[idx])][:4]:
-                ax.annotate(labels[i][:30], (lx[i], ly[i]), fontsize=5.6, xytext=(4, 2),
-                            textcoords="offset points", color=style.INK)
+            for k, i in enumerate(idx[np.argsort(-key[idx])][:3 if stagger else 4]):
+                ax.annotate(labels[i][:30], (lx[i], ly[i]), fontsize=5.6, color=style.INK,
+                            xytext=(4 + step[0] * k, 2 + step[1] * k), textcoords="offset points",
+                            arrowprops={"arrowstyle": "-", "color": style.GREY, "lw": 0.4} if k and stagger else None)
         ax.set_xlabel(f"{xl}: -log10 combined p")
         ax.set_ylabel(f"{yl}: -log10 combined p")
         return [Line2D([], [], marker="o", ls="", color=style.INK, label="q < 0.05 in both"),
@@ -197,10 +210,12 @@ def figures(t4, t5, names):
                                "OSD-522: model-predicted vs reference metabolite layer, same genes and proteins"),
         "fig03_light_vs_dark": ("B", "C", "OSD-678 light", "OSD-678 dark",
                                 "OSD-678 leaves: light vs dark flight, same reference layer"),
+        "fig07_bric_lit_vs_dark": ("A", "D", "OSD-522 (lit BRIC-LED)", "OSD-38 (dark BRIC-PDFU)",
+                                   "Sealed BRIC, lit vs dark: genes + proteins + the same reference layer"),
     }.items():
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 4.4), gridspec_kw={"width_ratios": [1.15, 1]})
         h1 = scatter(ax1, t4[f"{a}_p"].to_numpy(), t4[f"{b}_p"].to_numpy(), t4[f"{a}_q"].to_numpy(),
-                     t4[f"{b}_q"].to_numpy(), t4.pathway.tolist(), la, lb)
+                     t4[f"{b}_q"].to_numpy(), t4.pathway.tolist(), la, lb, stagger=stem.startswith("fig07"))
         style.panel(ax1, "a", "Pathways (232; BH q within job)")
         ax1.legend(handles=h1, loc="upper left", bbox_to_anchor=(0, -0.13), ncol=2, fontsize=6.2)
         h2 = hubpanel(ax2, a, b, la, lb)

@@ -13,6 +13,8 @@ uses; scripts/15_paintomics_tables.py checks every match against the intended ID
   A  OSD-522 genes and proteins, byte-identical to the first study's job 1 files, + layer
   B  OSD-678-light genes (GeneLab log2FC; relevant = adjusted p < 0.05) + layer
   C  OSD-678-dark genes, same rule, + layer
+  D  OSD-38 (BRIC-20, dark sealed BRIC-PDFU) genes, same rule, + membrane proteins from T11 (relevant at the
+     paper's rule, as pre-registered in prereg/osd38) + layer
 """
 
 import hashlib
@@ -83,6 +85,12 @@ def main():
         assert sha(PHOTORESP / f) == sha(UPLOAD / f"osd522_{f}")
     b = gene_layer("OSD-678-light", "osd678_light_genes")
     c = gene_layer("OSD-678-dark", "osd678_dark_genes")
+    d = gene_layer("OSD-38", "osd38_genes")
+    mem = pd.read_csv(TABLES / "T11_osd38_proteome.tsv", sep="\t").query("fraction == 'membrane'")
+    (UPLOAD / "osd38_membrane_proteins_values.tab").write_text("#proteinID\tFLT_vs_GC\n" + "".join(
+        f"{r.locus}\t{r.log2fc:.6f}\n" for r in mem.itertuples()))
+    (UPLOAD / "osd38_membrane_proteins_relevant.tab").write_text(
+        "".join(f"{r.locus}\n" for r in mem[mem.relevant].itertuples()))
     lines = [
         "PaintOmics upload bundles, built by scripts/13_build_layer.py",
         "",
@@ -96,6 +104,9 @@ def main():
         "       (data/photoresp/, SHA-256 checked) + the metabolite layer",
         f"Job B: osd678_light_genes_* ({b[0]} genes, {b[1]} at GeneLab adjusted p < 0.05) + layer",
         f"Job C: osd678_dark_genes_* ({c[0]} genes, {c[1]} at GeneLab adjusted p < 0.05) + layer",
+        f"Job D: osd38_genes_* ({d[0]} genes, {d[1]} at GeneLab adjusted p < 0.05) + "
+        f"osd38_membrane_proteins_* ({len(mem)} proteins, AGI loci; {int(mem.relevant.sum())} at p <= 0.05 and "
+        "|log2FC| > 0.2, from T11) + layer",
     ]
     (UPLOAD / "METHOD.txt").write_text("\n".join(lines) + "\n")
     print("\n".join("  " + ln for ln in lines))

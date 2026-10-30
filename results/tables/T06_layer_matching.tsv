@@ -290,3 +290,100 @@ C	C17254	intended, used	8-Methylthiooctyl glucosinolate
 C	C17256	intended, used	2-Methylpropyl glucosinolate
 C	C17271	intended, used	Glucohirsutin
 C	C02350	used, not intended	(S)-Allantoin
+D	C00003	intended, used	NAD+
+D	C00006	intended, used	NADP+
+D	C00016	intended, used	FAD
+D	C00020	intended, used	AMP
+D	C00025	intended, used	L-Glutamate
+D	C00026	intended, used	2-Oxoglutarate
+D	C00049	intended, used	L-Aspartate
+D	C00051	intended, used	Glutathione
+D	C00052	intended, used	UDP-alpha-D-galactose
+D	C00061	intended, used	FMN
+D	C00062	intended, used	L-Arginine
+D	C00064	intended, used	L-Glutamine
+D	C00065	intended, used	L-Serine
+D	C00072	intended, used	L-Ascorbate
+D	C00073	intended, used	L-Methionine
+D	C00078	intended, used	L-Tryptophan
+D	C00082	intended, used	L-Tyrosine
+D	C00109	intended, used	2-Oxobutanoate
+D	C00114	intended, used	Choline
+D	C00123	intended, used	L-Leucine
+D	C00135	intended, used	L-Histidine
+D	C00147	intended, used	Adenine
+D	C00148	intended, used	L-Proline
+D	C00149	intended, used	(S)-Malate
+D	C00152	intended, used	L-Asparagine
+D	C00153	intended, used	Nicotinamide
+D	C00158	intended, used	Citrate
+D	C00168	intended, used	Hydroxypyruvate
+D	C00170	intended, used	5'-Methylthioadenosine
+D	C00183	intended, used	L-Valine
+D	C00208	intended, used	Maltose
+D	C00212	intended, used	Adenosine
+D	C00255	intended, used	Riboflavin
+D	C00257	intended, used	D-Gluconic acid
+D	C00327	intended, used	L-Citrulline
+D	C00330	intended, used	Deoxyguanosine
+D	C00366	intended, used	Urate
+D	C00387	intended, used	Guanosine
+D	C00407	intended, used	L-Isoleucine
+D	C00408	intended, used	L-Pipecolate
+D	C00417	intended, used	cis-Aconitate
+D	C00475	intended, used	Cytidine
+D	C00482	intended, used	Sinapate
+D	C00499	intended, used	Allantoate
+D	C00624	intended, used	N-Acetyl-L-glutamate
+D	C00643	intended, used	5-Hydroxy-L-tryptophan
+D	C00669	intended, used	gamma-L-Glutamyl-L-cysteine
+D	C00811	intended, used	4-Coumarate
+D	C00818	intended, used	D-Glucarate
+D	C00864	intended, used	Pantothenate
+D	C00956	intended, used	L-2-Aminoadipate
+D	C01020	intended, used	6-Hydroxynicotinate
+D	C01026	intended, used	N,N-Dimethylglycine
+D	C01035	intended, used	4-Guanidinobutanoate
+D	C01077	intended, used	O-Acetyl-L-homoserine
+D	C01094	intended, used	D-Fructose 1-phosphate
+D	C01175	intended, used	1-O-Sinapoyl-beta-D-glucose
+D	C01187	intended, used	3-Deoxy-D-manno-octulosonate
+D	C01384	intended, used	Maleic acid
+D	C01433	intended, used	Loganin
+D	C01551	intended, used	Allantoin
+D	C01750	intended, used	Quercitrin
+D	C01752	intended, used	Scopoletin
+D	C01835	intended, used	Maltotriose
+D	C01879	intended, used	5-Oxoproline
+D	C02043	intended, used	Indolelactate
+D	C02076	intended, used	D-Sedoheptulose
+D	C02153	intended, used	Glucotropaeolin
+D	C02504	intended, used	alpha-Isopropylmalate
+D	C02985	intended, used	L-Fucose 1-phosphate
+D	C04368	intended, used	3-Amino-3-(4-hydroxyphenyl)propanoate
+D	C04608	intended, used	Apigenin 7-O-beta-D-glucoside
+D	C04695	intended, used	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside
+D	C05519	intended, used	L-Allothreonine
+D	C05620	intended, used	N-Acetyl-D-phenylalanine
+D	C05625	intended, used	Rutin
+D	C05837	intended, used	Glucobrassicin
+D	C05841	intended, used	Nicotinate D-ribonucleoside
+D	C06104	intended, used	Adipate
+D	C06455	intended, used	Hydroxymethylphosphonate
+D	C07064	intended, used	Lactulose
+D	C08400	intended, used	Glucoalyssin
+D	C08401	intended, used	Glucoberteroin
+D	C08403	intended, used	Glucobrassicanapin
+D	C08409	intended, used	Glucoerucin
+D	C08411	intended, used	Glucoiberin
+D	C08412	intended, used	Glucoiberverin
+D	C08415	intended, used	Gluconapin
+D	C08419	intended, used	Glucoraphanin
+D	C09789	intended, used	Naringin
+D	C10164	intended, used	Picolinic acid
+D	C15587	intended, used	Purine
+D	C17252	intended, used	7-Methylthioheptyl glucosinolate
+D	C17254	intended, used	8-Methylthiooctyl glucosinolate
+D	C17256	intended, used	2-Methylpropyl glucosinolate
+D	C17271	intended, used	Glucohirsutin
+D	C02350	used, not intended	(S)-Allantoin
