@@ -1,0 +1,95 @@
+metabolite_id,metabolite_name,metabolite_class,quant_mass
+met01,Maleic acid,Organic acid,147
+met02,Proline,Amino acid,142
+met03,Altrose,Sugar,160
+met04,Malic acid,Organic acid,233
+met05,Succinic acid,Organic acid,147
+met06,Sucrose,Sugar,361
+met07,Serine,Amino acid,204
+met08,Dehydroascorbic acid,Organic acid,173
+met09,Aspartate,Amino acid,232
+met10,myo-inositol,Sugar,191
+met11,Citric acid,Organic acid,273
+met12,Similar to Uridine-5-diphosphoglucose disodium salt,Unknown,217
+met13,Unknown01,Unknown,174
+met14,Alanine,Amino acid,116
+met15,Unknown02,Unknown,204
+met16,Glutamine,Amino acid,156
+met17,Threonine,Amino acid,117
+met18,Glycine,Amino acid,174
+met19,Fructose,Sugar,217
+met20,Glucose,Sugar,160
+met21,Galactinol,Sugar,204
+met22,"1,6-Anhydro-beta-D-glucose",Sugar,204
+met23,Glutamine [-H2O],Amino acid,154
+met24,Phosphoric acid,Organic acid,299
+met25,Valine,Amino acid,144
+met26,Unknown03,Unknown,89
+met27,Arabinose,Sugar,103
+met28,Sinapic acid (cis),Organic acid,338
+met29,Unknown04,Unknown,147
+met30,Glyceric acid,Organic acid,189
+met31,GABA,Amino acid,174
+met32,Phenylalanine,Amino acid,218
+met33,Isopropyl-beta-D-thiogalactoside,Sugar,147
+met34,Unknown05 (sugar),Unknown,147
+met35,Unknown06,Unknown,204
+met36,Octadecanoic acid,Organic acid,117
+met37,Spermidine,Amine,144
+met38,Maltose,Sugar,204
+met39,Threonic acid,Organic acid,292
+met40,Fucose,Sugar,117
+met41,Citrulline/Arginine,Amino acid,157
+met42,Putrescine,Amine,174
+met43,Unknown07,Unknown,204
+met44,Asparagine,Amino acid,116
+met45,Cysteine,Amino acid,100
+met46,Sinapic acid (trans),Organic acid,338
+met47,Isoleucine,Amino acid,158
+met48,Methionine,Amino acid,128
+met49,Leucine,Amino acid,158
+met50,Trehalose,Sugar,191
+met51,Unknown08,Unknown,147
+met52,Tyrosine,Amino acid,218
+met53,Pyruvic acid,Organic acid,174
+met54,Unknown09,Unknown,234
+met55,Gluconic acid,Sugar,292
+met56,Mannose,Sugar,160
+met57,Unknown10,Unknown,191
+met58,Palmitic acid,Organic acid,313
+met59,Unknown11,Unknown,204
+met60,Benzoic acid,Organic acid,105
+met61,Tyramine,Amine,174
+met62,Unknown12,Unknown,143
+met63,2-Oxoglutaric acid,Organic acid,198
+met64,Nicotinic acid,Organic acid,180
+met65,beta-alanine,Amino acid,174
+met66,Unknown13,Unknown,217
+met67,Hydroxyproline,Amino acid,230
+met68,Similar to Methanolphosphate,Unknown,241
+met69,Tryptophan,Amino acid,202
+met70,Unknown14,Unknown,281
+met71,Citramalate,Organic acid,247
+met72,4-hydroxy-benzoic acid,Organic acid,223
+met73,Similar to L-Glutamine,Unknown,190
+met74,Unknown15,Unknown,275
+met75,Ascorbic acid,Organic acid,332
+met76,Unknown16,Unknown,281
+met77,Erythritol,Sugar,217
+met78,Adenine,Others,264
+met79,Shikimate,Organic acid,255
+met80,Similar to Uric acid,Unknown,441
+met81,Homoserine,Amino acid,128
+met82,Unknown17,Unknown,91
+met83,Glucose-6-phosphate,Sugar,387
+met84,"Butanoic acid, 2-amino-",Organic acid,130
+met85,Eicosanoic acid methyl ester,Others,326
+met86,Octacosanoic acid,Organic acid,117
+met87,Glycerol-3-phosphate,Others,299
+met88,"Galactose, 3,6-anhydro-",Sugar,129
+met89,Histidine,Amino acid,154
+met90,Fumaric acid,Organic acid,245
+met91,Glutamate,Amino acid,246
+met92,Glycerol,Others,117
+met93,Lysine,Amino acid,156
+met94,Ornithine,Amino acid,142

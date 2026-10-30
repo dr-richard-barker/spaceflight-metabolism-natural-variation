@@ -1,0 +1,27 @@
+# Reviewed corrections to data/reference/kegg_map.tsv (scripts/10_light_dark_reference.py `kegg`).
+# Every ID below was checked against its KEGG entry (rest.kegg.jp/get/cpd:<id>, 2026-10-30); the
+# `reason` column quotes the KEGG NAME that confirms it. Amino acids: the exact-name rule picks
+# KEGG's generic entries (C16439 "Leucine" etc.); LC-MS cannot separate enantiomers and plant pools
+# are the L-forms, which are also the IDs the first study's predictions use (T06).
+name	kegg_id	reason
+Leucine	C00123	KEGG NAME L-Leucine (generic C16439 replaced)
+Isoleucine	C00407	KEGG NAME L-Isoleucine (generic C16434 replaced)
+Valine	C00183	KEGG NAME L-Valine (generic C16436 replaced)
+Proline	C00148	KEGG NAME L-Proline (generic C16435 replaced)
+Arginine	C00062	KEGG NAME L-Arginine (generic C02385 replaced)
+Flavine adenine dinucleotide (FAD)	C00016	KEGG NAME FAD; Flavin adenine dinucleotide
+Flavine adenine dinucleotide	C00016	KEGG NAME FAD; Flavin adenine dinucleotide
+beta-Nicotinamide adenine dinucleotide	C00003	KEGG NAME NAD+; beta-NAD+
+3-indolymethyl glucosinolate	C05837	KEGG NAME Glucobrassicin; Indolylmethyl glucosinolate
+3-methylsulfinylpropyl-glucosinolate	C08411	KEGG NAME Glucoiberin; 3-Methylsulfinylpropyl glucosinolate
+3-methylthiopropyl-glucosinolate	C08412	KEGG NAME Glucoiberverin; 3-Methylthiopropyl glucosinolate
+5-methylthiopentylglucosinolate	C08401	KEGG NAME Glucoberteroin; 5-Methylthiopentyl glucosinolate
+4-pentenylglucosinolate	C08403	KEGG NAME Glucobrassicanapin; 4-Pentenyl glucosinolate
+Indole-3-lactic acid	C02043	KEGG NAME Indolelactate
+N,N-Dimethylglycine	C01026	KEGG NAME N,N-Dimethylglycine
+2-Picolinic acid	C10164	KEGG NAME Picolinic acid; 2-Pyridinecarboxylic acid
+Apigenin-7-O-glucoside	C04608	KEGG NAME Apigenin 7-O-glucoside
+Sinapoylglucose	C01175	KEGG NAME 1-O-Sinapoyl-beta-D-glucose
+Uridine-5'-diphosphogalactose	C00052	KEGG NAME UDP-alpha-D-galactose; UDP-galactose
+Glutamic acid, N-acetyl-	C00624	KEGG NAME N-Acetyl-L-glutamate
+3-Deoxy-D-manno-2-octulosonic acid	C01187	KEGG NAME 3-Deoxy-D-manno-octulosonate; 3-Deoxy-D-manno-2-octulosonate

@@ -1,0 +1,127 @@
+peak_control_pos,peak_control_neg,peak_stress_pos,peak_stress_neg,mz_pos,mz_neg,rt,formula,metabolite_class,metabolite_name,alias,id_level
+PC_1379,NC_1276,PS_1274,NS_1054,424.0400345703,422.0254813703,1.116360706,C11H21NO10S3,Glucosinolate,3-methylsulfinylpropyl-glucosinolate,glucoiberin,B
+PC_1410,NC_1336,PS_1308,NS_1106,438.055684634499,436.041131434499,1.606473803,C12H23NO10S3,Glucosinolate,4-methylsulfinylbutyl glucosinolate,glucoraphanin,B
+,NC_1393,,NS_1161,,450.0567814987,2.776835045,C13H25NO10S3,Glucosinolate,5-methylsulfinylpentyl glucosinolate,glucoalyssin,B
+,NC_1433,,NS_1207,,464.07243156289996,3.467158281,C14H27NO10S3,Glucosinolate,6-methylsulfinylhexyl glucosinolate,glucohesperin,B
+PC_1493,NC_1482,PS_1392,NS_1248,480.1026348271,478.0880816271,4.214509551,C15H29NO10S3,Glucosinolate,7-methylsulfinylheptyl glucosinolate,glucoibarin,B
+PC_1528,NC_1543,PS_1419,NS_1299,494.11828460000004,492.1037314,5.053434749,C16H31NO10S3,Glucosinolate,8-Methylsulfinyloctyl glucosinolate,Glucohirsutin,B
+PC_1248,NC_1066,PS_1144,NS_0887,378.0523138161,376.0377606161,0.885136331,C10H19NO10S2,Glucosinolate,3-hydroxypropyl-glucosinolate,,B
+,NC_1142,,NS_0946,,390.0534106803,1.224983569,C11H21NO10S2,Glucosinolate,4-hydroxybutylglucosinolate,,B
+PC_1181,NC_0986,PS_1077,NS_0823,360.0417491298,358.0271959298,1.539732046,C10H17NO9S2,Glucosinolate,2-propenyl-glucosinolate,sinigrin,B
+PC_1237,NC_1048,PS_1134,NS_0874,374.057399194,372.042845994,2.950488487,C11H19NO9S2,Glucosinolate,3-butenylglucosinolate,gluconapin,B
+,NC_1111,,NS_0917,,386.0584960582,4.063682849,C12H21NO9S2,Glucosinolate,4-pentenylglucosinolate,,B
+,NC_1201,,NS_0998,,406.0305667482,3.501538961,C11H21NO9S3,Glucosinolate,3-methylthiopropyl-glucosinolate,glucoiberverin,B
+,NC_1260,,NS_1044,,420.04621681239996,4.342611246,C12H23NO9S3,Glucosinolate,4-methylthiobutyl glucosinolate,glucoerucin,B
+,NC_1334,,NS_1103,,434.0618668766,5.397851932,C13H25NO9S3,Glucosinolate,5-methylthiopentylglucosinolate,glucoberteroin,B
+,NC_1383,,NS_1155,,448.07751694079997,6.550456344,C14H27NO9S3,Glucosinolate,6-methylthiohexylglucosinolate,,B
+PC_1465,NC_1424,PS_1365,NS_1197,464.107720205,462.093167005,7.750678121,C15H29NO9S3,Glucosinolate,7-methylthioheptyl glucosinolate,,B
+,NC_1474,,NS_1240,,476.1088168,8.898752288,C16H31NO9S3,Glucosinolate,8-Methylthiooctyl glucosinolate,,B
+PC_1435,NC_1378,PS_1332,NS_1150,449.0682982313,447.05374503129997,4.774494303,C16H20N2O9S2,Glucosinolate,3-indolymethyl glucosinolate,glucobrassicin,B
+PC_1491,NC_1479,PS_1389,NS_1245,479.0788629176,477.0643097176,6.607260459,C17H22N2O10S2,Glucosinolate,1-methoxy-3-indolylmethyl-glucosinolate,neoglucobrassicin,B
+PC_1490,NC_1478,PS_1388,NS_1244,479.0788629176,477.0643097176,5.700884377,C17H22N2O10S2,Glucosinolate,4-methoxy-3-indolylmethyl-glucosinolate,4-methyoxyglucobrassicin,B
+PC_1274,NC_1122,PS_1176,NS_0926,390.0523138161,388.0377606161,1.381802607,C11H19NO10S2,Glucosinolate,2-hydroxy-3-butenylglucosinolate,,B
+,NC_1548,,,,494.0796254308,7.382407241,C18H25NO11S2,Glucosinolate,4-benzoyloxybutylglucosinolate,,B
+,,,NS_1590,,582.0956694255001,6.638800374,C21H29NO14S2,Glucosinolate,3-sinapoyloxypropylglucosinolate,,B
+,NC_1542,,NS_1298,,492.0639753666,7.336115416,C18H23NO11S2,Glucosinolate,2-benzoyloxy-3-butenylglucosinolate,,B
+,NC_1971,,NS_1641,,594.0956694255001,7.351881839,C22H29NO14S2,Glucosinolate,2-sinapoyloxy-3-butenylglucosinolate,,B
+PC_0642,,,,178.0354819,,7.169286314,C6H11NOS2,Glucosinolate,Sulforaphane,,B
+,NC_1427,,NS_1203,,463.04865965339997,3.400206621,C16H20N2O10S2,Glucosinolate,4-hydroxy-3-indolylmethyl-glucosinolate,4-hydroxyglucobrassicin,B
+PC_2372,,PS_2174,,1181.297784,,8.003142841,C56H60O24S2,Flavonoid,Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-coumaroyl) glucoside] 5-O-[6''''-O-(malonyl) glucoside],,B
+PC_2395,,PS_2192,,1257.349373,,6.398532024,C58H68O28S,Flavonoid,Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl) p-coumaroyl) glucoside] 5-O-glucoside,,B
+PC_2413,,PS_2210,,1343.349819,,6.689886441,C62H70O29S2,Flavonoid,Cyanidin 3-O-[2''-O-(6'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl)-p-coumaroyl) glucoside] 5-O-(6''''-O-malonyl) glucoside,,B
+PC_1732,,PS_1597,,579.1696853,,7.373318244,C27H30O14,Flavonoid,Kaempferol 3-O-rhamnoside 7-O-rhamnoside,,B
+PC_1755,,PS_1622,,595.1649097,,6.806959592,C27H30O15,Flavonoid,Kaempferol 3-O-glucoside 7-O-rhamnoside,,B
+PC_1976,,PS_1838 ,,741.2233181,,5.948147547,C33H40O19,Flavonoid,Kaempferol 3-O-[2''-O-(rhamnosyl) glucoside] 7-O-rhamnoside,,B
+PC_2001 ,,PS_1859,,757.2163023,,6.374493533,C33H40O20,Flavonoid,Kaempferol 3-O-glucosyl-glucoside 7-O-rhamnoside,,B
+PC_1782,,PS_1647,,611.160152,,6.346711997,C27H30O16,Flavonoid,Quercetin 3-O-glucoside 7-O-rhamnoside,,B
+PC_1998,,PS_1857,,757.2177997,,5.651941054,C33H40O20,Flavonoid,Quercetin 3-O-[2''-O-(rhamnosyl) glucoside] 7-O-rhamnoside,,B
+PC_0866,,PS_0785,,256.081,,1.05,C11H13NO6,Nucleotide,Nicotinate D-ribonucleoside,,B
+PC_0858,,PS_0777,,251.0694,,1.32,C8H14N2O5S,Dipeptide,gamma-L-Glutamyl-L-cysteine,,A
+,NC_1946,,NS_1617,,591.1719616,8.556503398,C28H32O14,Phenylpropanoid,"1,2-disinapoylglucose",,B
+,NC_1042,,NS_0864,,371.0981518,5.113893637,C16H20O10,Phenylpropanoid,5-Hydroxyferulic acid glucoside,,B
+,NC_0817,,NS_0678,,325.056557,6.336751859,C15H18O8,Phenylpropanoid,Coumaric acid glucoside,,B
+,PC_0448,,PS_0372,,121.0657,2.227,C8H11NO,Amine,Fragment of tyramine,,A
+,PC_1533,,PS_1425,,500.1758528,7.548301589,C22H29NO12,Sugar,5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside,,C
+,NC_1431,,NS_1205,,463.1456049,7.136722719,C18H26O11,Ester,Oleoside dimethyl ester,,C
+,NC_1186,,NS_0985,,403.1243,5.769,C17H24O11,Ester,Oleoside 11-methyl ester,,C
+,NC_0704,,NS_0573,,285.0613,4.62,C12H14O8,Phenylpropanoid,"2,5-dihydroxybenzoic acid 5-O-β-D-xyloside","2,5-DHBAX",B
+,NC_0705,,NS_0574,,285.0614,5.02,C12H14O8,Phenylpropanoid,"2,3-dihydroxybenzoic acid 5-O-β-D-xyloside","2,3-DHBAX",B
+,NC_0790,,NS_0654,,315.0717,3.78,C13H16O9,Phenylpropanoid,"2,5-dihydroxybenzoic acid 5-O-β-D-glucoside","2,5-DHBAG",B
+,NC_0791,,NS_0655,,315.0718,4.16,C13H16O9,Phenylpropanoid,"2,3-dihydroxybenzoic acid 5-O-β-D-glucoside","2,3-DHBAG",B
+PC_1265,,PS_1164,,384.1146,,3.96,C14H17N5O8,Nucleoside derivative,Succinoadenosine,,A
+,,PS_0824,NS_0558,277.1389,275.1250344,0.66,C11H20N2O6,Amino acid derivative,L-Saccharopine,,A
+,NC_1295,,,,427.1454,2.394,C16H28O13,Sugar,b-D-Xylopyranosyl-(1->4)-a-L-rhamnopyranosyl-(1->2)-L-arabinose,,C
+,NC_1036,,NS_0859,,369.0825,6.18,C16H8O10,Glocoside,5-Hydroxy-6-methoxycoumarin 7-glucoside,,C
+,NC_0596,,NS_0464,,223.0240 [M+FA-H]-,5.7,C9H6O4,Phenylpropanoid,"7,8-Dihydroxycoumarin",,C
+,NC_0734,,NS_0602,,299.0771,3.43,C13H16O8,Glucoside,Salicylic acid beta-D-glucoside,,C
+,NC_1422,,NS_1195,,461.1298 [M+FA-H]-,4.07,C18H24O11,Glucoside,2-Hydroxybenzaldehyde O-[xylosyl-(1->6)-glucoside],,C
+,NC_1213,,NS_1010,,408.0426129,4.268935603,C14H19NO9S2,Glucosinolate,Benzyl glucosinolate,Glucotropaeolin,B
+,NC_1057,,NS_0880,,374.0580393,3.424758747,C11H21NO9S2,Glucosinolate,2-Methylpropyl glucosinolate,,B
+,NC_1125,,NS_0929,,388.0739372,4.602707785,C12H23NO9S2,Glucosinolate,3-Methylbutyl glucosinolate,,B
+,NC_0570,,NS_0443,,206.0814,6.74,C11H13NO3,Amino acid,N-Acetyl-D-phenylalanine,,A
+PC_0435,,PS_0357,,116.071512,,0.773504469,C5H9NO2,Amino acid,Proline,,A
+PC_0441,,PS_0363,,118.0871171,,1.046217061,C5H11NO2,Amino acid,Valine,,A
+PC_0451,,PS_0378,,123.0561779,,1.023513296,C6H6N2O,Amine,Nicotinamide,,A
+PC_0454,,PS_0379,,124.0401261,,1.052909733,C6H5NO2,Organic acid,2-Picolinic acid,,A
+PC_0455,,PS_0380,,124.0402483,,1.127750292,C6H5NO2,Organic acid,Nicotinic acid,,A
+PC_0499,,PS_0421,,132.1028303,,2.044194161,C6H13NO2,Amino acid,Leucine,,A
+PC_0500,,PS_0422,,132.1028355,,2.228650743,C6H13NO2,Amino acid,Isoleucine,,A
+PC_0544,,,,146.1648957,,0.526873891,C7H19N3,Amine,Spermidine,,A
+PC_0546,,PS_0467,,147.0285393,,1.4819232,C5H6O5,Organic acid,alpha-Ketoglutaric acid,,A
+PC_0552,NC_0446,PS_0475,NS_0339,147.0762614,145.0606114,0.666266507,C5H10N2O3,Amino acid,L-Glutamine,,A
+,,PS_0476,,147.1124799,,0.586010023,C6H14N2O2,Amino acid,L-Lysine,,A
+PC_0558,NC_0448,PS_0481,NS_0341,148.0602294,146.0445794,0.696750394,C5H9NO4,Amino acid,L-Glutamic acid,,A
+PC_0570,,PS_0490,,150.0582104,,1.275036629,C5H11NO2S,Amino acid,Methionine,,A
+PC_0601,,PS_0529,,162.0758974 [M+NH4]+,,1.059767541,C6H11NO4,Amino acid,O-Acetyl-L-Homoserine,,A
+PC_0615,NC_0485,PS_0541,NS_0374,169.035385,167.019735,1.485500851,C5H4N4O3,Amine,Uric acid,,A
+PC_0626,NC_0492,PS_0556,NS_0382,175.0234985,173.0078485,1.481892381,C6H6O6,Organic acid,cis-Aconitic acid,,A
+PC_0631,,,,175.0864846,,6.468359219,C10H10N2O,Amine,Indole-3-acetamide,,A
+PC_0633,NC_0496,PS_0561,NS_0384,175.1188383,173.1031883,0.649162443,C6H14N4O2,Amino acid,Arginine,,A
+PC_0635,,,,176.1027411,,0.708110921,C6H13N3O3,Amino acid,L-Citrulline,,A
+PC_0638,NC_0499,PS_0564,NS_0387,177.0392056,175.0235556,1.044624145,C6H8O6,Organic acid,Ascorbic acid,,A
+PC_0658,,PS_0584,,182.0811125 [M+NH4]+,,2.199785135,C9H11NO3,Amino acid,3-Amino-3-(4-hydroxyphenyl)propanoate,,A
+PC_0673,NC_0530,,,190.0707366,188.0550866,1.870082957,C7H11NO5,Amino acid,N-acetyl-glutamic acid,,A
+PC_0684,NC_0537,PS_0612,NS_0411,193.0340622,191.0184122,1.483760068,C6H8O7,Organic acid,Citric acid,,A
+PC_0688,,PS_0613,,193.0493551,,6.340581017,C10H8O4,Phenylpropanoid,Scopoletin,,A
+PC_0712,,PS_0638,,206.0809814,,6.737752178,C11H11NO3,Amino acid deri,Indole-3-lactic acid,,A
+PC_0785,NC_0592,PS_0706,NS_0460,220.1179392,218.1022892,3.83722039,C9H17NO5,Organic acid,Pantothenic acid (Vitamine B5),,A
+PC_0846,NC_0632,,NS_0501,245.0763833,243.0607333,2.20633354,C9H12N2O6,Nucleoside,Uridine,,A
+PC_0932,NC_0699,PS_0833,NS_0566,284.0988602,282.0832102,2.937300252,C10H13N5O5,Nucleoside,Guanosine,,A
+PC_1145,NC_0932,PS_1041,NS_0776,348.0699366,346.0542866,1.260412679,C10H14N5O7P,Nucleotide,Adenosine 5'-monophosphate,,A
+PC_1246,NC_1062,PS_1142,NS_0884,377.1450151,375.12936510000003,5.942634351,C17H20N4O6,Vitamin,Riboflavin,,A
+PC_1322,,,,405.0091936,,0.733581736,C9H14N2O12P2,Nucleotide,Uridine 5'-diphosphate,,A
+PC_1401,NC_1311,PS_1296,,433.1121125,431.09646250000003,7.373272249,C21H20O10,Flavonoid,Apigenin-7-O-glucoside,,A
+PC_1734,NC_1905,PS_1599,,581.1838131,579.1681630999999,7.783932848,C27H32O14,Flavonoid,Naringin,,A
+PC_1782,NC_2025,PS_1647,NS_1686,611.160152,609.144502,6.346711997,C27H30O16,Flavonoid,Rutin,,A
+PC_1857,NC_2227,PS_1739,NS_1861,664.1155518,662.0999018,1.869954109,C21H27N7O14P2,Coenzyme,beta-Nicotinamide adenine dinucleotide,NAD,A
+PC_2045,NC_2562,PS_1895,NS_2137,786.1640881,784.1484380999999,4.953380134,C27H31N9Na2O15P2,Cofactor,Flavine adenine dinucleotide,FAD,A
+PC_0506,NC_0431,,NS_0325,134.0454751,132.0290644,0.659231841,C4H7NO4,Organic acid,D-Aspartic acid,,A
+PC_0526,NC_0440,PS_0446,NS_0334,140.034076,138.018437,2.704287859,C6H5NO3,Organic acid,6-Hydroxynicotinic acid,,A
+PC_0446,,,,120.0663596,118.0509,0.679968303,C4H9NO3,Amino acid,Homoserine,,A
+PC_0709,NC_0567,PS_0636,NS_0439,205.0968833,203.0826,4.514430176,C11H12N2O2,Amino acid,L-Tryptophan,,A
+,,PS_0500,,156.0765,154.0619,0.634347641,C6H9N3O2,Amino acid,Histidine,,A
+,,PS_0425,NS_0324,133.0614,131.0468,0.63968366,C4H8N2O3,Amino acid,L-Asparagine,,A
+PC_0995,NC_0755,PS_0900,NS_0623,308.0906194,306.0749694,1.289235839,C10H17N3O6S,Antioxidant,Glutathione,,A
+,,PS_1028,NS_0765,346.0539153,344.03826530000003,2.398873724,C10H12N5O7P,Nucleoside derivative,Guanosine 2':3'-cyclic monophosphate sodium,,A
+PC_0512,,PS_0434,,136.0617311,134.0472,1.149618877,C5H5N5,Nucleobase,Adenine,,A
+PC_0888,NC_0672,PS_0801,NS_0545,268.1035952,266.0894,2.810242848,C10H13N5O4,Nucleoside,Adenosine,,A
+PC_0490,,PS_0409,,130.0871182,128.0717,1.12116517,C6H11NO2,Organic acid,Pipecolic Acid,,A
+,NC_0662,,,261.0387,259.0241,0.606719146,C6H13O9P,Sugar,Fructose 1-phosphate,,A
+,,,NS_0356,161.1074,159.0917043,4.37114296,C10H12N2,Alkaloid,Tryptamine,,A
+,,,NS_0401,182.0818,180.0656447,1.981595537,C9H11NO3,Amino acid,Tyrosine,,A
+,NC_0557,,,,195.050305,0.690132486,C6H10O7,Organic acid,D-Galactonic acid,,A
+,NC_0674,,,,267.0732438,2.943594033,C10H12N4O5,Nucleoside,Inosine,,A
+,NC_0710,,NS_0579,,289.0827898,6.6419428,C14H14N2O5,Organic acid,Indole-3-acetyl-L-aspartic acid,,A
+,NC_0928,,NS_0765,,344.0399968,2.581635552,C10H12N5O7P,Nucleoside derivative,Guanosine 2':3'-cyclic monophosphate sodium,,A
+,NC_1008,,,,362.0505056,1.391910998,C10H14N5O8P,Nucleoside derivative,Guanosine-5´-Monophosphate,,A
+,NC_1092,,,,383.1142076,2.622407691,C14H20N6O5S,Amino acid and derivative,S-Adenosyl-L-Homocysteine,,A
+,NC_1379,,NS_1151,,447.0929433,7.87294093,C21H20O11,Phenylpropanoid,Quercitrin,,A
+,NC_2426,,NS_2028,,742.0701621,1.246443326,C21H28N7O17P3,Nucleoside derivative,Nicotinamide adenine dinucleotide phosphate,NADP,A
+,,,NS_0360,,160.0606067,0.771431314,C6H11NO4,Organic acid,D-2-Aminoadipic acid,,A
+,,,NS_0363,,161.0444989,2.402498518,C6H10O5,Organic acid,3-Hydroxy-3-methylglutaric acid,,A
+,,,NS_0383,,173.0920945,0.837084443,C7H14N2O3,Amino acid and derivative,N-Acetyl-L-ornithine,,A
+,,,NS_0389,,175.0463939,0.686657201,C4H8N4O4,Organic acid,Allantoic acid,,A
+,,,NS_0429,,195.0503658,0.678495204,C6H12O7,Organic acid,D-Galactonic acid,,A
+,,,NS_0440,,204.0658614,7.836429282,C11H11NO3,Amino acid and derivative,N-cinnamoyl-glycine,,A
+,,,NS_0452,,209.0447722,6.198904509,C10H12O5,Organic acid,4-Hydroxymethyl-3-methoxyphenoxyacetic acid,,A
+,,,NS_1069,,426.0154204,1.074973159,C10H14N5O10PS,Nucleoside derivative,Adenosine 5'-phosphosulfate,APS,A

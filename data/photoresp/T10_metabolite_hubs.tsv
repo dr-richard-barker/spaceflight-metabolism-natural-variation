@@ -1,0 +1,23 @@
+# PaintOmics AI job oK2h66740Q — OSD-522 (BRIC-LED-001) Arabidopsis shoots, Space Flight vs Ground Control
+# organism ath; databases KEGG + MapMan; AI interpretation off
+# 3 omics: gene expression (real, OSDR), proteomics (real, OSDR), metabolomics (PREDICTED, model output)
+# PaintOmics metabolite hub analysis (KEGG network): which metabolites have differentially
+# expressed genes concentrated around them. 15 compounds entered the analysis: 13 of the 21 predicted (those submitted as changed) plus 2 PaintOmics added (beta-D-Glucopyranose; alpha-D-Glucose).
+# 7 reach FDR < 0.05. The DE genes counted are REAL; the compounds are model output.
+# Derived from results/paintomics_raw/ by scripts/06_paintomics_tables.py.
+compound	kegg_id	FDR	DE_neighbours	best_at_step	block
+L-Glutamate	C00025	0.003	215	3	carbon starvation
+L-Leucine	C00123	0.003	112	4	carbon starvation
+L-Valine	C00183	0.003	112	4	carbon starvation
+L-Isoleucine (2-Amino-3-methylvaleric acid)	C00407	0.003	112	4	carbon starvation
+D-Ribulose 1,5-bisphosphate	C01182	0.003	40	3	Calvin-Benson
+3-Phospho-D-glycerate	C00197	0.004	81	3	photosynthate
+L-Glutamine	C00064	0.029	279	4	carbon starvation
+D-Fructose	C00095	0.058	52	2	photosynthate
+Sucrose	C00089	0.058	44	2	photosynthate
+L-Asparagine	C00152	0.127	172	4	carbon starvation
+beta-D-Glucopyranose	C00221	0.129	23	2	photosynthate
+D-Glucose	C00031	0.145	60	2	photosynthate
+Maltose	C00208	0.209	6	1	photosynthate
+alpha-D-Glucose	C00267	0.209	5	1	photosynthate
+Glycogen (Starch)	C00369	0.225	14	2	photosynthate

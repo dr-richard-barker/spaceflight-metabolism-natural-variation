@@ -1,0 +1,113 @@
+name	source	kegg_id	match	candidates
+Allantoic acid	zhu	C00499	exact	C00499
+alpha-D-Galacturonic acid 1-phosphate	zhu		none	
+alpha-Ketoglutaric acid	zhu	C00026	exact	C00026;C16625
+beta-Nicotinamide adenine dinucleotide	zhu		none	C00006
+Citric acid	zhu	C00158	exact	C00158;C00311;C00451;C01251;C02225;C04593;C04617;C12649;C22932
+Flavin Mononucleotide	zhu	C00061	exact	C00061;C20730
+Flavine adenine dinucleotide (FAD)	zhu		none	
+Formimino-L-Aspartic acid	zhu		none	
+Glucoalyssin	zhu	C08400	exact	C08400
+Glucohirsutin	zhu	C17271	exact	C17271
+Gluconic acid	zhu	C00257	D-prefix	C00198;C00204;C00257;C02780;C06473;C06892;C06893;C22921
+Glutamic acid, N-acetyl-	zhu		none	
+Glutathione	zhu	C00051	exact	C00051;C00127;C00920;C01031;C02320;C02589;C02886;C03174;C03451;C03899;C03928;C04572;C11175;C11302;C11303;C11304;C11315;C11347;C11367;C11370;C14180;C14861;C14862;C14863;C14864;C14868;C14871;C14874;C148
+Guanosine	zhu	C00387	exact	C00035;C00044;C00144;C00286;C00330;C00361;C00362;C00387;C00942;C01228;C01972;C02031;C02339;C03998;C04494;C04545;C04696;C04802;C04833;C05031;C06193;C08432;C16619;C16620;C18076;C19155;C19967;C19968;C201
+2-Isopropylmalic acid	zhu	C02504	exact	C02504
+Leucine	zhu	C16439	exact	C00123;C00407;C01570;C01933;C02155;C02486;C02710;C03969;C04301;C04335;C05010;C06418;C11328;C11332;C11333;C16434;C16439;C18699;C20310;C20311;C20802;C20963;C20964;C21092;C21096;C22300;C22301;C22429;C224
+Kaempferol 3-O-6-O-(rhamnosyl) glucoside 7-O-rhamnoside	zhu		none	
+Kaempferol 3-O-glucoside 7-O-rhamnoside	zhu		none	
+Lactulose	zhu	C07064	exact	C07064
+Isoleucine	zhu	C16434	exact	C00407;C06418;C16434;C18699;C20310;C20311;C20802;C20963;C21092;C21096;C22300;C22301
+Loganin	zhu	C01433	exact	C01433;C01852;C06071;C11646;C11648;C11650;C11659;C11662;C11663;C11668
+Malic acid	zhu	C00149	exact (2 hits)	C00149;C00497;C00711;C00815;C01990;C02123;C02488;C02504;C02612;C02614;C05994;C17210;C17212;C17214;C17215;C17218;C17219;C17222;C17223;C17226;C17227;C17230;C17231;C17263;C17264;C17947;C20653;C20654
+N,N-Dimethylglycine	zhu		none	
+N-Acetyl-L-Tyrosine	zhu		none	C01657
+Naringin	zhu	C09789	exact	C09789;C16423
+N-Ethylmaleamic acid	zhu		none	
+Pantothenic acid (Vitamine B5) 	zhu	C00864	exact	C00864
+3-Deoxy-D-manno-2-octulosonic acid	zhu		none	
+Purine	zhu	C15587	exact	C00147;C00242;C00262;C01736;C01756;C02339;C02380;C02860;C03391;C04083;C04422;C04583;C04646;C04802;C05325;C08434;C11263;C14614;C14623;C15279;C15347;C15348;C15397;C15586;C15587;C16614;C16615;C16616;C166
+Pyroglutamic acid	zhu	C01879	exact	C01879;C02237
+Quercetin 3,7-dirhamnoside	zhu		none	
+Quercetin 3-O-glucoside 7-O-rhamnoside	zhu		none	
+Riboflavin 	zhu	C00255	exact	C00061;C00255;C01007;C16071;C19154;C20730;C21646;C21647;C21648;C21803;C21804;C21805;C22277
+Rutin	zhu	C05625	exact	C04194;C04491;C04787;C05625;C08247;C08620;C09008;C09732;C09755;C09793;C10039;C10175;C12644;C12645;C12646;C16292;C16293;C16294;C16295;C16296;C16315;C21833
+Saccharic acid	zhu	C00818	D-prefix	C00818
+Sedoheptulose	zhu	C02076	exact	C00447;C02076;C05382;C06222;C08355
+Serine	zhu	C00065	exact (2 hits)	C00065;C00263;C00716;C00740;C00839;C00979;C01005;C01077;C01102;C01118;C01262;C02115;C02189;C02532;C02703;C02737;C02926;C03015;C03016;C03059;C03290;C03637;C03872;C04128;C04204;C04565;C04776;C04800;C048
+Sinapoylglucose	zhu		none	
+Succinoadenosine	zhu		none	
+Tyrosine	zhu	C00082	exact (2 hits)	C00082;C00355;C00585;C00826;C01060;C01167;C01281;C01299;C01536;C01657;C01829;C02515;C03004;C03224;C03225;C03347;C03404;C03643;C03721;C04201;C04214;C04368;C04418;C06420;C06501;C07921;C11820;C15503;C167
+Uric acid	zhu	C00366	exact	C00059;C00366;C00802;C00813;C01586;C01614;C02679;C03712;C05281;C05380;C05513;C05529;C05727;C06554;C07588;C07846;C11117;C14495;C15607;C16355;C16356;C16359;C16360;C16361;C16613;C16623;C16950;C17647;C176
+Uridine-5'-diphosphogalactose	zhu		none	
+1-methoxy-3-indolylmethyl-glucosinolate	wu_stress		none	
+2,5-dihydroxybenzoic acid 5-O-β-D-glucoside	wu_stress		none	
+2,5-dihydroxybenzoic acid 5-O-β-D-xyloside	wu_stress		none	
+2-Hydroxybenzaldehyde O-[xylosyl-(1->6)-glucoside]	wu_stress		none	
+2-Methylpropyl glucosinolate	wu_stress	C17256	exact	C08408;C17256
+2-Picolinic acid	wu_stress		none	
+2-benzoyloxy-3-butenylglucosinolate	wu_stress		none	
+2-hydroxy-3-butenylglucosinolate	wu_stress		none	
+2-propenyl-glucosinolate	wu_stress		none	
+2-sinapoyloxy-3-butenylglucosinolate	wu_stress		none	
+3-Amino-3-(4-hydroxyphenyl)propanoate	wu_stress	C04368	exact	C04368
+3-Methylbutyl glucosinolate	wu_stress		none	
+3-butenylglucosinolate	wu_stress	C08415	exact	C08415
+3-hydroxypropyl-glucosinolate	wu_stress		none	
+3-indolymethyl glucosinolate	wu_stress		none	
+3-methylsulfinylpropyl-glucosinolate	wu_stress		none	
+3-methylthiopropyl-glucosinolate	wu_stress		none	
+4-hydroxy-3-indolylmethyl-glucosinolate	wu_stress		none	
+4-hydroxybutylglucosinolate	wu_stress		none	
+4-methoxy-3-indolylmethyl-glucosinolate	wu_stress		none	
+4-methylsulfinylbutyl glucosinolate	wu_stress	C08419	exact	C08419
+4-methylthiobutyl glucosinolate	wu_stress	C08409	exact	C08409;C17248
+4-pentenylglucosinolate	wu_stress		none	
+5-Hydroxy-6-methoxycoumarin 7-glucoside	wu_stress		none	
+5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside	wu_stress	C04695	exact	C04695
+5-methylsulfinylpentyl glucosinolate	wu_stress	C08400	exact	C08400
+5-methylthiopentylglucosinolate	wu_stress		none	
+6-Hydroxynicotinic acid	wu_stress	C01020	exact	C01020
+6-methylsulfinylhexyl glucosinolate	wu_stress		none	
+6-methylthiohexylglucosinolate	wu_stress		none	
+7,8-Dihydroxycoumarin	wu_stress		none	
+7-methylsulfinylheptyl glucosinolate	wu_stress		none	
+7-methylthioheptyl glucosinolate	wu_stress	C17252	exact	C17252;C21650
+8-Methylsulfinyloctyl glucosinolate	wu_stress	C17271	exact	C17271
+8-Methylthiooctyl glucosinolate	wu_stress	C17254	exact	C17254;C21746
+Adenine	wu_stress	C00147	exact	C00003;C00004;C00005;C00006;C00016;C00147;C00371;C00821;C00857;C00913;C01804;C02029;C02216;C02241;C03391;C04083;C04154;C04156;C04159;C04378;C04432;C04856;C04899;C05026;C07195;C08272;C08434;C10831;C112
+Adenosine	wu_stress	C00212	exact	C00002;C00008;C00020;C00053;C00054;C00131;C00170;C00206;C00212;C00224;C00301;C00360;C00498;C00559;C00575;C00939;C00946;C01367;C01972;C02494;C03218;C03361;C03416;C03483;C03795;C03850;C03851;C04432;C047
+Adenosine 5'-monophosphate	wu_stress	C00020	exact	C00020;C00360;C04713;C22441
+Apigenin-7-O-glucoside	wu_stress		none	
+Arginine	wu_stress	C02385	exact	C00062;C00613;C00792;C01201;C01253;C01682;C01924;C01952;C02334;C02385;C02424;C02562;C02993;C03001;C03296;C03315;C03417;C03626;C03771;C03884;C04026;C04137;C04143;C04303;C04337;C05206;C05207;C05320;C053
+Ascorbic acid	wu_stress	C00072	exact	C00072;C01041;C05422;C18339;C18340;C18341;C18342;C20340;C20364
+Benzyl glucosinolate	wu_stress	C02153	exact	C01069;C02153;C08426;C17240;C17273
+Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl) p-coumaroyl) glucoside] 5-O-glucoside	wu_stress		none	
+Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-coumaroyl) glucoside] 5-O-[6''''-O-(malonyl) glucoside]	wu_stress		none	
+Cyanidin 3-O-[2''-O-(6'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl)-p-coumaroyl) glucoside] 5-O-(6''''-O-malonyl) glucoside	wu_stress		none	
+D-Aspartic acid	wu_stress	C00402	exact	C00402;C12269
+Flavine adenine dinucleotide	wu_stress		none	
+Fragment of tyramine	wu_stress		none	
+Indole-3-lactic acid	wu_stress		none	
+Kaempferol 3-O-rhamnoside 7-O-rhamnoside	wu_stress		none	
+L-Glutamic acid	wu_stress	C00025	exact	C00025;C00449;C00624;C01046;C01425;C03066;C03079
+L-Glutamine	wu_stress	C00064	exact	C00064;C01047;C01109;C02583;C02716;C03153;C03905;C04148;C05283;C08271;C16345;C20843;C20858;C21179;C21785;C22033
+L-Tryptophan	wu_stress	C00078	exact	C00078;C00643;C00977;C02983;C03512;C04290;C16831;C19687;C19716;C19717;C19767;C21777;C21865;C21866;C21868;C21892;C22980;C23128;C23151;C23194
+Methionine	wu_stress	C00073	exact (2 hits)	C00019;C00073;C00855;C01733;C02712;C02989;C03023;C03145;C03172;C03510;C03829;C03895;C04078;C05205;C05319;C05335;C05524;C05690;C05691;C05708;C06409;C06410;C11684;C15653;C15998;C15999;C17213;C17217;C172
+N-Acetyl-D-phenylalanine	wu_stress	C05620	exact	C05620
+Nicotinamide	wu_stress	C00153	exact	C00003;C00004;C00005;C00006;C00153;C00455;C02421;C02918;C03150;C04423;C04856;C04899;C15497;C17729;C20482;C20483;C21113;C21757;C22493
+Nicotinamide adenine dinucleotide phosphate	wu_stress	C00006	exact	C00005;C00006;C04899;C20483;C22493
+Nicotinate D-ribonucleoside	wu_stress	C05841	exact	C05841
+O-Acetyl-L-Homoserine	wu_stress	C01077	exact	C01077
+Pantothenic acid (Vitamine B5)	wu_stress	C00864	exact	C00864
+Pipecolic Acid	wu_stress	C00408	exact	C00408;C08268
+Proline	wu_stress	C16435	exact	C00148;C00763;C01015;C01078;C01157;C01632;C01843;C01877;C01879;C02237;C03183;C03440;C03633;C03651;C03798;C04397;C04398;C05147;C05939;C08269;C10172;C11711;C16435;C17366;C19483;C19485;C19706;C20705;C207
+Quercetin 3-O-[2''-O-(rhamnosyl) glucoside] 7-O-rhamnoside	wu_stress		none	
+Quercitrin	wu_stress	C01750	exact	C01750;C05623
+Riboflavin	wu_stress	C00255	exact	C00061;C00255;C01007;C16071;C19154;C20730;C21646;C21647;C21648;C21803;C21804;C21805;C22277
+Salicylic acid beta-D-glucoside	wu_stress		none	
+Scopoletin	wu_stress	C01752	exact	C01752;C18079
+Valine	wu_stress	C16436	exact	C00141;C00183;C01799;C01826;C05556;C06417;C11747;C16436;C20313;C20314;C20962;C20965;C22989
+cis-Aconitic acid	wu_stress	C00417	exact	C00417
+gamma-L-Glutamyl-L-cysteine	wu_stress	C00669	exact	C00669;C03646

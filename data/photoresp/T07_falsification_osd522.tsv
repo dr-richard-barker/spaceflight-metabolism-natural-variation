@@ -1,0 +1,26 @@
+set	n	median	shift	p	observed	predicted	verdict	layer
+ath00630	76	-0.102017	-0.124803	0.0003150109978592829	down	none	MISMATCH	transcriptome
+ath00710	66	-0.0820385	-0.1048585	0.00013200422852491686	down	down	MATCH	transcriptome
+ath00500	142	-0.141808	-0.16461299999999998	3.510021953475015e-06	down	down	MATCH	transcriptome
+ath00010	111	-0.091694	-0.114669	5.740587951627125e-06	down		—	transcriptome
+photorespiration_core	13	-0.141695	-0.1641355	0.09167121378445355	no change	none	MATCH	transcriptome
+carbon_starvation_DIN	5	0.707545	0.685458	0.0025950415942480637	up	up	MATCH	transcriptome
+fermentation	6	-0.0673695	-0.0895705	0.5956115137930895	no change	none	MATCH	transcriptome
+hypoxia_responsive	3	0.190753	0.1686485	0.24784088957307016	no change	none	MATCH	transcriptome
+photosynthesis_apparatus	31	-0.215013	-0.237672	3.7506386397387976e-06	down	down	MATCH	transcriptome
+rubisco	5	-0.381024	-0.40333199999999997	0.0045219354005854705	down	down	MATCH	transcriptome
+photorespiration vs carbon fixation	76	-0.102017	-0.019978499999999996	0.9494488414673065	-0.0200	A above B	no signal	transcriptome
+photorespiration_core vs rubisco	13	-0.141695	0.239329	0.00676937441643324	+0.2393	A above B	SUPPORTS	transcriptome
+starvation vs photosynthesis	5	0.707545	0.922558	5.3051523639758935e-06	+0.9226	A above B	SUPPORTS	transcriptome
+ath00630	55	0.08	0.19	0.2961597571569564	no change	none	MATCH	proteome
+ath00710	55	0.05	0.15000000000000002	0.19364298036916894	no change	down	MISMATCH	proteome
+ath00500	68	-0.195	-0.095	0.13293907726611268	no change	down	MISMATCH	proteome
+ath00010	87	-0.04	0.07	0.021011683682845415	up		—	proteome
+photorespiration_core	10	-0.20500000000000002	-0.10500000000000001	0.4144418649381316	no change	none	MATCH	proteome
+carbon_starvation_DIN	1				too few	up	n/a	proteome
+fermentation	3	0.51	0.61	0.06679887941987975	no change	none	MATCH	proteome
+hypoxia_responsive	0				too few	none	n/a	proteome
+photosynthesis_apparatus	19	-0.92	-0.8200000000000001	0.000502831748191372	down	down	MATCH	proteome
+rubisco	3	-0.49	-0.39	0.06240739120172339	no change	down	MISMATCH	proteome
+photorespiration vs carbon fixation	55	0.08	0.03	0.8225980287417147	+0.0300	A above B	no signal	proteome
+photorespiration_core vs rubisco	10	-0.20500000000000002	0.285	0.04895104895104895	+0.2850	A above B	SUPPORTS	proteome

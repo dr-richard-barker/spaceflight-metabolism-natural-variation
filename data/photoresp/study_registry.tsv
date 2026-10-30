@@ -1,0 +1,33 @@
+# OSDR studies in the hardware ladder — the auditable core of the cross-study comparison.
+#
+# The model predicts a GRADED outcome across enclosure types. LunarLeaf-CFD T11 gives 12 h
+# carbon gain as a percentage of Earth's: sealed BRIC 1, micropore-tape CARA 90, vented 100.
+# So the carbon-starvation signature should be strongest in sealed hardware, intermediate
+# under tape, and weakest when vented.
+#
+# Every field below was read off OSDR by scripts/probe_studies.py on 2026-09-08, not assumed.
+# `contrast` is the exact Log2fc_ column used, and it is always MATCHED: the two sides differ
+# only in Space Flight vs Ground Control. A study offering flight-vs-ground contrasts that
+# also swap genotype, ecotype or light treatment (OSD-678 has 36 such, only 6 matched) would
+# confound the very thing being tested.
+#
+# `include` is a judgement and each exclusion carries its reason. The binding constraint is
+# TISSUE: a photosynthesis prediction says nothing about roots, so root studies are out even
+# though their data is otherwise perfectly good.
+#
+# enclosure_class : sealed | tape | vented
+# carbon_pct_earth: LunarLeaf-CFD T11 prediction for that enclosure class
+#
+accession	include	enclosure_class	carbon_pct_earth	hardware	project	tissue	genotype	light	light_evidence	platform	dge_file	contrast	reason
+OSD-522	yes	sealed	1	BRIC-LED	BRIC-LED-001	shoots	Col-0	light	CONFIRMED: "light wavelength composition of 85% red, 15% blue, and 60 umol m-2 s-1 intensity" (OSDR protocol)	RNA-seq	(computed by 01_dge_rnaseq.py)	FLT_vs_GC	Flagship. Only study here with a matched proteome. GeneLab ships raw RSEM counts but no DGE, so PyDESeq2 is run on the 6 flight vs 6 ground shoot samples.
+OSD-38	yes	sealed	1	BRIC-PDFU	BRIC-20	whole seedlings	Col-0	dark	INFERRED: BRIC PDFU canisters have no growth illumination; OSDR protocol mentions only 1-2 h white light to synchronise germination, never a growth photoperiod. Weaker evidence than OSD-321.	RNA-seq	GLDS-38_rna_seq_differential_expression.csv	Log2fc_(FLT)v(GC)	Independent sealed-hardware replicate, and the second study with a proteome (soluble + membrane). One matched contrast, unambiguous.
+OSD-321	yes	sealed	1	BRIC-PDFU	BRIC-22	seedlings	Wild Type	dark	CONFIRMED: "cultivate sterile dark-grown seedlings germinated aboard the ISS for a 14 day period" (OSDR description)	RNA-seq	GLDS-321_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv	Log2fc_(Space Flight & Wild Type)v(Ground Control & Wild Type)	Third sealed replicate. Wild-type arm only; the four UPR-mutant arms are left aside as they perturb the very stress response we are measuring.
+OSD-678-light	yes	tape	90	CARA square dish	CARA	leaves	Col-0 Wild Type	light	CONFIRMED: "Light Treatment" is an explicit study factor level and names the contrast	RNA-seq	GLDS-612_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv	Log2fc_(Col-0 & Wild Type & Space Flight & Light Treatment)v(Col-0 & Wild Type & Ground Control & Light Treatment)	Intermediate enclosure. Leaves, confirmed by the study description contrasting leaves with root tips.
+OSD-678-dark	yes	tape	90	CARA square dish	CARA	leaves	Col-0 Wild Type	dark	CONFIRMED: "Dark Treatment" is an explicit study factor level and names the contrast	RNA-seq	GLDS-612_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv	Log2fc_(Col-0 & Wild Type & Space Flight & Dark Treatment)v(Col-0 & Wild Type & Ground Control & Dark Treatment)	INTERNAL CONTROL. Same hardware, same plants, no light. Without photosynthesis there is no CO2 drawdown, so the model predicts the carbon-starvation signature should be ABSENT here while present in the light arm.
+OSD-427	yes	vented	100	VEGGIE (VPS)	APEX-04	leaf	Wild Type	light	CONFIRMED: "Plants in the Veggie hardware were exposed to constant light conditions of 100-135 umoles/m2/s PAR" (OSDR protocol). NOTE this is ~2x the PAR of OSD-522.	RNA-seq	GLDS-427_rna_seq_differential_expression.csv	Log2fc_(Wild Type & Space Flight & leaf)v(Wild Type & Ground control & leaf)	The vented arm. Explicit leaf tissue and a wild-type contrast; the elp2-5 and met1-7 methylation mutants are left aside.
+OSD-120	no	tape	90	CARA square dish	CARA	root tips	Col-0	light/dark	-	RNA-seq	GLDS-120_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv	-	EXCLUDED: root tips. The study description states the CARA comparison was made "in the root tips". A photosynthesis and photorespiration prediction does not apply to non-photosynthetic tissue.
+OSD-193	no	vented	100	APH/APEX chamber	APEX03-2	roots	Col-0, Sku6	light	-	RNA-seq	GLDS-193_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv	-	EXCLUDED: roots. Description states gene expression was profiled "in roots".
+OSD-281	no	vented	100	APH/APEX chamber	APEX-03-2	roots	WS, Sku5	light	-	RNA-seq	GLDS-281_rna_seq_differential_expression_GLbulkRNAseq.csv	-	EXCLUDED: roots. Description states gene expression was profiled "in roots".
+OSD-218	no	vented	100	APH/APEX chamber	APEX03-2	ambiguous	Col-0, WS	light	-	RNA-seq	GLDS-218_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv	-	EXCLUDED: tissue not stated in the metadata and the description dwells on "root system development"; same APEX03-2 project as the two root studies above. Including it on a guess would put possibly-root data into a shoot comparison.
+OSD-16	no	vented	100	APEX-TAGES	APEX-TAGES	-	-	light	-	proteomics	-	-	EXCLUDED: OSDR holds no processed files for this study, only 16 files total and none usable. It was the intended vented proteome arm; its absence is why the vented arm is transcriptome-only.
+OSD-7	no	vented	100	TAGES	TAGES	-	-	light	-	microarray	-	-	EXCLUDED: Affymetrix microarray, not RNA-seq. Cross-platform log2 fold changes are not comparable on the same scale as the eight GeneLab RNA-seq studies here.

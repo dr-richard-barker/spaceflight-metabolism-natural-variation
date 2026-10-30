@@ -1,0 +1,162 @@
+source	source_id	name	n	effect	frac_same	spread	p	kegg_given	mean_intensity	kegg_id	qualifies	z
+zhu	Met.193	Allantoic acid	259	4.0141	1.0	0.3544				C00499	True	11.3269
+zhu	Met.202	alpha-D-Galacturonic acid 1-phosphate	259	4.3324	1.0	0.4775					True	9.0727
+zhu	Met.205	alpha-Ketoglutaric acid	259	-1.6833	0.9961	0.1324				C00026	True	-12.7175
+zhu	Met.300	beta-Nicotinamide adenine dinucleotide	259	-0.611	1.0	0.105				C00003	True	-5.8209
+zhu	Met.321	Citric acid	259	-0.1233	0.7413	0.2319				C00158	False	-0.5319
+zhu	Met.384	Flavin Mononucleotide	259	-0.5547	1.0	0.0917				C00061	True	-6.0491
+zhu	Met.385	Flavine adenine dinucleotide (FAD)	259	-0.796	1.0	0.1717				C00016	True	-4.6366
+zhu	Met.387	Formimino-L-Aspartic acid	259	0.1846	0.8726	0.176					True	1.0493
+zhu	Met.409	Glucoalyssin	259	-0.7108	0.9614	2.2654				C08400	True	-0.3138
+zhu	Met.412	Glucohirsutin	259	-0.2618	0.8224	0.4445				C17271	True	-0.5889
+zhu	Met.414	Gluconic acid	259	-0.3803	0.9961	0.0734				C00257	True	-5.1834
+zhu	Met.422	Glutamic acid, N-acetyl-	259	-2.793	1.0	0.1614				C00624	True	-17.3023
+zhu	Met.457	Glutathione	259	-0.4651	0.9807	0.2071				C00051	True	-2.2455
+zhu	Met.486	Guanosine	259	-1.0574	0.9923	0.2771				C00387	True	-3.8153
+zhu	Met.50	2-Isopropylmalic acid	259	-0.7322	0.9768	0.1156				C02504	True	-6.3345
+zhu	Met.545	Leucine	259	4.9195	1.0	0.1652				C00123	True	29.7762
+zhu	Met.563	Kaempferol 3-O-6-O-(rhamnosyl) glucoside 7-O-rhamnoside	259	-0.0905	0.6564	0.8151					False	-0.111
+zhu	Met.564	Kaempferol 3-O-glucoside 7-O-rhamnoside	259	-0.3323	0.8263	0.8183					True	-0.4061
+zhu	Met.570	Lactulose	259	-4.1259	1.0	0.0671				C07064	True	-61.4658
+zhu	Met.571	Isoleucine	259	3.1496	1.0	0.1413				C00407	True	22.2847
+zhu	Met.589	Loganin	259	2.2795	1.0	0.6513				C01433	True	3.4999
+zhu	Met.614	Malic acid	259	-1.1871	1.0	0.0655				C00149	True	-18.127
+zhu	Met.660	N,N-Dimethylglycine	259	-0.5886	1.0	0.0853				C01026	True	-6.8978
+zhu	Met.669	N-Acetyl-L-Tyrosine	259	-1.0799	0.9884	0.3611					True	-2.9909
+zhu	Met.674	Naringin	259	1.4212	0.8842	0.4223				C09789	True	3.3655
+zhu	Met.684	N-Ethylmaleamic acid	259	5.9546	1.0	0.2933					True	20.3002
+zhu	Met.728	Pantothenic acid (Vitamine B5) 	259	1.2628	1.0	0.2728				C00864	True	4.6292
+zhu	Met.73	3-Deoxy-D-manno-2-octulosonic acid	259	-0.5119	1.0	0.1882				C01187	True	-2.7203
+zhu	Met.809	Purine	259	5.1137	1.0	0.1758				C15587	True	29.08
+zhu	Met.817	Pyroglutamic acid	259	1.4302	1.0	0.0783				C01879	True	18.2663
+zhu	Met.819	Quercetin 3,7-dirhamnoside	259	-0.3371	0.7529	0.9541					True	-0.3533
+zhu	Met.821	Quercetin 3-O-glucoside 7-O-rhamnoside	259	-0.5599	0.9112	0.9307					True	-0.6016
+zhu	Met.830	Riboflavin 	259	-1.1137	1.0	0.2089				C00255	True	-5.3321
+zhu	Met.836	Rutin	259	-0.9922	0.9923	0.069				C05625	True	-14.3858
+zhu	Met.837	Saccharic acid	259	-0.0985	0.6795	0.1709				C00818	False	-0.5762
+zhu	Met.846	Sedoheptulose	259	1.4554	1.0	0.1313				C02076	True	11.0831
+zhu	Met.850	Serine	259	-0.2866	0.8301	0.1294				C00065	True	-2.2145
+zhu	Met.876	Sinapoylglucose	259	-0.7302	0.9575	0.454				C01175	True	-1.6084
+zhu	Met.886	Succinoadenosine	259	-0.0024	0.5058	0.3417					False	-0.0071
+zhu	Met.964	Tyrosine	259	5.0599	1.0	0.1957				C00082	True	25.861
+zhu	Met.985	Uric acid	259	0.2533	0.7413	1.0845				C00366	False	0.2336
+zhu	Met.989	Uridine-5'-diphosphogalactose	259	-1.9098	1.0	0.0765				C00052	True	-24.9527
+wu_stress	1-methoxy-3-indolylmethyl-glucosinolate	1-methoxy-3-indolylmethyl-glucosinolate	299	-0.0978	0.5385	1.3898					False	-0.0704
+wu_stress	2,5-dihydroxybenzoic acid 5-O-β-D-glucoside	2,5-dihydroxybenzoic acid 5-O-β-D-glucoside	301	0.2283	0.588	2.4806					False	0.092
+wu_stress	2,5-dihydroxybenzoic acid 5-O-β-D-xyloside	2,5-dihydroxybenzoic acid 5-O-β-D-xyloside	301	-0.0399	0.5216	1.9736					False	-0.0202
+wu_stress	2-Hydroxybenzaldehyde O-[xylosyl-(1->6)-glucoside]	2-Hydroxybenzaldehyde O-[xylosyl-(1->6)-glucoside]	266	-0.0342	0.5263	1.3076					False	-0.0262
+wu_stress	2-Methylpropyl glucosinolate	2-Methylpropyl glucosinolate	284	1.264	0.9261	1.8835				C17256	True	0.6711
+wu_stress	2-Picolinic acid	2-Picolinic acid	301	0.2175	0.7176	1.9713				C10164	False	0.1103
+wu_stress	2-benzoyloxy-3-butenylglucosinolate	2-benzoyloxy-3-butenylglucosinolate	87	-0.7051	0.7701	1.6635					True	-0.4238
+wu_stress	2-hydroxy-3-butenylglucosinolate	2-hydroxy-3-butenylglucosinolate	291	-0.1088	0.5086	5.4133					False	-0.0201
+wu_stress	2-propenyl-glucosinolate	2-propenyl-glucosinolate	209	-0.8907	0.6842	4.3894					False	-0.2029
+wu_stress	2-sinapoyloxy-3-butenylglucosinolate	2-sinapoyloxy-3-butenylglucosinolate	97	1.1288	0.7835	4.1689					True	0.2708
+wu_stress	3-Amino-3-(4-hydroxyphenyl)propanoate	3-Amino-3-(4-hydroxyphenyl)propanoate	301	5.0486	1.0	0.433				C04368	True	11.6602
+wu_stress	3-Methylbutyl glucosinolate	3-Methylbutyl glucosinolate	291	-0.3042	0.6838	1.5865					False	-0.1917
+wu_stress	3-butenylglucosinolate	3-butenylglucosinolate	301	-0.0356	0.5083	5.2382				C08415	False	-0.0068
+wu_stress	3-hydroxypropyl-glucosinolate	3-hydroxypropyl-glucosinolate	79	-0.6589	0.8987	1.1571					True	-0.5695
+wu_stress	3-indolymethyl glucosinolate	3-indolymethyl glucosinolate	301	-0.5109	0.9003	0.5333				C05837	True	-0.9581
+wu_stress	3-methylsulfinylpropyl-glucosinolate	3-methylsulfinylpropyl-glucosinolate	199	-0.9608	0.7286	3.0045				C08411	False	-0.3198
+wu_stress	3-methylthiopropyl-glucosinolate	3-methylthiopropyl-glucosinolate	269	-0.21	0.5688	3.119				C08412	False	-0.0673
+wu_stress	4-hydroxy-3-indolylmethyl-glucosinolate	4-hydroxy-3-indolylmethyl-glucosinolate	99	6.1663	1.0	1.3486					True	4.5725
+wu_stress	4-hydroxybutylglucosinolate	4-hydroxybutylglucosinolate	197	-0.6721	0.7614	2.607					True	-0.2578
+wu_stress	4-methoxy-3-indolylmethyl-glucosinolate	4-methoxy-3-indolylmethyl-glucosinolate	301	0.7674	0.9369	0.7158					True	1.072
+wu_stress	4-methylsulfinylbutyl glucosinolate	4-methylsulfinylbutyl glucosinolate	199	-1.1902	0.9598	2.8542				C08419	True	-0.417
+wu_stress	4-methylthiobutyl glucosinolate	4-methylthiobutyl glucosinolate	264	0.0084	0.5038	4.1105				C08409	False	0.002
+wu_stress	4-pentenylglucosinolate	4-pentenylglucosinolate	192	0.1569	0.5312	4.3812				C08403	False	0.0358
+wu_stress	5-Hydroxy-6-methoxycoumarin 7-glucoside	5-Hydroxy-6-methoxycoumarin 7-glucoside	260	0.0901	0.5538	1.3639					False	0.066
+wu_stress	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside	295	-0.5748	0.7458	1.3204				C04695	False	-0.4353
+wu_stress	5-methylsulfinylpentyl glucosinolate	5-methylsulfinylpentyl glucosinolate	301	0.1352	0.5415	2.9299				C08400	False	0.0461
+wu_stress	5-methylthiopentylglucosinolate	5-methylthiopentylglucosinolate	298	0.5134	0.6309	2.7931				C08401	False	0.1838
+wu_stress	6-Hydroxynicotinic acid	6-Hydroxynicotinic acid	293	0.4978	0.9181	1.5862				C01020	True	0.3138
+wu_stress	6-methylsulfinylhexyl glucosinolate	6-methylsulfinylhexyl glucosinolate	301	-0.3714	0.6611	1.3438					False	-0.2764
+wu_stress	6-methylthiohexylglucosinolate	6-methylthiohexylglucosinolate	301	0.3224	0.6744	1.3543					False	0.2381
+wu_stress	7,8-Dihydroxycoumarin	7,8-Dihydroxycoumarin	251	-0.2068	0.6096	1.8661					False	-0.1108
+wu_stress	7-methylsulfinylheptyl glucosinolate	7-methylsulfinylheptyl glucosinolate	254	-0.1338	0.5354	1.7888					False	-0.0748
+wu_stress	7-methylthioheptyl glucosinolate	7-methylthioheptyl glucosinolate	270	0.248	0.6259	1.7941				C17252	False	0.1383
+wu_stress	8-Methylsulfinyloctyl glucosinolate	8-Methylsulfinyloctyl glucosinolate	301	-0.0969	0.588	0.6566				C17271	False	-0.1477
+wu_stress	8-Methylthiooctyl glucosinolate	8-Methylthiooctyl glucosinolate	301	0.0087	0.5083	1.0022				C17254	False	0.0087
+wu_stress	Adenine	Adenine	301	-0.8972	0.9302	0.7548				C00147	True	-1.1887
+wu_stress	Adenosine	Adenosine	301	-1.3214	0.9734	0.4075				C00212	True	-3.2423
+wu_stress	Adenosine 5'-monophosphate	Adenosine 5'-monophosphate	301	-0.5228	0.8771	0.3736				C00020	True	-1.3991
+wu_stress	Apigenin-7-O-glucoside	Apigenin-7-O-glucoside	301	0.419	0.8206	0.6171				C04608	True	0.679
+wu_stress	Arginine	Arginine	301	2.3387	1.0	1.0779				C00062	True	2.1697
+wu_stress	Ascorbic acid	Ascorbic acid	274	-1.6071	0.9161	1.2143				C00072	True	-1.3234
+wu_stress	Benzyl glucosinolate	Benzyl glucosinolate	300	0.3635	0.7267	1.4128				C02153	False	0.2573
+wu_stress	Citric acid	Citric acid	301	-0.0279	0.5017	1.0276				C00158	False	-0.0272
+wu_stress	Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl) p-coumaroyl) glucoside] 5-O-glucoside	Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl) p-coumaroyl) glucoside] 5-O-glucoside	299	-0.0737	0.5217	1.4908					False	-0.0494
+wu_stress	Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-coumaroyl) glucoside] 5-O-[6''''-O-(malonyl) glucoside]	Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-coumaroyl) glucoside] 5-O-[6''''-O-(malonyl) glucoside]	286	-2.1062	0.8357	2.0522					True	-1.0263
+wu_stress	Cyanidin 3-O-[2''-O-(6'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl)-p-coumaroyl) glucoside] 5-O-(6''''-O-malonyl) glucoside	Cyanidin 3-O-[2''-O-(6'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl)-p-coumaroyl) glucoside] 5-O-(6''''-O-malonyl) glucoside	299	1.9011	0.9666	1.1732					True	1.6204
+wu_stress	D-Aspartic acid	D-Aspartic acid	301	-0.4339	0.9203	0.2381				C00402	True	-1.8223
+wu_stress	Flavine adenine dinucleotide	Flavine adenine dinucleotide	300	0.2839	0.6867	0.4613				C00016	False	0.6156
+wu_stress	Fragment of tyramine	Fragment of tyramine	301	-0.5777	0.8472	0.8813					True	-0.6555
+wu_stress	Glutathione	Glutathione	301	0.0413	0.5415	0.5838				C00051	False	0.0707
+wu_stress	Guanosine	Guanosine	301	-0.9333	0.897	0.9646				C00387	True	-0.9675
+wu_stress	Indole-3-lactic acid	Indole-3-lactic acid	301	1.0036	0.9435	0.8411				C02043	True	1.1932
+wu_stress	Isoleucine	Isoleucine	301	4.4238	1.0	0.4388				C00407	True	10.0814
+wu_stress	Kaempferol 3-O-glucoside 7-O-rhamnoside	Kaempferol 3-O-glucoside 7-O-rhamnoside	301	-0.4482	0.8439	0.8937					True	-0.5015
+wu_stress	Kaempferol 3-O-rhamnoside 7-O-rhamnoside	Kaempferol 3-O-rhamnoside 7-O-rhamnoside	301	0.2073	0.701	0.6216					False	0.3335
+wu_stress	L-Glutamic acid	L-Glutamic acid	301	-0.5046	0.9668	0.2296				C00025	True	-2.198
+wu_stress	L-Glutamine	L-Glutamine	301	-0.0197	0.505	0.4861				C00064	False	-0.0406
+wu_stress	L-Tryptophan	L-Tryptophan	301	5.4098	1.0	0.4976				C00078	True	10.8728
+wu_stress	Leucine	Leucine	301	4.7397	1.0	0.4359				C00123	True	10.873
+wu_stress	Methionine	Methionine	301	0.118	0.588	0.5545				C00073	False	0.2128
+wu_stress	N-Acetyl-D-phenylalanine	N-Acetyl-D-phenylalanine	301	-0.2166	0.6512	1.0575				C05620	False	-0.2048
+wu_stress	Naringin	Naringin	298	0.3647	0.8121	0.8877				C09789	True	0.4108
+wu_stress	Nicotinamide	Nicotinamide	301	-1.3219	0.9169	1.107				C00153	True	-1.1941
+wu_stress	Nicotinamide adenine dinucleotide phosphate	Nicotinamide adenine dinucleotide phosphate	275	-1.3866	0.8909	1.0427				C00006	True	-1.3298
+wu_stress	Nicotinate D-ribonucleoside	Nicotinate D-ribonucleoside	285	-0.0851	0.5789	2.0055				C05841	False	-0.0424
+wu_stress	O-Acetyl-L-Homoserine	O-Acetyl-L-Homoserine	301	-1.4544	0.9967	0.4786				C01077	True	-3.0391
+wu_stress	Pantothenic acid (Vitamine B5)	Pantothenic acid (Vitamine B5)	301	2.0224	1.0	0.4993				C00864	True	4.0507
+wu_stress	Pipecolic Acid	Pipecolic Acid	297	1.1828	0.8249	1.8164				C00408	True	0.6512
+wu_stress	Proline	Proline	301	-0.4758	0.7508	0.8236				C00148	True	-0.5777
+wu_stress	Quercetin 3-O-[2''-O-(rhamnosyl) glucoside] 7-O-rhamnoside	Quercetin 3-O-[2''-O-(rhamnosyl) glucoside] 7-O-rhamnoside	301	-0.1112	0.5615	1.0167					False	-0.1093
+wu_stress	Quercetin 3-O-glucoside 7-O-rhamnoside	Quercetin 3-O-glucoside 7-O-rhamnoside	301	-0.633	0.814	1.2127					True	-0.522
+wu_stress	Quercitrin	Quercitrin	298	-1.9709	0.9899	1.0481				C01750	True	-1.8804
+wu_stress	Riboflavin	Riboflavin	301	-0.1577	0.6478	0.4753				C00255	False	-0.3317
+wu_stress	Rutin	Rutin	301	-0.633	0.814	1.2127				C05625	True	-0.522
+wu_stress	Salicylic acid beta-D-glucoside	Salicylic acid beta-D-glucoside	301	0.9884	0.907	1.1377					True	0.8687
+wu_stress	Scopoletin	Scopoletin	301	-0.4408	0.7973	0.9722				C01752	True	-0.4534
+wu_stress	Succinoadenosine	Succinoadenosine	301	-0.895	0.9867	0.4902					True	-1.8258
+wu_stress	Uric acid	Uric acid	301	0.5581	0.8206	1.4453				C00366	True	0.3862
+wu_stress	Valine	Valine	301	2.4913	1.0	0.3813				C00183	True	6.5342
+wu_stress	alpha-Ketoglutaric acid	alpha-Ketoglutaric acid	301	0.1145	0.5914	0.875				C00026	False	0.1309
+wu_stress	beta-Nicotinamide adenine dinucleotide	beta-Nicotinamide adenine dinucleotide	301	-0.0032	0.505	0.4219				C00003	False	-0.0076
+wu_stress	cis-Aconitic acid	cis-Aconitic acid	301	0.1347	0.5714	0.9056				C00417	False	0.1488
+wu_stress	gamma-L-Glutamyl-L-cysteine	gamma-L-Glutamyl-L-cysteine	301	2.3933	1.0	0.6405				C00669	True	3.7368
+caldana	PN_183	L-(-)-Malic acid	18	-0.5798		0.1968	0.0008	C00149	24.8903	C00149	True	-2.9457
+caldana	PN_75	Maleic acid	18	-0.7458		0.2375	0.0008	C01384	23.8326	C01384	True	-3.1405
+caldana	PP_151	Valine	18	0.9006		0.2102	0.0	C00183	23.5735	C00183	True	4.284
+caldana	PP_518	L-Glutamic acid	18	0.0805		0.1039	0.3365	C00025	23.428	C00025	False	0.7749
+caldana	PP_322	L-Isoleucine	18	2.1714		0.3715	0.0	C00407	23.0037	C00407	True	5.8452
+caldana	PP_323	L-Leucine	18	2.4041		0.4516	0.0	C00123	22.909	C00123	True	5.3235
+caldana	PP_49	Choline	18	0.0048		0.1198	0.9464	C00114	22.7769	C00114	False	0.0398
+caldana	PP_2471	2'-Deoxyguanosine	18	-0.9098		0.28	0.0012	C00330	22.4539	C00330	True	-3.2492
+caldana	PN_1888	D-Maltose	18	-1.231		0.1114	0.001	C00208	22.2085	C00208	True	-11.0501
+caldana	PP_341	L-Asparagine	18	1.5135		0.2682	0.0001	C00152	21.5195	C00152	True	5.6442
+caldana	PP_1080	Tyrosine	18	2.3627		0.5233	0.0	C00082	21.3432	C00082	True	4.5146
+caldana	PP_169	Allothreonine	18	-0.364		0.4657	0.0677	C05519	20.5818	C05519	False	-0.7815
+caldana	PP_951	L-Arginine	18	2.5772		0.4511	0.0	C00062	20.4465	C00062	True	5.7128
+caldana	PN_616	p-Coumaric acid	18	-0.1392		0.2598	0.4496	C00811	19.703	C00811	False	-0.5356
+caldana	PN_245	alpha-Ketoglutaric acid	18	-0.7254		0.2431	0.0033	C00026	19.4976	C00026	True	-2.9836
+caldana	PP_2650	Guanosine	18	-0.361		0.3407	0.062	C00387	19.2671	C00387	False	-1.0596
+caldana	PP_1756	Pantothenic acid (Vitamine B5)	18	0.2542		0.2188	0.0191	C00864	19.0447	C00864	True	1.1618
+caldana	PP_640	Histidine	18	1.5033		0.2615	0.0	C00135	18.6296	C00135	True	5.7486
+caldana	PN_266	2-Oxobutyric acid	18	-0.2526		0.1187	0.035	C00109	18.4565	C00109	True	-2.1285
+caldana	PP_486	4-Guanidinobutyric acid	18	0.0011		0.482	0.9956	C01035	18.3938	C01035	False	0.0023
+caldana	PP_986	L-Citrulline	18	-2.4625		0.4899	0.0	C00327	18.0257	C00327	True	-5.0265
+caldana	PP_2812	5'-Deoxy-5'-(methylthio)adenosine	18	-0.0536		0.2158	0.58	C00170	17.9477	C00170	False	-0.2486
+caldana	PN_276	beta-Hydoxypyruvic acid	18	-0.7325		0.2286	0.0034	C00168	17.9299	C00168	True	-3.2042
+caldana	PN_2942	Maltotriose	18	-0.3302		0.5047	0.2728	C01835	17.7891	C01835	False	-0.6542
+caldana	PP_2142	Cytidine	18	-0.0893		0.3794	0.6105	C00475	17.596	C00475	False	-0.2354
+caldana	PN_833	alpha-L-Fucose 1-phosphate	18	-0.0167		0.3151	0.9216	C02985	17.5362	C02985	False	-0.0531
+caldana	PP_740	D-2-Aminoadipic acid	18	0.7894		0.4675	0.0209	C00956	17.3139	C00956	True	1.6887
+caldana	PP_683	Allantoin	18	0.4598		0.7309	0.1461	C02348	16.6255	C02348	False	0.6291
+caldana	PN_506	Citric acid	18	-0.7272		0.2787	0.0061	C00158	16.3606	C00158	True	-2.6096
+caldana	PN_712	allo-Inositol OR chiro-Inositol 	18	-0.453		0.1452	0.0206	C00137	16.3374	C00137	True	-3.1193
+caldana	PP_47	N,N-Dimethylglycine	18	0.9254		0.4178	0.0002	C01026	16.1201	C01026	True	2.2151
+caldana	PN_247	Adipic acid	18	-0.1849		0.1565	0.0146	C06104	16.0306	C06104	True	-1.1816
+caldana	PP_104	Hydroxymethylphosphonic acid	14	0.0565		0.1948	0.6639	C06455	15.9039	C06455	False	0.2899
+caldana	PP_1842	3,5-Dimethoxy-4-hydroxycinnamic acid	15	-0.533		0.4532	0.0216	C00482	15.82	C00482	True	-1.1761
+caldana	PP_1772	5-Hydroxy-L-tryptophan	17	-0.0922		0.2173	0.3808	C00643	15.4831	C00643	False	-0.4242
+caldana	PN_926	D-Fructose 1-phosphate	17	-0.8259		0.5806	0.0298	C01094	15.3856	C01094	True	-1.4223

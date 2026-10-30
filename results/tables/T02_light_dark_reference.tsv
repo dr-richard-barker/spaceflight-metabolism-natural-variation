@@ -1,0 +1,98 @@
+kegg_id	name	sources	qualifying	status	direction	reference_z	zhu_effect	wu_stress_effect	caldana_effect	zhu_frac_same	wu_stress_frac_same	caldana_p
+C01026	N,N-Dimethylglycine	caldana,zhu	caldana,zhu	conflicting	0	0	-0.589		0.925	1		0.0001563
+C00064	L-Glutamine	wu_stress		none	0	0		-0.02			0.505	
+C00073	Methionine	wu_stress		none	0	0		0.118			0.588	
+C00114	Choline	caldana		none	0	0			0.005			0.9464
+C00170	5'-Deoxy-5'-(methylthio)adenosine	caldana		none	0	0			-0.054			0.58
+C00417	cis-Aconitic acid	wu_stress		none	0	0		0.135			0.571	
+C00475	Cytidine	caldana		none	0	0			-0.089			0.6105
+C00643	5-Hydroxy-L-tryptophan	caldana		none	0	0			-0.092			0.3808
+C00811	p-Coumaric acid	caldana		none	0	0			-0.139			0.4496
+C00818	Saccharic acid	zhu		none	0	0	-0.098			0.68		
+C01035	4-Guanidinobutyric acid	caldana		none	0	0			0.001			0.9956
+C01835	Maltotriose	caldana		none	0	0			-0.33			0.2728
+C02153	Benzyl glucosinolate	wu_stress		none	0	0		0.364			0.727	
+C02348	Allantoin	caldana		none	0	0			0.46			0.1461
+C02985	alpha-L-Fucose 1-phosphate	caldana		none	0	0			-0.017			0.9216
+C04695	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside	wu_stress		none	0	0		-0.575			0.746	
+C05519	Allothreonine	caldana		none	0	0			-0.364			0.06772
+C05620	N-Acetyl-D-phenylalanine	wu_stress		none	0	0		-0.217			0.651	
+C05841	Nicotinate D-ribonucleoside	wu_stress		none	0	0		-0.085			0.579	
+C06455	Hydroxymethylphosphonic acid	caldana		none	0	0			0.056			0.6639
+C08401	5-methylthiopentylglucosinolate	wu_stress		none	0	0		0.513			0.631	
+C08403	4-pentenylglucosinolate	wu_stress		none	0	0		0.157			0.531	
+C08409	4-methylthiobutyl glucosinolate	wu_stress		none	0	0		0.008			0.504	
+C08411	3-methylsulfinylpropyl-glucosinolate	wu_stress		none	0	0		-0.961			0.729	
+C08412	3-methylthiopropyl-glucosinolate	wu_stress		none	0	0		-0.21			0.569	
+C08415	3-butenylglucosinolate	wu_stress		none	0	0		-0.036			0.508	
+C10164	2-Picolinic acid	wu_stress		none	0	0		0.217			0.718	
+C17252	7-methylthioheptyl glucosinolate	wu_stress		none	0	0		0.248			0.626	
+C17254	8-Methylthiooctyl glucosinolate	wu_stress		none	0	0		0.009			0.508	
+C15587	Purine	zhu	zhu	robust	1	29.08	5.114			1		
+C01879	Pyroglutamic acid	zhu	zhu	robust	1	18.27	1.43			1		
+C00123	Leucine	caldana,wu_stress,zhu	caldana,wu_stress,zhu	robust	1	15.32	4.919	4.74	2.404	1	1	2.948e-08
+C00082	Tyrosine	caldana,zhu	caldana,zhu	robust	1	15.19	5.06		2.363	1		1.76e-06
+C00407	Isoleucine	caldana,wu_stress,zhu	caldana,wu_stress,zhu	robust	1	12.74	3.15	4.424	2.171	1	1	2.692e-07
+C04368	3-Amino-3-(4-hydroxyphenyl)propanoate	wu_stress	wu_stress	robust	1	11.66		5.049			1	
+C00499	Allantoic acid	zhu	zhu	robust	1	11.33	4.014			1		
+C02076	Sedoheptulose	zhu	zhu	robust	1	11.08	1.455			1		
+C00078	L-Tryptophan	wu_stress	wu_stress	robust	1	10.87		5.41			1	
+C00183	Valine	caldana,wu_stress	caldana,wu_stress	robust	1	5.409		2.491	0.901		1	4.324e-05
+C00062	Arginine	caldana,wu_stress	caldana,wu_stress	robust	1	3.941		2.339	2.577		1	1.752e-06
+C00669	gamma-L-Glutamyl-L-cysteine	wu_stress	wu_stress	robust	1	3.737		2.393			1	
+C01433	Loganin	zhu	zhu	robust	1	3.5	2.28			1		
+C00864	Pantothenic acid (Vitamine B5) 	caldana,wu_stress,zhu	caldana,wu_stress,zhu	robust	1	3.281	1.263	2.022	0.254	1	1	0.01909
+C09789	Naringin	wu_stress,zhu	wu_stress,zhu	robust	1	1.888	1.421	0.365		0.884	0.812	
+C02043	Indole-3-lactic acid	wu_stress	wu_stress	robust	1	1.193		1.004			0.944	
+C17256	2-Methylpropyl glucosinolate	wu_stress	wu_stress	robust	1	0.671		1.264			0.926	
+C01020	6-Hydroxynicotinic acid	wu_stress	wu_stress	robust	1	0.314		0.498			0.918	
+C08400	Glucoalyssin	wu_stress,zhu	zhu	robust	-1	-0.314	-0.711	0.135		0.961	0.542	
+C08419	4-methylsulfinylbutyl glucosinolate	wu_stress	wu_stress	robust	-1	-0.417		-1.19			0.96	
+C05837	3-indolymethyl glucosinolate	wu_stress	wu_stress	robust	-1	-0.958		-0.511			0.9	
+C00147	Adenine	wu_stress	wu_stress	robust	-1	-1.189		-0.897			0.93	
+C00153	Nicotinamide	wu_stress	wu_stress	robust	-1	-1.194		-1.322			0.917	
+C00072	Ascorbic acid	wu_stress	wu_stress	robust	-1	-1.323		-1.607			0.916	
+C01175	Sinapoylglucose	zhu	zhu	robust	-1	-1.608	-0.73			0.958		
+C00402	D-Aspartic acid	wu_stress	wu_stress	robust	-1	-1.822		-0.434			0.92	
+C01750	Quercitrin	wu_stress	wu_stress	robust	-1	-1.88		-1.971			0.99	
+C00025	L-Glutamic acid	caldana,wu_stress	wu_stress	robust	-1	-2.198		-0.505	0.08		0.967	0.3365
+C00051	Glutathione	wu_stress,zhu	zhu	robust	-1	-2.246	-0.465	0.041		0.981	0.542	
+C00387	Guanosine	caldana,wu_stress,zhu	wu_stress,zhu	robust	-1	-2.391	-1.057	-0.933	-0.361	0.992	0.897	0.062
+C01187	3-Deoxy-D-manno-2-octulosonic acid	zhu	zhu	robust	-1	-2.72	-0.512			1		
+C01077	O-Acetyl-L-Homoserine	wu_stress	wu_stress	robust	-1	-3.039		-1.454			0.997	
+C00212	Adenosine	wu_stress	wu_stress	robust	-1	-3.242		-1.321			0.973	
+C00016	Flavine adenine dinucleotide (FAD)	wu_stress,zhu	zhu	robust	-1	-4.637	-0.796	0.284		1	0.687	
+C00257	Gluconic acid	zhu	zhu	robust	-1	-5.183	-0.38			0.996		
+C00255	Riboflavin 	wu_stress,zhu	zhu	robust	-1	-5.332	-1.114	-0.158		1	0.648	
+C00003	beta-Nicotinamide adenine dinucleotide	wu_stress,zhu	zhu	robust	-1	-5.821	-0.611	-0.003		1	0.505	
+C00061	Flavin Mononucleotide	zhu	zhu	robust	-1	-6.049	-0.555			1		
+C02504	2-Isopropylmalic acid	zhu	zhu	robust	-1	-6.334	-0.732			0.977		
+C05625	Rutin	wu_stress,zhu	wu_stress,zhu	robust	-1	-7.454	-0.992	-0.633		0.992	0.814	
+C00026	alpha-Ketoglutaric acid	caldana,wu_stress,zhu	caldana,zhu	robust	-1	-7.851	-1.683	0.115	-0.725	0.996	0.591	0.003301
+C00149	Malic acid	caldana,zhu	caldana,zhu	robust	-1	-10.54	-1.187		-0.58	1		0.0007841
+C00624	Glutamic acid, N-acetyl-	zhu	zhu	robust	-1	-17.3	-2.793			1		
+C00052	Uridine-5'-diphosphogalactose	zhu	zhu	robust	-1	-24.95	-1.91			1		
+C07064	Lactulose	zhu	zhu	robust	-1	-61.47	-4.126			1		
+C00135	Histidine	caldana	caldana	single	1	5.749			1.503			3.974e-05
+C00152	L-Asparagine	caldana	caldana	single	1	5.644			1.514			0.0001404
+C00956	D-2-Aminoadipic acid	caldana	caldana	single	1	1.689			0.789			0.02088
+C04608	Apigenin-7-O-glucoside	wu_stress	wu_stress	single	1	0.679		0.419			0.821	
+C00408	Pipecolic Acid	wu_stress	wu_stress	single	1	0.651		1.183			0.825	
+C00366	Uric acid	wu_stress,zhu	wu_stress	single	1	0.386	0.253	0.558		0.741	0.821	
+C01752	Scopoletin	wu_stress	wu_stress	single	-1	-0.453		-0.441			0.797	
+C00148	Proline	wu_stress	wu_stress	single	-1	-0.578		-0.476			0.751	
+C17271	Glucohirsutin	wu_stress,zhu	zhu	single	-1	-0.589	-0.262	-0.097		0.822	0.588	
+C00482	3,5-Dimethoxy-4-hydroxycinnamic acid	caldana	caldana	single	-1	-1.176			-0.533			0.02159
+C06104	Adipic acid	caldana	caldana	single	-1	-1.182			-0.185			0.01456
+C00006	Nicotinamide adenine dinucleotide phosphate	wu_stress	wu_stress	single	-1	-1.33		-1.387			0.891	
+C00020	Adenosine 5'-monophosphate	wu_stress	wu_stress	single	-1	-1.399		-0.523			0.877	
+C01094	D-Fructose 1-phosphate	caldana	caldana	single	-1	-1.422			-0.826			0.02984
+C00109	2-Oxobutyric acid	caldana	caldana	single	-1	-2.129			-0.253			0.03496
+C00065	Serine	zhu	zhu	single	-1	-2.214	-0.287			0.83		
+C00158	Citric acid	caldana,wu_stress,zhu	caldana	single	-1	-2.61	-0.123	-0.028	-0.727	0.741	0.502	0.00612
+C00137	allo-Inositol OR chiro-Inositol 	caldana	caldana	single	-1	-3.119			-0.453			0.02057
+C01384	Maleic acid	caldana	caldana	single	-1	-3.14			-0.746			0.0007712
+C00168	beta-Hydoxypyruvic acid	caldana	caldana	single	-1	-3.204			-0.733			0.003398
+C00330	2'-Deoxyguanosine	caldana	caldana	single	-1	-3.249			-0.91			0.001215
+C00327	L-Citrulline	caldana	caldana	single	-1	-5.027			-2.462			7.298e-06
+C00208	D-Maltose	caldana	caldana	single	-1	-11.05			-1.231			0.0009845

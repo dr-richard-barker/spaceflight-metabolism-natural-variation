@@ -1,0 +1,7 @@
+OSD-522 (BRIC-LED-001) Arabidopsis shoots — Space Flight vs Ground Control
+source:   NASA OSDR GLDS-522_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv
+design:   6 Space Flight vs 6 Ground Control, all Plant Shoots (from runsheet)
+filter:   genes with total count >= 10 across all samples
+method:   PyDESeq2 0.4.12 — DESeq2 negative-binomial model, median-of-ratios size factors, dispersion shrinkage, Wald test, BH FDR
+contrast: FLT_vs_GC = log2(Space Flight / Ground Control)
+relevant: FDR < 0.05 (1795 genes: 936 up, 859 down)

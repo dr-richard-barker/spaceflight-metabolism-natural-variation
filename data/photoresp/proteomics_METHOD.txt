@@ -1,0 +1,8 @@
+OSD-522 (BRIC-LED-001) Arabidopsis shoots — proteome, Space Flight vs Ground Control
+source:   NASA OSDR GLDS-522_proteomics_GO_Shoot_SOL_Report_20220223_Proteins.csv, GLDS-522_proteomics_GO_Shoot_MEM_Report_20220223_Proteins.csv
+values:   the deposited 'S/G_Log2_ratio' column, used as-is — no statistics recomputed
+fractions: shoot soluble + shoot membrane merged; on collision the row with the
+           smaller adjusted p-value was kept (see proteomics_RECONCILIATION.log)
+ids:      UniProt accessions; PaintOmics maps them to Entrez itself
+contrast: FLT_vs_GC = log2(Space Flight / Ground Control)
+relevant: deposited 'S/G_Adj_ P-Value' < 0.05 (2144 proteins: 903 up, 1241 down)

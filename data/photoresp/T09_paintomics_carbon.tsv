@@ -1,0 +1,19 @@
+# PaintOmics AI job oK2h66740Q — OSD-522 (BRIC-LED-001) Arabidopsis shoots, Space Flight vs Ground Control
+# organism ath; databases KEGG + MapMan; AI interpretation off
+# 3 omics: gene expression (real, OSDR), proteomics (real, OSDR), metabolomics (PREDICTED, model output)
+# The carbon pathways the model made claims about, significant or not.
+# Glyoxylate and dicarboxylate metabolism (photorespiration) ranks 214 of 232 by combined p,
+# at p = 0.99367: in the bottom 8% but NOT last — 18 pathways rank below it.
+# Derived from results/paintomics_raw/ by scripts/06_paintomics_tables.py.
+db	pathway	features	unique_metabolites	p_gene	p_protein	p_metabolite	p_combined_fisher	fdr_bh	predicted	outcome
+K	Photosynthesis	72	0	0.10688	0.00944	-	0.00797	0.14227	down	p < 0.05 uncorrected; not FDR-significant
+K	Starch and sucrose metabolism	144	5	0.01213	0.64420	0.06325	0.01857	0.20520	down	p < 0.05 uncorrected; not FDR-significant
+K	Photosynthesis - antenna proteins	21	0	0.81535	0.00396	-	0.02174	0.22921	down	p < 0.05 uncorrected; not FDR-significant
+M	photosynthesis	1724	0	0.97784	0.00586	-	0.03531	0.30344	down	p < 0.05 uncorrected; not FDR-significant
+K	Nitrogen metabolism	30	3	0.02461	0.34569	0.68421	0.11287	0.59058	not predicted	ns
+K	Glycolysis / Gluconeogenesis	111	4	0.48929	0.10926	0.37143	0.25018	0.96734	not predicted	ns
+K	Biosynthesis of amino acids	223	10	0.19576	0.95582	0.39164	0.51505	1.00000	not predicted	ns
+K	Carbon fixation by Calvin cycle	68	2	0.89980	0.35819	0.37143	0.64351	1.00000	down	NOT significant
+M	Plant glycolysis	5272	0	0.98785	0.39162	-	0.75426	1.00000	not predicted	ns
+K	Carbon metabolism	259	13	0.85126	0.77001	1.00000	0.99082	1.00000	not predicted	ns
+K	Glyoxylate and dicarboxylate metabolism	77	12	0.71942	0.96182	1.00000	0.99367	1.00000	no change	confirmed, not enriched

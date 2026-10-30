@@ -1,0 +1,30 @@
+# Predicted metabolite pools for OSD-522 (BRIC-LED-001).
+# EVERY VALUE IS MODEL OUTPUT — NOT MEASURED. OSDR has no plant metabolomics.
+# KEGG IDs retrieved from rest.kegg.jp on 2026-09-08.
+kegg_id	compound	driver	tier	log2FC_FLT_vs_GC	log2FC_BRIC_vs_VENTED	status	basis
+C00988	2-Phosphoglycolate	Vo	1	+0.003488	+0.239187	PREDICTED	First product of Rubisco oxygenation
+C00160	Glycolate	Vo	1	+0.003488	+0.239187	PREDICTED	2-PG dephosphorylated by PGLP1; exported to peroxisome
+C00048	Glyoxylate	Vo	1	+0.003488	+0.239187	PREDICTED	Glycolate oxidised by GOX in the peroxisome
+C00037	Glycine	Vo	1	+0.003488	+0.239187	PREDICTED	Glyoxylate transaminated; the C2 cycle's mitochondrial input
+C00065	L-Serine	Vo	1	+0.003488	+0.239187	PREDICTED	Product of the GDC/SHMT reaction, 2 Gly -> 1 Ser
+C00168	Hydroxypyruvate	Vo	1	+0.003488	+0.239187	PREDICTED	Serine transaminated in the peroxisome
+C00258	D-Glycerate	Vo	1	+0.003488	+0.239187	PREDICTED	Hydroxypyruvate reduced by HPR1; returns to chloroplast
+C00014	Ammonia	Vo	1	+0.003488	+0.239187	PREDICTED	Photorespiratory NH3 release at glycine decarboxylase
+C00197	3-Phospho-D-glycerate	A	1	-0.130520	-2.810755	PREDICTED	First stable product of carboxylation
+C00089	Sucrose	A	1	-0.130520	-2.810755	PREDICTED	Principal export product of net assimilation
+C00031	D-Glucose	A	1	-0.130520	-2.810755	PREDICTED	Hexose pool fed by sucrose cleavage
+C00095	D-Fructose	A	1	-0.130520	-2.810755	PREDICTED	Hexose pool fed by sucrose cleavage
+C00208	Maltose	A	1	-0.130520	-2.810755	PREDICTED	Product of nocturnal starch turnover
+C00369	Starch	A	1	-0.130520	-2.810755	PREDICTED	Transitory reserve; fills from surplus assimilate
+C01182	D-Ribulose 1,5-bisphosphate	RuBP	2	+0.036533	+1.545920	PREDICTED	Substrate upstream of a CO2-limited Rubisco; accumulates as carboxylation is substrate-limited rather than RuBP-limited (model reports the limiting process)
+C00152	L-Asparagine	starvation	2	+0.130520	+2.810755	PREDICTED	Canonical carbon-starvation amino acid; ASN1/DIN6 is the marker gene of the SnRK1 low-energy response, driven here by the assimilation deficit
+C00183	L-Valine	starvation	2	+0.130520	+2.810755	PREDICTED	Branched-chain amino acid released by protein turnover and catabolised for energy under carbon limitation
+C00123	L-Leucine	starvation	2	+0.130520	+2.810755	PREDICTED	Branched-chain amino acid, as L-Valine
+C00407	L-Isoleucine	starvation	2	+0.130520	+2.810755	PREDICTED	Branched-chain amino acid, as L-Valine
+C00064	L-Glutamine	starvation	2	+0.130520	+2.810755	PREDICTED	N re-assimilation pool; rises as protein turnover outpaces growth demand
+C00025	L-Glutamate	starvation	2	+0.130520	+2.810755	PREDICTED	Amino donor for photorespiratory transamination and the hub of N remobilisation
+#
+# Considered and deliberately excluded:
+# - Citrate / Malate / Succinate / Fumarate / 2-Oxoglutarate (TCA): The model does not resolve respiratory flux, and carbon limitation can either deplete these pools (oxidised for energy) or raise them (anaplerosis from amino acid catabolism). Direction genuinely uncertain, so no value is asserted.
+# - Ethanol / Lactate / Alanine (fermentation): Fermentation needs hypoxia. LunarLeaf-CFD T8 puts BRIC O2 depletion at 6.5 days and only in DARK canisters; OSD-522 is BRIC-LED, illuminated, where photosynthesis releases O2. No hypoxia is predicted, so no fermentation products are predicted.
+# - Glycine/Serine ratio: Both pools are tied to the same flux Vo, so under this model the ratio does not move. Reporting it as a photorespiration readout here would be circular.

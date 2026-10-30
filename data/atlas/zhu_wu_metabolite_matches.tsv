@@ -1,0 +1,42 @@
+metabolite_id	name	metabolite_name	formula	drt	name_match	metabolite_class
+Met.193	Allantoic acid	Allantoic acid	C4H8N4O4	0.004557201000000011	True	Organic acid
+Met.457	Glutathione	Glutathione	C10H17N3O6S	0.01743583900000001	True	Antioxidant
+Met.674	Naringin	Naringin	C27H32O14	0.035232847999999706	True	Flavonoid
+Met.413	Glucoiberin	3-methylsulfinylpropyl-glucosinolate	C11H21NO10S3	0.036360705999999965	True	Glucosinolate
+Met.74	3-Hydroxy-3-Methylglutaric acid	3-Hydroxy-3-methylglutaric acid	C6H10O5	0.03669851799999968	True	Organic acid
+Met.126	6-Hydroxynicotinic acid	6-Hydroxynicotinic acid	C6H5NO3	0.03738785899999986	True	Organic acid
+Met.421	Glutamic acid	L-Glutamic acid	C5H9NO4	0.03855039400000004	True	Amino acid
+Met.261	Aspartic acid	D-Aspartic acid	C4H7NO4	0.04003184100000001	True	Organic acid
+Met.964	Tyrosine	Tyrosine	C9H11NO3	0.04529553700000011	True	Amino acid
+Met.503	Histidine	Histidine	C6H9N3O2	0.06094764099999994	True	Amino acid
+Met.136	adenine	Adenine	C5H5N5	0.07161887699999991	True	Nucleobase
+Met.412	Glucohirsutin	8-Methylsulfinyloctyl glucosinolate	C16H31NO10S3	0.07343474899999958	True	Glucosinolate
+Met.622	Methionine	Methionine	C5H11NO2S	0.07903662899999997	True	Amino acid
+Met.886	Succinoadenosine	Succinoadenosine	C14H17N5O8	0.08000000000000007	True	Nucleoside derivative
+Met.565	Kaempferol 3-O-rhamnoside 7-O-rhamnoside	Kaempferol 3-O-rhamnoside 7-O-rhamnoside	C27H30O14	0.08331824399999999	True	Flavonoid
+Met.821	Quercetin 3-O-glucoside 7-O-rhamnoside	Quercetin 3-O-glucoside 7-O-rhamnoside	C27H30O16	0.09671199699999988	True	Flavonoid
+Met.564	Kaempferol 3-O-glucoside 7-O-rhamnoside	Kaempferol 3-O-glucoside 7-O-rhamnoside	C27H30O15	0.09695959200000015	True	Flavonoid
+Met.146	Adenosine 5'-monophosphate	Adenosine 5'-monophosphate	C10H14N5O7P	0.0990126790000001	True	Nucleotide
+Met.830	Riboflavin 	Riboflavin	C17H20N4O6	0.09953435099999997	True	Vitamin
+Met.409	Glucoalyssin	5-methylsulfinylpentyl glucosinolate	C13H25NO10S3	0.10683504499999996	True	Glucosinolate
+Met.728	Pantothenic acid (Vitamine B5) 	Pantothenic acid (Vitamine B5)	C9H17NO5	0.1139203900000001	True	Organic acid
+Met.321	Citric acid	Citric acid	C6H8O7	0.11766006799999995	True	Organic acid
+Met.694	Nicotinamide adenine dinucleotide phosphate (NADP)	Nicotinamide adenine dinucleotide phosphate	C21H28N7O17P3	0.12034332599999997	True	Nucleoside derivative
+Met.410	Glucobrassicin	3-indolymethyl glucosinolate	C16H20N2O9S2	0.12449430299999964	True	Glucosinolate
+Met.985	Uric acid	Uric acid	C5H4N4O3	0.13600085100000014	True	Amine
+Met.138	Adenosine	Adenosine	C10H13N5O4	0.14224284799999998	True	Nucleoside
+Met.545	Leucine	Leucine	C6H13NO2	0.1466941610000001	True	Amino acid
+Met.486	Guanosine	Guanosine	C10H13N5O5	0.15390025200000013	True	Nucleoside
+Met.571	Isoleucine	Isoleucine	C6H13NO2	0.16065074300000015	True	Amino acid
+Met.385	Flavine adenine dinucleotide (FAD)	Flavine adenine dinucleotide	C27H31N9Na2O15P2	0.16188013399999956	True	Cofactor
+Met.840	S-Adenosyl-L-Homocysteine	S-Adenosyl-L-Homocysteine	C14H20N6O5S	0.17860769099999985	True	Amino acid and derivative
+Met.943	Tryptophan	L-Tryptophan	C11H12N2O2	0.19763017600000055	True	Amino acid
+Met.665	N-Acetyl-D-Phenylalanine	N-Acetyl-D-phenylalanine	C11H13NO3	0.19919999999999938	True	Amino acid
+Met.986	Uridine	Uridine	C9H12N2O6	0.22773354000000023	True	Nucleoside
+Met.300	beta-Nicotinamide adenine dinucleotide	beta-Nicotinamide adenine dinucleotide	C21H27N7O14P2	0.26985410899999995	True	Coenzyme
+Met.205	alpha-Ketoglutaric acid	alpha-Ketoglutaric acid	C5H6O5	0.39662320000000006	True	Organic acid
+Met.836	Rutin	Rutin	C27H30O16	0.5461880030000001	True	Flavonoid
+Met.414	Gluconic acid	D-Galactonic acid	C6H12O7	0.0055047960000000895	False	Organic acid
+Met.487	Guanosine 2':3'-Cyclic monophosphate	Guanosine 2':3'-cyclic monophosphate sodium	C10H12N5O7P	0.010973723999999851	False	Nucleoside derivative
+Met.563	Kaempferol 3-O-6-O-(rhamnosyl) glucoside 7-O-rhamnoside	Kaempferol 3-O-[2''-O-(rhamnosyl) glucoside] 7-O-rhamnoside	C33H40O19	0.08814754699999927	False	Flavonoid
+Met.422	Glutamic acid, N-acetyl-	N-acetyl-glutamic acid	C7H11NO5	0.13638295699999992	False	Amino acid
