@@ -53,6 +53,7 @@ PHOTORESP_FILES = [
     "results/tables/T09_paintomics_carbon.tsv",
     "results/tables/T10_metabolite_hubs.tsv",
     "results/tables/T11_hardware_ladder.tsv",
+    "results/tables/T13_light_sensitivity.tsv",
 ]
 # GeneLab differential-expression tables (downloaded by the first study's 07_hardware_ladder.py
 # into its git-ignored data/cache/). Sample columns are kept only where the name states the arm.

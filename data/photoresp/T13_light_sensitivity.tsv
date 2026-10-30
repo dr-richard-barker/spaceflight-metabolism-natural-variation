@@ -1,0 +1,17 @@
+# Irradiance sensitivity. Q = 1000 is what every other table uses; Q = 60 is the OSD-522 growth light.
+# Derived by scripts/09_light_sensitivity.py from fvcb.py and the vendored LunarLeaf-CFD T13.
+quantity	Q_umol_m2_s	scale	Ca_umol_mol	phi_percent	A_umol_m2_s	deficit_min_percent	deficit_max_percent
+operating_point:GC_sealed	1000	rosette	100	53.10	2.403		
+operating_point:FLT_sealed	1000	rosette	100	53.73	2.195		
+operating_point:VENTED	1000	rosette	400	28.45	15.404		
+compensation_point:FLT	1000	rosette	54.2	61.19	0.000		
+deficit	1000	leaf	60-420			5.10	6.51
+deficit	1000	rosette	60-420			7.25	8.82
+deficit	1000	canopy	60-420			26.16	28.51
+operating_point:GC_sealed	60	rosette	100	46.07	-0.011		
+operating_point:FLT_sealed	60	rosette	100	46.06	-0.010		
+operating_point:VENTED	60	rosette	400	18.43	1.786		
+compensation_point:FLT	60	rosette	100.8	45.90	0.000		
+deficit	60	leaf	105-420			0.29	1.66
+deficit	60	rosette	105-420			0.42	2.37
+deficit	60	canopy	105-420			2.31	10.78

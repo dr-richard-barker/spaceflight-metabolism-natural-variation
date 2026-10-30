@@ -1,0 +1,37 @@
+set	contrast	light	statistic	predicted	n_genes	basis
+din_first_study	OSD-522	lit	signed	up	5	model: assimilation deficit in light only; RE-TEST, the first study already reported this set in all six contrasts (its T07, T11)
+din_first_study	OSD-678-light	lit	signed	up	5	model: assimilation deficit in light only; RE-TEST, the first study already reported this set in all six contrasts (its T07, T11)
+din_first_study	OSD-427	lit	signed	up	5	model: assimilation deficit in light only; RE-TEST, the first study already reported this set in all six contrasts (its T07, T11)
+din_first_study	OSD-38	dark	signed	none	5	model: assimilation deficit in light only; RE-TEST, the first study already reported this set in all six contrasts (its T07, T11)
+din_first_study	OSD-321	dark	signed	none	5	model: assimilation deficit in light only; RE-TEST, the first study already reported this set in all six contrasts (its T07, T11)
+din_first_study	OSD-678-dark	dark	signed	none	5	model: assimilation deficit in light only; RE-TEST, the first study already reported this set in all six contrasts (its T07, T11)
+bcaa_degradation	OSD-522	lit	signed	up	53	reference: branched-chain amino acids are the strongest darkness response in all three sources; their catabolic route should rise with a carbon deficit
+bcaa_degradation	OSD-678-light	lit	signed	up	53	reference: branched-chain amino acids are the strongest darkness response in all three sources; their catabolic route should rise with a carbon deficit
+bcaa_degradation	OSD-427	lit	signed	up	53	reference: branched-chain amino acids are the strongest darkness response in all three sources; their catabolic route should rise with a carbon deficit
+bcaa_degradation	OSD-38	dark	signed	none	53	reference: branched-chain amino acids are the strongest darkness response in all three sources; their catabolic route should rise with a carbon deficit
+bcaa_degradation	OSD-321	dark	signed	none	53	reference: branched-chain amino acids are the strongest darkness response in all three sources; their catabolic route should rise with a carbon deficit
+bcaa_degradation	OSD-678-dark	dark	signed	none	53	reference: branched-chain amino acids are the strongest darkness response in all three sources; their catabolic route should rise with a carbon deficit
+wu_stress_only	OSD-522	lit	unsigned	enriched	491	loci that shape metabolism only under 32 C darkness should be perturbed if lit flight is starvation-like; weak prior (a locus gene need not be responsive)
+wu_stress_only	OSD-678-light	lit	unsigned	enriched	491	loci that shape metabolism only under 32 C darkness should be perturbed if lit flight is starvation-like; weak prior (a locus gene need not be responsive)
+wu_stress_only	OSD-427	lit	unsigned	enriched	491	loci that shape metabolism only under 32 C darkness should be perturbed if lit flight is starvation-like; weak prior (a locus gene need not be responsive)
+wu_stress_only	OSD-38	dark	unsigned	none	491	loci that shape metabolism only under 32 C darkness should be perturbed if lit flight is starvation-like; weak prior (a locus gene need not be responsive)
+wu_stress_only	OSD-321	dark	unsigned	none	491	loci that shape metabolism only under 32 C darkness should be perturbed if lit flight is starvation-like; weak prior (a locus gene need not be responsive)
+wu_stress_only	OSD-678-dark	dark	unsigned	none	491	loci that shape metabolism only under 32 C darkness should be perturbed if lit flight is starvation-like; weak prior (a locus gene need not be responsive)
+wu_dark_metabolite	OSD-522	lit	unsigned	enriched	540	loci of metabolites with a directional darkness response; weak prior
+wu_dark_metabolite	OSD-678-light	lit	unsigned	enriched	540	loci of metabolites with a directional darkness response; weak prior
+wu_dark_metabolite	OSD-427	lit	unsigned	enriched	540	loci of metabolites with a directional darkness response; weak prior
+wu_dark_metabolite	OSD-38	dark	unsigned	none	540	loci of metabolites with a directional darkness response; weak prior
+wu_dark_metabolite	OSD-321	dark	unsigned	none	540	loci of metabolites with a directional darkness response; weak prior
+wu_dark_metabolite	OSD-678-dark	dark	unsigned	none	540	loci of metabolites with a directional darkness response; weak prior
+wu_control_only	OSD-522	lit	unsigned	none	301	comparator: control-condition loci, about which the model makes no claim
+wu_control_only	OSD-678-light	lit	unsigned	none	301	comparator: control-condition loci, about which the model makes no claim
+wu_control_only	OSD-427	lit	unsigned	none	301	comparator: control-condition loci, about which the model makes no claim
+wu_control_only	OSD-38	dark	unsigned	none	301	comparator: control-condition loci, about which the model makes no claim
+wu_control_only	OSD-321	dark	unsigned	none	301	comparator: control-condition loci, about which the model makes no claim
+wu_control_only	OSD-678-dark	dark	unsigned	none	301	comparator: control-condition loci, about which the model makes no claim
+wu_shared	OSD-522	lit	unsigned	none	1954	comparator: loci found in both conditions, about which the model makes no claim
+wu_shared	OSD-678-light	lit	unsigned	none	1954	comparator: loci found in both conditions, about which the model makes no claim
+wu_shared	OSD-427	lit	unsigned	none	1954	comparator: loci found in both conditions, about which the model makes no claim
+wu_shared	OSD-38	dark	unsigned	none	1954	comparator: loci found in both conditions, about which the model makes no claim
+wu_shared	OSD-321	dark	unsigned	none	1954	comparator: loci found in both conditions, about which the model makes no claim
+wu_shared	OSD-678-dark	dark	unsigned	none	1954	comparator: loci found in both conditions, about which the model makes no claim

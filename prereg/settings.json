@@ -1,0 +1,78 @@
+{
+  "written": "2026-10-30",
+  "contrasts": {
+    "lit": [
+      "OSD-522",
+      "OSD-678-light",
+      "OSD-427"
+    ],
+    "dark": [
+      "OSD-38",
+      "OSD-321",
+      "OSD-678-dark"
+    ]
+  },
+  "gene_statistic": "GeneLab Wald stat (Stat_ column) for the five vendored contrasts; for OSD-522 the PyDESeq2 Wald stat recomputed from raw counts as the first study did (6 flight vs 6 ground shoots, genes with total count >= 10)",
+  "set_statistics": {
+    "signed": "mean gene statistic in the set minus the mean over all measured genes",
+    "unsigned": "mean |gene statistic| in the set minus the mean |statistic| over all measured genes"
+  },
+  "primary_statistic": {
+    "din_first_study": "signed",
+    "bcaa_degradation": "signed",
+    "wu_stress_only": "unsigned",
+    "wu_dark_metabolite": "unsigned",
+    "wu_control_only": "unsigned",
+    "wu_shared": "unsigned"
+  },
+  "primary_null": {
+    "OSD-522": "sample permutation: all 924 ways to label 6 of the 12 samples as flight; gene statistic a Welch t on log2(median-of-ratios normalised count + 1)",
+    "other": "genomic rotation: the set's gene positions shifted together by a random offset along the genome (KEGG order, prereg/gene_order.tsv.gz), preserving set size and clustering; 10000 offsets"
+  },
+  "rotation_draws": 10000,
+  "seed": 20261030,
+  "min_total_count_osd522": 10,
+  "p_two_sided": "(1 + #{|null| >= |obs|}) / (B + 1) for rotation; #{|null| >= |obs|} / 924 for the sample permutation, which includes the observed labelling",
+  "p_one_sided": "same with null >= obs, for the unsigned statistic",
+  "fdr": 0.05,
+  "fdr_family": "Benjamini-Hochberg across the 36 primary tests (6 sets x 6 contrasts)",
+  "verdict": "observed = up/down (signed) or enriched (unsigned) when BH q < 0.05, else none; MATCH when observed equals the prediction",
+  "secondary": "rotation null for OSD-522 as well; two-sided Mann-Whitney of set log2FC against all other genes (the first study's test); the non-primary statistic. Reported, not used for verdicts.",
+  "compound_rule": {
+    "scored_drivers": [
+      "A",
+      "starvation"
+    ],
+    "rule": "a T06 prediction whose driver is net assimilation (A) or carbon starvation is compared with the T02 consensus direction: agrees if the signs match, disagrees if they differ, untested if T02 has no directional status for that KEGG ID",
+    "not_comparable": "Vo- and RuBP-driven predictions: darkness stops oxygenation and carboxylation together, so a darkness reference cannot test them",
+    "blind": false,
+    "note": "T02 was built and inspected on 2026-10-30 before this file was written, so this comparison is a consistency check, not a blind test"
+  },
+  "paintomics": {
+    "layer": "all T02 compounds; value = direction x 0.13052 (the model's carbon-deficit magnitude, T06) for robust and single, 0 for none and conflicting; relevant = robust only",
+    "label": "ground carbon-starvation reference, not flight measurements",
+    "job_A": "OSD-522 gene and protein files byte-identical to job 1 (SHA-256 checked) + layer",
+    "job_B": "OSD-678-light genes (GeneLab log2FC; relevant = adjusted p < 0.05) + layer",
+    "job_C": "OSD-678-dark genes, same rule + layer",
+    "databases": [
+      "KEGG",
+      "MapMan"
+    ],
+    "ai": "off",
+    "comparison": "descriptive: pathways at combined-p BH FDR < 0.05 gained or lost, rank shifts, hubs at FDR < 0.05",
+    "mechanistic_check": "hub raw p-values for compounds relevant in both job 1 and job A are expected to be identical, because hub significance depends on the gene layer and the KEGG network, not on the metabolite values; FDR may differ because more compounds enter the family"
+  },
+  "power": {
+    "variance": "Col-0 wild-type control groups of MetaboLights GC-MS leaf or rosette studies; within-group SD of log2 intensity per metabolite, median across groups",
+    "test": "two-sided two-sample t, equal n per arm, noncentral t",
+    "alpha": 0.05,
+    "power": 0.8,
+    "effects_log2": {
+      "model_Q60_rosette_max": "log2(1 - 0.0237)",
+      "model_Q1000_T06": 0.13052,
+      "half_fold": 0.585,
+      "two_fold": 1.0
+    },
+    "multiplicity": "unadjusted and Bonferroni across the panel; BH lies between them"
+  }
+}

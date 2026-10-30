@@ -19,3 +19,4 @@ Read with `git show 515226d:<path>` from `Photorespiration_multiomics_microgravi
 | `T09_paintomics_carbon.tsv` | `results/tables/T09_paintomics_carbon.tsv` | 1817 | `6a88da65efa15cf4` |
 | `T10_metabolite_hubs.tsv` | `results/tables/T10_metabolite_hubs.tsv` | 1528 | `26944b447b0b67fe` |
 | `T11_hardware_ladder.tsv` | `results/tables/T11_hardware_ladder.tsv` | 7457 | `24d7676609a0fcf3` |
+| `T13_light_sensitivity.tsv` | `results/tables/T13_light_sensitivity.tsv` | 976 | `f49caae015c1029d` |
