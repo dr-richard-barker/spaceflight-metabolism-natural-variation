@@ -42,14 +42,18 @@ integration the gene layer decides the outcome. Of \nTests{} pre-registered gene
 \nMatch{} matched. None of the predicted lit-flight starvation signals reached significance, while
 carbon-starvation and branched-chain amino acid catabolism genes moved strongly in three dark flight
 contrasts, down in two BRIC canister experiments and up in the leaves of dark-grown CARA seedlings. Natural-variation
-GWAS gene sets showed no light-specific signal. With six plants per arm a targeted GC-MS panel
+GWAS gene sets showed no light-specific signal. In OSD-38, a dark sealed-BRIC flight with a
+proteome, the four KEGG carbon pathways rose in the transcriptome but fell in the membrane proteome,
+and the branched-chain amino acid hubs of the lit OSD-522 canister appeared in the dark one too.
+With six plants per arm a targeted GC-MS panel
 could detect only changes of about \detectMinFold-fold or larger; the model's predicted
 0.13\,log$_2$ shifts would need \nQThousandMin{} to \nQThousandMax{} plants per arm. The
 carbon-starvation signal in plant spaceflight transcriptomes is real, but it is not specific to
-light, and its sign differs between flight experiments.}
+light, its sign differs between flight experiments, and where proteins were measured, carbon
+metabolism moved against its transcripts.}
 
 \keywords{spaceflight, \textit{Arabidopsis}, natural variation, carbon starvation, darkness,
-metabolomics, pre-registration}
+metabolomics, proteomics, pre-registration}
 
 \maketitle
 
@@ -87,7 +91,10 @@ We use them in four ways: to score the model's compound predictions; to replace 
 metabolite layer with a measured one and resubmit to PaintOmics; to test the model's light/dark
 prediction on six flight contrasts with gene sets built from that natural variation, under nulls
 that respect gene correlation and with predictions committed before any test ran; and to ask how
-many plants a targeted metabolite panel on flight material would need.
+many plants a targeted metabolite panel on flight material would need. Finally, because OSD-38
+\citep{osd38} grew dark seedlings in the same sealed BRIC hardware with a proteome
+\citep{kruse2020} and a ground control outside the hardware \citep{basu2017}, we ask whether the
+dark signal reaches the proteins and whether the hardware alone produces it.
 
 \section{Results}\label{sec:results}
 
@@ -299,6 +306,77 @@ Asterisks mark compounds the first study predicted.}
 \label{fig:power}
 \end{figure}
 
+\subsection{A dark sealed BRIC with a proteome}
+
+OSD-38 (BRIC-20) grew Col-0 seedlings for about three days in darkness on 0.5x MS with 1\,\%
+sucrose, in sealed BRIC-PDFU canisters on the station and on the ground, and measured their
+transcriptome and the iTRAQ proteomes of a membrane and a soluble fraction \citep{osd38,kruse2020}.
+The same study holds a ground comparison of the BRIC-PDFU with plates kept in closed containers
+outside it \citep{basu2017}. We added both under a second pre-registration, committed before any
+OSD-38 protein or hardware statistic was computed (\texttt{prereg/osd38/}). It covers nine gene
+sets in four layers; the first study's model predicts no signal for any of them in dark flight.
+
+OSDR's processed protein tables are truncated. Both the CSV and the spreadsheet copies stop at
+\nOsdRows{} data rows, the old spreadsheet row limit. The membrane table's first block (protein
+groups 1--2{,}948) ends before the cut and was used whole, giving \nProtMem{} quantified proteins.
+The soluble table stops inside its 438th protein group, so only its top-ranked \nProtSol{}
+proteins could be used, as a secondary layer. Quantified by the paper's rules, the membrane layer
+gave \nPaperRule{} proteins at the paper's threshold, against the 103 the paper reports
+\citep{kruse2020}.
+
+In OSD-38, transcripts and proteins of carbon metabolism moved in opposite directions
+(Fig.~\ref{fig:osd38}). All four KEGG carbon pathways rose in the transcriptome (glyoxylate and
+dicarboxylate, carbon fixation, starch and sucrose, glycolysis; $q \le \qRnaCarbonMax$), as did the
+photosystem and light-harvesting set ($z = \zRnaPhoto$), while the DIN set fell ($z = \zRnaDin$);
+these transcript rows re-test what the first study reported. In the membrane proteome the same four
+pathways fell ($z$ from $\zMemSta$ to $\zMemGlyc$, $q$ from $\qMemCarbonMin$ to $\qMemCarbonMax$). This
+held against random protein sets matched for abundance (PSM count; $p$ from $\pRobMin$ to
+$\pRobMax$), and the protein statistic was unrelated to abundance ($\rho = \rhoPsm$).
+Branched-chain amino acid degradation, the catabolic route of the strongest darkness response, did
+not move in either layer ($z = \zRnaBcaa$ for transcripts and $\zMemBcaa$ for \nMemBcaa{} membrane
+proteins). The DIN, fermentation, hypoxia and photosystem sets had too few measured proteins to
+test. Across all proteins, protein and transcript changes were only weakly correlated
+($\rho = \rhoMem$ for the membrane fraction, $\rhoSol$ for the soluble subset; $\rhoFiveTwoTwoProt$
+over \nFiveTwoTwoProt{} proteins in OSD-522). The truncated soluble subset showed no significant
+set.
+
+On the ground, the BRIC-PDFU against the closed container did not show the conditional prediction
+derived from the first study's enclosure mass balance, that hypoxia and fermentation genes would
+rise in the BRIC ($z = \zHwHyp$ and $\zHwFer$). Carbon fixation and glyoxylate and dicarboxylate
+metabolism rose in the BRIC ($q \qHwFix$ and $\qHwGly$) and starch and sucrose fell
+($q \qHwSta$). Across all genes, the flight effect was weakly anti-correlated with this hardware
+effect ($\rho = \rhoFlightHw$; exploratory, not pre-registered). Of the \nOsdTests{} testable
+primary OSD-38 outcomes, \nOsdMatch{} matched the predictions.
+
+Submitted to PaintOmics with the same reference layer (job D), OSD-38's genes and membrane
+proteins gave \nPathD{} pathways at FDR $<0.05$, against \nPathA{} for OSD-522's lit canister
+(job A). Only \nPathAD{} pathway was shared, and the rank correlation was $\rhoAD$
+(Fig.~\ref{fig:bric}). Of the metabolite hubs, \nHubAD{} were shared by the lit and the dark
+canister: leucine, isoleucine, glutamate, malate, 2-oxoglutarate and 2-isopropylmalate. The
+first study read these hubs as signs of lit-canister starvation; they appear in the dark too.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig06_osd38.pdf}
+\caption{\textbf{OSD-38: a dark sealed BRIC with a proteome.} \textbf{a}, Pre-registered gene-set
+tests in four layers ($z$ against the rotation null; bold where BH $q<0.05$; boxes mark significant
+contradictions of the prediction; $n$ = measured members where fewer than three). The soluble
+proteome is the 437 top-ranked groups left in OSDR's truncated table. \textbf{b}, Transcript
+against membrane-protein log$_2$ fold change, flight vs ground; red, members of the four KEGG
+carbon pathways. \textbf{c}, Exploratory: the flight effect against the ground hardware effect
+(BRIC-PDFU vs closed container), all genes.}
+\label{fig:osd38}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig07_bric_lit_vs_dark.pdf}
+\caption{\textbf{Sealed BRIC, lit (OSD-522, job A) against dark (OSD-38, job D).} Both jobs carry
+genes, proteins and the same ground reference metabolite layer. \textbf{a}, Combined Fisher $p$ for
+all pathways. \textbf{b}, Metabolite hubs at FDR $<0.05$ in either job.}
+\label{fig:bric}
+\end{figure}
+
 \section{Discussion}\label{sec:discussion}
 
 \subsection{Compared with the first study}
@@ -330,9 +408,25 @@ Metabolite layer in PaintOmics & \nModelCompounds{} predicted compounds & \nLaye
 Lit flight shows a starvation signal & DIN up in OSD-522 ($p \pDinFirstStudy$, Mann--Whitney) & Leans up in all three lit contrasts; none significant after correction under gene-correlation-aware nulls\\
 Dark flight shows none & Predicted none; dark inversions unexplained & Strongest signals are in dark-grown seedlings; sign differs between BRIC canisters and CARA plates\\
 Metabolite shifts are measurable & Proposed a 20--30 compound panel on archived material & Needs \nQThousandMin--\nQThousandMax{} plants per arm for 0.13\,log$_2$\\
+Transcripts stand in for metabolism & Read pathways and hubs from transcripts & In dark BRIC flight (OSD-38) carbon-pathway transcripts rise while their membrane proteins fall\\
+Starvation hubs mark the lit canister & Seven hubs at FDR $<0.05$, all starvation or supply nodes & Leu, Ile, Glu, malate, 2-oxoglutarate and 2-isopropylmalate are hubs in the dark BRIC too\\
+Enclosure atmosphere matters & Mass balance: a dark BRIC loses O$_2$ over days & BRIC vs container on the ground at 3 days: no hypoxia or fermentation signal\\
 \botrule
 \end{tabularx}
 \end{table}
+
+\subsection{What a proteome adds}
+
+Both the first study's starvation reading and every PaintOmics integration here read metabolism
+from gene products, mostly transcripts. OSD-38 is the one dark sealed-BRIC flight with a proteome, and there the carbon
+pathways' transcripts rose while their membrane proteins fell. Kruse et al.\ saw the same decoupling
+gene by gene: nearly 30\,\% of the 17 genes that changed at both levels moved in opposite
+directions, and they pointed to post-transcriptional regulation \citep{kruse2020}. At the pathway
+level it means a transcript signature is not a reliable proxy for the enzyme complement, and still
+less for metabolite pools. The hub result points the same way. The branched-chain amino acid and
+glutamate hubs that the first study attributed to a lit-canister carbon deficit appear in a dark
+canister with no assimilation to lose. Hub status reflects which genes change around a compound,
+not why they change.
 
 \subsection{Why the dark contrasts carry the signal}
 
@@ -345,7 +439,9 @@ flight in the two BRIC-PDFU canister experiments and higher in the CARA plates, 
 hardware (a sealed canister against a plate on the cabin wall) and in what was sequenced (whole
 seedlings against dissected leaves). Either way, a carbon-starvation programme responds to
 spaceflight conditions that the boundary-layer mechanism cannot reach, because in the dark there
-is no assimilation for it to reduce.
+is no assimilation for it to reduce. OSD-38's seedlings also grew on 1\,\% sucrose (OSDR protocol),
+which makes classical carbon starvation unlikely in either of its arms and leaves the cause of its
+DIN fall open.
 
 \subsection{Limitations}
 
@@ -360,7 +456,13 @@ the cabin's ambient light of 4--6\,$\mu$mol\,m$^{-2}$\,s$^{-1}$ \citep{osd678}, 
 60, where the model's deficit is smaller still, so its light/dark comparison is a weak test of the
 model's light dependence. PaintOmics hub counts rise with the number of
 differentially expressed genes, which differs \ratioDE-fold between the two OSD-678 contrasts.
-The GC-MS variance pools leaf and shoot studies from different laboratories and timepoints. And the
+The GC-MS variance pools leaf and shoot studies from different laboratories and timepoints.
+OSDR's OSD-38 protein tables are truncated, so the soluble layer is a top-ranked subset and the
+membrane layer one of two acquisitions. iTRAQ compresses ratios, which shrinks protein fold
+changes but should not reverse them. The membrane fraction is a 100{,}000\,$g$ pellet rather than
+total protein, and OSD-38 has three replicates per arm. The BRIC-versus-container comparison also
+differs in site (Kennedy Space Center against Ohio University) and in handling, and the
+container's gas volume is not reported \citep{basu2017}. And the
 pre-registration was written by the same analyst on the same day as the tests, after the reference
 had been built; its value lies in the commit order, which shows that no prediction or setting was
 changed after a flight result was seen.
@@ -414,7 +516,26 @@ was run in a browser, and the full job records were recovered and vendored. On e
 matches were reduced to the intended KEGG identifier (PaintOmics also selected CMP-KDO,
 neoglucobrassicin, sugar anomers and a non-KEGG NADP$^+$ identifier); one residual, (S)-allantoin on
 a compound of value 0, is recorded. Job identifiers: first study oK2h66740Q; A 6kBOS7AN5K; B
-JfVZ1L37PY; C wgT3IPi7U2.
+JfVZ1L37PY; C wgT3IPi7U2; D Es6j23q40o.
+
+\textbf{OSD-38.} The processed iTRAQ tables (soluble and membrane, OSDR) were fetched with their
+SHA-256 recorded. Membrane: rows of the first block only (groups 1--2{,}948); soluble: groups
+1--437. Peptide-spectrum matches with score above 20 and all six reporter intensities positive were
+kept, and loci with at least two distinct peptides, as in the paper \citep{kruse2020}. Each
+channel was centred on its median, each match on its own mean, and a protein's channel value was
+the median over its matches. Flight minus ground gives the log$_2$ fold change, tested with a
+two-sided Student's $t$ (three against three). The pre-registration addendum
+(\texttt{scripts/21\_prereg\_osd38.py}) fixed this method, the nine sets (DIN, BCAA degradation,
+the first study's photosystem, fermentation and hypoxia rules, and KEGG ath00630, ath00710,
+ath00500 and ath00010), the minimum of three measured members, the rotation null over measured
+features and the predictions before any OSD-38 protein or hardware statistic existed. BH
+correction ran over the testable primary rows (flight transcripts, membrane proteins, hardware
+transcripts). The hardware contrast is GeneLab's ground BRIC-PDFU against closed-container plates,
+both fixed in RNAlater. A planted-signal check on the membrane proteins precedes the tests.
+Abundance robustness, not pre-registered, compares each membrane set with 5{,}000 random sets
+matched on PSM-count decile. PaintOmics job D carried the OSD-38 genes (relevant at adjusted
+$p<0.05$), membrane proteins (relevant at $p\le0.05$ and $|\log_2\mathrm{FC}|>0.2$, the paper's
+rule) and the reference layer.
 
 \textbf{Power.} Col-0 control groups: the 0\,mM salt group of MTBLS22, 41 and 42; Col-0
 well-watered shoots of MTBLS2289 per timepoint; the wild-type group of MTBLS4066; the Col-0 time
@@ -433,7 +554,9 @@ this text from the vendored inputs; the PaintOmics step reads the vendored job r
 \bmhead{Data availability} All derived data are in the repository
 (\url{https://github.com/dr-richard-barker/spaceflight-metabolism-natural-variation}). [TODO ---
 Zenodo DOI.] Source data: NASA OSDR (OSD-522, OSD-38, OSD-321, OSD-678, OSD-427), the Zhu and Wu
-natural-variation datasets as cited, and MetaboLights MTBLS22, 41, 42, 363, 2289 and 4066.
+natural-variation datasets as cited, and MetaboLights MTBLS22, 41, 42, 363, 2289 and 4066. OSDR's
+processed OSD-38 protein tables stop at \nOsdRows{} rows; the protein values used here are in
+\texttt{results/tables/T11\_osd38\_proteome.tsv}.
 
 \bmhead{Code availability} Scripts are in the same repository under the MIT licence.
 

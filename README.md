@@ -25,6 +25,9 @@ model's light/dark claim, with measured natural-variation data:
   their metabolite GWAS loci per condition
 - **Caldana et al. 2011**: a light/dark time course (from the Wu supplement)
 - **MetaboLights**: Col-0 control groups from six GC-MS studies, for replicate variance
+- **OSD-38 (BRIC-20)**: 3-day dark-grown Col-0 seedlings in sealed BRIC-PDFU canisters, flight and
+  ground, with RNA-seq and iTRAQ membrane and soluble proteomes (Kruse et al. 2020), plus a ground
+  BRIC-PDFU vs closed-container comparison (Basu et al. 2017)
 
 ## Findings
 
@@ -46,6 +49,13 @@ model's light/dark claim, with measured natural-variation data:
 4. **The predicted metabolite shifts are too small for a feasible panel.** With 6 plants per arm,
    GC-MS detects about 1.48-fold changes at best; the model's 0.13 log₂ needs 92–1,342 plants per
    arm. [T10](results/tables/T10_gcms_power.tsv), [fig05](results/figures/fig05_gcms_power.png)
+5. **In a dark sealed BRIC, proteins move against transcripts.** In OSD-38 all four KEGG carbon
+   pathways rise in the transcriptome but fall in the membrane proteome (q 0.0005–0.014, robust to
+   abundance-matched random sets); BCAA degradation is flat at both levels. On the ground the
+   BRIC-PDFU shows no hypoxia or fermentation signal against a closed container. In PaintOmics the
+   leucine, isoleucine and glutamate hubs of the lit OSD-522 canister appear in the dark one too.
+   [T11–T13](results/tables), [fig06](results/figures/fig06_osd38.png),
+   [fig07](results/figures/fig07_bric_lit_vs_dark.png)
 
 Labels used throughout: the PaintOmics metabolite layer here is a **ground carbon-starvation
 reference, not flight measurements**.
@@ -56,7 +66,9 @@ reference, not flight measurements**.
 before any gene-set statistic was computed on a flight contrast; the tests came in 0d07084.
 `scripts/16_gwas_light_dark_tests.py` reads `prereg/` and will not run without it. The DIN set and
 the compound comparison are flagged there as re-tests and consistency checks, since the first
-study's results and the reference had been seen.
+study's results and the reference had been seen. The OSD-38 addendum, `prereg/osd38/`, was
+committed in eb005ec, before any OSD-38 protein or hardware statistic was computed; its tests came in
+488d801 (`scripts/22_osd38_tests.py`).
 
 ## Layout
 
@@ -66,9 +78,9 @@ study's results and the reference had been seen.
 | `data/osdr/` | per-contrast GeneLab statistics for OSD-38, OSD-321, OSD-678 light and dark, OSD-427 |
 | `data/reference/` | KEGG name map and reviewed overrides, MetaboLights sources and derived SDs |
 | `data/paintomics_upload/` | the three PaintOmics bundles and the layer key |
-| `prereg/` | the frozen pre-registration |
+| `prereg/` | the frozen pre-registration; `prereg/osd38/` the OSD-38 addendum |
 | `scripts/` | numbered analysis scripts; `run_all.sh` runs them in order |
-| `results/tables/`, `results/figures/` | T01–T10 (see `MANIFEST.tsv`), fig01–fig05 |
+| `results/tables/`, `results/figures/` | T01–T13 (see `MANIFEST.tsv`), fig01–fig07 |
 | `results/paintomics_raw/` | recovered PaintOmics job records (guest jobs expire after 7 days) |
 | `manuscript/latex/` | manuscript source, generated `numbers.tex`, PDF and DOCX |
 | `docs/` | the GitHub Pages story page |
@@ -88,7 +100,9 @@ records are vendored.
 
 ## Data sources and licences
 
-- NASA OSDR: OSD-522, OSD-38, OSD-321, OSD-678, OSD-427 (public domain, CC0)
+- NASA OSDR: OSD-522, OSD-38, OSD-321, OSD-678, OSD-427 (public domain, CC0). OSDR's processed
+  OSD-38 proteome tables (CSV and xlsx) are truncated at 65,535 rows: only soluble protein groups
+  1–437 and the first membrane block are usable (`scripts/20_osd38_inputs.py`)
 - Zhu et al. 2024 (*Sci Data*, doi:10.1038/s41597-024-03694-2) and Wu et al. 2018 (*Mol Plant*,
   doi:10.1016/j.molp.2017.08.012), as derived tables in the
   [Arabidopsis Atlas](https://github.com/dr-richard-barker/arabidopsis-atlas) (commit 69b21c6)
@@ -105,3 +119,5 @@ Code: MIT (`LICENSE`).
 - Zenodo deposit (manual)
 - Manuscript authorship, affiliation, funding and AI-use statements (`manuscript/latex/README.md`)
 - Caldana genotype and the Wu stress condition, to confirm against the papers' main text
+- OSD-38's soluble proteome: only the top 437 protein groups survive OSDR's truncated table; the
+  raw iTRAQ files in OSDR would have to be re-searched to recover the rest

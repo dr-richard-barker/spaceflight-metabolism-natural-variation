@@ -6,22 +6,25 @@
 #   ./run_all.sh --pdf      also build manuscript/latex/main.pdf and main.docx
 #
 # Not re-run here, on purpose:
-#   scripts/11_prereg.py            the pre-registration is frozen; re-running it would rewrite
-#                                   prereg/ from today's KEGG release
+#   scripts/11_prereg.py,           the pre-registrations are frozen; re-running them would rewrite
+#   scripts/21_prereg_osd38.py      prereg/ from today's KEGG release
 #   scripts/14_submit_paintomics.py PaintOmics jobs are submitted once; their records are vendored
 #                                   in results/paintomics_raw/ and read from there
-# Network: the Wu supplement, KEGG lists and MetaboLights files are fetched into the git-ignored
-# data/cache/ on first run (MetaboLights files are checked against their recorded SHA-256).
+# Network: the Wu supplement, KEGG lists, MetaboLights and OSD-38 proteome files are fetched into the
+# git-ignored data/cache/ on first run (MetaboLights and OSD-38 files are checked against their recorded
+# SHA-256).
 set -euo pipefail
 cd "$(dirname "$0")/scripts"
 
 for arg in "$@"; do
-  [ "$arg" = "--vendor" ] && python3 00_vendor_inputs.py
+  if [ "$arg" = "--vendor" ]; then python3 00_vendor_inputs.py; python3 20_osd38_inputs.py contrasts; fi
 done
 
 python3 10_light_dark_reference.py fetch
 python3 10_light_dark_reference.py build
 python3 12_model_vs_reference.py
+python3 20_osd38_inputs.py fetch
+python3 22_osd38_tests.py
 python3 13_build_layer.py
 python3 15_paintomics_tables.py
 python3 16_gwas_light_dark_tests.py
