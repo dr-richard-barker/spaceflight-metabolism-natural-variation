@@ -1,0 +1,11 @@
+table	bytes	script	contents	inputs
+T01_light_dark_sources.tsv	16142	scripts/10_light_dark_reference.py	Per-source light/dark response per compound (Zhu darkness, Wu stress, Caldana dark vs light): effect, fraction of accessions moving the same way, spread, p, KEGG ID, qualifies	data/atlas (Zhu, Wu); Wu 2018 supplementary tables 7-8 (Caldana time course)
+T02_light_dark_reference.tsv	7452	scripts/10_light_dark_reference.py	Consensus light/dark reference per KEGG compound: status, direction, standardised effect	T01
+T03_model_vs_reference.tsv	6864	scripts/12_model_vs_reference.py	The first study's 21 predicted compounds against the reference (pre-registered rule), plus directional reference compounds the model did not predict	data/photoresp/T06_predicted_compounds.tsv, T02
+T04_paintomics_pathways.tsv	32291	scripts/15_paintomics_tables.py	All 232 pathways in PaintOmics jobs 1, A, B, C: combined and per-omic p, BH q, rank	data/photoresp/job1_*, results/paintomics_raw/job{A,B,C}_*
+T05_paintomics_hubs.tsv	3839	scripts/15_paintomics_tables.py	Metabolite hub analysis per compound and job: best adjusted p, raw p, DE neighbours, step	as T04
+T06_layer_matching.tsv	11407	scripts/15_paintomics_tables.py	KEGG IDs PaintOmics used for the reference layer in jobs A-C against the intended IDs	as T04; data/paintomics_upload/metabolomics_key.tsv
+T07_paintomics_summary.tsv	2072	scripts/15_paintomics_tables.py	Job-level counts, gained and lost pathways and hubs, the pre-registered hub check	T04, T05
+T08_geneset_tests.tsv	6157	scripts/16_gwas_light_dark_tests.py	36 pre-registered gene-set tests: prediction, observed, verdict, primary p and q, z, and secondary nulls (rotation, permutation, Mann-Whitney)	prereg/, data/osdr, data/atlas GLDS-522 counts
+T09_geneset_summary.tsv	259	scripts/16_gwas_light_dark_tests.py	MATCH counts per gene set in lit and dark contrasts	T08
+T10_gcms_power.tsv	3473	scripts/17_gcms_power.py	Per-compound GC-MS replicate SD (Col-0 controls, MetaboLights) and plants per arm for 80% power	data/reference/metabolights_group_sds.tsv

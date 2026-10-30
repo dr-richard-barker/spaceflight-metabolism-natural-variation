@@ -27,6 +27,7 @@ target, the most abundant (highest median) is used.
 """
 
 import argparse
+import hashlib
 import json
 import re
 import urllib.parse
@@ -43,7 +44,6 @@ from paths import CACHE, FIGURES, PHOTORESP, PREREG, REF, TABLES
 ML = CACHE / "metabolights"
 FTP = "https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/{sid}/{name}"
 UA = {"User-Agent": "spaceflight-metabolism-natural-variation/1.0"}
-CATALOGUE = "../arabidopsis-atlas/docs/explorer/metabolights_catalogue.json"
 STUDIES = ["MTBLS22", "MTBLS41", "MTBLS42", "MTBLS2289", "MTBLS4066", "MTBLS363"]
 MIN_N = 3
 REPLICATES_OSD522 = 6   # the first study's RNA-seq: 6 flight vs 6 ground shoots
@@ -57,21 +57,17 @@ def files(sid):
 
 
 def fetch():
-    from paths import ROOT
-    cat = json.loads((ROOT / CATALOGUE).read_text())
-    for s in cat["studies"]:
-        if s["id"] not in STUDIES:
-            continue
-        names = [s["sample_file"]] + [x for a in s["assays"] if a["technique"] == "GC-MS"
-                                      for x in ([a["assay_file"]] if a.get("assay_file") else []) + a["mafs"]]
-        (ML / s["id"]).mkdir(parents=True, exist_ok=True)
-        for n in names:
-            out = ML / s["id"] / n
-            if not out.exists():
-                req = urllib.request.Request(FTP.format(sid=s["id"], name=urllib.parse.quote(n)), headers=UA)
-                with urllib.request.urlopen(req, timeout=300) as r:
-                    out.write_bytes(r.read())
-            print(f"  {s['id']}/{n}")
+    """Download the study files listed, with their SHA-256, in data/reference/metabolights_sources.tsv."""
+    src = pd.read_csv(REF / "metabolights_sources.tsv", sep="\t")
+    for r in src.itertuples():
+        out = ML / r.study / r.file
+        if not out.exists():
+            out.parent.mkdir(parents=True, exist_ok=True)
+            req = urllib.request.Request(FTP.format(sid=r.study, name=urllib.parse.quote(r.file)), headers=UA)
+            with urllib.request.urlopen(req, timeout=300) as resp:
+                out.write_bytes(resp.read())
+        digest = hashlib.sha256(out.read_bytes()).hexdigest()
+        print(f"  {r.study}/{r.file} {'ok' if digest == r.sha256 else 'CHANGED since 2026-10-30'}")
 
 
 def groups(sid):
