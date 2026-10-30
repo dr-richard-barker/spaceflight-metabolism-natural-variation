@@ -1,0 +1,12 @@
+comparison	kind	n	rho	p
+OSD-38 membrane protein vs transcript log2FC	pre-registered, descriptive	2000	0.1809	3.504e-16
+OSD-38 soluble protein vs transcript log2FC	pre-registered, descriptive	433	0.106	0.02739
+OSD-522 protein vs transcript log2FC (first study's upload)	pre-registered, descriptive	4266	0.03787	0.01338
+OSD-38 membrane proteins at the paper's rule (p <= 0.05, |log2FC| > 0.2); Kruse et al. 2020 report 103	quantification check	97		
+OSD-38 membrane: Spearman of protein t with log PSM count	robustness, not pre-registered	2000	-0.03711	
+OSD-38 membrane ath00630: mean t against PSM-decile-matched random sets (observed -0.83, null mean -0.13)	robustness, not pre-registered	41		0.009398
+OSD-38 membrane ath00710: mean t against PSM-decile-matched random sets (observed -1.16, null mean -0.10)	robustness, not pre-registered	38		0.0002
+OSD-38 membrane ath00500: mean t against PSM-decile-matched random sets (observed -0.95, null mean -0.09)	robustness, not pre-registered	28		0.008398
+OSD-38 membrane ath00010: mean t against PSM-decile-matched random sets (observed -1.00, null mean -0.15)	robustness, not pre-registered	60		0.0003999
+OSD-38 membrane bcaa_degradation: mean t against PSM-decile-matched random sets (observed -0.29, null mean -0.17)	robustness, not pre-registered	17		0.7536
+OSD-38 flight vs ground (Wald) against BRIC vs container (Wald), all genes	exploratory, not pre-registered	27723	-0.1489	2.926e-137

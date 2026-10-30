@@ -1,0 +1,37 @@
+layer	set	primary	predicted	observed	verdict	p	q	z	signed	n_measured
+rna_flight	din_first_study	True	none	down	MISMATCH	0.0015	0.00345	-3.384	-2.879	5
+rna_flight	bcaa_degradation	True	none	none	MATCH	0.08079	0.1327	-1.708	-0.4508	53
+rna_flight	photosynthesis_apparatus	True	none	up	MISMATCH	9.999e-05	0.00046	4.593	1.586	31
+rna_flight	fermentation	True	none	none	MATCH	0.3726	0.4504	-0.876	-0.7007	6
+rna_flight	hypoxia_responsive	True	none	none	MATCH	0.459	0.5027	0.7369	0.7958	3
+rna_flight	ath00630	True	none	up	MISMATCH	0.0005	0.001278	3.6	0.7645	79
+rna_flight	ath00710	True	none	up	MISMATCH	9.999e-05	0.00046	5.821	1.341	70
+rna_flight	ath00500	True	none	up	MISMATCH	0.0002	0.0006571	4.031	0.5842	177
+rna_flight	ath00010	True	none	up	MISMATCH	9.999e-05	0.00046	4.326	0.7654	120
+rna_hardware	din_first_study	True	none	none	MATCH	0.1145	0.1646	-1.545	-1.214	5
+rna_hardware	bcaa_degradation	True	none	none	MATCH	0.1701	0.2173	-1.357	-0.3261	53
+rna_hardware	photosynthesis_apparatus	True	none	none	MATCH	0.1606	0.2173	-1.408	-0.4401	31
+rna_hardware	fermentation	True	up	none	MISMATCH	0.3917	0.4504	0.8504	0.6068	6
+rna_hardware	hypoxia_responsive	True	up	none	MISMATCH	0.7576	0.7576	-0.2975	-0.302	3
+rna_hardware	ath00630	True	none	up	MISMATCH	0.009099	0.0161	2.705	0.5284	79
+rna_hardware	ath00710	True	none	up	MISMATCH	9.999e-05	0.00046	5.285	1.102	70
+rna_hardware	ath00500	True	none	down	MISMATCH	0.0003	0.0008624	-3.876	-0.5141	177
+rna_hardware	ath00010	True	none	none	MATCH	0.1011	0.155	1.625	0.2627	120
+membrane_flight	din_first_study	True	none	too few	n/a					1
+membrane_flight	bcaa_degradation	True	none	none	MATCH	0.6361	0.6651	-0.4351	-0.1937	17
+membrane_flight	photosynthesis_apparatus	True	none	too few	n/a					0
+membrane_flight	fermentation	True	none	too few	n/a					1
+membrane_flight	hypoxia_responsive	True	none	too few	n/a					0
+membrane_flight	ath00630	True	none	down	MISMATCH	0.007499	0.01437	-2.794	-0.7278	41
+membrane_flight	ath00710	True	none	down	MISMATCH	0.0002	0.0006571	-3.904	-1.057	38
+membrane_flight	ath00500	True	none	down	MISMATCH	0.006599	0.0138	-2.631	-0.8498	28
+membrane_flight	ath00010	True	none	down	MISMATCH	9.999e-05	0.00046	-4.193	-0.905	60
+soluble_flight	din_first_study	False	none	too few	n/a					0
+soluble_flight	bcaa_degradation	False	none	none	MATCH	0.5193	0.6492	0.6194	0.4782	7
+soluble_flight	photosynthesis_apparatus	False	none	too few	n/a					0
+soluble_flight	fermentation	False	none	too few	n/a					0
+soluble_flight	hypoxia_responsive	False	none	too few	n/a					0
+soluble_flight	ath00630	False	none	none	MATCH	0.08589	0.2147	1.777	0.6346	30
+soluble_flight	ath00710	False	none	none	MATCH	0.9771	0.9771	0.02043	0.005377	33
+soluble_flight	ath00500	False	none	none	MATCH	0.07659	0.2147	1.8	1.025	13
+soluble_flight	ath00010	False	none	none	MATCH	0.2897	0.4828	1.047	0.3547	36
