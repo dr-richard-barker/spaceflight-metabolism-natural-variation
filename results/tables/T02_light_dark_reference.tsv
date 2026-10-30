@@ -10,9 +10,9 @@ C00643	5-Hydroxy-L-tryptophan	caldana		none	0	0			-0.092			0.3808
 C00811	p-Coumaric acid	caldana		none	0	0			-0.139			0.4496
 C00818	Saccharic acid	zhu		none	0	0	-0.098			0.68		
 C01035	4-Guanidinobutyric acid	caldana		none	0	0			0.001			0.9956
+C01551	Allantoin	caldana		none	0	0			0.46			0.1461
 C01835	Maltotriose	caldana		none	0	0			-0.33			0.2728
 C02153	Benzyl glucosinolate	wu_stress		none	0	0		0.364			0.727	
-C02348	Allantoin	caldana		none	0	0			0.46			0.1461
 C02985	alpha-L-Fucose 1-phosphate	caldana		none	0	0			-0.017			0.9216
 C04695	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside	wu_stress		none	0	0		-0.575			0.746	
 C05519	Allothreonine	caldana		none	0	0			-0.364			0.06772
@@ -53,7 +53,7 @@ C00147	Adenine	wu_stress	wu_stress	robust	-1	-1.189		-0.897			0.93
 C00153	Nicotinamide	wu_stress	wu_stress	robust	-1	-1.194		-1.322			0.917	
 C00072	Ascorbic acid	wu_stress	wu_stress	robust	-1	-1.323		-1.607			0.916	
 C01175	Sinapoylglucose	zhu	zhu	robust	-1	-1.608	-0.73			0.958		
-C00402	D-Aspartic acid	wu_stress	wu_stress	robust	-1	-1.822		-0.434			0.92	
+C00049	D-Aspartic acid	wu_stress	wu_stress	robust	-1	-1.822		-0.434			0.92	
 C01750	Quercitrin	wu_stress	wu_stress	robust	-1	-1.88		-1.971			0.99	
 C00025	L-Glutamic acid	caldana,wu_stress	wu_stress	robust	-1	-2.198		-0.505	0.08		0.967	0.3365
 C00051	Glutathione	wu_stress,zhu	zhu	robust	-1	-2.246	-0.465	0.041		0.981	0.542	
@@ -90,7 +90,6 @@ C01094	D-Fructose 1-phosphate	caldana	caldana	single	-1	-1.422			-0.826			0.0298
 C00109	2-Oxobutyric acid	caldana	caldana	single	-1	-2.129			-0.253			0.03496
 C00065	Serine	zhu	zhu	single	-1	-2.214	-0.287			0.83		
 C00158	Citric acid	caldana,wu_stress,zhu	caldana	single	-1	-2.61	-0.123	-0.028	-0.727	0.741	0.502	0.00612
-C00137	allo-Inositol OR chiro-Inositol 	caldana	caldana	single	-1	-3.119			-0.453			0.02057
 C01384	Maleic acid	caldana	caldana	single	-1	-3.14			-0.746			0.0007712
 C00168	beta-Hydoxypyruvic acid	caldana	caldana	single	-1	-3.204			-0.733			0.003398
 C00330	2'-Deoxyguanosine	caldana	caldana	single	-1	-3.249			-0.91			0.001215

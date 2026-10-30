@@ -1,0 +1,12 @@
+PaintOmics upload bundles, built by scripts/13_build_layer.py
+
+Metabolite layer (all jobs): GROUND CARBON-STARVATION REFERENCE, NOT FLIGHT MEASUREMENTS.
+  source:   results/tables/T02_light_dark_reference.tsv (96 KEGG compounds)
+  value:    direction x 0.13052 for robust and single responses, 0 otherwise
+  relevant: robust (45 compounds)
+  names:    primary KEGG COMPOUND name (metabolomics_key.tsv maps name -> KEGG ID)
+
+Job A: osd522_* gene and protein files, byte-identical to the first study's job 1 upload
+       (data/photoresp/, SHA-256 checked) + the metabolite layer
+Job B: osd678_light_genes_* (24474 genes, 7790 at GeneLab adjusted p < 0.05) + layer
+Job C: osd678_dark_genes_* (24474 genes, 2112 at GeneLab adjusted p < 0.05) + layer

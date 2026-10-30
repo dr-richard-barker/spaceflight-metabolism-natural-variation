@@ -212,6 +212,13 @@ def load_kegg():
     return dict(zip(m.name, m.kegg_id))
 
 
+def kegg_overrides():
+    """Reviewed corrections by name; they also apply to the IDs Wu gave the time-course peaks."""
+    ov = REF / "kegg_overrides.tsv"
+    o = pd.read_csv(ov, sep="\t", dtype=str, comment="#").fillna("")
+    return {n.strip(): k for n, k in zip(o.name, o.kegg_id)}
+
+
 # ---------- build ----------
 
 def qualifies(r):
@@ -223,7 +230,9 @@ def qualifies(r):
 def build():
     kmap = load_kegg()
     src = pd.concat([zhu_response(), wu_stress_response(), caldana_response()], ignore_index=True)
-    src["kegg_id"] = [r.kegg_given if r.source == "caldana" else kmap.get(r.name, "") for r in src.itertuples()]
+    ovr = kegg_overrides()
+    src["kegg_id"] = [ovr.get(r.name.strip(), r.kegg_given if r.source == "caldana" else kmap.get(r.name, ""))
+                      for r in src.itertuples()]
     src["qualifies"] = [qualifies(r) for r in src.itertuples()]
     src["z"] = src.effect / src.spread
     src.round(4).to_csv(TABLES / "T01_light_dark_sources.tsv", sep="\t", index=False)

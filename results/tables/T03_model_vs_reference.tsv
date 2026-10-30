@@ -1,0 +1,81 @@
+kegg_id	compound	block	model_log2FC	in_model	status	verdict	direction	reference_z	zhu_effect	wu_stress_effect	caldana_effect
+C00988	2-Phosphoglycolate	C2 cycle (Vo)	0.003488	True	absent	not comparable					
+C00160	Glycolate	C2 cycle (Vo)	0.003488	True	absent	not comparable					
+C00048	Glyoxylate	C2 cycle (Vo)	0.003488	True	absent	not comparable					
+C00037	Glycine	C2 cycle (Vo)	0.003488	True	absent	not comparable					
+C00065	L-Serine	C2 cycle (Vo)	0.003488	True	single	not comparable	-1	-2.214	-0.287		
+C00168	Hydroxypyruvate	C2 cycle (Vo)	0.003488	True	single	not comparable	-1	-3.204			-0.733
+C00258	D-Glycerate	C2 cycle (Vo)	0.003488	True	absent	not comparable					
+C00014	Ammonia	C2 cycle (Vo)	0.003488	True	absent	not comparable					
+C00197	3-Phospho-D-glycerate	Photosynthate (A)	-0.1305	True	absent	untested					
+C00089	Sucrose	Photosynthate (A)	-0.1305	True	absent	untested					
+C00031	D-Glucose	Photosynthate (A)	-0.1305	True	absent	untested					
+C00095	D-Fructose	Photosynthate (A)	-0.1305	True	absent	untested					
+C00208	Maltose	Photosynthate (A)	-0.1305	True	single	agrees	-1	-11.05			-1.231
+C00369	Starch	Photosynthate (A)	-0.1305	True	absent	untested					
+C01182	D-Ribulose 1,5-bisphosphate	RuBP	0.03653	True	absent	not comparable					
+C00152	L-Asparagine	Starvation amino acids	0.1305	True	single	agrees	1	5.644			1.514
+C00183	L-Valine	Starvation amino acids	0.1305	True	robust	agrees	1	5.409		2.491	0.901
+C00123	L-Leucine	Starvation amino acids	0.1305	True	robust	agrees	1	15.32	4.919	4.74	2.404
+C00407	L-Isoleucine	Starvation amino acids	0.1305	True	robust	agrees	1	12.74	3.15	4.424	2.171
+C00064	L-Glutamine	Starvation amino acids	0.1305	True	none	untested	0	0		-0.02	
+C00025	L-Glutamate	Starvation amino acids	0.1305	True	robust	disagrees	-1	-2.198		-0.505	0.08
+C15587	Purine	not in model		False	robust	not predicted	1	29.08	5.114		
+C01879	Pyroglutamic acid	not in model		False	robust	not predicted	1	18.27	1.43		
+C00082	Tyrosine	not in model		False	robust	not predicted	1	15.19	5.06		2.363
+C04368	3-Amino-3-(4-hydroxyphenyl)propanoate	not in model		False	robust	not predicted	1	11.66		5.049	
+C00499	Allantoic acid	not in model		False	robust	not predicted	1	11.33	4.014		
+C02076	Sedoheptulose	not in model		False	robust	not predicted	1	11.08	1.455		
+C00078	L-Tryptophan	not in model		False	robust	not predicted	1	10.87		5.41	
+C00062	Arginine	not in model		False	robust	not predicted	1	3.941		2.339	2.577
+C00669	gamma-L-Glutamyl-L-cysteine	not in model		False	robust	not predicted	1	3.737		2.393	
+C01433	Loganin	not in model		False	robust	not predicted	1	3.5	2.28		
+C00864	Pantothenic acid (Vitamine B5)	not in model		False	robust	not predicted	1	3.281	1.263	2.022	0.254
+C09789	Naringin	not in model		False	robust	not predicted	1	1.888	1.421	0.365	
+C02043	Indole-3-lactic acid	not in model		False	robust	not predicted	1	1.193		1.004	
+C17256	2-Methylpropyl glucosinolate	not in model		False	robust	not predicted	1	0.671		1.264	
+C01020	6-Hydroxynicotinic acid	not in model		False	robust	not predicted	1	0.314		0.498	
+C08400	Glucoalyssin	not in model		False	robust	not predicted	-1	-0.314	-0.711	0.135	
+C08419	4-methylsulfinylbutyl glucosinolate	not in model		False	robust	not predicted	-1	-0.417		-1.19	
+C05837	3-indolymethyl glucosinolate	not in model		False	robust	not predicted	-1	-0.958		-0.511	
+C00147	Adenine	not in model		False	robust	not predicted	-1	-1.189		-0.897	
+C00153	Nicotinamide	not in model		False	robust	not predicted	-1	-1.194		-1.322	
+C00072	Ascorbic acid	not in model		False	robust	not predicted	-1	-1.323		-1.607	
+C01175	Sinapoylglucose	not in model		False	robust	not predicted	-1	-1.608	-0.73		
+C00049	D-Aspartic acid	not in model		False	robust	not predicted	-1	-1.822		-0.434	
+C01750	Quercitrin	not in model		False	robust	not predicted	-1	-1.88		-1.971	
+C00051	Glutathione	not in model		False	robust	not predicted	-1	-2.246	-0.465	0.041	
+C00387	Guanosine	not in model		False	robust	not predicted	-1	-2.391	-1.057	-0.933	-0.361
+C01187	3-Deoxy-D-manno-2-octulosonic acid	not in model		False	robust	not predicted	-1	-2.72	-0.512		
+C01077	O-Acetyl-L-Homoserine	not in model		False	robust	not predicted	-1	-3.039		-1.454	
+C00212	Adenosine	not in model		False	robust	not predicted	-1	-3.242		-1.321	
+C00016	Flavine adenine dinucleotide (FAD)	not in model		False	robust	not predicted	-1	-4.637	-0.796	0.284	
+C00257	Gluconic acid	not in model		False	robust	not predicted	-1	-5.183	-0.38		
+C00255	Riboflavin	not in model		False	robust	not predicted	-1	-5.332	-1.114	-0.158	
+C00003	beta-Nicotinamide adenine dinucleotide	not in model		False	robust	not predicted	-1	-5.821	-0.611	-0.003	
+C00061	Flavin Mononucleotide	not in model		False	robust	not predicted	-1	-6.049	-0.555		
+C02504	2-Isopropylmalic acid	not in model		False	robust	not predicted	-1	-6.334	-0.732		
+C05625	Rutin	not in model		False	robust	not predicted	-1	-7.454	-0.992	-0.633	
+C00026	alpha-Ketoglutaric acid	not in model		False	robust	not predicted	-1	-7.851	-1.683	0.115	-0.725
+C00149	Malic acid	not in model		False	robust	not predicted	-1	-10.54	-1.187		-0.58
+C00624	Glutamic acid, N-acetyl-	not in model		False	robust	not predicted	-1	-17.3	-2.793		
+C00052	Uridine-5'-diphosphogalactose	not in model		False	robust	not predicted	-1	-24.95	-1.91		
+C07064	Lactulose	not in model		False	robust	not predicted	-1	-61.47	-4.126		
+C00135	Histidine	not in model		False	single	not predicted	1	5.749			1.503
+C00956	D-2-Aminoadipic acid	not in model		False	single	not predicted	1	1.689			0.789
+C04608	Apigenin-7-O-glucoside	not in model		False	single	not predicted	1	0.679		0.419	
+C00408	Pipecolic Acid	not in model		False	single	not predicted	1	0.651		1.183	
+C00366	Uric acid	not in model		False	single	not predicted	1	0.386	0.253	0.558	
+C01752	Scopoletin	not in model		False	single	not predicted	-1	-0.453		-0.441	
+C00148	Proline	not in model		False	single	not predicted	-1	-0.578		-0.476	
+C17271	Glucohirsutin	not in model		False	single	not predicted	-1	-0.589	-0.262	-0.097	
+C00482	3,5-Dimethoxy-4-hydroxycinnamic acid	not in model		False	single	not predicted	-1	-1.176			-0.533
+C06104	Adipic acid	not in model		False	single	not predicted	-1	-1.182			-0.185
+C00006	Nicotinamide adenine dinucleotide phosphate	not in model		False	single	not predicted	-1	-1.33		-1.387	
+C00020	Adenosine 5'-monophosphate	not in model		False	single	not predicted	-1	-1.399		-0.523	
+C01094	D-Fructose 1-phosphate	not in model		False	single	not predicted	-1	-1.422			-0.826
+C00109	2-Oxobutyric acid	not in model		False	single	not predicted	-1	-2.129			-0.253
+C00158	Citric acid	not in model		False	single	not predicted	-1	-2.61	-0.123	-0.028	-0.727
+C01384	Maleic acid	not in model		False	single	not predicted	-1	-3.14			-0.746
+C00330	2'-Deoxyguanosine	not in model		False	single	not predicted	-1	-3.249			-0.91
+C00327	L-Citrulline	not in model		False	single	not predicted	-1	-5.027			-2.462

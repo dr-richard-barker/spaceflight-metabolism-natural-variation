@@ -1,0 +1,97 @@
+kegg_id	name	kegg_name	status	direction	value	relevant
+C01026	N,N-Dimethylglycine	N,N-Dimethylglycine	conflicting	0	0.0	False
+C00064	L-Glutamine	L-Glutamine	none	0	0.0	False
+C00073	Methionine	L-Methionine	none	0	0.0	False
+C00114	Choline	Choline	none	0	0.0	False
+C00170	5'-Deoxy-5'-(methylthio)adenosine	5'-Methylthioadenosine	none	0	0.0	False
+C00417	cis-Aconitic acid	cis-Aconitate	none	0	0.0	False
+C00475	Cytidine	Cytidine	none	0	0.0	False
+C00643	5-Hydroxy-L-tryptophan	5-Hydroxy-L-tryptophan	none	0	0.0	False
+C00811	p-Coumaric acid	4-Coumarate	none	0	0.0	False
+C00818	Saccharic acid	D-Glucarate	none	0	0.0	False
+C01035	4-Guanidinobutyric acid	4-Guanidinobutanoate	none	0	0.0	False
+C01551	Allantoin	Allantoin	none	0	0.0	False
+C01835	Maltotriose	Maltotriose	none	0	0.0	False
+C02153	Benzyl glucosinolate	Glucotropaeolin	none	0	0.0	False
+C02985	alpha-L-Fucose 1-phosphate	L-Fucose 1-phosphate	none	0	0.0	False
+C04695	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside	none	0	0.0	False
+C05519	Allothreonine	L-Allothreonine	none	0	0.0	False
+C05620	N-Acetyl-D-phenylalanine	N-Acetyl-D-phenylalanine	none	0	0.0	False
+C05841	Nicotinate D-ribonucleoside	Nicotinate D-ribonucleoside	none	0	0.0	False
+C06455	Hydroxymethylphosphonic acid	Hydroxymethylphosphonate	none	0	0.0	False
+C08401	5-methylthiopentylglucosinolate	Glucoberteroin	none	0	0.0	False
+C08403	4-pentenylglucosinolate	Glucobrassicanapin	none	0	0.0	False
+C08409	4-methylthiobutyl glucosinolate	Glucoerucin	none	0	0.0	False
+C08411	3-methylsulfinylpropyl-glucosinolate	Glucoiberin	none	0	0.0	False
+C08412	3-methylthiopropyl-glucosinolate	Glucoiberverin	none	0	0.0	False
+C08415	3-butenylglucosinolate	Gluconapin	none	0	0.0	False
+C10164	2-Picolinic acid	Picolinic acid	none	0	0.0	False
+C17252	7-methylthioheptyl glucosinolate	7-Methylthioheptyl glucosinolate	none	0	0.0	False
+C17254	8-Methylthiooctyl glucosinolate	8-Methylthiooctyl glucosinolate	none	0	0.0	False
+C15587	Purine	Purine	robust	1	0.13052	True
+C01879	Pyroglutamic acid	5-Oxoproline	robust	1	0.13052	True
+C00123	Leucine	L-Leucine	robust	1	0.13052	True
+C00082	Tyrosine	L-Tyrosine	robust	1	0.13052	True
+C00407	Isoleucine	L-Isoleucine	robust	1	0.13052	True
+C04368	3-Amino-3-(4-hydroxyphenyl)propanoate	3-Amino-3-(4-hydroxyphenyl)propanoate	robust	1	0.13052	True
+C00499	Allantoic acid	Allantoate	robust	1	0.13052	True
+C02076	Sedoheptulose	Sedoheptulose	robust	1	0.13052	True
+C00078	L-Tryptophan	L-Tryptophan	robust	1	0.13052	True
+C00183	Valine	L-Valine	robust	1	0.13052	True
+C00062	Arginine	L-Arginine	robust	1	0.13052	True
+C00669	gamma-L-Glutamyl-L-cysteine	gamma-L-Glutamyl-L-cysteine	robust	1	0.13052	True
+C01433	Loganin	Loganin	robust	1	0.13052	True
+C00864	Pantothenic acid (Vitamine B5) 	Pantothenate	robust	1	0.13052	True
+C09789	Naringin	Naringin	robust	1	0.13052	True
+C02043	Indole-3-lactic acid	Indolelactate	robust	1	0.13052	True
+C17256	2-Methylpropyl glucosinolate	2-Methylpropyl glucosinolate	robust	1	0.13052	True
+C01020	6-Hydroxynicotinic acid	6-Hydroxynicotinate	robust	1	0.13052	True
+C08400	Glucoalyssin	Glucoalyssin	robust	-1	-0.13052	True
+C08419	4-methylsulfinylbutyl glucosinolate	Glucoraphanin	robust	-1	-0.13052	True
+C05837	3-indolymethyl glucosinolate	Glucobrassicin	robust	-1	-0.13052	True
+C00147	Adenine	Adenine	robust	-1	-0.13052	True
+C00153	Nicotinamide	Nicotinamide	robust	-1	-0.13052	True
+C00072	Ascorbic acid	Ascorbate	robust	-1	-0.13052	True
+C01175	Sinapoylglucose	1-O-Sinapoyl-beta-D-glucose	robust	-1	-0.13052	True
+C00049	D-Aspartic acid	L-Aspartate	robust	-1	-0.13052	True
+C01750	Quercitrin	Quercitrin	robust	-1	-0.13052	True
+C00025	L-Glutamic acid	L-Glutamate	robust	-1	-0.13052	True
+C00051	Glutathione	Glutathione	robust	-1	-0.13052	True
+C00387	Guanosine	Guanosine	robust	-1	-0.13052	True
+C01187	3-Deoxy-D-manno-2-octulosonic acid	3-Deoxy-D-manno-octulosonate	robust	-1	-0.13052	True
+C01077	O-Acetyl-L-Homoserine	O-Acetyl-L-homoserine	robust	-1	-0.13052	True
+C00212	Adenosine	Adenosine	robust	-1	-0.13052	True
+C00016	Flavine adenine dinucleotide (FAD)	FAD	robust	-1	-0.13052	True
+C00257	Gluconic acid	D-Gluconic acid	robust	-1	-0.13052	True
+C00255	Riboflavin 	Riboflavin	robust	-1	-0.13052	True
+C00003	beta-Nicotinamide adenine dinucleotide	NAD+	robust	-1	-0.13052	True
+C00061	Flavin Mononucleotide	FMN	robust	-1	-0.13052	True
+C02504	2-Isopropylmalic acid	alpha-Isopropylmalate	robust	-1	-0.13052	True
+C05625	Rutin	Rutin	robust	-1	-0.13052	True
+C00026	alpha-Ketoglutaric acid	2-Oxoglutarate	robust	-1	-0.13052	True
+C00149	Malic acid	(S)-Malate	robust	-1	-0.13052	True
+C00624	Glutamic acid, N-acetyl-	N-Acetyl-L-glutamate	robust	-1	-0.13052	True
+C00052	Uridine-5'-diphosphogalactose	UDP-alpha-D-galactose	robust	-1	-0.13052	True
+C07064	Lactulose	Lactulose	robust	-1	-0.13052	True
+C00135	Histidine	L-Histidine	single	1	0.13052	False
+C00152	L-Asparagine	L-Asparagine	single	1	0.13052	False
+C00956	D-2-Aminoadipic acid	L-2-Aminoadipate	single	1	0.13052	False
+C04608	Apigenin-7-O-glucoside	Apigenin 7-O-beta-D-glucoside	single	1	0.13052	False
+C00408	Pipecolic Acid	L-Pipecolate	single	1	0.13052	False
+C00366	Uric acid	Urate	single	1	0.13052	False
+C01752	Scopoletin	Scopoletin	single	-1	-0.13052	False
+C00148	Proline	L-Proline	single	-1	-0.13052	False
+C17271	Glucohirsutin	Glucohirsutin	single	-1	-0.13052	False
+C00482	3,5-Dimethoxy-4-hydroxycinnamic acid	Sinapate	single	-1	-0.13052	False
+C06104	Adipic acid	Adipate	single	-1	-0.13052	False
+C00006	Nicotinamide adenine dinucleotide phosphate	NADP+	single	-1	-0.13052	False
+C00020	Adenosine 5'-monophosphate	AMP	single	-1	-0.13052	False
+C01094	D-Fructose 1-phosphate	D-Fructose 1-phosphate	single	-1	-0.13052	False
+C00109	2-Oxobutyric acid	2-Oxobutanoate	single	-1	-0.13052	False
+C00065	Serine	L-Serine	single	-1	-0.13052	False
+C00158	Citric acid	Citrate	single	-1	-0.13052	False
+C01384	Maleic acid	Maleic acid	single	-1	-0.13052	False
+C00168	beta-Hydoxypyruvic acid	Hydroxypyruvate	single	-1	-0.13052	False
+C00330	2'-Deoxyguanosine	Deoxyguanosine	single	-1	-0.13052	False
+C00327	L-Citrulline	L-Citrulline	single	-1	-0.13052	False
+C00208	D-Maltose	Maltose	single	-1	-0.13052	False

@@ -1,5 +1,6 @@
-# Reviewed corrections to data/reference/kegg_map.tsv (scripts/10_light_dark_reference.py `kegg`).
-# Every ID below was checked against its KEGG entry (rest.kegg.jp/get/cpd:<id>, 2026-10-30); the
+# Reviewed corrections to data/reference/kegg_map.tsv (scripts/10_light_dark_reference.py `kegg`) and to
+# the KEGG IDs Wu gave the time-course peaks; a blank kegg_id excludes the compound. Every ID below was
+# checked against its KEGG entry (rest.kegg.jp get or list/compound, 2026-10-30); the
 # `reason` column quotes the KEGG NAME that confirms it. Amino acids: the exact-name rule picks
 # KEGG's generic entries (C16439 "Leucine" etc.); LC-MS cannot separate enantiomers and plant pools
 # are the L-forms, which are also the IDs the first study's predictions use (T06).
@@ -25,3 +26,6 @@ Sinapoylglucose	C01175	KEGG NAME 1-O-Sinapoyl-beta-D-glucose
 Uridine-5'-diphosphogalactose	C00052	KEGG NAME UDP-alpha-D-galactose; UDP-galactose
 Glutamic acid, N-acetyl-	C00624	KEGG NAME N-Acetyl-L-glutamate
 3-Deoxy-D-manno-2-octulosonic acid	C01187	KEGG NAME 3-Deoxy-D-manno-octulosonate; 3-Deoxy-D-manno-2-octulosonate
+D-Aspartic acid	C00049	KEGG NAME L-Aspartate; LC-MS does not resolve enantiomers and the plant pool is L (same rule as the amino acids above; C00402 D-Aspartate replaced)
+Allantoin	C01551	KEGG NAME Allantoin (generic entry); Wu's C02348 is (R)(-)-Allantoin, an enantiomer LC-MS does not resolve
+allo-Inositol OR chiro-Inositol		excluded: Wu's C00137 is myo-Inositol, a different isomer from the peak's own name, and the peak does not say which of allo- or chiro- it is

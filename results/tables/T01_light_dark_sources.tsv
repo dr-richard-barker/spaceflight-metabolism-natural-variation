@@ -87,7 +87,7 @@ wu_stress	Citric acid	Citric acid	301	-0.0279	0.5017	1.0276				C00158	False	-0.0
 wu_stress	Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl) p-coumaroyl) glucoside] 5-O-glucoside	Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl) p-coumaroyl) glucoside] 5-O-glucoside	299	-0.0737	0.5217	1.4908					False	-0.0494
 wu_stress	Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-coumaroyl) glucoside] 5-O-[6''''-O-(malonyl) glucoside]	Cyanidin 3-O-[2''-O-(2'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-coumaroyl) glucoside] 5-O-[6''''-O-(malonyl) glucoside]	286	-2.1062	0.8357	2.0522					True	-1.0263
 wu_stress	Cyanidin 3-O-[2''-O-(6'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl)-p-coumaroyl) glucoside] 5-O-(6''''-O-malonyl) glucoside	Cyanidin 3-O-[2''-O-(6'''-O-(sinapoyl) xylosyl) 6''-O-(p-O-(glucosyl)-p-coumaroyl) glucoside] 5-O-(6''''-O-malonyl) glucoside	299	1.9011	0.9666	1.1732					True	1.6204
-wu_stress	D-Aspartic acid	D-Aspartic acid	301	-0.4339	0.9203	0.2381				C00402	True	-1.8223
+wu_stress	D-Aspartic acid	D-Aspartic acid	301	-0.4339	0.9203	0.2381				C00049	True	-1.8223
 wu_stress	Flavine adenine dinucleotide	Flavine adenine dinucleotide	300	0.2839	0.6867	0.4613				C00016	False	0.6156
 wu_stress	Fragment of tyramine	Fragment of tyramine	301	-0.5777	0.8472	0.8813					True	-0.6555
 wu_stress	Glutathione	Glutathione	301	0.0413	0.5415	0.5838				C00051	False	0.0707
@@ -151,9 +151,9 @@ caldana	PN_2942	Maltotriose	18	-0.3302		0.5047	0.2728	C01835	17.7891	C01835	Fals
 caldana	PP_2142	Cytidine	18	-0.0893		0.3794	0.6105	C00475	17.596	C00475	False	-0.2354
 caldana	PN_833	alpha-L-Fucose 1-phosphate	18	-0.0167		0.3151	0.9216	C02985	17.5362	C02985	False	-0.0531
 caldana	PP_740	D-2-Aminoadipic acid	18	0.7894		0.4675	0.0209	C00956	17.3139	C00956	True	1.6887
-caldana	PP_683	Allantoin	18	0.4598		0.7309	0.1461	C02348	16.6255	C02348	False	0.6291
+caldana	PP_683	Allantoin	18	0.4598		0.7309	0.1461	C02348	16.6255	C01551	False	0.6291
 caldana	PN_506	Citric acid	18	-0.7272		0.2787	0.0061	C00158	16.3606	C00158	True	-2.6096
-caldana	PN_712	allo-Inositol OR chiro-Inositol 	18	-0.453		0.1452	0.0206	C00137	16.3374	C00137	True	-3.1193
+caldana	PN_712	allo-Inositol OR chiro-Inositol 	18	-0.453		0.1452	0.0206	C00137	16.3374		True	-3.1193
 caldana	PP_47	N,N-Dimethylglycine	18	0.9254		0.4178	0.0002	C01026	16.1201	C01026	True	2.2151
 caldana	PN_247	Adipic acid	18	-0.1849		0.1565	0.0146	C06104	16.0306	C06104	True	-1.1816
 caldana	PP_104	Hydroxymethylphosphonic acid	14	0.0565		0.1948	0.6639	C06455	15.9039	C06455	False	0.2899
