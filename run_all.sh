@@ -35,4 +35,5 @@ for arg in "$@"; do
     (cd ../manuscript/latex && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex && ./build_docx.sh)
   fi
 done
+python3 19_build_site.py
 echo "run_all: done"

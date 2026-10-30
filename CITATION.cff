@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or its derived data, please cite it as below."
+title: "Natural variation in Arabidopsis light/dark metabolism tests a carbon-starvation model of plant spaceflight transcriptomes"
+abstract: >-
+  Tests a gas-transport and photosynthesis model of the OSD-522 spaceflight transcriptome
+  against measured light/dark metabolism from Arabidopsis natural variation: the model's
+  compound predictions against a three-source darkness reference, a PaintOmics resubmission
+  with a measured metabolite layer, pre-registered light/dark gene-set tests on six NASA OSDR
+  flight contrasts, and a GC-MS panel power estimate from MetaboLights replicate variance.
+type: software
+authors:
+  - given-names: Richard
+    family-names: Barker
+    orcid: "https://orcid.org/0000-0001-5681-9857"
+    # TODO add affiliation before deposit
+repository-code: "https://github.com/dr-richard-barker/spaceflight-metabolism-natural-variation"
+url: "https://dr-richard-barker.github.io/spaceflight-metabolism-natural-variation/"
+license: MIT
+keywords:
+  - spaceflight
+  - Arabidopsis thaliana
+  - natural variation
+  - carbon starvation
+  - metabolomics
+  - pre-registration
