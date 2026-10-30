@@ -41,12 +41,12 @@ a \nLayer-compound measured one left the PaintOmics pathway result unchanged, wi
 integration the gene layer decides the outcome. Of \nTests{} pre-registered gene-set outcomes,
 \nMatch{} matched. None of the predicted lit-flight starvation signals reached significance, while
 carbon-starvation and branched-chain amino acid catabolism genes moved strongly in three dark flight
-contrasts, down in two BRIC canister experiments and up in dark-adapted CARA leaves. Natural-variation
+contrasts, down in two BRIC canister experiments and up in the leaves of dark-grown CARA seedlings. Natural-variation
 GWAS gene sets showed no light-specific signal. With six plants per arm a targeted GC-MS panel
 could detect only changes of about \detectMinFold-fold or larger; the model's predicted
 0.13\,log$_2$ shifts would need \nQThousandMin{} to \nQThousandMax{} plants per arm. The
 carbon-starvation signal in plant spaceflight transcriptomes is real, but it is not specific to
-light, and its sign depends on the hardware.}
+light, and its sign differs between flight experiments.}
 
 \keywords{spaceflight, \textit{Arabidopsis}, natural variation, carbon starvation, darkness,
 metabolomics, pre-registration}
@@ -77,7 +77,7 @@ Zhu and colleagues profiled the leaf metabolome of natural accessions before and
 extended darkness \citep{zhu2022,zhu2024}; \nZhuAcc{} have both timepoints in the published
 per-accession values. Wu and colleagues profiled accessions under
 control conditions and under a stress the supplement describes as darkness at 32\,\textdegree C,
-and mapped metabolite GWAS loci in each \citep{wu2018}; \nWuAcc{} have paired values here. Their supplement also re-analyses the
+and mapped metabolite GWAS loci in each \citep{wu2018}; \nWuAcc{} have paired values here. Their supplement also includes LC-MS profiles from the
 Caldana time course, in which plants grown at 21\,\textdegree C in the light were kept there or
 moved to darkness \citep{caldana2011}. Together they say how carbon starvation actually moves
 \textit{Arabidopsis} leaf metabolites, how consistently across genotypes, and which loci shape that
@@ -131,7 +131,7 @@ The reference also shows what the model leaves out (Fig.~\ref{fig:model}b): it d
 \nNotPredictedRobust{} robust darkness responses. They include malate ($\malZhu{}$ log$_2$) and
 2-oxoglutarate ($\oxgZhu{}$), both TCA-cycle intermediates that the model excluded because their
 direction under carbon limitation seemed uncertain; the reference says both fall. Also missing were
-the flavin and nicotinamide cofactors (FAD, FMN, riboflavin, NAD$^+$), adenine nucleosides,
+the flavin and nicotinamide cofactors (FAD, FMN, riboflavin, NAD$^+$), adenosine and guanosine,
 glutathione and ascorbate, all of which fell, and aromatic amino acids, arginine, allantoate and
 purine, which rose.
 
@@ -184,8 +184,9 @@ either job; open symbols mark compounds not entered in that job's hub test.}
 
 \subsection{Light and dark flight in the same hardware}
 
-OSD-678 \citep{osd678} grew Col-0 in the same CARA plates on the same flight, in light and in
-darkness, which makes it the one place where light can be compared without changing hardware,
+OSD-678 \citep{osd678} grew Col-0 seedlings in the same CARA plates on the same flight, either in
+the ambient light of the station's cabin wall (4--6\,$\mu$mol\,m$^{-2}$\,s$^{-1}$) or wrapped in
+black-out cloth from germination, which makes it the one place where light can be compared without changing hardware,
 genotype or mission. We submitted both of its gene layers with the same reference metabolite layer
 (Fig.~\ref{fig:lightdark}). The light contrast had more differentially expressed genes than the
 dark one (\nDELight{} against \nDEDark{} at an adjusted $p<0.05$) and more significant pathways
@@ -220,9 +221,11 @@ carbon-starvation (DIN) set, re-tested here, and KEGG's valine, leucine and isol
 pathway (\nSetBcaa{} genes), the catabolic route of the strongest darkness response. Four come from
 the Wu GWAS: genes in loci found only under control, only under the darkness stress, under both,
 and in the loci of metabolites with a directional darkness response. For OSD-522 the null was every
-one of the 924 ways to relabel its twelve samples; for the other five contrasts, which publish
-statistics but too few replicates for a sample permutation, it was a genomic rotation that moves a
-set along the genome and keeps its size and clustering (Methods).
+one of the 924 ways to relabel its twelve samples. The other five contrasts were tested on GeneLab's
+published statistics, with too few replicates for a useful sample permutation (three per arm in
+OSD-38 and OSD-678) or samples that could not be assigned to an arm from their names, so their null
+was a genomic rotation that moves a set along the genome and keeps its size and clustering
+(Methods).
 
 Of the \nTests{} outcomes, \nMatch{} matched (Fig.~\ref{fig:sets}), but the matches are not where the
 model needs them. In the lit contrasts none of the predicted signals passed correction:
@@ -236,7 +239,7 @@ genes, it weakens to $p \pDinFiveTwoTwo$.
 
 The dark contrasts carried the strongest signals of all, where the model predicts none. The DIN
 set fell in both BRIC-PDFU experiments (OSD-38 \citep{osd38}, $q \qDinThirtyEight$; OSD-321
-\citep{osd321}, $q \qDinThreeTwoOne$) and rose in dark-adapted CARA leaves (OSD-678 dark,
+\citep{osd321}, $q \qDinThreeTwoOne$) and rose in the leaves of dark-grown CARA seedlings (OSD-678 dark,
 $q \qDinDark$). Branched-chain catabolism followed it, down in OSD-321 ($q \qBcaaThreeTwoOne$) and up
 in OSD-678 dark ($q \qBcaaDark$). The natural-variation GWAS sets gave nothing light-specific: the
 stress-only and darkness-metabolite loci were never enriched after correction, and the one
@@ -322,10 +325,10 @@ opposite directions in BRIC-PDFU seedlings and in CARA leaves.
 Claim & First study \citep{firststudy} & This study\\
 \midrule
 Starvation amino acids rise together & Predicted together, one shared gain of 1, unfitted & Leu, Ile, Val, Asn rise; Glu falls; Gln flat; Leu responds \ratioLeuAsn--\ratioLeuVal{} times as strongly as Val or Asn\\
-TCA-cycle acids & Not predicted (direction uncertain) & Malate and 2-oxoglutarate fall in every source that measured them\\
+TCA-cycle acids & Not predicted (direction uncertain) & Malate and 2-oxoglutarate fall robustly, each in two sources\\
 Metabolite layer in PaintOmics & \nModelCompounds{} predicted compounds & \nLayer{} measured compounds; pathways unchanged; hub $p$ identical for shared compounds\\
 Lit flight shows a starvation signal & DIN up in OSD-522 ($p \pDinFirstStudy$, Mann--Whitney) & Leans up in all three lit contrasts; none significant after correction under gene-correlation-aware nulls\\
-Dark flight shows none & Predicted none; dark inversions unexplained & Strongest signals are in the dark; sign depends on hardware\\
+Dark flight shows none & Predicted none; dark inversions unexplained & Strongest signals are in dark-grown seedlings; sign differs between BRIC canisters and CARA plates\\
 Metabolite shifts are measurable & Proposed a 20--30 compound panel on archived material & Needs \nQThousandMin--\nQThousandMax{} plants per arm for 0.13\,log$_2$\\
 \botrule
 \end{tabularx}
@@ -333,14 +336,16 @@ Metabolite shifts are measurable & Proposed a 20--30 compound panel on archived 
 
 \subsection{Why the dark contrasts carry the signal}
 
-We cannot say from these data, and offer possibilities to test rather than conclusions. In BRIC-PDFU
-experiments both arms are dark-grown seedlings, so the flight-versus-ground contrast compares two
-starved states; a lower starvation signal in flight would mean the flight seedlings were less
-starved, or starved differently, than their ground controls. In OSD-678 the dark treatment is a
-period of darkness applied to plants grown in light, which is closer to the extended darkness of
-the natural-variation reference, and there the starvation and branched-chain catabolism genes rise.
-Either way, a carbon-starvation programme responds to spaceflight conditions that the boundary-layer
-mechanism cannot reach, because in the dark there is no assimilation for it to reduce.
+We cannot say from these data, and offer possibilities to test rather than conclusions. In all
+three dark contrasts both arms are seedlings grown in darkness from germination
+\citep{osd38,osd321,osd678}, so the flight-versus-ground contrast compares two starved states, and
+a difference in the starvation programme means the flight seedlings were starved more, less or
+differently than their ground controls. The direction is not consistent: the programme is lower in
+flight in the two BRIC-PDFU canister experiments and higher in the CARA plates, which differ in
+hardware (a sealed canister against a plate on the cabin wall) and in what was sequenced (whole
+seedlings against dissected leaves). Either way, a carbon-starvation programme responds to
+spaceflight conditions that the boundary-layer mechanism cannot reach, because in the dark there
+is no assimilation for it to reduce.
 
 \subsection{Limitations}
 
@@ -349,8 +354,11 @@ it fixes directions rather than flight magnitudes, and its use as a stand-in for
 the first study's hypothesis. The Caldana genotype is not stated in the sources we could read
 (TODO: confirm from the paper), and the Wu stress condition is taken from the supplement. Gene-set
 tests on GWAS regions include many genes that do not cause the association, which dilutes any
-signal. Five of the six contrasts have three replicates per arm and were tested with a rotation
-null that is weaker than a sample permutation. PaintOmics hub counts rise with the number of
+signal. The five contrasts other than OSD-522 were tested with a rotation null, which is weaker
+than a sample permutation; OSD-38 and OSD-678 have three replicates per arm. OSD-678's light arm was
+the cabin's ambient light of 4--6\,$\mu$mol\,m$^{-2}$\,s$^{-1}$ \citep{osd678}, well below OSD-522's
+60, where the model's deficit is smaller still, so its light/dark comparison is a weak test of the
+model's light dependence. PaintOmics hub counts rise with the number of
 differentially expressed genes, which differs \ratioDE-fold between the two OSD-678 contrasts.
 The GC-MS variance pools leaf and shoot studies from different laboratories and timepoints. And the
 pre-registration was written by the same analyst on the same day as the tests, after the reference

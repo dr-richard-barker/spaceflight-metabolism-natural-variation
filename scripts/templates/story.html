@@ -122,7 +122,7 @@
 <section>
   <div class="wrap">
     <h2><span class="n">04</span>Light and dark flight in the same hardware</h2>
-    <p class="sub">OSD-678 grew Col-0 in the same CARA plates on the same flight, in light and in darkness.</p>
+    <p class="sub">OSD-678 grew Col-0 seedlings in the same CARA plates on the same flight, in the cabin's ambient light (4–6 µmol m<sup>−2</sup> s<sup>−1</sup>) or wrapped in black-out cloth from germination.</p>
     <p>The light contrast had $ratioDE times as many differentially expressed genes ($nDELight against $nDEDark) and more
       significant pathways ($nPathB against $nPathC). The branched-chain amino acids, glutamate and 2-oxoglutarate were
       hubs only in light, the direction the model expects, but every light hub sat just inside the threshold
@@ -144,7 +144,7 @@
       contrasts (OSD-522 p $pDinFiveTwoTwo). The first study's Mann–Whitney test gave p $pDinFirstStudy for OSD-522, and is
       reproduced here; a permutation of the twelve samples, which keeps the correlation between genes, weakens it. The
       strongest signals came from dark flights: DIN and branched-chain amino acid catabolism fell in BRIC-PDFU seedlings
-      (OSD-321, q $qDinThreeTwoOne) and rose in dark CARA leaves (OSD-678 dark, q $qDinDark). Gene sets from the
+      (OSD-321, q $qDinThreeTwoOne) and rose in the leaves of dark-grown CARA seedlings (OSD-678 dark, q $qDinDark). Gene sets from the
       natural-variation GWAS loci showed nothing light-specific.</p>
     <figure>
       <img src="figures/fig04_geneset_tests.png" alt="Heat map of 36 pre-registered gene-set tests across three lit and three dark flight contrasts">
@@ -184,7 +184,7 @@
       <tr><td>TCA-cycle acids</td><td>Not predicted (direction uncertain)</td><td>Malate and 2-oxoglutarate fall in darkness</td></tr>
       <tr><td>Metabolite layer in PaintOmics</td><td>21 predicted compounds</td><td>$nLayer measured compounds; same pathways; identical hub p for shared compounds</td></tr>
       <tr><td>Lit flight shows a starvation signal</td><td>DIN up in OSD-522 (p $pDinFirstStudy, Mann–Whitney)</td><td>Leans up in all three lit contrasts; none significant under nulls that respect gene correlation</td></tr>
-      <tr><td>Dark flight shows none</td><td>Predicted none; dark inversions unexplained</td><td>Strongest signals are in the dark; sign depends on hardware</td></tr>
+      <tr><td>Dark flight shows none</td><td>Predicted none; dark inversions unexplained</td><td>Strongest signals are in the dark-grown seedlings; sign differs between BRIC canisters and CARA plates</td></tr>
       <tr><td>Metabolite shifts are measurable</td><td>Proposed a 20–30 compound panel on archived material</td><td>$nQThousandMin–$nQThousandMax plants per arm for 0.13 log<sub>2</sub></td></tr>
     </table></div>
   </div>
@@ -198,8 +198,9 @@
       directions, not flight magnitudes. A source counted for a compound when at least 75&nbsp;% of accessions moved the
       same way (Zhu, Wu) or at Welch p &lt; 0.05 (Caldana). Compound names were matched to KEGG through its REST API and every
       correction is recorded with the KEGG name that confirms it. The Caldana genotype is not stated in the sources read
-      here, and Wu's stress condition is taken from its supplement. Five of the six flight contrasts have three replicates
-      per arm and were tested against a genomic-rotation null, which is weaker than a sample permutation. PaintOmics hub
+      here, and Wu's stress condition is taken from its supplement. The five flight contrasts other than OSD-522 were tested
+      against a genomic-rotation null, which is weaker than a sample permutation. OSD-678's light arm was ambient cabin light
+      of 4–6 µmol m<sup>−2</sup> s<sup>−1</sup>, well below OSD-522's 60, so it is a weak test of the model's light dependence. PaintOmics hub
       counts rise with the number of differentially expressed genes. The GC-MS variance pools leaf and shoot studies from
       different laboratories. The pre-registration was written by the same analyst on the day of the tests, after the
       reference was built; the commit order shows that no prediction or setting changed after a flight result was seen.

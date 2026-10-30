@@ -41,7 +41,7 @@ model's light/dark claim, with measured natural-variation data:
 3. **The starvation signal is not light-specific.** 18 of 36 pre-registered outcomes matched,
    but no lit contrast gave a significant starvation signal, while the starvation (DIN) and
    branched-chain amino acid catabolism sets moved strongly in three dark contrasts, down in
-   BRIC-PDFU seedlings and up in dark CARA leaves. GWAS-locus gene sets showed nothing
+   BRIC-PDFU seedlings and up in the leaves of dark-grown CARA seedlings. GWAS-locus gene sets showed nothing
    light-specific. [T08](results/tables/T08_geneset_tests.tsv), [fig04](results/figures/fig04_geneset_tests.png)
 4. **The predicted metabolite shifts are too small for a feasible panel.** With 6 plants per arm,
    GC-MS detects about 1.48-fold changes at best; the model's 0.13 log₂ needs 92–1,342 plants per
