@@ -1,0 +1,112 @@
+study	kegg_id	compound	maf_name	via
+MTBLS22	C00149	(S)-Malate	malic acid	name
+MTBLS22	C00183	L-Valine	L-valine	ChEBI
+MTBLS22	C01879	5-Oxoproline	pyroglutamic acid	name
+MTBLS22	C00025	L-Glutamate	L-glutamic acid	ChEBI
+MTBLS22	C00160	Glycolate	glycolic acid	ChEBI
+MTBLS22	C00258	D-Glycerate	L-glyceric acid	name
+MTBLS22	C00152	L-Asparagine	L-asparagine	ChEBI
+MTBLS22	C00089	Sucrose	sucrose	name
+MTBLS22	C00031	D-Glucose	D-glucopyranose	ChEBI
+MTBLS22	C00257	D-Gluconic acid	D-gluconic acid	ChEBI
+MTBLS22	C00158	Citrate	citric acid	ChEBI
+MTBLS22	C00148	L-Proline	L-proline	ChEBI
+MTBLS22	C00049	L-Aspartate	L-aspartic acid	ChEBI
+MTBLS22	C00037	Glycine	glycine	ChEBI
+MTBLS22	C00407	L-Isoleucine	isoleucine	name
+MTBLS22	C00095	D-Fructose	D-fructose	ChEBI
+MTBLS41	C00149	(S)-Malate	malic acid	name
+MTBLS41	C00183	L-Valine	L-valine	ChEBI
+MTBLS41	C01879	5-Oxoproline	pyroglutamic acid	name
+MTBLS41	C00025	L-Glutamate	L-glutamic acid	ChEBI
+MTBLS41	C00160	Glycolate	glycolic acid	ChEBI
+MTBLS41	C00258	D-Glycerate	L-glyceric acid	name
+MTBLS41	C00152	L-Asparagine	L-asparagine	ChEBI
+MTBLS41	C00089	Sucrose	sucrose	name
+MTBLS41	C00031	D-Glucose	D-glucopyranose	ChEBI
+MTBLS41	C00257	D-Gluconic acid	D-gluconic acid	ChEBI
+MTBLS41	C00158	Citrate	citric acid	ChEBI
+MTBLS41	C00148	L-Proline	L-proline	ChEBI
+MTBLS41	C00049	L-Aspartate	L-aspartic acid	ChEBI
+MTBLS41	C00037	Glycine	glycine	ChEBI
+MTBLS41	C00407	L-Isoleucine	isoleucine	name
+MTBLS41	C00095	D-Fructose	D-fructose	ChEBI
+MTBLS42	C00149	(S)-Malate	malic acid	name
+MTBLS42	C00183	L-Valine	L-valine	ChEBI
+MTBLS42	C01879	5-Oxoproline	pyroglutamic acid	name
+MTBLS42	C00025	L-Glutamate	L-glutamic acid	ChEBI
+MTBLS42	C00160	Glycolate	glycolic acid	ChEBI
+MTBLS42	C00258	D-Glycerate	L-glyceric acid	name
+MTBLS42	C00152	L-Asparagine	L-asparagine	ChEBI
+MTBLS42	C00089	Sucrose	sucrose	name
+MTBLS42	C00031	D-Glucose	D-glucopyranose	ChEBI
+MTBLS42	C00257	D-Gluconic acid	D-gluconic acid	ChEBI
+MTBLS42	C00158	Citrate	citric acid	ChEBI
+MTBLS42	C00148	L-Proline	L-proline	ChEBI
+MTBLS42	C00049	L-Aspartate	L-aspartic acid	ChEBI
+MTBLS42	C00037	Glycine	glycine	ChEBI
+MTBLS42	C00407	L-Isoleucine	isoleucine	name
+MTBLS42	C00095	D-Fructose	D-fructose	ChEBI
+MTBLS2289	C00026	2-Oxoglutarate	2-oxoglutarate	ChEBI
+MTBLS2289	C00147	Adenine	Adenine	ChEBI
+MTBLS2289	C00062	L-Arginine	Arginine	name
+MTBLS2289	C00072	Ascorbate	Ascorbate	ChEBI
+MTBLS2289	C00152	L-Asparagine	Asparagine	name
+MTBLS2289	C00049	L-Aspartate	Aspartate	name
+MTBLS2289	C00158	Citrate	Citrate	ChEBI
+MTBLS2289	C00095	D-Fructose	Fructose	name
+MTBLS2289	C00031	D-Glucose	Glucose	name
+MTBLS2289	C00025	L-Glutamate	Glutamate	name
+MTBLS2289	C00064	L-Glutamine	Glutamine	name
+MTBLS2289	C00258	D-Glycerate	Glycerate	name
+MTBLS2289	C00037	Glycine	Glycine	ChEBI
+MTBLS2289	C00160	Glycolate	Glycolate	ChEBI
+MTBLS2289	C00135	L-Histidine	Histidine	name
+MTBLS2289	C00407	L-Isoleucine	Isoleucine	ChEBI
+MTBLS2289	C00123	L-Leucine	Leucine	name
+MTBLS2289	C00149	(S)-Malate	Malate	name
+MTBLS2289	C00208	Maltose	Maltose	ChEBI
+MTBLS2289	C00148	L-Proline	Proline	name
+MTBLS2289	C01879	5-Oxoproline	Pyroglutamate	name
+MTBLS2289	C00065	L-Serine	Serine	name
+MTBLS2289	C00482	Sinapate	Sinapate	ChEBI
+MTBLS2289	C00089	Sucrose	Sucrose	ChEBI
+MTBLS2289	C00078	L-Tryptophan	Tryptophan	name
+MTBLS2289	C00082	L-Tyrosine	Tyrosine	name
+MTBLS2289	C00183	L-Valine	Valine	name
+MTBLS4066	C00072	Ascorbate	Ascorbic acid	name
+MTBLS4066	C00152	L-Asparagine	Asparagine	name
+MTBLS4066	C00049	L-Aspartate	Aspartic acid	name
+MTBLS4066	C00158	Citrate	Citric acid	ChEBI
+MTBLS4066	C00095	D-Fructose	Fructose	name
+MTBLS4066	C00031	D-Glucose	Glucose	name
+MTBLS4066	C00025	L-Glutamate	Glutamic acid	name
+MTBLS4066	C00064	L-Glutamine	Glutamine	name
+MTBLS4066	C00258	D-Glycerate	Glyceric acid	name
+MTBLS4066	C00037	Glycine	Glycine	ChEBI
+MTBLS4066	C00407	L-Isoleucine	Isoleucine	name
+MTBLS4066	C00123	L-Leucine	Leucine	name
+MTBLS4066	C00149	(S)-Malate	Malic acid	name
+MTBLS4066	C00148	L-Proline	Proline	name
+MTBLS4066	C01879	5-Oxoproline	Pyroglutamic acid	ChEBI
+MTBLS4066	C00065	L-Serine	Serine	name
+MTBLS4066	C00089	Sucrose	Sucrose	ChEBI
+MTBLS4066	C00082	L-Tyrosine	Tyrosine	name
+MTBLS4066	C00183	L-Valine	Valine	name
+MTBLS363	C00149	(S)-Malate	malic acid	name
+MTBLS363	C00049	L-Aspartate	aspartic acid	name
+MTBLS363	C01879	5-Oxoproline	5-oxo-proline	name
+MTBLS363	C00025	L-Glutamate	glutamic acid	name
+MTBLS363	C00158	Citrate	citric acid	ChEBI
+MTBLS363	C00078	L-Tryptophan	tryptophan	name
+MTBLS363	C00089	Sucrose	sucrose	ChEBI
+MTBLS363	C01384	Maleic acid	maleic acid	ChEBI
+MTBLS363	C00258	D-Glycerate	glyceric acid	name
+MTBLS363	C00072	Ascorbate	ascorbic acid	name
+MTBLS363	C00031	D-Glucose	glucose	name
+MTBLS363	C00095	D-Fructose	fructose	name
+MTBLS363	C00482	Sinapate	sinapic acid	ChEBI
+MTBLS363	C00064	L-Glutamine	glutamine	name
+MTBLS363	C00065	L-Serine	serine	name
+MTBLS363	C00183	L-Valine	valine	name
+MTBLS363	C00152	L-Asparagine	asparagine	name
