@@ -5,6 +5,8 @@
 # (author-date), not by sn-nature.bst.
 set -euo pipefail
 cd "$(dirname "$0")"
+# Pin the timestamps pandoc writes into the .docx, so an unchanged source rebuilds byte-identically.
+export SOURCE_DATE_EPOCH=1735689600
 
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
