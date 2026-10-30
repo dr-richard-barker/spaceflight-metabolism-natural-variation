@@ -1,0 +1,38 @@
+{
+  "written": "2026-10-30",
+  "layers": {
+    "rna_flight": "OSD-38 RNA-seq, flight vs ground (both sealed BRIC-PDFU, dark)",
+    "membrane_flight": "OSD-38 membrane iTRAQ proteome, flight vs ground",
+    "soluble_flight": "OSD-38 soluble iTRAQ proteome, flight vs ground (truncated: top 437 groups)",
+    "rna_hardware": "OSD-38 RNA-seq, ground: BRIC-PDFU vs closed container (both dark)"
+  },
+  "primary_layers": [
+    "rna_flight",
+    "membrane_flight",
+    "rna_hardware"
+  ],
+  "protein_quantification": {
+    "psm_filter": "Score > 20 and all six iTRAQ reporter intensities > 0",
+    "loci": "AGI locus from Sequence Id; loci with at least 2 distinct peptides (the paper's rule)",
+    "soluble_rows": "protein groups 1-437 (the table is cut inside group 438)",
+    "membrane_rows": "block 1, rows 1-48,799 (groups 1-2,948); block 2 excluded",
+    "normalisation": "log2; each channel centred on its median; each PSM centred on its own mean",
+    "summary": "protein value per channel = median over its PSMs",
+    "contrast": "log2FC = mean(flight S1-S3) - mean(ground GC1-GC3)",
+    "test": "two-sided Student's t, 3 vs 3 (the paper's test)",
+    "relevant_for_paintomics": "p <= 0.05 and |log2FC| > 0.2 (the paper's rule)"
+  },
+  "gene_statistic": {
+    "rna_flight": "GeneLab Wald stat (data/osdr/contrast_OSD-38.csv.gz)",
+    "rna_hardware": "GeneLab Wald stat, (GC)v(RNAlat) (data/osdr/contrast_OSD-38-hardware.csv.gz)",
+    "membrane_flight": "protein Student's t",
+    "soluble_flight": "protein Student's t"
+  },
+  "set_statistic": "signed: mean gene/protein statistic in the set minus the mean over all measured features",
+  "null": "genomic rotation over the measured features in prereg/gene_order.tsv.gz order, 10000 offsets, seed 20261030",
+  "min_measured": 3,
+  "fdr": "Benjamini-Hochberg over every testable primary row (rna_flight, membrane_flight, rna_hardware); soluble_flight rows are reported with their own BH and are not used for verdicts",
+  "verdict": "observed = up/down when q < 0.05, else none; MATCH when observed equals the prediction",
+  "concordance": "descriptive: Spearman correlation of protein and transcript log2FC over shared loci, OSD-38 (membrane, soluble) and OSD-522 (the first study's proteome, UniProt mapped to AGI by KEGG conv/uniprot/ath)",
+  "paintomics": "job D: OSD-38 genes (log2FC; relevant = adjusted p < 0.05) + membrane proteins (relevant = p <= 0.05 and |log2FC| > 0.2) + the reference metabolite layer, same settings as job A; compared descriptively with job A (OSD-522, lit BRIC-LED)"
+}

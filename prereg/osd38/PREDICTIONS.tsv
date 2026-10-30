@@ -1,0 +1,37 @@
+layer	set	n_set	n_measured_protein	predicted	primary	basis
+rna_flight	din_first_study	5		none	True	first study's model: no assimilation to lose in the dark; RE-TEST: the first study reported every one of these sets for the OSD-38 transcriptome by Mann-Whitney (its T11), and this study's T08 tested DIN and BCAA degradation there; rna_flight rows are re-tests, not blind
+rna_flight	bcaa_degradation	53		none	True	first study's model: no assimilation to lose in the dark; RE-TEST: the first study reported every one of these sets for the OSD-38 transcriptome by Mann-Whitney (its T11), and this study's T08 tested DIN and BCAA degradation there; rna_flight rows are re-tests, not blind
+rna_flight	photosynthesis_apparatus	31		none	True	first study's model: no assimilation to lose in the dark; RE-TEST: the first study reported every one of these sets for the OSD-38 transcriptome by Mann-Whitney (its T11), and this study's T08 tested DIN and BCAA degradation there; rna_flight rows are re-tests, not blind
+rna_flight	fermentation	6		none	True	first study's model: no assimilation to lose in the dark; RE-TEST: the first study reported every one of these sets for the OSD-38 transcriptome by Mann-Whitney (its T11), and this study's T08 tested DIN and BCAA degradation there; rna_flight rows are re-tests, not blind
+rna_flight	hypoxia_responsive	3		none	True	first study's model: no assimilation to lose in the dark; RE-TEST: the first study reported every one of these sets for the OSD-38 transcriptome by Mann-Whitney (its T11), and this study's T08 tested DIN and BCAA degradation there; rna_flight rows are re-tests, not blind
+rna_flight	ath00630	80		none	True	first study's model: no assimilation to lose in the dark; RE-TEST: the first study reported every one of these sets for the OSD-38 transcriptome by Mann-Whitney (its T11), and this study's T08 tested DIN and BCAA degradation there; rna_flight rows are re-tests, not blind
+rna_flight	ath00710	70		none	True	first study's model: no assimilation to lose in the dark; RE-TEST: the first study reported every one of these sets for the OSD-38 transcriptome by Mann-Whitney (its T11), and this study's T08 tested DIN and BCAA degradation there; rna_flight rows are re-tests, not blind
+rna_flight	ath00500	181		none	True	first study's model: no assimilation to lose in the dark; RE-TEST: the first study reported every one of these sets for the OSD-38 transcriptome by Mann-Whitney (its T11), and this study's T08 tested DIN and BCAA degradation there; rna_flight rows are re-tests, not blind
+rna_flight	ath00010	120		none	True	first study's model: no assimilation to lose in the dark; RE-TEST: the first study reported every one of these sets for the OSD-38 transcriptome by Mann-Whitney (its T11), and this study's T08 tested DIN and BCAA degradation there; rna_flight rows are re-tests, not blind
+membrane_flight	din_first_study	5	1.0	none	True	first study's model: no assimilation to lose in the dark
+membrane_flight	bcaa_degradation	53	17.0	none	True	first study's model: no assimilation to lose in the dark
+membrane_flight	photosynthesis_apparatus	31	0.0	none	True	first study's model: no assimilation to lose in the dark
+membrane_flight	fermentation	6	1.0	none	True	first study's model: no assimilation to lose in the dark
+membrane_flight	hypoxia_responsive	3	0.0	none	True	first study's model: no assimilation to lose in the dark
+membrane_flight	ath00630	80	41.0	none	True	first study's model: no assimilation to lose in the dark
+membrane_flight	ath00710	70	38.0	none	True	first study's model: no assimilation to lose in the dark
+membrane_flight	ath00500	181	28.0	none	True	first study's model: no assimilation to lose in the dark
+membrane_flight	ath00010	120	60.0	none	True	first study's model: no assimilation to lose in the dark
+soluble_flight	din_first_study	5	0.0	none	False	first study's model: no assimilation to lose in the dark
+soluble_flight	bcaa_degradation	53	7.0	none	False	first study's model: no assimilation to lose in the dark
+soluble_flight	photosynthesis_apparatus	31	0.0	none	False	first study's model: no assimilation to lose in the dark
+soluble_flight	fermentation	6	0.0	none	False	first study's model: no assimilation to lose in the dark
+soluble_flight	hypoxia_responsive	3	0.0	none	False	first study's model: no assimilation to lose in the dark
+soluble_flight	ath00630	80	30.0	none	False	first study's model: no assimilation to lose in the dark
+soluble_flight	ath00710	70	33.0	none	False	first study's model: no assimilation to lose in the dark
+soluble_flight	ath00500	181	13.0	none	False	first study's model: no assimilation to lose in the dark
+soluble_flight	ath00010	120	36.0	none	False	first study's model: no assimilation to lose in the dark
+rna_hardware	din_first_study	5		none	True	no mechanism in the first study's model for this set in a dark enclosure
+rna_hardware	bcaa_degradation	53		none	True	no mechanism in the first study's model for this set in a dark enclosure
+rna_hardware	photosynthesis_apparatus	31		none	True	no mechanism in the first study's model for this set in a dark enclosure
+rna_hardware	fermentation	6		up	True	conditional on the BRIC-PDFU holding less gas per seedling than the container (first study's enclosure mass balance)
+rna_hardware	hypoxia_responsive	3		up	True	conditional on the BRIC-PDFU holding less gas per seedling than the container (first study's enclosure mass balance)
+rna_hardware	ath00630	80		none	True	no mechanism in the first study's model for this set in a dark enclosure
+rna_hardware	ath00710	70		none	True	no mechanism in the first study's model for this set in a dark enclosure
+rna_hardware	ath00500	181		none	True	no mechanism in the first study's model for this set in a dark enclosure
+rna_hardware	ath00010	120		none	True	no mechanism in the first study's model for this set in a dark enclosure

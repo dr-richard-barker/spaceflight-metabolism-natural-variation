@@ -1,0 +1,3 @@
+fraction	file	bytes	sha256	data_rows
+soluble	GLDS-38_soluble_proteome_WyattLab_soluble.csv	9792292	63d09e38978ad48cc7a8bc1d47553ccccd15281e2b37d5a4f853be379325442a	65535
+membrane	GLDS-38_membrane_proteome_WyattLab_membrane.csv	9323992	6ab7ac5c427b9c9747a4dfebefc8fed8f417dad0fd16cebeb7ca41c67a1b3934	65535

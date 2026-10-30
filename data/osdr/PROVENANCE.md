@@ -10,3 +10,11 @@ Extracted by `scripts/00_vendor_inputs.py` from the GeneLab differential-express
 | `contrast_OSD-678-light.csv.gz` | OSD-678-light | `GLDS-612_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv` | 24474 | flight 3 / ground 3 | `52d2fb0aae764db4` |
 | `contrast_OSD-678-dark.csv.gz` | OSD-678-dark | `GLDS-612_rna_seq_differential_expression_rRNArm_GLbulkRNAseq.csv` | 24474 | flight 3 / ground 3 | `52d2fb0aae764db4` |
 | `contrast_OSD-427.csv.gz` | OSD-427 | `GLDS-427_rna_seq_differential_expression.csv` | 24863 | none | `1d011c49a8ce8e0d` |
+
+## OSD-38 ground contrasts
+
+From the same GeneLab table as `contrast_OSD-38.csv.gz` (the first study's cached `dge_OSD-38.csv`), by `scripts/20_osd38_inputs.py`. GC = BRIC-PDFU ground control; RNAlat = plates in closed containers at Ohio University, fixed in RNAlater like GC (Basu et al. 2017).
+
+| File | Contrast | Genes | Source SHA-256 (first 16) |
+|---|---|---|---|
+| `contrast_OSD-38-hardware.csv.gz` | BRIC-PDFU (ground) vs closed container: `(GC)v(RNAlat)` columns | 27723 | `64cee38cf11e622f` |
