@@ -1,0 +1,292 @@
+job	kegg_id	status	compound
+A	C00003	intended, used	NAD+
+A	C00006	intended, used	NADP+
+A	C00016	intended, used	FAD
+A	C00020	intended, used	AMP
+A	C00025	intended, used	L-Glutamate
+A	C00026	intended, used	2-Oxoglutarate
+A	C00049	intended, used	L-Aspartate
+A	C00051	intended, used	Glutathione
+A	C00052	intended, used	UDP-alpha-D-galactose
+A	C00061	intended, used	FMN
+A	C00062	intended, used	L-Arginine
+A	C00064	intended, used	L-Glutamine
+A	C00065	intended, used	L-Serine
+A	C00072	intended, used	L-Ascorbate
+A	C00073	intended, used	L-Methionine
+A	C00078	intended, used	L-Tryptophan
+A	C00082	intended, used	L-Tyrosine
+A	C00109	intended, used	2-Oxobutanoate
+A	C00114	intended, used	Choline
+A	C00123	intended, used	L-Leucine
+A	C00135	intended, used	L-Histidine
+A	C00147	intended, used	Adenine
+A	C00148	intended, used	L-Proline
+A	C00149	intended, used	(S)-Malate
+A	C00152	intended, used	L-Asparagine
+A	C00153	intended, used	Nicotinamide
+A	C00158	intended, used	Citrate
+A	C00168	intended, used	Hydroxypyruvate
+A	C00170	intended, used	5'-Methylthioadenosine
+A	C00183	intended, used	L-Valine
+A	C00208	intended, used	Maltose
+A	C00212	intended, used	Adenosine
+A	C00255	intended, used	Riboflavin
+A	C00257	intended, used	D-Gluconic acid
+A	C00327	intended, used	L-Citrulline
+A	C00330	intended, used	Deoxyguanosine
+A	C00366	intended, used	Urate
+A	C00387	intended, used	Guanosine
+A	C00407	intended, used	L-Isoleucine
+A	C00408	intended, used	L-Pipecolate
+A	C00417	intended, used	cis-Aconitate
+A	C00475	intended, used	Cytidine
+A	C00482	intended, used	Sinapate
+A	C00499	intended, used	Allantoate
+A	C00624	intended, used	N-Acetyl-L-glutamate
+A	C00643	intended, used	5-Hydroxy-L-tryptophan
+A	C00669	intended, used	gamma-L-Glutamyl-L-cysteine
+A	C00811	intended, used	4-Coumarate
+A	C00818	intended, used	D-Glucarate
+A	C00864	intended, used	Pantothenate
+A	C00956	intended, used	L-2-Aminoadipate
+A	C01020	intended, used	6-Hydroxynicotinate
+A	C01026	intended, used	N,N-Dimethylglycine
+A	C01035	intended, used	4-Guanidinobutanoate
+A	C01077	intended, used	O-Acetyl-L-homoserine
+A	C01094	intended, used	D-Fructose 1-phosphate
+A	C01175	intended, used	1-O-Sinapoyl-beta-D-glucose
+A	C01187	intended, used	3-Deoxy-D-manno-octulosonate
+A	C01384	intended, used	Maleic acid
+A	C01433	intended, used	Loganin
+A	C01551	intended, used	Allantoin
+A	C01750	intended, used	Quercitrin
+A	C01752	intended, used	Scopoletin
+A	C01835	intended, used	Maltotriose
+A	C01879	intended, used	5-Oxoproline
+A	C02043	intended, used	Indolelactate
+A	C02076	intended, used	D-Sedoheptulose
+A	C02153	intended, used	Glucotropaeolin
+A	C02504	intended, used	alpha-Isopropylmalate
+A	C02985	intended, used	L-Fucose 1-phosphate
+A	C04368	intended, used	3-Amino-3-(4-hydroxyphenyl)propanoate
+A	C04608	intended, used	Apigenin 7-O-beta-D-glucoside
+A	C04695	intended, used	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside
+A	C05519	intended, used	L-Allothreonine
+A	C05620	intended, used	N-Acetyl-D-phenylalanine
+A	C05625	intended, used	Rutin
+A	C05837	intended, used	Glucobrassicin
+A	C05841	intended, used	Nicotinate D-ribonucleoside
+A	C06104	intended, used	Adipate
+A	C06455	intended, used	Hydroxymethylphosphonate
+A	C07064	intended, used	Lactulose
+A	C08400	intended, used	Glucoalyssin
+A	C08401	intended, used	Glucoberteroin
+A	C08403	intended, used	Glucobrassicanapin
+A	C08409	intended, used	Glucoerucin
+A	C08411	intended, used	Glucoiberin
+A	C08412	intended, used	Glucoiberverin
+A	C08415	intended, used	Gluconapin
+A	C08419	intended, used	Glucoraphanin
+A	C09789	intended, used	Naringin
+A	C10164	intended, used	Picolinic acid
+A	C15587	intended, used	Purine
+A	C17252	intended, used	7-Methylthioheptyl glucosinolate
+A	C17254	intended, used	8-Methylthiooctyl glucosinolate
+A	C17256	intended, used	2-Methylpropyl glucosinolate
+A	C17271	intended, used	Glucohirsutin
+A	C02350	used, not intended	(S)-Allantoin
+B	C00003	intended, used	NAD+
+B	C00006	intended, used	NADP+
+B	C00016	intended, used	FAD
+B	C00020	intended, used	AMP
+B	C00025	intended, used	L-Glutamate
+B	C00026	intended, used	2-Oxoglutarate
+B	C00049	intended, used	L-Aspartate
+B	C00051	intended, used	Glutathione
+B	C00052	intended, used	UDP-alpha-D-galactose
+B	C00061	intended, used	FMN
+B	C00062	intended, used	L-Arginine
+B	C00064	intended, used	L-Glutamine
+B	C00065	intended, used	L-Serine
+B	C00072	intended, used	L-Ascorbate
+B	C00073	intended, used	L-Methionine
+B	C00078	intended, used	L-Tryptophan
+B	C00082	intended, used	L-Tyrosine
+B	C00109	intended, used	2-Oxobutanoate
+B	C00114	intended, used	Choline
+B	C00123	intended, used	L-Leucine
+B	C00135	intended, used	L-Histidine
+B	C00147	intended, used	Adenine
+B	C00148	intended, used	L-Proline
+B	C00149	intended, used	(S)-Malate
+B	C00152	intended, used	L-Asparagine
+B	C00153	intended, used	Nicotinamide
+B	C00158	intended, used	Citrate
+B	C00168	intended, used	Hydroxypyruvate
+B	C00170	intended, used	5'-Methylthioadenosine
+B	C00183	intended, used	L-Valine
+B	C00208	intended, used	Maltose
+B	C00212	intended, used	Adenosine
+B	C00255	intended, used	Riboflavin
+B	C00257	intended, used	D-Gluconic acid
+B	C00327	intended, used	L-Citrulline
+B	C00330	intended, used	Deoxyguanosine
+B	C00366	intended, used	Urate
+B	C00387	intended, used	Guanosine
+B	C00407	intended, used	L-Isoleucine
+B	C00408	intended, used	L-Pipecolate
+B	C00417	intended, used	cis-Aconitate
+B	C00475	intended, used	Cytidine
+B	C00482	intended, used	Sinapate
+B	C00499	intended, used	Allantoate
+B	C00624	intended, used	N-Acetyl-L-glutamate
+B	C00643	intended, used	5-Hydroxy-L-tryptophan
+B	C00669	intended, used	gamma-L-Glutamyl-L-cysteine
+B	C00811	intended, used	4-Coumarate
+B	C00818	intended, used	D-Glucarate
+B	C00864	intended, used	Pantothenate
+B	C00956	intended, used	L-2-Aminoadipate
+B	C01020	intended, used	6-Hydroxynicotinate
+B	C01026	intended, used	N,N-Dimethylglycine
+B	C01035	intended, used	4-Guanidinobutanoate
+B	C01077	intended, used	O-Acetyl-L-homoserine
+B	C01094	intended, used	D-Fructose 1-phosphate
+B	C01175	intended, used	1-O-Sinapoyl-beta-D-glucose
+B	C01187	intended, used	3-Deoxy-D-manno-octulosonate
+B	C01384	intended, used	Maleic acid
+B	C01433	intended, used	Loganin
+B	C01551	intended, used	Allantoin
+B	C01750	intended, used	Quercitrin
+B	C01752	intended, used	Scopoletin
+B	C01835	intended, used	Maltotriose
+B	C01879	intended, used	5-Oxoproline
+B	C02043	intended, used	Indolelactate
+B	C02076	intended, used	D-Sedoheptulose
+B	C02153	intended, used	Glucotropaeolin
+B	C02504	intended, used	alpha-Isopropylmalate
+B	C02985	intended, used	L-Fucose 1-phosphate
+B	C04368	intended, used	3-Amino-3-(4-hydroxyphenyl)propanoate
+B	C04608	intended, used	Apigenin 7-O-beta-D-glucoside
+B	C04695	intended, used	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside
+B	C05519	intended, used	L-Allothreonine
+B	C05620	intended, used	N-Acetyl-D-phenylalanine
+B	C05625	intended, used	Rutin
+B	C05837	intended, used	Glucobrassicin
+B	C05841	intended, used	Nicotinate D-ribonucleoside
+B	C06104	intended, used	Adipate
+B	C06455	intended, used	Hydroxymethylphosphonate
+B	C07064	intended, used	Lactulose
+B	C08400	intended, used	Glucoalyssin
+B	C08401	intended, used	Glucoberteroin
+B	C08403	intended, used	Glucobrassicanapin
+B	C08409	intended, used	Glucoerucin
+B	C08411	intended, used	Glucoiberin
+B	C08412	intended, used	Glucoiberverin
+B	C08415	intended, used	Gluconapin
+B	C08419	intended, used	Glucoraphanin
+B	C09789	intended, used	Naringin
+B	C10164	intended, used	Picolinic acid
+B	C15587	intended, used	Purine
+B	C17252	intended, used	7-Methylthioheptyl glucosinolate
+B	C17254	intended, used	8-Methylthiooctyl glucosinolate
+B	C17256	intended, used	2-Methylpropyl glucosinolate
+B	C17271	intended, used	Glucohirsutin
+B	C02350	used, not intended	(S)-Allantoin
+C	C00003	intended, used	NAD+
+C	C00006	intended, used	NADP+
+C	C00016	intended, used	FAD
+C	C00020	intended, used	AMP
+C	C00025	intended, used	L-Glutamate
+C	C00026	intended, used	2-Oxoglutarate
+C	C00049	intended, used	L-Aspartate
+C	C00051	intended, used	Glutathione
+C	C00052	intended, used	UDP-alpha-D-galactose
+C	C00061	intended, used	FMN
+C	C00062	intended, used	L-Arginine
+C	C00064	intended, used	L-Glutamine
+C	C00065	intended, used	L-Serine
+C	C00072	intended, used	L-Ascorbate
+C	C00073	intended, used	L-Methionine
+C	C00078	intended, used	L-Tryptophan
+C	C00082	intended, used	L-Tyrosine
+C	C00109	intended, used	2-Oxobutanoate
+C	C00114	intended, used	Choline
+C	C00123	intended, used	L-Leucine
+C	C00135	intended, used	L-Histidine
+C	C00147	intended, used	Adenine
+C	C00148	intended, used	L-Proline
+C	C00149	intended, used	(S)-Malate
+C	C00152	intended, used	L-Asparagine
+C	C00153	intended, used	Nicotinamide
+C	C00158	intended, used	Citrate
+C	C00168	intended, used	Hydroxypyruvate
+C	C00170	intended, used	5'-Methylthioadenosine
+C	C00183	intended, used	L-Valine
+C	C00208	intended, used	Maltose
+C	C00212	intended, used	Adenosine
+C	C00255	intended, used	Riboflavin
+C	C00257	intended, used	D-Gluconic acid
+C	C00327	intended, used	L-Citrulline
+C	C00330	intended, used	Deoxyguanosine
+C	C00366	intended, used	Urate
+C	C00387	intended, used	Guanosine
+C	C00407	intended, used	L-Isoleucine
+C	C00408	intended, used	L-Pipecolate
+C	C00417	intended, used	cis-Aconitate
+C	C00475	intended, used	Cytidine
+C	C00482	intended, used	Sinapate
+C	C00499	intended, used	Allantoate
+C	C00624	intended, used	N-Acetyl-L-glutamate
+C	C00643	intended, used	5-Hydroxy-L-tryptophan
+C	C00669	intended, used	gamma-L-Glutamyl-L-cysteine
+C	C00811	intended, used	4-Coumarate
+C	C00818	intended, used	D-Glucarate
+C	C00864	intended, used	Pantothenate
+C	C00956	intended, used	L-2-Aminoadipate
+C	C01020	intended, used	6-Hydroxynicotinate
+C	C01026	intended, used	N,N-Dimethylglycine
+C	C01035	intended, used	4-Guanidinobutanoate
+C	C01077	intended, used	O-Acetyl-L-homoserine
+C	C01094	intended, used	D-Fructose 1-phosphate
+C	C01175	intended, used	1-O-Sinapoyl-beta-D-glucose
+C	C01187	intended, used	3-Deoxy-D-manno-octulosonate
+C	C01384	intended, used	Maleic acid
+C	C01433	intended, used	Loganin
+C	C01551	intended, used	Allantoin
+C	C01750	intended, used	Quercitrin
+C	C01752	intended, used	Scopoletin
+C	C01835	intended, used	Maltotriose
+C	C01879	intended, used	5-Oxoproline
+C	C02043	intended, used	Indolelactate
+C	C02076	intended, used	D-Sedoheptulose
+C	C02153	intended, used	Glucotropaeolin
+C	C02504	intended, used	alpha-Isopropylmalate
+C	C02985	intended, used	L-Fucose 1-phosphate
+C	C04368	intended, used	3-Amino-3-(4-hydroxyphenyl)propanoate
+C	C04608	intended, used	Apigenin 7-O-beta-D-glucoside
+C	C04695	intended, used	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside
+C	C05519	intended, used	L-Allothreonine
+C	C05620	intended, used	N-Acetyl-D-phenylalanine
+C	C05625	intended, used	Rutin
+C	C05837	intended, used	Glucobrassicin
+C	C05841	intended, used	Nicotinate D-ribonucleoside
+C	C06104	intended, used	Adipate
+C	C06455	intended, used	Hydroxymethylphosphonate
+C	C07064	intended, used	Lactulose
+C	C08400	intended, used	Glucoalyssin
+C	C08401	intended, used	Glucoberteroin
+C	C08403	intended, used	Glucobrassicanapin
+C	C08409	intended, used	Glucoerucin
+C	C08411	intended, used	Glucoiberin
+C	C08412	intended, used	Glucoiberverin
+C	C08415	intended, used	Gluconapin
+C	C08419	intended, used	Glucoraphanin
+C	C09789	intended, used	Naringin
+C	C10164	intended, used	Picolinic acid
+C	C15587	intended, used	Purine
+C	C17252	intended, used	7-Methylthioheptyl glucosinolate
+C	C17254	intended, used	8-Methylthiooctyl glucosinolate
+C	C17256	intended, used	2-Methylpropyl glucosinolate
+C	C17271	intended, used	Glucohirsutin
+C	C02350	used, not intended	(S)-Allantoin

@@ -1,0 +1,23 @@
+# Jobs: job1 = first study oK2h66740Q (OSD-522 genes + proteins + 21 predicted compounds); A = 6kBOS7AN5K (same genes + proteins + reference layer); B = JfVZ1L37PY (OSD-678 light genes + layer); C = wgT3IPi7U2 (OSD-678 dark genes + layer). The reference layer is a ground carbon-starvation reference, not flight measurements.
+quantity	job1	A	B	C
+pathways tested	232	232	232	232
+pathways at BH q < 0.05	6	6	24	10
+hub compounds tested	15	32	32	32
+hub compounds at FDR < 0.05	7	11	17	5
+
+quantity	value
+A vs job1: Spearman rho of combined p	0.9529
+A vs job1: pathways gained at q < 0.05	none
+A vs job1: pathways lost at q < 0.05	none
+A vs job1: hubs gained	(S)-Malate; 2-Oxoglutarate; Glucobrassicin; Glutathione; L-Ascorbate; alpha-Isopropylmalate; gamma-L-Glutamyl-L-cysteine
+A vs job1: hubs lost	3-Phospho-D-glycerate; D-Ribulose 1,5-bisphosphate; L-Glutamine
+A vs job1: raw hub p identical for shared compounds and steps (pre-registered check)	True (16 compound-steps)
+B vs C: Spearman rho of combined p	0.5088
+B only (light) at q < 0.05	AGPs; Biosynthesis of cofactors; Fatty acid biosynthesis; Fatty acid degradation; Fatty acid metabolism; Glycolysis / Gluconeogenesis; Isopentenyl PP; Pentose Phosphate; Phylloquinone Synthesis; Porphyrin metabolism; Prokaryotic Ribosome LSU assembly; Pyruvate metabolism; Riboflavin metabolism; Seed custom arabidopsis Seed; Selenocompound metabolism; alpha-Linolenic acid metabolism
+C only (dark) at q < 0.05	Lipoic acid metabolism; Photosynthesis
+B and C at q < 0.05	Biosynthesis of secondary metabolites; Carbon fixation by Calvin cycle; Carbon metabolism; ChloroPlast CustomArray CUSTOM MAPPING; Chloroplast PlasTi-microarray pathway; Metabolic pathways; Photosynthesis - antenna proteins; photosynthesis
+hubs B only (light)	2-Oxoglutarate; Adenine; Adenosine; Guanosine; L-Aspartate; L-Glutamate; L-Isoleucine; L-Leucine; L-Tryptophan; L-Valine; Pantothenate; Riboflavin
+hubs C only (dark)	none
+hubs B and C	(S)-Malate; FAD; FMN; NAD+; alpha-Isopropylmalate
+layer: intended IDs not used (A)	0
+layer: used IDs not intended (A)	1
