@@ -109,7 +109,9 @@ def figure(t):
             a.plot([0, r.reference_z], [yi, yi], color=col, lw=1.6, solid_capstyle="butt")
             a.scatter(r.reference_z, yi, s=26, color=col, zorder=3,
                       marker="o" if r.status == "robust" else "D")
-        av.text(0.06, yi, r.verdict, va="center", fontsize=6.8,
+        label = {"not measured": "not measured",
+                 "measured, no directional response": "no direction"}.get(r.verdict_detail, r.verdict)
+        av.text(0.06, yi, label, va="center", fontsize=6.8,
                 color=verdict_ink.get(r.verdict, style.GREY),
                 fontweight="bold" if r.verdict in verdict_ink else "normal")
     am.set_xlim(0, 1)

@@ -267,6 +267,8 @@ def revision(m):
     m["nOverRescued"] = (v("reviewed overrides", "rescued (rule found no exact synonym)"), "T16")
     m["nOverCorrected"] = (v("reviewed overrides", "corrected (rule picked another entry)"), "T16")
     m["nKeggMapped"] = (v("after overrides", "measured names with a KEGG ID"), "T16")
+    m["nOverCaldanaFix"] = (v("reviewed overrides", "Caldana peak only: Wu's given ID corrected"), "T16")
+    m["nOverCaldanaExcl"] = (v("reviewed overrides", "Caldana peak only: excluded"), "T16")
     for src_, key in (("zhu", "Zhu"), ("wu_stress", "Wu")):
         m[f"nKeggMapped{key}"] = (v("after overrides", f"from {src_}"), "T16")
         m[f"nKeggNames{key}"] = (o("after overrides", f"from {src_}"), "T16")
@@ -397,6 +399,10 @@ def revision(m):
         m[f"rhoComb{key}"] = (f"{float(c17[('A', '', f'Spearman rho of combined p with the {om} p')]):.2f}", "T17")
     m["nPathMetP"] = (int(c17[("A", "", "pathways with a Metabolomics p")]), "T17")
     m["nRelevantTested"] = (int(c17[("A", "", "relevant compounds hub-tested")]), "T17")
+    m["nRelevantNoHub"] = (int(c17[("A", "", "relevant compounds (robust) in the layer")]) - m["nRelevantTested"][0], "T17")
+    m["nWuLoci"] = (len(pd.read_csv(DATA / "atlas" / "wu_gwas_loci.csv")), "data/atlas/wu_gwas_loci.csv")
+    m["nWuRegions"] = (len(pd.read_csv(DATA / "atlas" / "wu_condition_regions.tsv", sep="\t")),
+                       "data/atlas/wu_condition_regions.tsv")
     rng = c17[("B", "", "hubs at FDR < 0.05: raw p range")].split("-")
     m["hubRawMinB"], m["hubRawMaxB"] = (_p(float(rng[0])), "T17"), (_p(float(rng[1])), "T17")
     t18 = t("T18_hub_overlap_null.tsv")
