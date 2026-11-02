@@ -1,0 +1,3 @@
+file	url	bytes	sha256
+osd38/GLDS-38_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	https://osdr.nasa.gov/geode-py/ws/studies/OSD-38/download?source=datamanager&file=GLDS-38_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	1851213	36946d9140ed864eb848a717f0ca24b4a1c03345847fb10c0f1e045b0d602728
+osd38/GLDS-38_rna_seq_bulkRNASeq_v2_runsheet.csv	https://osdr.nasa.gov/geode-py/ws/studies/OSD-38/download?source=datamanager&file=GLDS-38_rna_seq_bulkRNASeq_v2_runsheet.csv	5310	e5838d18b790332b33df6558315d3b36110083fadac44c76c8286c941c28e20d

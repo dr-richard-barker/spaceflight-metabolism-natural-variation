@@ -1,0 +1,121 @@
+contrast	set_type	set_size	null	n_sets	rejected_at_0.05	type1_error	ci_low	ci_high
+OSD-522	random genes	5	rotation	200	12	0.06	0.03465	0.1019
+OSD-522	random genes	5	naive	200	14	0.07	0.04215	0.1141
+OSD-522	contiguous genomic blocks	5	rotation	200	10	0.05	0.02738	0.08958
+OSD-522	contiguous genomic blocks	5	naive	200	15	0.075	0.04597	0.12
+OSD-522	random genes	50	rotation	200	10	0.05	0.02738	0.08958
+OSD-522	random genes	50	naive	200	5	0.025	0.01072	0.05718
+OSD-522	contiguous genomic blocks	50	rotation	200	9	0.045	0.02385	0.0833
+OSD-522	contiguous genomic blocks	50	naive	200	19	0.095	0.06166	0.1436
+OSD-522	random genes	300	rotation	200	9	0.045	0.02385	0.0833
+OSD-522	random genes	300	naive	200	11	0.055	0.03099	0.09579
+OSD-522	contiguous genomic blocks	300	rotation	200	11	0.055	0.03099	0.09579
+OSD-522	contiguous genomic blocks	300	naive	200	30	0.15	0.1071	0.2061
+OSD-522	random genes	500	rotation	200	10	0.05	0.02738	0.08958
+OSD-522	random genes	500	naive	200	12	0.06	0.03465	0.1019
+OSD-522	contiguous genomic blocks	500	rotation	200	17	0.085	0.05375	0.1319
+OSD-522	contiguous genomic blocks	500	naive	200	39	0.195	0.1461	0.2554
+OSD-522	random genes	2000	rotation	200	4	0.02	0.007804	0.05029
+OSD-522	random genes	2000	naive	200	5	0.025	0.01072	0.05718
+OSD-522	contiguous genomic blocks	2000	rotation	200	9	0.045	0.02385	0.0833
+OSD-522	contiguous genomic blocks	2000	naive	200	41	0.205	0.1549	0.2663
+OSD-678-light	random genes	5	rotation	200	9	0.045	0.02385	0.0833
+OSD-678-light	random genes	5	naive	200	10	0.05	0.02738	0.08958
+OSD-678-light	contiguous genomic blocks	5	rotation	200	15	0.075	0.04597	0.12
+OSD-678-light	contiguous genomic blocks	5	naive	200	18	0.09	0.05769	0.1378
+OSD-678-light	random genes	50	rotation	200	8	0.04	0.02041	0.07693
+OSD-678-light	random genes	50	naive	200	7	0.035	0.01706	0.07047
+OSD-678-light	contiguous genomic blocks	50	rotation	200	11	0.055	0.03099	0.09579
+OSD-678-light	contiguous genomic blocks	50	naive	200	10	0.05	0.02738	0.08958
+OSD-678-light	random genes	300	rotation	200	18	0.09	0.05769	0.1378
+OSD-678-light	random genes	300	naive	200	18	0.09	0.05769	0.1378
+OSD-678-light	contiguous genomic blocks	300	rotation	200	6	0.03	0.01382	0.06389
+OSD-678-light	contiguous genomic blocks	300	naive	200	12	0.06	0.03465	0.1019
+OSD-678-light	random genes	500	rotation	200	14	0.07	0.04215	0.1141
+OSD-678-light	random genes	500	naive	200	12	0.06	0.03465	0.1019
+OSD-678-light	contiguous genomic blocks	500	rotation	200	14	0.07	0.04215	0.1141
+OSD-678-light	contiguous genomic blocks	500	naive	200	11	0.055	0.03099	0.09579
+OSD-678-light	random genes	2000	rotation	200	8	0.04	0.02041	0.07693
+OSD-678-light	random genes	2000	naive	200	9	0.045	0.02385	0.0833
+OSD-678-light	contiguous genomic blocks	2000	rotation	200	8	0.04	0.02041	0.07693
+OSD-678-light	contiguous genomic blocks	2000	naive	200	4	0.02	0.007804	0.05029
+OSD-427	random genes	5	rotation	200	6	0.03	0.01382	0.06389
+OSD-427	random genes	5	naive	200	6	0.03	0.01382	0.06389
+OSD-427	contiguous genomic blocks	5	rotation	200	7	0.035	0.01706	0.07047
+OSD-427	contiguous genomic blocks	5	naive	200	10	0.05	0.02738	0.08958
+OSD-427	random genes	50	rotation	200	9	0.045	0.02385	0.0833
+OSD-427	random genes	50	naive	200	9	0.045	0.02385	0.0833
+OSD-427	contiguous genomic blocks	50	rotation	200	14	0.07	0.04215	0.1141
+OSD-427	contiguous genomic blocks	50	naive	200	16	0.08	0.04984	0.126
+OSD-427	random genes	300	rotation	200	7	0.035	0.01706	0.07047
+OSD-427	random genes	300	naive	200	7	0.035	0.01706	0.07047
+OSD-427	contiguous genomic blocks	300	rotation	200	16	0.08	0.04984	0.126
+OSD-427	contiguous genomic blocks	300	naive	200	30	0.15	0.1071	0.2061
+OSD-427	random genes	500	rotation	200	3	0.015	0.005114	0.04317
+OSD-427	random genes	500	naive	200	3	0.015	0.005114	0.04317
+OSD-427	contiguous genomic blocks	500	rotation	200	9	0.045	0.02385	0.0833
+OSD-427	contiguous genomic blocks	500	naive	200	32	0.16	0.1157	0.2171
+OSD-427	random genes	2000	rotation	200	10	0.05	0.02738	0.08958
+OSD-427	random genes	2000	naive	200	9	0.045	0.02385	0.0833
+OSD-427	contiguous genomic blocks	2000	rotation	200	7	0.035	0.01706	0.07047
+OSD-427	contiguous genomic blocks	2000	naive	200	28	0.14	0.09867	0.1949
+OSD-38	random genes	5	rotation	200	10	0.05	0.02738	0.08958
+OSD-38	random genes	5	naive	200	13	0.065	0.03838	0.108
+OSD-38	contiguous genomic blocks	5	rotation	200	8	0.04	0.02041	0.07693
+OSD-38	contiguous genomic blocks	5	naive	200	15	0.075	0.04597	0.12
+OSD-38	random genes	50	rotation	200	9	0.045	0.02385	0.0833
+OSD-38	random genes	50	naive	200	12	0.06	0.03465	0.1019
+OSD-38	contiguous genomic blocks	50	rotation	200	16	0.08	0.04984	0.126
+OSD-38	contiguous genomic blocks	50	naive	200	20	0.1	0.06567	0.1494
+OSD-38	random genes	300	rotation	200	4	0.02	0.007804	0.05029
+OSD-38	random genes	300	naive	200	4	0.02	0.007804	0.05029
+OSD-38	contiguous genomic blocks	300	rotation	200	9	0.045	0.02385	0.0833
+OSD-38	contiguous genomic blocks	300	naive	200	21	0.105	0.06971	0.1552
+OSD-38	random genes	500	rotation	200	6	0.03	0.01382	0.06389
+OSD-38	random genes	500	naive	200	6	0.03	0.01382	0.06389
+OSD-38	contiguous genomic blocks	500	rotation	200	4	0.02	0.007804	0.05029
+OSD-38	contiguous genomic blocks	500	naive	200	13	0.065	0.03838	0.108
+OSD-38	random genes	2000	rotation	200	10	0.05	0.02738	0.08958
+OSD-38	random genes	2000	naive	200	10	0.05	0.02738	0.08958
+OSD-38	contiguous genomic blocks	2000	rotation	200	10	0.05	0.02738	0.08958
+OSD-38	contiguous genomic blocks	2000	naive	200	20	0.1	0.06567	0.1494
+OSD-321	random genes	5	rotation	200	18	0.09	0.05769	0.1378
+OSD-321	random genes	5	naive	200	19	0.095	0.06166	0.1436
+OSD-321	contiguous genomic blocks	5	rotation	200	9	0.045	0.02385	0.0833
+OSD-321	contiguous genomic blocks	5	naive	200	13	0.065	0.03838	0.108
+OSD-321	random genes	50	rotation	200	12	0.06	0.03465	0.1019
+OSD-321	random genes	50	naive	200	13	0.065	0.03838	0.108
+OSD-321	contiguous genomic blocks	50	rotation	200	7	0.035	0.01706	0.07047
+OSD-321	contiguous genomic blocks	50	naive	200	17	0.085	0.05375	0.1319
+OSD-321	random genes	300	rotation	200	10	0.05	0.02738	0.08958
+OSD-321	random genes	300	naive	200	9	0.045	0.02385	0.0833
+OSD-321	contiguous genomic blocks	300	rotation	200	9	0.045	0.02385	0.0833
+OSD-321	contiguous genomic blocks	300	naive	200	22	0.11	0.07377	0.1609
+OSD-321	random genes	500	rotation	200	7	0.035	0.01706	0.07047
+OSD-321	random genes	500	naive	200	6	0.03	0.01382	0.06389
+OSD-321	contiguous genomic blocks	500	rotation	200	7	0.035	0.01706	0.07047
+OSD-321	contiguous genomic blocks	500	naive	200	24	0.12	0.08198	0.1723
+OSD-321	random genes	2000	rotation	200	10	0.05	0.02738	0.08958
+OSD-321	random genes	2000	naive	200	11	0.055	0.03099	0.09579
+OSD-321	contiguous genomic blocks	2000	rotation	200	5	0.025	0.01072	0.05718
+OSD-321	contiguous genomic blocks	2000	naive	200	29	0.145	0.1029	0.2005
+OSD-678-dark	random genes	5	rotation	200	7	0.035	0.01706	0.07047
+OSD-678-dark	random genes	5	naive	200	10	0.05	0.02738	0.08958
+OSD-678-dark	contiguous genomic blocks	5	rotation	200	8	0.04	0.02041	0.07693
+OSD-678-dark	contiguous genomic blocks	5	naive	200	14	0.07	0.04215	0.1141
+OSD-678-dark	random genes	50	rotation	200	9	0.045	0.02385	0.0833
+OSD-678-dark	random genes	50	naive	200	11	0.055	0.03099	0.09579
+OSD-678-dark	contiguous genomic blocks	50	rotation	200	9	0.045	0.02385	0.0833
+OSD-678-dark	contiguous genomic blocks	50	naive	200	14	0.07	0.04215	0.1141
+OSD-678-dark	random genes	300	rotation	200	13	0.065	0.03838	0.108
+OSD-678-dark	random genes	300	naive	200	14	0.07	0.04215	0.1141
+OSD-678-dark	contiguous genomic blocks	300	rotation	200	11	0.055	0.03099	0.09579
+OSD-678-dark	contiguous genomic blocks	300	naive	200	22	0.11	0.07377	0.1609
+OSD-678-dark	random genes	500	rotation	200	10	0.05	0.02738	0.08958
+OSD-678-dark	random genes	500	naive	200	13	0.065	0.03838	0.108
+OSD-678-dark	contiguous genomic blocks	500	rotation	200	11	0.055	0.03099	0.09579
+OSD-678-dark	contiguous genomic blocks	500	naive	200	28	0.14	0.09867	0.1949
+OSD-678-dark	random genes	2000	rotation	200	8	0.04	0.02041	0.07693
+OSD-678-dark	random genes	2000	naive	200	10	0.05	0.02738	0.08958
+OSD-678-dark	contiguous genomic blocks	2000	rotation	200	2	0.01	0.002747	0.03572
+OSD-678-dark	contiguous genomic blocks	2000	naive	200	18	0.09	0.05769	0.1378

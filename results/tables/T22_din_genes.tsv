@@ -1,0 +1,157 @@
+kind	contrast	gene	stat	log2fc	n_used	signed	rotation_p	rotation_z	perm_p	perm_z	sample	log2_norm_count
+gene	OSD-522	AT1G67070	1.094	0.2105								
+gene	OSD-522	AT3G13450	1.343	0.5606								
+gene	OSD-522	AT3G49620	2.854	1.613								
+gene	OSD-522	AT3G60140	0.9227	0.7075								
+gene	OSD-522	AT5G20250	4.301	1.237								
+set	OSD-522				5	2.028	0.008699	2.765	0.02814	2.35		
+leave one out	OSD-522	AT1G67070			4	2.28	0.007099	2.768	0.01515	2.559		
+leave one out	OSD-522	AT3G13450			4	2.218	0.0105	2.698	0.02381	2.497		
+leave one out	OSD-522	AT3G49620			4	1.84	0.028	2.263	0.04762	2.071		
+leave one out	OSD-522	AT3G60140			4	2.323	0.008299	2.802	0.02381	2.548		
+leave one out	OSD-522	AT5G20250			4	1.478	0.07269	1.808	0.05844	1.939		
+gene	OSD-678-light	AT1G67070	0.5341	0.3195								
+gene	OSD-678-light	AT3G13450	1.569	0.737								
+gene	OSD-678-light	AT3G49620	1.925	1.254								
+gene	OSD-678-light	AT3G60140	7.949	5.545								
+gene	OSD-678-light	AT5G20250	-0.7697	-0.3365								
+set	OSD-678-light				5	2.199	0.08899	1.704				
+leave one out	OSD-678-light	AT1G67070			4	2.626	0.07129	1.818				
+leave one out	OSD-678-light	AT3G13450			4	2.367	0.09459	1.653				
+leave one out	OSD-678-light	AT3G49620			4	2.278	0.1128	1.576				
+leave one out	OSD-678-light	AT3G60140			4	0.7723	0.5605	0.5214				
+leave one out	OSD-678-light	AT5G20250			4	2.952	0.0454	2.056				
+gene	OSD-427	AT1G67070	1.126	0.2494								
+gene	OSD-427	AT3G13450	2.105	0.2118								
+gene	OSD-427	AT3G49620	0.865	0.6773								
+gene	OSD-427	AT3G60140	2.67	2.866								
+gene	OSD-427	AT5G20250	1.517	0.4197								
+set	OSD-427				5	1.731	0.0318	2.168				
+leave one out	OSD-427	AT1G67070			4	1.863	0.0368	2.08				
+leave one out	OSD-427	AT3G13450			4	1.619	0.06799	1.822				
+leave one out	OSD-427	AT3G49620			4	1.928	0.0318	2.165				
+leave one out	OSD-427	AT3G60140			4	1.477	0.09669	1.652				
+leave one out	OSD-427	AT5G20250			4	1.765	0.0476	1.986				
+gene	OSD-38	AT1G67070	-0.3385	-0.09572								
+gene	OSD-38	AT3G13450	-4.143	-0.8386								
+gene	OSD-38	AT3G49620	-0.8648	-1.299								
+gene	OSD-38	AT3G60140	-2.901	-1.877								
+gene	OSD-38	AT5G20250	-6.478	-1.6								
+set	OSD-38				5	-2.879	0.0015	-3.384				
+leave one out	OSD-38	AT1G67070			4	-3.531	0.0004	-3.72				
+leave one out	OSD-38	AT3G13450			4	-2.58	0.0103	-2.693				
+leave one out	OSD-38	AT3G49620			4	-3.4	0.0011	-3.579				
+leave one out	OSD-38	AT3G60140			4	-2.89	0.0049	-3.056				
+leave one out	OSD-38	AT5G20250			4	-1.996	0.04	-2.09				
+gene	OSD-321	AT1G67070	-13.74	-2.552								
+gene	OSD-321	AT3G13450	-14.64	-1.834								
+gene	OSD-321	AT3G49620	-2.657	-0.9951								
+gene	OSD-321	AT3G60140	-15.78	-3.424								
+gene	OSD-321	AT5G20250	-14.7	-1.241								
+set	OSD-321				5	-12.45	9.999e-05	-5.591				
+leave one out	OSD-321	AT1G67070			4	-12.09	9.999e-05	-4.825				
+leave one out	OSD-321	AT3G13450			4	-11.87	0.0002	-4.763				
+leave one out	OSD-321	AT3G49620			4	-14.86	9.999e-05	-5.94				
+leave one out	OSD-321	AT3G60140			4	-11.58	9.999e-05	-4.601				
+leave one out	OSD-321	AT5G20250			4	-11.85	9.999e-05	-4.756				
+gene	OSD-678-dark	AT1G67070	3.412	2.044								
+gene	OSD-678-dark	AT3G13450	4.976	2.337								
+gene	OSD-678-dark	AT3G49620	0.9114	0.5893								
+gene	OSD-678-dark	AT3G60140	-0.09806	-0.06806								
+gene	OSD-678-dark	AT5G20250	5.318	2.325								
+set	OSD-678-dark				5	2.867	0.0004	3.884				
+leave one out	OSD-678-dark	AT1G67070			4	2.74	0.0021	3.34				
+leave one out	OSD-678-dark	AT3G13450			4	2.349	0.007699	2.849				
+leave one out	OSD-678-dark	AT3G49620			4	3.365	9.999e-05	4.061				
+leave one out	OSD-678-dark	AT3G60140			4	3.618	0.0002	4.453				
+leave one out	OSD-678-dark	AT5G20250			4	2.264	0.009199	2.737				
+sample	OSD-38	AT1G67070									flight:Atha_WT-Col-0_sl_FLT_Rep1_G1S1	7.368
+sample	OSD-38	AT3G13450									flight:Atha_WT-Col-0_sl_FLT_Rep1_G1S1	8.059
+sample	OSD-38	AT3G49620									flight:Atha_WT-Col-0_sl_FLT_Rep1_G1S1	3.368
+sample	OSD-38	AT3G60140									flight:Atha_WT-Col-0_sl_FLT_Rep1_G1S1	5.489
+sample	OSD-38	AT5G20250									flight:Atha_WT-Col-0_sl_FLT_Rep1_G1S1	12.41
+sample	OSD-38	AT1G67070									flight:Atha_WT-Col-0_sl_FLT_Rep2_G1S2	7.353
+sample	OSD-38	AT3G13450									flight:Atha_WT-Col-0_sl_FLT_Rep2_G1S2	8.592
+sample	OSD-38	AT3G49620									flight:Atha_WT-Col-0_sl_FLT_Rep2_G1S2	3.901
+sample	OSD-38	AT3G60140									flight:Atha_WT-Col-0_sl_FLT_Rep2_G1S2	6.916
+sample	OSD-38	AT5G20250									flight:Atha_WT-Col-0_sl_FLT_Rep2_G1S2	12.62
+sample	OSD-38	AT1G67070									flight:Atha_WT-Col-0_sl_FLT_Rep3_G1S3	7.502
+sample	OSD-38	AT3G13450									flight:Atha_WT-Col-0_sl_FLT_Rep3_G1S3	8.447
+sample	OSD-38	AT3G49620									flight:Atha_WT-Col-0_sl_FLT_Rep3_G1S3	3.075
+sample	OSD-38	AT3G60140									flight:Atha_WT-Col-0_sl_FLT_Rep3_G1S3	7.147
+sample	OSD-38	AT5G20250									flight:Atha_WT-Col-0_sl_FLT_Rep3_G1S3	12.44
+sample	OSD-38	AT1G67070									ground:Atha_WT-Col-0_sl_GC_Rep1_G2S1	7.479
+sample	OSD-38	AT3G13450									ground:Atha_WT-Col-0_sl_GC_Rep1_G2S1	8.973
+sample	OSD-38	AT3G49620									ground:Atha_WT-Col-0_sl_GC_Rep1_G2S1	4.875
+sample	OSD-38	AT3G60140									ground:Atha_WT-Col-0_sl_GC_Rep1_G2S1	7.149
+sample	OSD-38	AT5G20250									ground:Atha_WT-Col-0_sl_GC_Rep1_G2S1	14.21
+sample	OSD-38	AT1G67070									ground:Atha_WT-Col-0_sl_GC_Rep2_G2S2	7.673
+sample	OSD-38	AT3G13450									ground:Atha_WT-Col-0_sl_GC_Rep2_G2S2	9.472
+sample	OSD-38	AT3G49620									ground:Atha_WT-Col-0_sl_GC_Rep2_G2S2	4.407
+sample	OSD-38	AT3G60140									ground:Atha_WT-Col-0_sl_GC_Rep2_G2S2	9.258
+sample	OSD-38	AT5G20250									ground:Atha_WT-Col-0_sl_GC_Rep2_G2S2	14.02
+sample	OSD-38	AT1G67070									ground:Atha_WT-Col-0_sl_GC_Rep3_G2S3	7.339
+sample	OSD-38	AT3G13450									ground:Atha_WT-Col-0_sl_GC_Rep3_G2S3	9.154
+sample	OSD-38	AT3G49620									ground:Atha_WT-Col-0_sl_GC_Rep3_G2S3	4.557
+sample	OSD-38	AT3G60140									ground:Atha_WT-Col-0_sl_GC_Rep3_G2S3	8.476
+sample	OSD-38	AT5G20250									ground:Atha_WT-Col-0_sl_GC_Rep3_G2S3	14.05
+sample	OSD-678-light	AT1G67070									flight:Flight_Col-0_Light_bio_rep3	7.608
+sample	OSD-678-light	AT3G13450									flight:Flight_Col-0_Light_bio_rep3	12.35
+sample	OSD-678-light	AT3G49620									flight:Flight_Col-0_Light_bio_rep3	8.111
+sample	OSD-678-light	AT3G60140									flight:Flight_Col-0_Light_bio_rep3	11.37
+sample	OSD-678-light	AT5G20250									flight:Flight_Col-0_Light_bio_rep3	15.42
+sample	OSD-678-light	AT1G67070									flight:Flight_Col-0_Light_bio_rep2	9.166
+sample	OSD-678-light	AT3G13450									flight:Flight_Col-0_Light_bio_rep2	13.6
+sample	OSD-678-light	AT3G49620									flight:Flight_Col-0_Light_bio_rep2	8.364
+sample	OSD-678-light	AT3G60140									flight:Flight_Col-0_Light_bio_rep2	12.97
+sample	OSD-678-light	AT5G20250									flight:Flight_Col-0_Light_bio_rep2	16.55
+sample	OSD-678-light	AT1G67070									flight:Flight_Col-0_Light_bio_rep1	9.97
+sample	OSD-678-light	AT3G13450									flight:Flight_Col-0_Light_bio_rep1	13.9
+sample	OSD-678-light	AT3G49620									flight:Flight_Col-0_Light_bio_rep1	7.895
+sample	OSD-678-light	AT3G60140									flight:Flight_Col-0_Light_bio_rep1	13.17
+sample	OSD-678-light	AT5G20250									flight:Flight_Col-0_Light_bio_rep1	16.66
+sample	OSD-678-light	AT1G67070									ground:Ground_control_Col-0_Light_bio_rep3	8.818
+sample	OSD-678-light	AT3G13450									ground:Ground_control_Col-0_Light_bio_rep3	12.75
+sample	OSD-678-light	AT3G49620									ground:Ground_control_Col-0_Light_bio_rep3	7.431
+sample	OSD-678-light	AT3G60140									ground:Ground_control_Col-0_Light_bio_rep3	7.66
+sample	OSD-678-light	AT5G20250									ground:Ground_control_Col-0_Light_bio_rep3	16.43
+sample	OSD-678-light	AT1G67070									ground:Ground_control_Col-0_Light_bio_rep2	8.69
+sample	OSD-678-light	AT3G13450									ground:Ground_control_Col-0_Light_bio_rep2	12.7
+sample	OSD-678-light	AT3G49620									ground:Ground_control_Col-0_Light_bio_rep2	6.847
+sample	OSD-678-light	AT3G60140									ground:Ground_control_Col-0_Light_bio_rep2	7.488
+sample	OSD-678-light	AT5G20250									ground:Ground_control_Col-0_Light_bio_rep2	16.74
+sample	OSD-678-light	AT1G67070									ground:Ground_control_Col-0_Light_bio_rep1	9.121
+sample	OSD-678-light	AT3G13450									ground:Ground_control_Col-0_Light_bio_rep1	12.6
+sample	OSD-678-light	AT3G49620									ground:Ground_control_Col-0_Light_bio_rep1	6.128
+sample	OSD-678-light	AT3G60140									ground:Ground_control_Col-0_Light_bio_rep1	5.656
+sample	OSD-678-light	AT5G20250									ground:Ground_control_Col-0_Light_bio_rep1	16.74
+sample	OSD-678-dark	AT1G67070									flight:Flight_Col-0_Dark_bio_rep3	10.83
+sample	OSD-678-dark	AT3G13450									flight:Flight_Col-0_Dark_bio_rep3	14.85
+sample	OSD-678-dark	AT3G49620									flight:Flight_Col-0_Dark_bio_rep3	6.556
+sample	OSD-678-dark	AT3G60140									flight:Flight_Col-0_Dark_bio_rep3	12.98
+sample	OSD-678-dark	AT5G20250									flight:Flight_Col-0_Dark_bio_rep3	17.62
+sample	OSD-678-dark	AT1G67070									flight:Flight_Col-0_Dark_bio_rep2	8.227
+sample	OSD-678-dark	AT3G13450									flight:Flight_Col-0_Dark_bio_rep2	12.46
+sample	OSD-678-dark	AT3G49620									flight:Flight_Col-0_Dark_bio_rep2	9.595
+sample	OSD-678-dark	AT3G60140									flight:Flight_Col-0_Dark_bio_rep2	11.34
+sample	OSD-678-dark	AT5G20250									flight:Flight_Col-0_Dark_bio_rep2	15.32
+sample	OSD-678-dark	AT1G67070									flight:Flight_Col-0_Dark_bio_rep1	7.157
+sample	OSD-678-dark	AT3G13450									flight:Flight_Col-0_Dark_bio_rep1	10.73
+sample	OSD-678-dark	AT3G49620									flight:Flight_Col-0_Dark_bio_rep1	9.124
+sample	OSD-678-dark	AT3G60140									flight:Flight_Col-0_Dark_bio_rep1	10.06
+sample	OSD-678-dark	AT5G20250									flight:Flight_Col-0_Dark_bio_rep1	13.89
+sample	OSD-678-dark	AT1G67070									ground:Ground_control_Col-0_Dark_bio_rep1	8.043
+sample	OSD-678-dark	AT3G13450									ground:Ground_control_Col-0_Dark_bio_rep1	11.32
+sample	OSD-678-dark	AT3G49620									ground:Ground_control_Col-0_Dark_bio_rep1	7.625
+sample	OSD-678-dark	AT3G60140									ground:Ground_control_Col-0_Dark_bio_rep1	12.23
+sample	OSD-678-dark	AT5G20250									ground:Ground_control_Col-0_Dark_bio_rep1	14.25
+sample	OSD-678-dark	AT1G67070									ground:Ground_control_Col-0_Dark_bio_rep3	7.272
+sample	OSD-678-dark	AT3G13450									ground:Ground_control_Col-0_Dark_bio_rep3	10.99
+sample	OSD-678-dark	AT3G49620									ground:Ground_control_Col-0_Dark_bio_rep3	8.793
+sample	OSD-678-dark	AT3G60140									ground:Ground_control_Col-0_Dark_bio_rep3	11.58
+sample	OSD-678-dark	AT5G20250									ground:Ground_control_Col-0_Dark_bio_rep3	13.71
+sample	OSD-678-dark	AT1G67070									ground:Ground_control_Col-0_Dark_bio_rep2	7.073
+sample	OSD-678-dark	AT3G13450									ground:Ground_control_Col-0_Dark_bio_rep2	11.4
+sample	OSD-678-dark	AT3G49620									ground:Ground_control_Col-0_Dark_bio_rep2	8.271
+sample	OSD-678-dark	AT3G60140									ground:Ground_control_Col-0_Dark_bio_rep2	12.12
+sample	OSD-678-dark	AT5G20250									ground:Ground_control_Col-0_Dark_bio_rep2	14.17
