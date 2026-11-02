@@ -10,9 +10,12 @@
 #   scripts/21_prereg_osd38.py      prereg/ from today's KEGG release
 #   scripts/14_submit_paintomics.py PaintOmics jobs are submitted once; their records are vendored
 #                                   in results/paintomics_raw/ and read from there
-# Network: the Wu supplement, KEGG lists, MetaboLights and OSD-38 proteome files are fetched into the
-# git-ignored data/cache/ on first run (MetaboLights and OSD-38 files are checked against their recorded
-# SHA-256).
+#   scripts/27_... versions          the OSDR file listing is a dated snapshot
+#                                   (data/reference/osd38_osdr_versions.tsv)
+# Revision 1 analyses (scripts/23-28, prereg/revision1) also need R with limma and edgeR (Rscript on PATH).
+# Network: the Wu supplement, KEGG lists, MetaboLights, OSDR (OSD-38, OSD-136, OSD-678) and GEO (GSE14502,
+# GPL198) files are fetched into the git-ignored data/cache/ on first run and checked against their
+# recorded SHA-256 (data/reference/*_sources.tsv).
 set -euo pipefail
 cd "$(dirname "$0")/scripts"
 
@@ -30,6 +33,12 @@ python3 15_paintomics_tables.py
 python3 16_gwas_light_dark_tests.py
 python3 17_gcms_power.py fetch
 python3 17_gcms_power.py build
+python3 23_reference_strata.py
+python3 24_osd678_interaction.py
+python3 25_geneset_diagnostics.py
+python3 26_hypoxia_positive_control.py
+python3 27_osd38_proteome_checks.py build
+python3 28_paintomics_controls.py
 python3 18_manuscript_numbers.py
 python3 make_manifest.py
 

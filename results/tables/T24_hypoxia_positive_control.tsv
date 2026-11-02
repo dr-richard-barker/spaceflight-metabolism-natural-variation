@@ -1,13 +1,13 @@
 dataset	set	role	hypoxia_sensitive	direction	p	q	z	signed	n_set	n_used	arms	members	genes_tested
-OSD-136	hypoxia_responsive	positive control	False	none	0.5661	0.8492	-0.545	-0.5322	3	2	3 v 3	AT3G48030:-0.43;AT5G27760:-0.83	2.025e+04
-OSD-136	fermentation	positive control	True	up	0.0002	0.0008999	9.626	7.553	6	3	3 v 3	AT4G33070:19.69;AT5G17380:0.44;AT5G54960:2.22	2.025e+04
-OSD-136	din_first_study	positive control	True	none	0.988	0.9969	0.006253	0.008699	5	5	3 v 3	AT1G67070:-0.98;AT3G13450:-1.83;AT3G49620:1.19;AT3G60140:1.18;AT5G20250:-0.02	2.025e+04
-GSE14502_shoot	hypoxia_responsive	positive control	False	none	0.9969	0.9969	0.006828	-0.004195	3	2	3 v 3	AT3G48030:-0.25;AT5G27760:-0.22	2.104e+04
-GSE14502_shoot	fermentation	positive control	True	up	9.999e-05	0.0008999	8.61	6.794	6	4	3 v 3	AT4G33070:14.10;AT5G01320:5.30;AT5G17380:-0.21;AT5G54960:7.06	2.104e+04
-GSE14502_shoot	din_first_study	positive control	True	none	0.3525	0.6344	0.8098	0.5599	5	5	3 v 3	AT1G67070:2.07;AT3G13450:0.97;AT3G49620:-2.91;AT3G60140:-0.84;AT5G20250:2.34	2.104e+04
-GSE14502_root	hypoxia_responsive	positive control	False	none	0.9538	0.9969	0.03773	0.07169	3	2	3 v 4	AT3G48030:-1.56;AT5G27760:1.94	2.104e+04
-GSE14502_root	fermentation	positive control	True	up	0.0018	0.005399	6.75	8.318	6	4	3 v 4	AT4G33070:23.47;AT5G01320:2.57;AT5G17380:0.59;AT5G54960:7.11	2.104e+04
-GSE14502_root	din_first_study	positive control	True	up	0.0134	0.03015	2.946	3.18	5	5	3 v 4	AT1G67070:5.98;AT3G13450:2.70;AT3G49620:0.87;AT3G60140:0.19;AT5G20250:6.74	2.104e+04
+OSD-136	hypoxia_responsive	positive control	False	none	0.5661	0.8492	-0.545	-0.5322	3	2	3 v 3	AT3G48030:-0.43;AT5G27760:-0.83	20254
+OSD-136	fermentation	positive control	True	up	0.0002	0.0008999	9.626	7.553	6	3	3 v 3	AT4G33070:19.69;AT5G17380:0.44;AT5G54960:2.22	20254
+OSD-136	din_first_study	positive control	True	none	0.988	0.9969	0.006253	0.008699	5	5	3 v 3	AT1G67070:-0.98;AT3G13450:-1.83;AT3G49620:1.19;AT3G60140:1.18;AT5G20250:-0.02	20254
+GSE14502_shoot	hypoxia_responsive	positive control	False	none	0.9969	0.9969	0.006828	-0.004195	3	2	3 v 3	AT3G48030:-0.25;AT5G27760:-0.22	21035
+GSE14502_shoot	fermentation	positive control	True	up	9.999e-05	0.0008999	8.61	6.794	6	4	3 v 3	AT4G33070:14.10;AT5G01320:5.30;AT5G17380:-0.21;AT5G54960:7.06	21035
+GSE14502_shoot	din_first_study	positive control	True	none	0.3525	0.6344	0.8098	0.5599	5	5	3 v 3	AT1G67070:2.07;AT3G13450:0.97;AT3G49620:-2.91;AT3G60140:-0.84;AT5G20250:2.34	21035
+GSE14502_root	hypoxia_responsive	positive control	False	none	0.9538	0.9969	0.03773	0.07169	3	2	3 v 4	AT3G48030:-1.56;AT5G27760:1.94	21035
+GSE14502_root	fermentation	positive control	True	up	0.0018	0.005399	6.75	8.318	6	4	3 v 4	AT4G33070:23.47;AT5G01320:2.57;AT5G17380:0.59;AT5G54960:7.11	21035
+GSE14502_root	din_first_study	positive control	True	up	0.0134	0.03015	2.946	3.18	5	5	3 v 4	AT1G67070:5.98;AT3G13450:2.70;AT3G49620:0.87;AT3G60140:0.19;AT5G20250:6.74	21035
 OSD-38 BRIC-PDFU vs closed container (T12)	din_first_study	informative	True	none	0.1145	0.1646	-1.545	-1.214		5			
 OSD-38 BRIC-PDFU vs closed container (T12)	fermentation	informative	True	none	0.3917	0.4504	0.8504	0.6068		6			
 OSD-38 BRIC-PDFU vs closed container (T12)	hypoxia_responsive	not informative	False	none	0.7576	0.7576	-0.2975	-0.302		3			

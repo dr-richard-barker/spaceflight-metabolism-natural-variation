@@ -139,6 +139,7 @@ def run():
                            np.where(out.hypoxia_sensitive, "informative", "not informative"), "positive control")
     lead = ["dataset", "set", "role", "hypoxia_sensitive", "direction", "p", "q", "z", "signed", "n_set", "n_used", "arms"]
     out = out[lead + [c for c in out.columns if c not in lead]]
+    out[["n_set", "n_used", "genes_tested"]] = out[["n_set", "n_used", "genes_tested"]].astype("Int64")
     out.to_csv(TABLES / "T24_hypoxia_positive_control.tsv", sep="\t", index=False, float_format="%.4g")
     print(out[["dataset", "set", "role", "direction", "p", "q", "z", "n_used"]].to_string(index=False))
     signature(gse, data["OSD-136"][0])
@@ -180,6 +181,7 @@ def signature(gse, t136):
     out.loc[sel, "q"] = T16.bh(out.loc[sel, "p"])
     out.loc[sel, "direction"] = np.where(out.loc[sel, "q"] >= 0.05, "none",
                                          np.where(out.loc[sel, "signed"] > 0, "up", "down"))
+    out[["n_set", "n_used", "genes_tested"]] = out[["n_set", "n_used", "genes_tested"]].astype("Int64")
     out.to_csv(TABLES / "T25_hypoxia_signature.tsv", sep="\t", index=False, float_format="%.4g")
     print(f"  R4b signature: {len(sig['hypoxia_up'])} hypoxia-up and {len(sig['hypoxia_down'])} hypoxia-down genes "
           f"(GSE14502 shoot and root, |log2FC| > 1, q < 0.05)")

@@ -1,10 +1,10 @@
 set	contrast	statistic	n_genes	n_used_perm	perm_signed	perm_unsigned	perm_p_signed	perm_p_unsigned	perm_p	T08_rotation_p	T08_q	T08_observed	pydeseq2_rotation_p	pydeseq2_rotation_z	T08_z	pipeline_spearman_stat	pipeline_spearman_log2fc	pipeline_genes
-din_first_study	OSD-38	signed	27723	5	-5.717	3.945	0.1	0.1	0.1	0.0015	0.0108	down	0.0005	-4.512	-3.384	0.9878	0.9978	2.731e+04
-bcaa_degradation	OSD-38	signed	27723	53	-0.4295	0.8629	0.3	0.1	0.3	0.08079	0.2237	none	0.2137	-1.241	-1.708	0.9878	0.9978	2.731e+04
-wu_control_only	OSD-38	unsigned	27723	254	0.08021	0.07541	0.8	0.2	0.2	0.6361	0.7387	none	0.5251	-0.09669	-0.3725	0.9878	0.9978	2.731e+04
-wu_stress_only	OSD-38	unsigned	27723	452	-0.186	0.298	0.1	0.1	0.1	0.4396	0.5616	none	0.2086	0.81	0.1505	0.9878	0.9978	2.731e+04
-wu_shared	OSD-38	unsigned	27723	1654	-0.02999	0.08257	0.8	0.1	0.1	0.3193	0.4789	none	0.2251	0.7672	0.4808	0.9878	0.9978	2.731e+04
-wu_dark_metabolite	OSD-38	unsigned	27723	452	0.01098	0.2172	0.9	0.1	0.1	0.1946	0.3535	none	0.2263	0.7373	0.8671	0.9878	0.9978	2.731e+04
+din_first_study	OSD-38	signed	27723	5	-5.717	3.945	0.1	0.1	0.1	0.0015	0.0108	down	0.0005	-4.512	-3.384	0.9878	0.9978	27309
+bcaa_degradation	OSD-38	signed	27723	53	-0.4295	0.8629	0.3	0.1	0.3	0.08079	0.2237	none	0.2137	-1.241	-1.708	0.9878	0.9978	27309
+wu_control_only	OSD-38	unsigned	27723	254	0.08021	0.07541	0.8	0.2	0.2	0.6361	0.7387	none	0.5251	-0.09669	-0.3725	0.9878	0.9978	27309
+wu_stress_only	OSD-38	unsigned	27723	452	-0.186	0.298	0.1	0.1	0.1	0.4396	0.5616	none	0.2086	0.81	0.1505	0.9878	0.9978	27309
+wu_shared	OSD-38	unsigned	27723	1654	-0.02999	0.08257	0.8	0.1	0.1	0.3193	0.4789	none	0.2251	0.7672	0.4808	0.9878	0.9978	27309
+wu_dark_metabolite	OSD-38	unsigned	27723	452	0.01098	0.2172	0.9	0.1	0.1	0.1946	0.3535	none	0.2263	0.7373	0.8671	0.9878	0.9978	27309
 din_first_study	OSD-678-light	signed	24474	5	2.006	0.2434	0.1	0.4	0.1	0.08899	0.2288	none						
 bcaa_degradation	OSD-678-light	signed	24474	53	0.6369	0.06976	0.2	0.3	0.2	0.0397	0.1429	none						
 wu_control_only	OSD-678-light	unsigned	24474	233	-0.1452	-0.09566	0.1	1	1	0.4026	0.5574	none						

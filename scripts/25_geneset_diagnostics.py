@@ -196,6 +196,7 @@ def t21(sets):
         t.loc[i, ["pydeseq2_rotation_p", "pydeseq2_rotation_z", "T08_z"]] = [p, z, t08.loc[(k, "OSD-38"), "z"]]
     t.loc[t.contrast == "OSD-38", ["pipeline_spearman_stat", "pipeline_spearman_log2fc", "pipeline_genes"]] = \
         [rho_stat, rho_fc, len(common)]
+    t["pipeline_genes"] = t.pipeline_genes.astype("Int64")   # a count: keep it out of %.4g
     t.to_csv(TABLES / "T21_exact_permutation.tsv", sep="\t", index=False, float_format="%.4g")
     print(t[["set", "contrast", "statistic", "perm_p", "T08_rotation_p", "T08_observed"]].to_string(index=False))
     print(f"  OSD-38 PyDESeq2 (6 samples) vs GeneLab: Spearman stat {rho_stat:.3f}, log2FC {rho_fc:.3f} over {len(common)} genes")
