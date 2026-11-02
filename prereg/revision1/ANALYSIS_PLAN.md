@@ -66,3 +66,15 @@ plus a KEGG-degree test and a degree-matched permutation.
 ## R7. Power (point 13)
 Rename the 1.5-fold column; show Bonferroni over the 29-compound panel; add a provenance table for
 the MetaboLights studies.
+
+## R4b. Hypoxia signature (addendum, written after R4 ran)
+R4 (commit 6c8f3d1) found that the annotation-based hypoxia-responsive set does not respond to
+hypoxia in any positive-control dataset, so its BRIC-PDFU vs container result says nothing. A
+gene-level look then showed ADH1 and PDC1, the canonical anaerobic markers, up about 6-fold in
+BRIC-PDFU against the closed container (padj < 0.001), which the six-gene fermentation-set mean
+dilutes. This addendum was written after those two observations and is labelled so.
+- **Signature:** genes up more than 2-fold at q < 0.05 in both the shoot and the root GSE14502
+  total-mRNA contrasts (R4's limma fits); the matching down signature too.
+- **Tested in:** OSD-136 (independent hypoxia data, expected up), OSD-38 BRIC-PDFU vs closed
+  container, and OSD-38 flight vs ground. Rotation null, signed statistic, BH over these rows.
+- ADH1 and PDC1 are reported gene by gene. The pre-registered T12 hardware verdicts are unchanged.
