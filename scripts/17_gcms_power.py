@@ -172,8 +172,10 @@ def n_per_arm(effect, sd, alpha, power=0.8):
 
 def build():
     S = json.loads((PREREG / "settings.json").read_text())["power"]
-    effects = {"Q60": float(np.log2(1 - 0.0237)), "Q1000": 0.13052, "half_fold": 0.585, "two_fold": 1.0}
+    # fold_1p5 is log2(1.5) = 0.585; prereg/settings.json (frozen) calls it half_fold, a misleading name
+    effects = {"Q60": float(np.log2(1 - 0.0237)), "Q1000": 0.13052, "fold_1p5": 0.585, "two_fold": 1.0}
     assert S["effects_log2"]["model_Q1000_T06"] == effects["Q1000"]
+    assert S["effects_log2"]["half_fold"] == effects["fold_1p5"]
     g, m, primary = sds()
     m.to_csv(REF / "metabolights_kegg_matches.tsv", sep="\t", index=False)
     _, _, _, _, t6, t2 = targets()
@@ -191,19 +193,60 @@ def build():
     d_min = t.sd_log2.apply(lambda s: optimize.brentq(
         lambda d: n_per_arm(d, s, S["alpha"], S["power"]) - REPLICATES_OSD522 - 0.5, 1e-4, 50))
     t["detectable_log2_at_n6"] = d_min
+    t["detectable_log2_at_n6_bonf"] = t.sd_log2.apply(lambda s: optimize.brentq(
+        lambda d: n_per_arm(d, s, S["alpha"] / m_panel, S["power"]) - REPLICATES_OSD522 - 0.5, 1e-4, 50))
     t = t.sort_values("sd_log2")
     with open(TABLES / "T10_gcms_power.tsv", "w") as fh:
         fh.write(f"# Samples per arm for 80% power, two-sided two-sample t, alpha {S['alpha']} "
                  f"(and Bonferroni over the {m_panel}-compound panel). Effects (log2): Q60 = log2(1 - 0.0237) "
-                 "(first study's T13, rosette, OSD-522 light), Q1000 = 0.13052 (its T06), half_fold 0.585, "
-                 "two_fold 1.0.\n# SD: median within-group SD of log2 intensity over Col-0 wild-type control "
+                 "(first study's T13, rosette, OSD-522 light), Q1000 = 0.13052 (its T06), fold_1p5 = 0.585 "
+                 "(1.5-fold; key half_fold in prereg/settings.json), two_fold 1.0.\n# SD: median within-group SD of log2 intensity over Col-0 wild-type control "
                  f"groups in {', '.join(STUDIES)} (MetaboLights; derived values only).\n"
-                 "# detectable_log2_at_n6: smallest |log2 fold change| detectable with 6 per arm (unadjusted).\n")
+                 "# detectable_log2_at_n6: smallest |log2 fold change| detectable with 6 per arm "
+                 "(unadjusted; _bonf: Bonferroni over the panel).\n")
         t.to_csv(fh, sep="\t", float_format="%.4g")
     g.to_csv(REF / "metabolights_group_sds.tsv", sep="\t", index=False, float_format="%.4g")
     print(t[["compound", "sd_log2", "groups", "studies", "n_Q60", "n_Q1000", "n_Q1000_bonf",
-             "n_half_fold", "detectable_log2_at_n6"]].to_string())
+             "n_fold_1p5", "n_fold_1p5_bonf", "detectable_log2_at_n6", "detectable_log2_at_n6_bonf"]].to_string())
+    provenance()
     figure(t)
+
+
+def provenance():
+    """Per-study provenance of the variance groups, read from the ISA sample and assay files (T26)."""
+    rule = {"MTBLS22": "Source Name rg1 (0 mM NaCl)", "MTBLS41": "Source Name rg1 (0 mM NaCl)",
+            "MTBLS42": "Source Name rg1 (0 mM NaCl)",
+            "MTBLS2289": "Genotype Col-0 WT, Drought stress water, shoot; one group per timepoint",
+            "MTBLS4066": "Sample group primary_sample_wildtype",
+            "MTBLS363": "Arabidopsis assay only (the study also profiles Agave americana); one group per elapsed time"}
+    rows = []
+    for sid in STUDIES:
+        s, a, m = files(sid)
+        s, a = pd.read_csv(s, sep="\t", dtype=str), pd.read_csv(a, sep="\t", dtype=str)
+        grp = groups(sid)
+        used = {c for v in grp.values() for c in v}
+        names = set(a.loc[a["MS Assay Name"].isin(used), "Sample Name"])
+        su = s[s["Sample Name"].isin(names)]
+        au = a[a["MS Assay Name"].isin(used)]
+        one = lambda d, c: "; ".join(sorted(d[c].dropna().unique())) if c in d else "not in ISA files"
+        maf = pd.read_csv(m, sep="\t", dtype=str)
+        cols = [c for c in maf.columns if c in set(a["MS Assay Name"])]       # every sample in the study's assay
+        v = maf[cols].apply(lambda x: pd.to_numeric(x, errors="coerce"))
+        mx = v.max(axis=1).dropna()
+        other = sorted(set(s["Characteristics[Organism]"].dropna()) - {"Arabidopsis thaliana", "blank", "reference compound"})
+        n = [len(x) for x in grp.values()]
+        rows.append({"study": sid, "organism": one(su, "Characteristics[Organism]"),
+                     "variant": one(su, "Characteristics[Variant]"), "organism_part": one(su, "Characteristics[Organism part]"),
+                     "group_rule": rule[sid], "groups": len(grp), "samples": sum(n),
+                     "n_per_group": f"{min(n)}-{max(n)}" if min(n) != max(n) else str(n[0]),
+                     "chromatography": one(au, "Parameter Value[Chromatography Instrument]"),
+                     "instrument": one(au, "Parameter Value[Instrument]"),
+                     "mass_analyzer": one(au, "Parameter Value[Mass analyzer]"),
+                     "compounds_whose_study_max_is_100": f"{int(np.isclose(mx, 100).sum())} of {len(mx)}",
+                     "other_organisms_in_study": "; ".join(other) or "none"})
+    t = pd.DataFrame(rows)
+    t.to_csv(TABLES / "T26_metabolights_provenance.tsv", sep="\t", index=False)
+    print(t.to_string(index=False))
 
 
 def figure(t):
@@ -215,17 +258,18 @@ def figure(t):
     y = np.arange(len(t))
     marks = {"n_Q60": (style.PURPLE, "v", "model, OSD-522 light (Q 60): 0.035 log2"),
              "n_Q1000": (style.VERMILION, "o", "model, Q 1000 (first study's T06): 0.13 log2"),
-             "n_half_fold": (style.BLUE, "s", "1.5-fold (0.585 log2)"),
+             "n_fold_1p5": (style.BLUE, "s", "1.5-fold (0.585 log2)"),
              "n_two_fold": (style.GREEN, "D", "2-fold (1 log2)")}
     for col, (c, mk, lab) in marks.items():
         ax.scatter(t[col], y, color=c, marker=mk, s=20, label=lab, zorder=3)
-    ax.axvline(REPLICATES_OSD522, color=style.INK, lw=1, ls="--")
-    ax.text(REPLICATES_OSD522 * 1.08, len(t) - 0.4, "6 per arm\n(OSD-522 RNA-seq)", fontsize=6.4, va="top")
+        ax.scatter(t[f"{col}_bonf"], y, facecolor="none", edgecolor=c, marker=mk, s=20, lw=0.8, zorder=3)
+        ax.hlines(y, t[col], t[f"{col}_bonf"], color=c, lw=0.5, alpha=0.5, zorder=2)
+    ax.axvline(REPLICATES_OSD522, color=style.INK, lw=1, ls="--", label="6 per arm (OSD-522 RNA-seq)")
     ax.set_xscale("log")
     ax.set_yticks(y)
     ax.set_yticklabels([f"{c}{' *' if f else ''}  (SD {s:.2f})" for c, f, s in
                         zip(t.compound, t.in_first_study, t.sd_log2)], fontsize=6.5)
-    ax.set_xlabel("Plants per arm for 80% power (two-sided t, alpha 0.05, unadjusted)")
+    ax.set_xlabel(f"Plants per arm for 80% power (two-sided t; filled: alpha 0.05; open: Bonferroni over {len(t)} compounds)")
     ax.grid(axis="y", visible=False)
     ax.legend(loc="upper center", bbox_to_anchor=(0.45, -0.1), ncol=2, fontsize=6.3)
     style.panel(ax, "", "Targeted GC-MS panel: replicates needed per compound")

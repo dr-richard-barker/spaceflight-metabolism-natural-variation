@@ -1,0 +1,7 @@
+study	organism	variant	organism_part	group_rule	groups	samples	n_per_group	chromatography	instrument	mass_analyzer	compounds_whose_study_max_is_100	other_organisms_in_study
+MTBLS22	Arabidopsis thaliana	Arabidopsis thaliana.Col-0	rosette leaf	Source Name rg1 (0 mM NaCl)	1	6	6	Agilent 6890N GC	LECO Pegasus III	time-of-flight	68 of 68	none
+MTBLS41	Arabidopsis thaliana	Arabidopsis thaliana.Col-0	rosette leaf	Source Name rg1 (0 mM NaCl)	1	5	5	Agilent 6890N GC	LECO Pegasus III	time-of-flight	67 of 67	none
+MTBLS42	Arabidopsis thaliana	Arabidopsis thaliana.Col-0	rosette leaf	Source Name rg1 (0 mM NaCl)	1	6	6	Agilent 6890N GC	LECO Pegasus III	time-of-flight	67 of 67	none
+MTBLS2289	Arabidopsis thaliana	Col-0	shoot	Genotype Col-0 WT, Drought stress water, shoot; one group per timepoint	7	35	5	Agilent 6890N GC	LECO Pegasus III	time-of-flight	0 of 75	none
+MTBLS4066	Arabidopsis thaliana	Col-0	leaf	Sample group primary_sample_wildtype	1	6	6	Agilent 6890N GC	LECO Pegasus III	time-of-flight	0 of 50	none
+MTBLS363	Arabidopsis thaliana	Arabidopsis thaliana str. Col-0	rosette leaf	Arabidopsis assay only (the study also profiles Agave americana); one group per elapsed time	8	24	3	Agilent 7890A GC	Agilent 5975C inert XL MSD	quadrupole	0 of 77	Agave americana

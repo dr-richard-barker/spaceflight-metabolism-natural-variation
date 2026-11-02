@@ -1,33 +1,33 @@
-# Samples per arm for 80% power, two-sided two-sample t, alpha 0.05 (and Bonferroni over the 29-compound panel). Effects (log2): Q60 = log2(1 - 0.0237) (first study's T13, rosette, OSD-522 light), Q1000 = 0.13052 (its T06), half_fold 0.585, two_fold 1.0.
+# Samples per arm for 80% power, two-sided two-sample t, alpha 0.05 (and Bonferroni over the 29-compound panel). Effects (log2): Q60 = log2(1 - 0.0237) (first study's T13, rosette, OSD-522 light), Q1000 = 0.13052 (its T06), fold_1p5 = 0.585 (1.5-fold; key half_fold in prereg/settings.json), two_fold 1.0.
 # SD: median within-group SD of log2 intensity over Col-0 wild-type control groups in MTBLS22, MTBLS41, MTBLS42, MTBLS2289, MTBLS4066, MTBLS363 (MetaboLights; derived values only).
-# detectable_log2_at_n6: smallest |log2 fold change| detectable with 6 per arm (unadjusted).
-kegg_id	compound	sd_log2	groups	studies	median_n	in_first_study	darkness_status	sd_study_min	sd_study_max	n_Q60	n_Q60_bonf	n_Q1000	n_Q1000_bonf	n_half_fold	n_half_fold_bonf	n_two_fold	n_two_fold_bonf	detectable_log2_at_n6
-C00089	Sucrose	0.3138	19	6	5	True	absent	0.04742	0.8055	1293	2603	92	186	6	12	3	6	0.5635
-C00065	L-Serine	0.333	16	3	4	True	single	0.1422	0.762	1456	2931	104	209	7	13	4	7	0.598
-C00257	D-Gluconic acid	0.3359	3	3	6	False	robust	0.3096	0.3648	1481	2982	105	212	7	13	4	7	0.6032
-C00258	D-Glycerate	0.3619	19	6	5	True	absent	0.1292	1.311	1718	3460	122	246	8	15	4	7	0.6498
-C00049	L-Aspartate	0.3699	19	6	5	False	robust	0.1645	0.5885	1795	3615	128	257	8	16	4	7	0.6642
-C01879	5-Oxoproline	0.3705	19	6	5	False	robust	0.101	0.957	1801	3626	128	258	8	16	4	7	0.6652
-C00064	L-Glutamine	0.4251	16	3	4	True	none	0.3539	1.373	2371	4775	168	338	10	20	5	9	0.7634
-C01384	Maleic acid	0.4976	8	1	3	False	single	0.4976	0.4976	3247	6539	230	462	13	26	6	11	0.8934
-C00183	L-Valine	0.5065	19	6	5	True	robust	0.2676	0.8126	3365	6775	238	479	13	27	6	11	0.9094
-C00160	Glycolate	0.5319	10	4	5	True	absent	0.2451	0.6269	3711	7473	262	528	15	29	6	12	0.9551
-C00149	(S)-Malate	0.5471	19	6	5	False	robust	0.09986	0.7894	3926	7905	277	558	15	31	6	13	0.9824
-C00095	D-Fructose	0.5715	19	6	5	True	absent	0.1465	1.216	4283	8625	302	609	16	33	7	13	1.026
-C00025	L-Glutamate	0.6038	19	6	5	True	robust	0.1714	0.8303	4781	9629	337	680	18	37	7	15	1.084
-C00152	L-Asparagine	0.6306	16	3	4	True	single	0.3783	1.121	5215	10502	368	741	20	40	8	16	1.132
-C00482	Sinapate	0.6403	15	2	3	False	single	0.2305	1.088	5376	10826	379	764	20	41	8	16	1.15
-C00037	Glycine	0.6742	11	5	5	True	absent	0.09489	0.7312	5960	12001	420	846	22	45	9	17	1.21
-C00026	2-Oxoglutarate	0.7561	7	1	5	False	robust	0.7561	0.7561	7497	15098	528	1064	28	56	11	21	1.358
-C00031	D-Glucose	0.797	19	6	5	True	absent	0.05597	1.293	8329	16772	587	1182	31	62	12	23	1.431
-C00072	Ascorbate	0.8108	16	3	4	False	robust	0.3518	1.36	8620	17359	607	1223	32	64	12	24	1.456
-C00078	L-Tryptophan	0.8595	15	2	3	False	robust	0.5072	2.253	9687	19507	682	1374	35	71	13	26	1.543
-C00147	Adenine	0.8638	7	1	5	False	robust	0.8638	0.8638	9783	19701	689	1388	36	72	13	27	1.551
-C00062	L-Arginine	0.873	7	1	5	False	robust	0.873	0.873	9992	20122	704	1417	36	73	13	27	1.567
-C00158	Citrate	0.8967	19	6	5	False	single	0.1951	1.845	10542	21228	742	1495	38	77	14	28	1.61
-C00082	L-Tyrosine	0.9182	8	2	5	False	robust	0.5391	0.9709	11055	22261	778	1567	40	81	15	30	1.649
-C00208	Maltose	0.9731	7	1	5	True	single	0.9731	0.9731	12416	25004	874	1760	45	90	16	33	1.747
-C00148	L-Proline	1.118	11	5	5	False	single	0.1629	1.66	16393	33011	1154	2323	59	118	21	43	2.008
-C00123	L-Leucine	1.124	8	2	5	True	robust	0.2543	1.23	16561	33350	1165	2347	59	120	21	43	2.018
-C00135	L-Histidine	1.182	7	1	5	False	single	1.182	1.182	18324	36900	1289	2596	66	132	23	47	2.123
-C00407	L-Isoleucine	1.206	8	2	5	True	robust	0.2036	1.386	19069	38400	1342	2702	68	137	24	49	2.165
+# detectable_log2_at_n6: smallest |log2 fold change| detectable with 6 per arm (unadjusted; _bonf: Bonferroni over the panel).
+kegg_id	compound	sd_log2	groups	studies	median_n	in_first_study	darkness_status	sd_study_min	sd_study_max	n_Q60	n_Q60_bonf	n_Q1000	n_Q1000_bonf	n_fold_1p5	n_fold_1p5_bonf	n_two_fold	n_two_fold_bonf	detectable_log2_at_n6	detectable_log2_at_n6_bonf
+C00089	Sucrose	0.3138	19	6	5	True	absent	0.04742	0.8055	1293	2603	92	186	6	12	3	6	0.5635	0.9568
+C00065	L-Serine	0.333	16	3	4	True	single	0.1422	0.762	1456	2931	104	209	7	13	4	7	0.598	1.015
+C00257	D-Gluconic acid	0.3359	3	3	6	False	robust	0.3096	0.3648	1481	2982	105	212	7	13	4	7	0.6032	1.024
+C00258	D-Glycerate	0.3619	19	6	5	True	absent	0.1292	1.311	1718	3460	122	246	8	15	4	7	0.6498	1.103
+C00049	L-Aspartate	0.3699	19	6	5	False	robust	0.1645	0.5885	1795	3615	128	257	8	16	4	7	0.6642	1.128
+C01879	5-Oxoproline	0.3705	19	6	5	False	robust	0.101	0.957	1801	3626	128	258	8	16	4	7	0.6652	1.129
+C00064	L-Glutamine	0.4251	16	3	4	True	none	0.3539	1.373	2371	4775	168	338	10	20	5	9	0.7634	1.296
+C01384	Maleic acid	0.4976	8	1	3	False	single	0.4976	0.4976	3247	6539	230	462	13	26	6	11	0.8934	1.517
+C00183	L-Valine	0.5065	19	6	5	True	robust	0.2676	0.8126	3365	6775	238	479	13	27	6	11	0.9094	1.544
+C00160	Glycolate	0.5319	10	4	5	True	absent	0.2451	0.6269	3711	7473	262	528	15	29	6	12	0.9551	1.622
+C00149	(S)-Malate	0.5471	19	6	5	False	robust	0.09986	0.7894	3926	7905	277	558	15	31	6	13	0.9824	1.668
+C00095	D-Fructose	0.5715	19	6	5	True	absent	0.1465	1.216	4283	8625	302	609	16	33	7	13	1.026	1.742
+C00025	L-Glutamate	0.6038	19	6	5	True	robust	0.1714	0.8303	4781	9629	337	680	18	37	7	15	1.084	1.841
+C00152	L-Asparagine	0.6306	16	3	4	True	single	0.3783	1.121	5215	10502	368	741	20	40	8	16	1.132	1.923
+C00482	Sinapate	0.6403	15	2	3	False	single	0.2305	1.088	5376	10826	379	764	20	41	8	16	1.15	1.952
+C00037	Glycine	0.6742	11	5	5	True	absent	0.09489	0.7312	5960	12001	420	846	22	45	9	17	1.21	2.055
+C00026	2-Oxoglutarate	0.7561	7	1	5	False	robust	0.7561	0.7561	7497	15098	528	1064	28	56	11	21	1.358	2.305
+C00031	D-Glucose	0.797	19	6	5	True	absent	0.05597	1.293	8329	16772	587	1182	31	62	12	23	1.431	2.43
+C00072	Ascorbate	0.8108	16	3	4	False	robust	0.3518	1.36	8620	17359	607	1223	32	64	12	24	1.456	2.472
+C00078	L-Tryptophan	0.8595	15	2	3	False	robust	0.5072	2.253	9687	19507	682	1374	35	71	13	26	1.543	2.62
+C00147	Adenine	0.8638	7	1	5	False	robust	0.8638	0.8638	9783	19701	689	1388	36	72	13	27	1.551	2.633
+C00062	L-Arginine	0.873	7	1	5	False	robust	0.873	0.873	9992	20122	704	1417	36	73	13	27	1.567	2.661
+C00158	Citrate	0.8967	19	6	5	False	single	0.1951	1.845	10542	21228	742	1495	38	77	14	28	1.61	2.734
+C00082	L-Tyrosine	0.9182	8	2	5	False	robust	0.5391	0.9709	11055	22261	778	1567	40	81	15	30	1.649	2.799
+C00208	Maltose	0.9731	7	1	5	True	single	0.9731	0.9731	12416	25004	874	1760	45	90	16	33	1.747	2.967
+C00148	L-Proline	1.118	11	5	5	False	single	0.1629	1.66	16393	33011	1154	2323	59	118	21	43	2.008	3.409
+C00123	L-Leucine	1.124	8	2	5	True	robust	0.2543	1.23	16561	33350	1165	2347	59	120	21	43	2.018	3.426
+C00135	L-Histidine	1.182	7	1	5	False	single	1.182	1.182	18324	36900	1289	2596	66	132	23	47	2.123	3.604
+C00407	L-Isoleucine	1.206	8	2	5	True	robust	0.2036	1.386	19069	38400	1342	2702	68	137	24	49	2.165	3.677
