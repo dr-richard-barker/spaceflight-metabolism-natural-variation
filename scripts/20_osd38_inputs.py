@@ -133,21 +133,26 @@ def contrasts():
     prov.write_text(text)
 
 
+def matrix(frac):
+    """Protein-by-channel log2 values (method fixed in prereg/osd38) and the PSM count per protein."""
+    d = psms(frac)
+    x = np.log2(d[FLIGHT + GROUND].astype(float))
+    x = x - x.median(axis=0)                    # channel (loading) normalisation
+    x = x.sub(x.mean(axis=1), axis=0)           # each PSM relative to its own mean
+    x["locus"] = d.locus.to_numpy()
+    return x.groupby("locus").median(), d.groupby("locus").size()
+
+
 def quantify():
     """Protein log2 fold changes, flight vs ground, per fraction (method fixed in prereg/osd38)."""
     out = []
     for frac in FILES:
-        d = psms(frac)
-        x = np.log2(d[FLIGHT + GROUND].astype(float))
-        x = x - x.median(axis=0)                    # channel (loading) normalisation
-        x = x.sub(x.mean(axis=1), axis=0)           # each PSM relative to its own mean
-        x["locus"] = d.locus.to_numpy()
-        prot = x.groupby("locus").median()
+        prot, n = matrix(frac)
         f, g = prot[FLIGHT].to_numpy(), prot[GROUND].to_numpy()
         from scipy import stats
         t, p = stats.ttest_ind(f, g, axis=1, equal_var=True)
         res = pd.DataFrame({"fraction": frac, "locus": prot.index, "log2fc": f.mean(1) - g.mean(1),
-                            "t": t, "p": p, "psms": d.groupby("locus").size().reindex(prot.index).to_numpy()})
+                            "t": t, "p": p, "psms": n.reindex(prot.index).to_numpy()})
         out.append(res)
     return pd.concat(out, ignore_index=True)
 

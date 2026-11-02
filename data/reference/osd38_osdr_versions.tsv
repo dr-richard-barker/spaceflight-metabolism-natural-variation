@@ -1,0 +1,9 @@
+query	file_name	file_size	date_created_utc	date_updated	files_listed
+(default)	GLDS-38_soluble_proteome_WyattLab_soluble.csv	9792292	2017-09-21		295
+(default)	GLDS-38_soluble_proteome_WyattLab_soluble.xlsx	6900438	2017-09-21		295
+(default)	GLDS-38_membrane_proteome_WyattLab_membrane.csv	9323992	2017-09-21		295
+(default)	GLDS-38_membrane_proteome_WyattLab_membrane.xlsx	7235696	2017-09-21		295
+?all_files=true	GLDS-38_soluble_proteome_WyattLab_soluble.csv	9792292	2017-09-21		295
+?all_files=true	GLDS-38_soluble_proteome_WyattLab_soluble.xlsx	6900438	2017-09-21		295
+?all_files=true	GLDS-38_membrane_proteome_WyattLab_membrane.csv	9323992	2017-09-21		295
+?all_files=true	GLDS-38_membrane_proteome_WyattLab_membrane.xlsx	7235696	2017-09-21		295
