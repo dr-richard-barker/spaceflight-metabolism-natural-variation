@@ -43,7 +43,7 @@ model's light/dark claim, with measured natural-variation data:
 2. **A measured metabolite layer leaves PaintOmics unchanged.** Swapping the 21 predicted
    compounds for 96 measured ones kept the same 6 significant pathways (rank correlation 0.95),
    and raw hub p-values were identical for every shared compound. Control jobs (revision) show the
-   same with no metabolite layer or with rescaled values; hubs need genes and proteins together,
+   same with no metabolite layer or with rescaled values; job A's hubs need genes and proteins together,
    and they follow the number of differentially expressed genes.
    [T04–T07](results/tables), [fig02](results/figures/fig02_jobA_vs_job1.png)
 3. **The starvation signal is not light-specific.** 18 of 36 pre-registered outcomes matched,

@@ -39,8 +39,9 @@ every qualification threshold we tried. Darkness can test only \nScored{} of the
 source alone, and \nNotPredictedRobust{} robust darkness responses, among them TCA-cycle acids and
 flavin and nicotinamide cofactors, were not predicted. In PaintOmics, replacing the model's
 metabolite layer with \nLayer{} measured compounds, removing it, or rescaling its values left the
-pathway result unchanged; hub calls needed the gene and protein layers together and disappeared when
-the light contrast's differentially expressed genes were cut to the dark contrast's number. Of
+pathway result unchanged. The lit canister's hub calls needed the gene and protein layers together,
+and in OSD-678 the light contrast's hubs disappeared when its differentially expressed genes were
+cut to the dark contrast's number. Of
 \nTests{} pre-registered gene-set outcomes, \nMatch{} matched. No predicted lit-flight starvation
 signal reached significance, while carbon-starvation and branched-chain amino acid catabolism genes
 moved strongly in three dark flight contrasts, down in two BRIC canister experiments and up in the
@@ -504,8 +505,8 @@ study read these hubs as signs of lit-canister starvation; they appear in the da
 is no larger than chance, however (post hoc; Supplementary Table~S11). Two hub sets of these sizes
 drawn from the same \nHubCand{} tested compounds share \hubOverlapExp{} on average
 (hypergeometric $P(\ge\nHubAD) = \hubOverlapP$), or \hubOverlapExpPerm{} with hub labels shuffled
-within tertiles of KEGG reaction count ($P = \hubOverlapPPerm$), and hubs did not have more KEGG
-reactions than other tested compounds in any job (Mann--Whitney $p \ge \mwDegreePMin$). Job D's
+within tertiles of KEGG reaction count ($P = \hubOverlapPPerm$), and in no job did hubs differ
+significantly from other tested compounds in KEGG reaction count (Mann--Whitney $p \ge \mwDegreePMin$). Job D's
 hubs largely survived with genes alone (\nHubI{} of \nHubD, job I) and vanished with membrane
 proteins alone (job J). Hub calls therefore do not separate the lit from the dark canister.
 
@@ -564,7 +565,7 @@ Claim & First study \citep{firststudy} & This study\\
 \midrule
 Starvation amino acids rise together & Predicted together, one shared gain of 1, unfitted & Leu, Ile, Val, Asn rise; Glu falls in the 32\,\textdegree C source only; Gln has no direction; Leu responds \ratioLeuAsn--\ratioLeuVal{} times as strongly as Val or Asn\\
 TCA-cycle acids & Not predicted (direction uncertain) & Malate and 2-oxoglutarate fall robustly, each in two sources\\
-Metabolite layer in PaintOmics & \nModelCompounds{} predicted compounds & \nLayer{} measured compounds, no layer or rescaled values: pathways unchanged; hubs need genes and proteins together\\
+Metabolite layer in PaintOmics & \nModelCompounds{} predicted compounds & \nLayer{} measured compounds, no layer or rescaled values: pathways unchanged; job A's hubs need genes and proteins together\\
 Lit flight shows a starvation signal & DIN up in OSD-522 ($p \pDinFirstStudy$, Mann--Whitney) & Leans up in all three lit contrasts; none significant after correction under gene-correlation-aware nulls\\
 Dark flight shows none & Predicted none; dark inversions unexplained & Strongest signals are in dark-grown seedlings (gene-level null; too few plants for sample permutation); sign differs between BRIC canisters and CARA plates\\
 Metabolite shifts are measurable & Proposed a 20--30 compound panel on archived material & Needs \nQThousandMin--\nQThousandMax{} plants per arm for 0.13\,log$_2$\\
