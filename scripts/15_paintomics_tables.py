@@ -152,7 +152,12 @@ def main():
     figures(t4, t5, names)
 
 
+DISPLAY = {"C02504": "2-Isopropylmalate"}   # PaintOmics shows KEGG's first name, alpha-Isopropylmalate
+JOB_ID = {k: v.name.split("_")[1] for k, v in JOBS.items()}
+
+
 def figures(t4, t5, names):
+    names = {**names, **DISPLAY}
     style.apply()
     import matplotlib.pyplot as plt
     from matplotlib.lines import Line2D
@@ -169,7 +174,7 @@ def figures(t4, t5, names):
         ax.plot([0, m], [0, m], color=style.GREY, lw=0.8, ls="--", zorder=0)
         ax.set_xlim(0, m)
         ax.set_ylim(0, m)
-        steps = ((-6, 14), (6, -14)) if stagger else ((0, 0), (0, 0))
+        steps = ((16, 20), (6, -14)) if stagger else ((0, 0), (0, 0))
         for (sel, key), step in zip(((onlyx, lx - ly), (onlyy, ly - lx)), steps):
             idx = np.flatnonzero(sel)
             for k, i in enumerate(idx[np.argsort(-key[idx])][:3 if stagger else 4]):
@@ -222,6 +227,8 @@ def figures(t4, t5, names):
         style.panel(ax2, "b", "Metabolite hubs at FDR < 0.05 in either")
         ax2.legend(handles=h2, loc="upper left", bbox_to_anchor=(-0.1, -0.13), ncol=1, fontsize=6.2)
         fig.suptitle(title, x=0.01, ha="left", fontsize=9, fontweight="bold", y=0.995)
+        fig.text(0.01, 0.935, f"PaintOmics jobs: {a} = {JOB_ID[a]}, {b} = {JOB_ID[b]}", fontsize=6.6,
+                 color=style.GREY, ha="left")
         fig.subplots_adjust(wspace=0.6, top=0.88)
         fig.text(0.01, -0.12, "Reference layer: ground carbon-starvation responses (T02), not flight measurements. "
                  "Gene and protein layers: NASA OSDR.", fontsize=6.4, color=style.GREY, ha="left")

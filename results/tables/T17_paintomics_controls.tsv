@@ -1,0 +1,106 @@
+job	job_id	versus	quantity	value
+E	K3ju047ZWB	A	what	job A without the metabolite layer
+E	K3ju047ZWB	A	pathways at BH q < 0.05 (job; parent)	6; 6
+E	K3ju047ZWB	A	pathways gained	none
+E	K3ju047ZWB	A	pathways lost	none
+E	K3ju047ZWB	A	Spearman rho of combined p	0.9518
+E	K3ju047ZWB	A	hub compounds tested (job; parent)	0; 32
+E	K3ju047ZWB	A	hubs at FDR < 0.05 (job; parent)	0; 11
+E	K3ju047ZWB	A	hubs gained	none
+E	K3ju047ZWB	A	hubs lost	(S)-Malate; 2-Isopropylmalate; 2-Oxoglutarate; Glucobrassicin; Glutathione; L-Ascorbate; L-Glutamate; L-Isoleucine; L-Leucine; L-Valine; gamma-L-Glutamyl-L-cysteine
+F	L46ds55AiY	A	what	job A with metabolite values = direction x |reference_z| x (0.13052 / median |reference_z| over directional compounds); relevant list unchanged
+F	L46ds55AiY	A	pathways at BH q < 0.05 (job; parent)	6; 6
+F	L46ds55AiY	A	pathways gained	none
+F	L46ds55AiY	A	pathways lost	none
+F	L46ds55AiY	A	Spearman rho of combined p	1.0
+F	L46ds55AiY	A	hub compounds tested (job; parent)	32; 32
+F	L46ds55AiY	A	hubs at FDR < 0.05 (job; parent)	11; 11
+F	L46ds55AiY	A	hubs gained	none
+F	L46ds55AiY	A	hubs lost	none
+F	L46ds55AiY	A	raw hub p identical to the parent for shared compound-steps	True (128 compound-steps)
+G	Y72ky4006o	A	what	job A genes + metabolite layer (no proteins)
+G	Y72ky4006o	A	pathways at BH q < 0.05 (job; parent)	7; 6
+G	Y72ky4006o	A	pathways gained	KEGG: Metabolic pathways; KEGG: Nitrogen cycle
+G	Y72ky4006o	A	pathways lost	KEGG: Glucosinolate biosynthesis
+G	Y72ky4006o	A	Spearman rho of combined p	0.7697
+G	Y72ky4006o	A	hub compounds tested (job; parent)	32; 32
+G	Y72ky4006o	A	hubs at FDR < 0.05 (job; parent)	0; 11
+G	Y72ky4006o	A	hubs gained	none
+G	Y72ky4006o	A	hubs lost	(S)-Malate; 2-Isopropylmalate; 2-Oxoglutarate; Glucobrassicin; Glutathione; L-Ascorbate; L-Glutamate; L-Isoleucine; L-Leucine; L-Valine; gamma-L-Glutamyl-L-cysteine
+G	Y72ky4006o	A	raw hub p identical to the parent for shared compound-steps	False (128 compound-steps)
+H	N2XgxyWlJn	A	what	job A proteins + metabolite layer (no genes)
+H	N2XgxyWlJn	A	pathways at BH q < 0.05 (job; parent)	0; 6
+H	N2XgxyWlJn	A	pathways gained	none
+H	N2XgxyWlJn	A	pathways lost	KEGG: Glucosinolate biosynthesis; KEGG: Plant hormone signal transduction; KEGG: Protein processing in endoplasmic reticulum; MapMan: Biotic Stress; MapMan: Cellular response overview; MapMan: Large enzyme families overview
+H	N2XgxyWlJn	A	Spearman rho of combined p	0.6419
+H	N2XgxyWlJn	A	hub compounds tested (job; parent)	32; 32
+H	N2XgxyWlJn	A	hubs at FDR < 0.05 (job; parent)	0; 11
+H	N2XgxyWlJn	A	hubs gained	none
+H	N2XgxyWlJn	A	hubs lost	(S)-Malate; 2-Isopropylmalate; 2-Oxoglutarate; Glucobrassicin; Glutathione; L-Ascorbate; L-Glutamate; L-Isoleucine; L-Leucine; L-Valine; gamma-L-Glutamyl-L-cysteine
+H	N2XgxyWlJn	A	raw hub p identical to the parent for shared compound-steps	False (128 compound-steps)
+I	sD7V1nZ4t4	D	what	job D genes + metabolite layer (no proteins)
+I	sD7V1nZ4t4	D	pathways at BH q < 0.05 (job; parent)	27; 25
+I	sD7V1nZ4t4	D	pathways gained	KEGG: Fatty acid biosynthesis; KEGG: Fatty acid degradation; KEGG: Fatty acid metabolism; KEGG: Sulfoquinovose metabolism; MapMan: Inositol Phosphates
+I	sD7V1nZ4t4	D	pathways lost	KEGG: Ascorbate and aldarate metabolism; KEGG: Pentose and glucuronate interconversions; MapMan: Secondary Metabolism
+I	sD7V1nZ4t4	D	Spearman rho of combined p	0.8968
+I	sD7V1nZ4t4	D	hub compounds tested (job; parent)	32; 32
+I	sD7V1nZ4t4	D	hubs at FDR < 0.05 (job; parent)	16; 21
+I	sD7V1nZ4t4	D	hubs gained	none
+I	sD7V1nZ4t4	D	hubs lost	2-Isopropylmalate; 2-Oxoglutarate; L-Arginine; L-Aspartate; L-Glutamate
+I	sD7V1nZ4t4	D	raw hub p identical to the parent for shared compound-steps	False (128 compound-steps)
+J	C3kVBAm3N5	D	what	job D membrane proteins + metabolite layer (no genes)
+J	C3kVBAm3N5	D	pathways at BH q < 0.05 (job; parent)	5; 25
+J	C3kVBAm3N5	D	pathways gained	none
+J	C3kVBAm3N5	D	pathways lost	KEGG: Aminoacyl-tRNA biosynthesis; KEGG: Ascorbate and aldarate metabolism; KEGG: DNA replication; KEGG: Histidine metabolism; KEGG: Porphyrin metabolism; KEGG: Ribosome; KEGG: Starch and sucrose metabolism; KEGG: Valine, leucine and isoleucine degradation; MapMan: AA TCA; MapMan: ChloroPlast CustomArray CUSTOM MAPPING; MapMan: Chloroplast PlasTi-microarray pathway; MapMan: Large enzyme families overview; MapMan: Overview; MapMan: Prokaryotic Ribosome LSU assembly; MapMan: Ribosomal proteins overview; MapMan: Secondary Metabolism; MapMan: Seed custom arabidopsis Seed; MapMan: Sucrose-Starch; MapMan: Volatile Carotenoid; MapMan: photosynthesis
+J	C3kVBAm3N5	D	Spearman rho of combined p	0.606
+J	C3kVBAm3N5	D	hub compounds tested (job; parent)	32; 32
+J	C3kVBAm3N5	D	hubs at FDR < 0.05 (job; parent)	0; 21
+J	C3kVBAm3N5	D	hubs gained	none
+J	C3kVBAm3N5	D	hubs lost	(S)-Malate; 2-Isopropylmalate; 2-Oxoglutarate; Adenine; Adenosine; FAD; FMN; Guanosine; L-Arginine; L-Aspartate; L-Glutamate; L-Isoleucine; L-Leucine; L-Tryptophan; N-Acetyl-L-glutamate; NAD+; Nicotinamide; Pantothenate; Quercitrin; Riboflavin; UDP-alpha-D-galactose
+J	C3kVBAm3N5	D	raw hub p identical to the parent for shared compound-steps	False (128 compound-steps)
+K1	Y0V56yFW12	B	what	job B with its relevant genes randomly downsampled to the job C count, seed 1
+K1	Y0V56yFW12	B	pathways at BH q < 0.05 (job; parent)	1; 24
+K1	Y0V56yFW12	B	pathways gained	none
+K1	Y0V56yFW12	B	pathways lost	KEGG: Biosynthesis of secondary metabolites; KEGG: Carbon fixation by Calvin cycle; KEGG: Carbon metabolism; KEGG: Fatty acid biosynthesis; KEGG: Fatty acid degradation; KEGG: Fatty acid metabolism; KEGG: Glycolysis / Gluconeogenesis; KEGG: Metabolic pathways; KEGG: Photosynthesis - antenna proteins; KEGG: Porphyrin metabolism; KEGG: Pyruvate metabolism; KEGG: Riboflavin metabolism; KEGG: Selenocompound metabolism; KEGG: alpha-Linolenic acid metabolism; MapMan: AGPs; MapMan: ChloroPlast CustomArray CUSTOM MAPPING; MapMan: Chloroplast PlasTi-microarray pathway; MapMan: Isopentenyl PP; MapMan: Pentose Phosphate; MapMan: Phylloquinone Synthesis; MapMan: Prokaryotic Ribosome LSU assembly; MapMan: Seed custom arabidopsis Seed; MapMan: photosynthesis
+K1	Y0V56yFW12	B	Spearman rho of combined p	0.6372
+K1	Y0V56yFW12	B	hub compounds tested (job; parent)	32; 32
+K1	Y0V56yFW12	B	hubs at FDR < 0.05 (job; parent)	0; 17
+K1	Y0V56yFW12	B	hubs gained	none
+K1	Y0V56yFW12	B	hubs lost	(S)-Malate; 2-Isopropylmalate; 2-Oxoglutarate; Adenine; Adenosine; FAD; FMN; Guanosine; L-Aspartate; L-Glutamate; L-Isoleucine; L-Leucine; L-Tryptophan; L-Valine; NAD+; Pantothenate; Riboflavin
+K1	Y0V56yFW12	B	raw hub p identical to the parent for shared compound-steps	False (128 compound-steps)
+K2	7725j3CkOp	B	what	the same, seed 2
+K2	7725j3CkOp	B	pathways at BH q < 0.05 (job; parent)	0; 24
+K2	7725j3CkOp	B	pathways gained	none
+K2	7725j3CkOp	B	pathways lost	KEGG: Biosynthesis of cofactors; KEGG: Biosynthesis of secondary metabolites; KEGG: Carbon fixation by Calvin cycle; KEGG: Carbon metabolism; KEGG: Fatty acid biosynthesis; KEGG: Fatty acid degradation; KEGG: Fatty acid metabolism; KEGG: Glycolysis / Gluconeogenesis; KEGG: Metabolic pathways; KEGG: Photosynthesis - antenna proteins; KEGG: Porphyrin metabolism; KEGG: Pyruvate metabolism; KEGG: Riboflavin metabolism; KEGG: Selenocompound metabolism; KEGG: alpha-Linolenic acid metabolism; MapMan: AGPs; MapMan: ChloroPlast CustomArray CUSTOM MAPPING; MapMan: Chloroplast PlasTi-microarray pathway; MapMan: Isopentenyl PP; MapMan: Pentose Phosphate; MapMan: Phylloquinone Synthesis; MapMan: Prokaryotic Ribosome LSU assembly; MapMan: Seed custom arabidopsis Seed; MapMan: photosynthesis
+K2	7725j3CkOp	B	Spearman rho of combined p	0.6466
+K2	7725j3CkOp	B	hub compounds tested (job; parent)	32; 32
+K2	7725j3CkOp	B	hubs at FDR < 0.05 (job; parent)	0; 17
+K2	7725j3CkOp	B	hubs gained	none
+K2	7725j3CkOp	B	hubs lost	(S)-Malate; 2-Isopropylmalate; 2-Oxoglutarate; Adenine; Adenosine; FAD; FMN; Guanosine; L-Aspartate; L-Glutamate; L-Isoleucine; L-Leucine; L-Tryptophan; L-Valine; NAD+; Pantothenate; Riboflavin
+K2	7725j3CkOp	B	raw hub p identical to the parent for shared compound-steps	False (128 compound-steps)
+K1	Y0V56yFW12	C	hubs at FDR < 0.05 (job; C)	0; 5
+K1	Y0V56yFW12	C	hubs shared with C	none
+K1	Y0V56yFW12	C	pathways at BH q < 0.05 (job; C)	1; 10
+K2	7725j3CkOp	C	hubs at FDR < 0.05 (job; C)	0; 5
+K2	7725j3CkOp	C	hubs shared with C	none
+K2	7725j3CkOp	C	pathways at BH q < 0.05 (job; C)	0; 10
+A	6kBOS7AN5K		pathways with a Gene expression p	232
+A	6kBOS7AN5K		Spearman rho of combined p with the Gene expression p	0.7093
+A	6kBOS7AN5K		pathways with a Proteomics p	223
+A	6kBOS7AN5K		Spearman rho of combined p with the Proteomics p	0.594
+A	6kBOS7AN5K		pathways with a Metabolomics p	80
+A	6kBOS7AN5K		Spearman rho of combined p with the Metabolomics p	0.3922
+A	6kBOS7AN5K		relevant compounds (robust) in the layer	45
+A	6kBOS7AN5K		relevant compounds hub-tested	32
+A	6kBOS7AN5K		relevant compounds with no hub result	2-Methylpropyl glucosinolate; 3-Amino-3-(4-hydroxyphenyl)propanoate; 6-Hydroxynicotinate; D-Sedoheptulose; Glucoalyssin; Glucoraphanin; Indolelactate; Lactulose; Loganin; Naringin; O-Acetyl-L-homoserine; Purine; Rutin
+B	JfVZ1L37PY		relevant compounds (robust) in the layer	45
+B	JfVZ1L37PY		relevant compounds hub-tested	32
+B	JfVZ1L37PY		relevant compounds with no hub result	2-Methylpropyl glucosinolate; 3-Amino-3-(4-hydroxyphenyl)propanoate; 6-Hydroxynicotinate; D-Sedoheptulose; Glucoalyssin; Glucoraphanin; Indolelactate; Lactulose; Loganin; Naringin; O-Acetyl-L-homoserine; Purine; Rutin
+C	wgT3IPi7U2		relevant compounds (robust) in the layer	45
+C	wgT3IPi7U2		relevant compounds hub-tested	32
+C	wgT3IPi7U2		relevant compounds with no hub result	2-Methylpropyl glucosinolate; 3-Amino-3-(4-hydroxyphenyl)propanoate; 6-Hydroxynicotinate; D-Sedoheptulose; Glucoalyssin; Glucoraphanin; Indolelactate; Lactulose; Loganin; Naringin; O-Acetyl-L-homoserine; Purine; Rutin
+D	Es6j23q40o		relevant compounds (robust) in the layer	45
+D	Es6j23q40o		relevant compounds hub-tested	32
+D	Es6j23q40o		relevant compounds with no hub result	2-Methylpropyl glucosinolate; 3-Amino-3-(4-hydroxyphenyl)propanoate; 6-Hydroxynicotinate; D-Sedoheptulose; Glucoalyssin; Glucoraphanin; Indolelactate; Lactulose; Loganin; Naringin; O-Acetyl-L-homoserine; Purine; Rutin
+B	JfVZ1L37PY		hubs at FDR < 0.05: raw p range	0.0007856-0.00729
+B	JfVZ1L37PY		hubs at FDR < 0.05: distinct adjusted p values	0.04441

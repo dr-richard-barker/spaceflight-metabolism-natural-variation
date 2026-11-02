@@ -1,0 +1,40 @@
+kind	test	n	hubs_A	hubs_D	observed	expected	p	hubs	median_reactions_hubs	median_reactions_others	rho	kegg_id	compound	reactions	hub_A	hub_B	hub_C	hub_D
+overlap A-D	hypergeometric over compounds hub-tested in both	32	11	21	6	7.219	0.91											
+overlap A-D	hub labels shuffled within KEGG reaction-count tertiles	32	11	21	6	7.337	0.9316											
+reaction count	job A: Mann-Whitney, hubs vs other hub-tested compounds	32					0.8269	11	14	12								
+reaction count	job B: Mann-Whitney, hubs vs other hub-tested compounds	32					0.1038	17	15	7								
+reaction count	job C: Mann-Whitney, hubs vs other hub-tested compounds	32					0.2865	5	45	12								
+reaction count	job D: Mann-Whitney, hubs vs other hub-tested compounds	32					0.1074	21	19	7								
+reaction count	Spearman of reaction count with -log10 best hub p, job A	32									0.03215							
+compound												C00003	NAD+	1077	tested	hub	hub	hub
+compound												C00026	2-Oxoglutarate	315	hub	hub	tested	hub
+compound												C00025	L-Glutamate	220	hub	hub	tested	hub
+compound												C00051	Glutathione	98	hub	tested	tested	tested
+compound												C00016	FAD	84	tested	hub	hub	hub
+compound												C00052	UDP-alpha-D-galactose	52	tested	tested	tested	hub
+compound												C00062	L-Arginine	48	tested	tested	tested	hub
+compound												C00049	L-Aspartate	45	tested	hub	tested	hub
+compound												C00061	FMN	45	tested	hub	hub	hub
+compound												C00078	L-Tryptophan	45	tested	hub	tested	hub
+compound												C00082	L-Tyrosine	43	tested	tested	tested	tested
+compound												C00072	L-Ascorbate	23	hub	tested	tested	tested
+compound												C00153	Nicotinamide	22	tested	tested	tested	hub
+compound												C00147	Adenine	19	tested	hub	tested	hub
+compound												C00149	(S)-Malate	15	hub	hub	hub	hub
+compound												C00407	L-Isoleucine	14	hub	hub	tested	hub
+compound												C00183	L-Valine	13	hub	hub	tested	tested
+compound												C00212	Adenosine	12	tested	hub	tested	hub
+compound												C00123	L-Leucine	9	hub	hub	tested	hub
+compound												C00255	Riboflavin	9	tested	hub	tested	hub
+compound												C00257	D-Gluconic acid	9	tested	tested	tested	tested
+compound												C00864	Pantothenate	8	tested	hub	tested	hub
+compound												C01175	1-O-Sinapoyl-beta-D-glucose	7	tested	tested	tested	tested
+compound												C00387	Guanosine	6	tested	hub	tested	hub
+compound												C00669	gamma-L-Glutamyl-L-cysteine	6	hub	tested	tested	tested
+compound												C01187	3-Deoxy-D-manno-octulosonate	6	tested	tested	tested	tested
+compound												C01879	5-Oxoproline	6	tested	tested	tested	tested
+compound												C00624	N-Acetyl-L-glutamate	5	tested	tested	tested	hub
+compound												C00499	Allantoate	4	tested	tested	tested	tested
+compound												C05837	Glucobrassicin	4	hub	tested	tested	tested
+compound												C01750	Quercitrin	3	tested	tested	tested	hub
+compound												C02504	2-Isopropylmalate	3	hub	hub	hub	hub
