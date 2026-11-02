@@ -1,0 +1,78 @@
+{
+  "written": "2026-11-02",
+  "status": "post hoc, reviewer-requested (revision 1). Not part of the original pre-registration; fixed here before any of these analyses ran.",
+  "frozen_outputs_unchanged": ["results/tables/T02_light_dark_reference.tsv", "results/tables/T08_geneset_tests.tsv",
+                               "results/tables/T12_osd38_geneset_tests.tsv", "T03 column verdict"],
+  "R1_reference": {
+    "strata": {"all": ["zhu", "wu_stress", "caldana"], "dark_only": ["zhu", "caldana"], "dark_heat": ["wu_stress"]},
+    "consensus_rule": "the pre-registered rule (scripts/10_light_dark_reference.py), applied within each stratum",
+    "sensitivity_agreement_fraction": [0.60, 0.70, 0.75, 0.80, 0.90],
+    "sensitivity_caldana_min_minutes": [60, 180, 360],
+    "fixed": {"min_accessions": 20, "robust_single_source_fraction": 0.90, "caldana_p": 0.05},
+    "key_calls": {"up": ["C00123", "C00407", "C00183"], "down": ["C00149", "C00026"], "watch": ["C00025", "C00064"]},
+    "also_reported": ["T03 verdict counts under each setting", "robust responses the model did not predict",
+                      "names with 0, 1 and >1 KEGG candidates; overrides; exclusions; mapped fraction by Wu class",
+                      "coverage: model predictions scorable and comparable; robust responses the model predicted"],
+    "verdict_detail": "T03 untested rows split into 'not measured' (KEGG ID absent from T02) and 'measured, no directional response' (status none or conflicting); the pre-registered verdict column is unchanged"
+  },
+  "R2_geneset_diagnostics": {
+    "rotation_calibration": {"contrasts": ["OSD-522", "OSD-678-light", "OSD-427", "OSD-38", "OSD-321", "OSD-678-dark"],
+                             "set_sizes": [5, 50, 300, 500, 2000], "sets_per_size_and_type": 200,
+                             "set_types": ["random genes", "contiguous genomic blocks"], "offsets": 999,
+                             "naive_comparator": "random-gene-set null of the same size, 999 draws, applied to the block sets",
+                             "report": "empirical type I error at alpha 0.05 (two-sided, signed statistic) and QQ against uniform",
+                             "seed": 20261102},
+    "exact_sample_permutation": {"contrasts": ["OSD-38", "OSD-678-light", "OSD-678-dark"],
+                                 "statistic": "Welch t on log2(GeneLab normalised count + 1), 3 vs 3, all 20 labellings",
+                                 "sets": "the six pre-registered sets", "p": "#{|null| >= |obs|} / 20 (minimum 0.1)"},
+    "pipeline_comparability": "PyDESeq2 (the OSD-522 settings) on OSD-38 raw RSEM counts, flight vs ground, against GeneLab's Wald statistic: Spearman over shared genes",
+    "din_robustness": "the five DIN genes' statistics in each of the six contrasts, and the rotation test with each gene left out in turn"
+  },
+  "R3_osd678_interaction": {
+    "counts": "GLDS-612_rna_seq_RSEM_Unnormalized_Counts_rRNArm_GLbulkRNAseq.csv (OSDR), the 12 Col-0 samples",
+    "filter": "genes with total count >= 10 (the OSD-522 rule)",
+    "model": "edgeR TMM, limma-voom, design ~ flight * light; interaction coefficient = (flight - ground in light) - (flight - ground in dark)",
+    "statistic": "interaction moderated t",
+    "sets": ["din_first_study", "bcaa_degradation", "photosynthesis_apparatus", "fermentation", "hypoxia_responsive",
+             "ath00630", "ath00710", "ath00500", "ath00010", "wu_stress_only", "wu_dark_metabolite"],
+    "null": "genomic rotation, 10000 offsets, seed 20261030; BH over the family",
+    "expectation_from_model": "starvation sets (din_first_study, bcaa_degradation) interaction up (flight effect larger in light); others none",
+    "check": "limma flight-in-light and flight-in-dark t against GeneLab's Wald statistics (Spearman)"
+  },
+  "R4_hypoxia_positive_control": {
+    "datasets": {
+      "OSD-136": "GeneLab microarray DE table (OSDR), T.stat_(50,000 pascal)v(50,000 pascal + O2 to 21,000 pascal): low O2 at 50 kPa against O2 restored, Ws-0 roots",
+      "GSE14502_shoot": "Mustroph et al. 2009 series matrix (RMA), shoot total mRNA, 2 h hypoxia (3) vs control (3); limma moderated t",
+      "GSE14502_root": "the same, root total mRNA, hypoxia (3) vs control (4)"
+    },
+    "probe_to_gene": "GPL198 annotation (GEO); probes with exactly one AGI; per AGI the probe with the highest mean expression",
+    "sets": ["hypoxia_responsive", "fermentation", "din_first_study"],
+    "null": "genomic rotation, 10000 offsets, seed 20261030; BH over all rows of this family",
+    "pass_criterion": "a set is called hypoxia-sensitive if it is up at q < 0.05 in at least one GSE14502 contrast; the BRIC-vs-container result for a set is called informative only if that set passes"
+  },
+  "R5_osd38_proteome": {
+    "moderated_t": "limma lmFit + eBayes on the protein-by-channel matrix from the pre-registered quantification (scripts/20_osd38_inputs.py), membrane fraction; rotation tests for bcaa_degradation and the four KEGG carbon pathways",
+    "partition_check": "proteins quantified in both fractions: Spearman of membrane vs soluble log2FC; direction of carbon-pathway members in the soluble subset",
+    "osdr_versions": "query the OSDR file API for other versions of the two processed tables and record the outcome"
+  },
+  "R6_paintomics": {
+    "jobs": {
+      "E": "job A without the metabolite layer",
+      "F": "job A with metabolite values = direction x |reference_z| x (0.13052 / median |reference_z| over directional compounds); relevant list unchanged",
+      "G": "job A genes + metabolite layer (no proteins)",
+      "H": "job A proteins + metabolite layer (no genes)",
+      "I": "job D genes + metabolite layer (no proteins)",
+      "J": "job D membrane proteins + metabolite layer (no genes)",
+      "K1": "job B with its relevant genes randomly downsampled to the job C count, seed 1",
+      "K2": "the same, seed 2"
+    },
+    "settings": "as jobs A-D: KEGG + MapMan, AI off, the same compound-card cleanup",
+    "comparisons": "pathways at BH q < 0.05, Spearman of combined p against the parent job, hub sets at FDR < 0.05",
+    "hub_overlap_null": "hypergeometric over the shared candidate list; KEGG reaction count per compound (REST link/reaction, cached): Mann-Whitney of degree in hubs vs non-hubs per job; degree-matched permutation (hub labels shuffled within degree tertiles, 10000 times, seed 20261102) of the A-D overlap"
+  },
+  "R7_power": {
+    "rename": "T10 columns half_fold -> fold_1p5 (0.585 log2 = 1.5-fold); the frozen key in prereg/settings.json is unchanged",
+    "multiplicity": "Bonferroni over the 29-compound panel shown in Fig. 5 and the text",
+    "provenance": "per MetaboLights study: organism, tissue, genotype, group definition, n per group, platform, normalisation, from the ISA files"
+  }
+}
