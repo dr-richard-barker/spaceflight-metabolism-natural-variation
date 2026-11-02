@@ -17,6 +17,10 @@ with the same one-mapping, highest-mean rule. Sets: hypoxia-responsive, fermenta
 rotation null as in T08; BH over the nine rows. Pass criterion, fixed beforehand: a set is
 hypoxia-sensitive if it is up at q < 0.05 in at least one GSE14502 contrast, and the BRIC-vs-container
 result for that set counts as informative only then.
+
+T25 is the R4b addendum, written after R4 ran: an empirical hypoxia signature (genes more than 2-fold
+up, or down, at q < 0.05 in both GSE14502 contrasts) tested in OSD-136 and in the OSD-38 hardware and
+flight contrasts, with ADH1 and PDC1 gene by gene.
 """
 
 import gzip
@@ -29,7 +33,7 @@ import pandas as pd
 
 import fetch_record
 import genesets
-from paths import CACHE, PREREG, ROOT, TABLES
+from paths import CACHE, OSDR, PREREG, ROOT, TABLES
 
 R4 = json.loads((PREREG / "revision1" / "settings.json").read_text())["R4_hypoxia_positive_control"]
 GSE = CACHE / "gse14502"
@@ -94,7 +98,8 @@ def gse14502():
         subprocess.run(["Rscript", str(ROOT / "scripts" / "r" / "limma_two_group.R"), str(work / f"{name}_expr.tsv"),
                         str(work / f"{name}_design.tsv"), str(work / f"{name}_limma.tsv")], check=True)
         r = pd.read_csv(work / f"{name}_limma.tsv", sep="\t").set_index("feature")
-        out[name] = (r.t, f"{grp.count('treated')} v {grp.count('control')}")
+        r["q"] = T16.bh(r.P)
+        out[name] = (r, f"{grp.count('treated')} v {grp.count('control')}")
     return out
 
 
@@ -114,7 +119,8 @@ def test(t, gs, rng):
 
 def run():
     gs = sets()
-    data = {"OSD-136": (osd136(), "3 v 3")} | gse14502()
+    gse = gse14502()
+    data = {"OSD-136": (osd136(), "3 v 3")} | {k: (r.t, n) for k, (r, n) in gse.items()}
     rows = []
     for name, (t, n) in data.items():
         r, genes = test(t, gs, np.random.default_rng(T16.SEED))
@@ -135,9 +141,49 @@ def run():
     out = out[lead + [c for c in out.columns if c not in lead]]
     out.to_csv(TABLES / "T24_hypoxia_positive_control.tsv", sep="\t", index=False, float_format="%.4g")
     print(out[["dataset", "set", "role", "direction", "p", "q", "z", "n_used"]].to_string(index=False))
-    for name, (t, n) in data.items():
-        print(f"  {name}: {len(t)} genes, {n}; ADH1 (AT1G77120) t = {t.get('AT1G77120', np.nan):.2f}, "
-              f"PDC1 (AT4G33070) t = {t.get('AT4G33070', np.nan):.2f}")
+    signature(gse, data["OSD-136"][0])
+    return out
+
+
+MARKERS = {"AT1G77120": "ADH1", "AT4G33070": "PDC1"}
+
+
+def signature(gse, t136):
+    """R4b (addendum, written after R4 ran): an empirical hypoxia signature from GSE14502, tested in
+    OSD-136 and in the OSD-38 hardware and flight contrasts (T25)."""
+    r4b = json.loads((PREREG / "revision1" / "settings.json").read_text())["R4b_hypoxia_signature"]
+    assert "both the shoot and the root" in r4b["signature"].lower()
+    sh, rt = (gse[k][0] for k in GSE_GROUPS)
+    both = sh.index.intersection(rt.index)
+    sig = {"hypoxia_up": {g for g in both if sh.logFC[g] > 1 and rt.logFC[g] > 1 and sh.q[g] < 0.05 and rt.q[g] < 0.05},
+           "hypoxia_down": {g for g in both if sh.logFC[g] < -1 and rt.logFC[g] < -1 and sh.q[g] < 0.05 and rt.q[g] < 0.05}}
+    targets = {"OSD-136": t136}
+    for c, lab in (("OSD-38-hardware", "OSD-38 BRIC-PDFU vs closed container"), ("OSD-38", "OSD-38 flight vs ground")):
+        d = pd.read_csv(OSDR / f"contrast_{c}.csv.gz").dropna(subset=["TAIR", "stat"]).drop_duplicates("TAIR").set_index("TAIR")
+        targets[lab] = d
+    rows = []
+    for lab, d in targets.items():
+        t = d if isinstance(d, pd.Series) else d.stat
+        rr, genes = test(t, sig, np.random.default_rng(T16.SEED))
+        rows += [{"kind": "signature", "dataset": lab, "genes_tested": genes, **{k: v for k, v in x.items() if k != "members"}}
+                 for x in rr]
+        if not isinstance(d, pd.Series):
+            for g, name in MARKERS.items():
+                rows.append({"kind": "gene", "dataset": lab, "set": name, "n_set": 1, "n_used": 1,
+                             "signed": d.stat[g], "log2fc": d.log2fc[g], "padj": d.padj[g]})
+    for name, (r, n) in gse.items():
+        for g, m in MARKERS.items():
+            rows.append({"kind": "gene", "dataset": name, "set": m, "n_set": 1, "n_used": 1, "signed": r.t[g],
+                         "log2fc": r.logFC[g], "padj": r.q[g]})
+    out = pd.DataFrame(rows)
+    sel = out.kind == "signature"
+    out.loc[sel, "q"] = T16.bh(out.loc[sel, "p"])
+    out.loc[sel, "direction"] = np.where(out.loc[sel, "q"] >= 0.05, "none",
+                                         np.where(out.loc[sel, "signed"] > 0, "up", "down"))
+    out.to_csv(TABLES / "T25_hypoxia_signature.tsv", sep="\t", index=False, float_format="%.4g")
+    print(f"  R4b signature: {len(sig['hypoxia_up'])} hypoxia-up and {len(sig['hypoxia_down'])} hypoxia-down genes "
+          f"(GSE14502 shoot and root, |log2FC| > 1, q < 0.05)")
+    print(out[["kind", "dataset", "set", "n_used", "signed", "p", "q", "z", "direction", "log2fc", "padj"]].to_string(index=False))
     return out
 
 
