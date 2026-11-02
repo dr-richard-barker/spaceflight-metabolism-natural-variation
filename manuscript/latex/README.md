@@ -2,9 +2,14 @@
 
 ```bash
 python3 scripts/18_manuscript_numbers.py      # numbers.tex, from results/tables
+python3 scripts/29_supplementary_tables.py     # supp_tables.tex (Supplementary Tables S2-S14)
 cd manuscript/latex && latexmk -pdf main.tex   # main.pdf
-./build_docx.sh                                # main.docx (pandoc, author-date citations)
+latexmk -pdf supplementary.tex                 # supplementary.pdf (reads main.aux for cross-references)
+./build_docx.sh                                # main.docx, supplementary.docx (pandoc, author-date citations)
 ```
+
+The response to the reviewer (`manuscript/response/`, built by its `build_response.py` from the same
+`numbers.tex`) quotes confidential review comments and is git-ignored; it lives only in the working copy.
 
 `numbers.tex` is generated: every number in the prose is a macro read from a results table, and
 the comment beside each macro names the table. Edit the script, never the file.
@@ -25,7 +30,7 @@ Placeholders in `main.tex`; nothing was invented to fill them.
 - [ ] Use of AI tools statement (the analysis code and first draft were prepared with an AI
       assistant; the journal's policy decides the wording)
 - [ ] Zenodo DOI in Data availability
-- [ ] Caldana et al. (2011) genotype: not stated in the abstract or the Wu supplement; the text
-      does not call it Col-0 until the paper is checked
-- [ ] Wu et al. (2018) stress condition: taken from the supplement ("32 C darkness"); confirm
-      against the main text
+- [x] Caldana et al. (2011) genotype: Col-0 per the authors' ArrayExpress deposit E-MTAB-375 and
+      Wu et al. (accepted manuscript, lines 476-478); the Caldana paper itself was not accessible
+- [x] Wu et al. (2018) stress condition: darkness, 32 C, 75 % humidity, 1,280 min (accepted
+      manuscript, lines 512-515)

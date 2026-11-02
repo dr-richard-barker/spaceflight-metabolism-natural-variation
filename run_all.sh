@@ -3,7 +3,7 @@
 #
 #   ./run_all.sh            analysis + numbers.tex
 #   ./run_all.sh --vendor   re-vendor inputs from the sibling repositories first
-#   ./run_all.sh --pdf      also build manuscript/latex/main.pdf and main.docx
+#   ./run_all.sh --pdf      also build the manuscript and Supplementary Information (PDF and DOCX)
 #
 # Not re-run here, on purpose:
 #   scripts/11_prereg.py,           the pre-registrations are frozen; re-running them would rewrite
@@ -40,11 +40,13 @@ python3 26_hypoxia_positive_control.py
 python3 27_osd38_proteome_checks.py build
 python3 28_paintomics_controls.py
 python3 18_manuscript_numbers.py
+python3 29_supplementary_tables.py
 python3 make_manifest.py
 
 for arg in "$@"; do
   if [ "$arg" = "--pdf" ]; then
-    (cd ../manuscript/latex && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex && ./build_docx.sh)
+    (cd ../manuscript/latex && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex \
+        && latexmk -pdf -interaction=nonstopmode -halt-on-error supplementary.tex && ./build_docx.sh)
   fi
 done
 python3 19_build_site.py

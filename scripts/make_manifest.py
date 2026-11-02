@@ -51,8 +51,49 @@ DESCRIBED = {
         "robustness of the membrane sets, and the exploratory flight-vs-hardware comparison",
         "T11, data/photoresp, data/osdr"),
     "T10_gcms_power.tsv": ("scripts/17_gcms_power.py",
-        "Per-compound GC-MS replicate SD (Col-0 controls, MetaboLights) and plants per arm for 80% power",
+        "Per-compound GC-MS replicate SD (Col-0 controls, MetaboLights) and plants per arm for 80% power, "
+        "unadjusted and Bonferroni over the panel",
         "data/reference/metabolights_group_sds.tsv"),
+    # Revision 1 (post hoc, prereg/revision1)
+    "T14_reference_strata.tsv": ("scripts/23_reference_strata.py",
+        "Per compound: each source's effect, n, support and qualification, and the consensus with all three "
+        "sources, darkness only (Zhu, Caldana) and dark+heat (Wu); model verdicts in both", "T01, T02, T03"),
+    "T15_reference_sensitivity.tsv": ("scripts/23_reference_strata.py",
+        "Consensus over accession agreement (60-90%) x Caldana window (>=60/180/360 min), all and dark-only: "
+        "category counts, key calls, model verdict counts", "T01 inputs"),
+    "T16_kegg_mapping_report.tsv": ("scripts/23_reference_strata.py",
+        "How measured names reached KEGG IDs: candidates, rule matches, reviewed overrides, mapped fraction by "
+        "Wu class", "data/reference/kegg_map.tsv, kegg_overrides.tsv"),
+    "T17_paintomics_controls.tsv": ("scripts/28_paintomics_controls.py",
+        "PaintOmics control jobs E-K2 against their parents (pathways, rank correlation, hubs, raw hub p), "
+        "per-omic p in job A, relevant compounds without a hub result, BH ties", "results/paintomics_raw/"),
+    "T18_hub_overlap_null.tsv": ("scripts/28_paintomics_controls.py",
+        "Lit (A) vs dark (D) hub overlap against hypergeometric and reaction-count-matched nulls; KEGG "
+        "reaction count per compound and hub status per job", "T05 inputs; KEGG link/reaction (cached)"),
+    "T19_osd678_interaction.tsv": ("scripts/24_osd678_interaction.py",
+        "OSD-678 Col-0 flight x light (edgeR TMM, limma-voom): rotation tests on the interaction and marginal "
+        "moderated t for eleven sets", "OSDR GLDS-612 rRNArm RSEM counts (data/reference/revision1_sources.tsv)"),
+    "T20_rotation_calibration.tsv": ("scripts/25_geneset_diagnostics.py",
+        "Type I error of the rotation and a naive null on random sets and genomic blocks, per contrast and "
+        "size", "data/osdr, data/atlas GLDS-522 counts, prereg/gene_order.tsv.gz"),
+    "T21_exact_permutation.tsv": ("scripts/25_geneset_diagnostics.py",
+        "Pre-registered sets under exact 3 v 3 sample permutation (OSD-38, OSD-678 light/dark), and OSD-38 "
+        "re-tested on PyDESeq2 statistics from raw counts", "data/osdr; OSDR GLDS-38 RSEM counts"),
+    "T22_din_genes.tsv": ("scripts/25_geneset_diagnostics.py",
+        "DIN genes per contrast, the set with each gene left out, and per-sample values in the 3 v 3 "
+        "contrasts", "data/osdr, T08"),
+    "T23_osd38_proteome_checks.tsv": ("scripts/27_osd38_proteome_checks.py",
+        "OSD-38 membrane sets under limma, membrane-soluble partition check, truncation and filter "
+        "accounting, OSDR file listing", "T11 inputs, T12, data/reference/osd38_osdr_versions.tsv"),
+    "T24_hypoxia_positive_control.tsv": ("scripts/26_hypoxia_positive_control.py",
+        "Hypoxia, fermentation and DIN sets in OSD-136 and GSE14502 (positive control), and whether the "
+        "BRIC-vs-container result is informative", "OSDR OSD-136 DE table; GEO GSE14502, GPL198; T12"),
+    "T25_hypoxia_signature.tsv": ("scripts/26_hypoxia_positive_control.py",
+        "Addendum: an empirical GSE14502 hypoxia signature in OSD-136 and the OSD-38 comparator and flight "
+        "contrasts; ADH1 and PDC1 gene by gene", "as T24; data/osdr/contrast_OSD-38*.csv.gz"),
+    "T26_metabolights_provenance.tsv": ("scripts/17_gcms_power.py",
+        "Per MetaboLights study: organism, variant, tissue, group rule, groups and n, platform, percent-of-"
+        "maximum check", "MetaboLights ISA files (data/reference/metabolights_sources.tsv)"),
 }
 
 

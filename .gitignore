@@ -14,3 +14,6 @@ manuscript/latex/*.out
 manuscript/latex/*.fdb_latexmk
 manuscript/latex/*.fls
 manuscript/latex/*.toc
+
+# Response to the reviewer: quotes confidential review comments, kept local (not published)
+manuscript/response/

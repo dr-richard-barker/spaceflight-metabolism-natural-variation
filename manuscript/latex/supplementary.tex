@@ -1,0 +1,127 @@
+%% Supplementary Information, compiled separately from main.tex so it can be uploaded as its own
+%% file. Same class and figure path as the manuscript. Tables S2-S14 are generated from
+%% results/tables by scripts/29_supplementary_tables.py (supp_tables.tex); S1 is written here.
+\documentclass[pdflatex,sn-nature]{sn-jnl}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{url}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+%% Cross-document references into the manuscript, so "Table 1" is never typed by hand. This reads
+%% main.aux, so main.tex must be compiled first.
+\usepackage{xr}
+\externaldocument{main}
+
+\graphicspath{{../../results/figures/}}
+\input{numbers}
+
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+
+\begin{document}
+
+\title[Supplementary information]{Supplementary information for: Natural variation in
+\textit{Arabidopsis} light/dark metabolism tests a carbon-starvation model of plant spaceflight
+transcriptomes}
+
+%% AUTHORSHIP --- mirrors main.tex and must be cleared at the same time.
+\author*[1]{\fnm{Richard} \sur{Barker}}\email{dr.richard.barker@gmail.com}
+\affil[1]{\orgname{[TODO --- affiliation]}, \city{[TODO]}, \country{[TODO]}}
+
+\maketitle
+
+Everything here except Table~S1 was added in revision, in answer to a reviewer, and is post hoc:
+the analysis plan is in \texttt{prereg/revision1/} (commit 90ff4b8; hypoxia-signature addendum
+8d6a9ae), committed before these analyses ran but after the pre-registered results were known. The
+pre-registered results (T02, T08, T12 and the T03 verdicts) are unchanged. Each table is generated
+from the named results table in the repository.
+
+\section*{Supplementary figures}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{figS1_reference_strata.pdf}
+\caption{\textbf{The darkness reference by source and stratum, and its threshold sensitivity.}
+\textbf{a}, Per-source calls for every compound with a directional or conflicting consensus, or in
+the model: filled symbols, the source qualifies (or the consensus is robust); hollow, it does not
+(or the consensus rests on one source). Orange names are directional only because of the
+32\,\textdegree C dark+heat source (Wu). \textbf{b}, Directional compounds over accession agreement
+and Caldana window, for all three sources (solid) and darkness only (dashed). \textbf{c}, The key
+calls over the same grid; the outlined columns are the pre-registered setting.}
+\label{fig:s1}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{figS2_rotation_calibration.pdf}
+\caption{\textbf{Calibration of the genomic-rotation null.} \textbf{a}, Share of 200 random gene
+sets or contiguous genomic blocks rejected at $\alpha=0.05$, by set size; thin lines single flight
+contrasts, thick lines their median. \textbf{b}, Quantile--quantile plot of rotation $p$-values,
+pooled over contrasts and sizes. \textbf{c}, Genomic blocks against a naive random-gene null, by
+block size: the inflation that gene clustering causes and the rotation null removes.}
+\label{fig:s2}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{figS3_din_genes.pdf}
+\caption{\textbf{The five DIN genes.} \textbf{a}, Wald statistic of each gene in each flight
+contrast. \textbf{b}, The DIN set statistic against its null ($z$) with all five genes (bar) and
+with each left out (dots).}
+\label{fig:s3}
+\end{figure}
+
+\clearpage
+\section*{Supplementary tables}
+
+\begingroup\scriptsize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{1.9cm}>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{4.1cm}@{}}
+\caption{\textbf{Where each entry of Table~\ref{tab:sources} and of the hardware and hypoxia
+designs is stated.} Values as given by the source, condensed; ``not stated'' after searching the
+full text or deposit. Wu et al.\ is read in its accepted manuscript (Wageningen University
+repository, \url{https://edepot.wur.nl/426556}; line numbers are the manuscript's).}\label{tab:s1}\\
+\toprule
+Source & Field & Value & Where stated\\
+\midrule
+\endfirsthead
+\toprule
+Source & Field & Value & Where stated\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Zhu 2024 \citep{zhu2024} & Material & Leaf, 50\,mg ground; one plant per accession per timepoint & Methods, LC-MS analysis; Plant material and sample preparation\\
+ & Age, growth & 35\,d after germination; short days in a greenhouse; photoperiod hours, light and temperature not stated & Plant material and sample preparation\\
+ & Seasons & Autumn 2018 and spring 2019, two biological replicates & Plant material and sample preparation\\
+ & Darkness & 0 and 6\,d; temperature in darkness not stated & Abstract; whole text searched\\
+ & Sampling & Within 30\,min at 10:00 (GMT+2) & Plant material and sample preparation\\
+ & Platform & Acquity UPLC with Exactive Orbitrap; negative mode, $m/z$ 100--1500 & LC-MS analysis\\
+ & Values & BLUPs (lme4) over the two seasons; batches standardised to quality controls & Technical Validation; Plant material\\
+ & Accessions & 259 & Plant material and sample preparation\\
+Zhu 2022 \citep{zhu2022} & Growth & Short days, 8\,h light, 250\,$\mu$E\,m$^{-2}$\,s$^{-1}$, 20/16\,\textdegree C, humidity 60/75\,\% & Materials and methods, Plant materials and growth conditions\\
+ & Sampling & At each harvest, within 30\,min at 10:00 (GMT+2) & Same\\
+Wu 2018 \citep{wu2018} & Control & 16\,h light, 150\,$\mu$E\,m$^{-2}$\,s$^{-1}$, 20/16\,\textdegree C, humidity 60/75\,\% & Lines 510--512\\
+ & Stress & Darkness, 32\,\textdegree C, humidity 75\,\%, continuous 1{,}280\,min, matching Caldana et al.'s stress & Lines 512--515\\
+ & Age, harvest & Control harvested at 42\,d after germination, from 4\,h into the light period; stress plants after 1{,}280\,min & Lines 515--518\\
+ & Material & About 100\,mg rosettes; three plants pooled per biological replicate & Lines 518--520, 548--550\\
+ & Platform & Acquity UPLC with Exactive; positive and negative modes; day- and sample-median normalisation & Lines 558--570, 594--595\\
+ & Filter & Traits present in at least 50\,\% of accessions & Lines 621--622\\
+ & Accessions & 309 (314 less five with poor germination) & Lines 604--606\\
+ & Time course & Material of Caldana et al.\ 2011, Col-0, re-profiled by LC--MS; conditions 21-D and 21-L (21\,\textdegree C, 150\,$\mu$E) among eight & Lines 176--186, 475--484\\
+ & Column labels & Supplementary Table 7 labels conditions 4/20/30 (text: 4/21/32\,\textdegree C); the label key is not stated & Supplementary Table 7; text and Supplementary Information searched\\
+Caldana 2011 \citep{caldana2011} & Conditions & Grown at 21\,\textdegree C, 150\,$\mu$E; kept there or moved to seven environments including 21\,\textdegree C darkness; 0 and 22 time points & Abstract (full text not accessible to us)\\
+E-MTAB-375 \citep{emtab375} & Material & Columbia-0 (stock CS906), wild type, rosette leaf & Sample and data relationship file\\
+OSD-38 \citep{osd38} & Comparator & 22 plates in sealed PDFUs in BRIC canisters at Kennedy Space Center; 22 plates in foil inside opaque, air-tight plastic containers at Ohio University; 4\,d cold, then 76\,h growth; continuous dark & OSDR growth protocol\\
+ & Fixation & RNAlater, 12\,h, then $-80$\,\textdegree C, both arms & OSDR sample collection protocol\\
+OSD-136 \citep{osd136,zhou2017} & Design & Wassilewskija roots, 5\,d old; 24\,h at 97\,kPa, 50\,kPa (O$_2$ 10\,kPa) or 50\,kPa with O$_2$ restored to 21\,kPa; three replicates & OSDR treatment protocol; Zhou et al., Abstract, Methods, Table 1\\
+GSE14502 \citep{gse14502,mustroph2009} & Design & 7-d Col-0 seedlings (p35S:HF-RPL18), vertical MS plates, 23\,\textdegree C; 2\,h argon from the end of the light period; roots and shoots; total mRNA from the 35S line; ATH1 arrays, RMA & GEO sample records; Mustroph et al., Materials and Methods\\
+\end{longtable}
+\endgroup
+
+\input{supp_tables}
+
+\bibliography{references}
+
+\end{document}

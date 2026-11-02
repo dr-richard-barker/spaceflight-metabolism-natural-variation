@@ -2,7 +2,7 @@
 
 Fills scripts/templates/story.html with the values in manuscript/latex/numbers.tex (script 18, from
 results/tables), so the page and the manuscript quote the same numbers. Copies the figures and the
-manuscript PDF/DOCX into docs/, and writes docs/hub_thumb.png (320 x 180) for the AstroBotany hub card.
+manuscript and Supplementary Information PDF/DOCX into docs/, and writes docs/hub_thumb.png (320 x 180) for the AstroBotany hub card.
 """
 
 import re
@@ -49,12 +49,13 @@ def main():
     (DOCS / "figures").mkdir(parents=True, exist_ok=True)
     page = Template(TEMPLATE.read_text()).substitute(numbers())
     (DOCS / "index.html").write_text(page)
-    for f in sorted(FIGURES.glob("fig0*.png")):
+    for f in sorted(FIGURES.glob("fig*.png")):
         shutil.copyfile(f, DOCS / "figures" / f.name)
-    for ext in ("pdf", "docx"):
-        src = ROOT / "manuscript" / "latex" / f"main.{ext}"
-        if src.exists():
-            shutil.copyfile(src, DOCS / f"{STEM}.{ext}")
+    for name, out in (("main", STEM), ("supplementary", f"{STEM}_SI")):
+        for ext in ("pdf", "docx"):
+            src = ROOT / "manuscript" / "latex" / f"{name}.{ext}"
+            if src.exists():
+                shutil.copyfile(src, DOCS / f"{out}.{ext}")
     (DOCS / ".nojekyll").write_text("")
     thumb()
     print(f"  docs/index.html, {len(list((DOCS / 'figures').glob('*.png')))} figures, hub_thumb.png")

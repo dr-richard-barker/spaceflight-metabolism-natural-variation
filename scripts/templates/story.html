@@ -36,12 +36,15 @@
       carbon, so lit spaceflight transcriptomes should look carbon-starved and dark ones should not. It could not
       check its metabolite predictions, because NASA's Open Science Data Repository holds no plant metabolome. Here
       hundreds of natural <em>Arabidopsis</em> accessions, measured in light and after darkness, supply the missing
-      metabolism, and six flight experiments test the light/dark claim under predictions committed in advance.</p>
+      metabolism as an extended-darkness, direction-of-change reference, and six flight experiments test the
+      light/dark claim under predictions committed in advance. Revised after peer review: the post hoc checks the
+      reviewer asked for are marked as such and are in the Supplementary Information.</p>
     <p class="meta">Richard Barker · <em>Arabidopsis thaliana</em> · natural-variation panels of $nZhuAcc and $nWuAcc accessions · $nRefCompounds
       compounds · 6 flight contrasts · $nTests pre-registered tests</p>
     <div class="btns">
       <a class="btn primary" href="spaceflight-metabolism-natural-variation.pdf">Manuscript (PDF)</a>
       <a class="btn" href="spaceflight-metabolism-natural-variation.docx">Manuscript (DOCX)</a>
+      <a class="btn" href="spaceflight-metabolism-natural-variation_SI.pdf">Supplementary information</a>
       <a class="btn" href="https://dr-richard-barker.github.io/Photorespiration_multiomics_microgravity/">The first study</a>
       <a class="btn" href="https://github.com/dr-richard-barker/spaceflight-metabolism-natural-variation">Code &amp; data (GitHub)</a>
     </div>
@@ -53,13 +56,15 @@
     <h2>In short</h2>
     <div class="cards" style="margin-top:16px">
       <div class="card"><div class="stat">$nModelAgree of $nComparable</div><h3>Directions mostly hold</h3>
-        <p>Testable compound predictions agree with measured darkness. Glutamate, grouped with the rising amino acids, falls.</p></div>
+        <p>Testable compound predictions agree with measured darkness. Glutamate, grouped with the rising amino acids, falls, but only in the 32&nbsp;°C dark+heat source.</p></div>
       <div class="card"><div class="stat">$nNotPredictedRobust</div><h3>Robust responses not predicted</h3>
         <p>Including malate and 2-oxoglutarate, which fall in darkness, and the flavin and nicotinamide cofactors.</p></div>
       <div class="card"><div class="stat">$nSigLitPredicted of 3</div><h3>Lit flights, no significant signal</h3>
         <p>The starvation genes lean up in all three lit contrasts but none passes correction. Three dark contrasts carry the strongest signals.</p></div>
       <div class="card"><div class="stat">$nMemCarbonDown of 4</div><h3>Proteins move against transcripts</h3>
-        <p>In a dark sealed BRIC (OSD-38), carbon-pathway transcripts rise while the same pathways' membrane proteins fall.</p></div>
+        <p>In a dark sealed BRIC (OSD-38), carbon-pathway transcripts rise while the same enzymes fall in the membrane fraction.</p></div>
+      <div class="card"><div class="stat">z = $zHypUpHw</div><h3>The ground BRIC is low in oxygen</h3>
+        <p>An independent hypoxia signature rises strongly in BRIC-PDFU seedlings against an air-tight container (post hoc).</p></div>
       <div class="card"><div class="stat">$nQThousandMin–$nQThousandMax</div><h3>Plants per arm needed</h3>
         <p>To detect the model's predicted 0.13 log<sub>2</sub> metabolite shifts by GC-MS. Six per arm detects about $detectMinFold-fold.</p></div>
     </div>
@@ -88,8 +93,12 @@
     <h2><span class="n">02</span>The model's predictions against measured darkness</h2>
     <p class="sub">The first study predicted 21 compounds. Darkness can test the $nScored driven by the carbon deficit.</p>
     <p>$nModelAgree agree in direction: maltose falls, and asparagine, valine, leucine and isoleucine rise. Glutamate,
-      which the model raises with them, falls ($gluWu log<sub>2</sub>, $gluWuFrac&nbsp;% of accessions). Glutamine does
-      not move, and $nModelUntested predictions have no light/dark measurement. The model gives the six starvation
+      which the model raises with them, falls ($gluWu log<sub>2</sub>, $gluWuFrac&nbsp;% of accessions), but only under Wu's
+      32&nbsp;°C darkness stress; at 21&nbsp;°C it does not move. Glutamine was measured but has no direction, and
+      $nNotMeasured predictions were not measured at all. Darkness cannot score the C<sub>2</sub>-cycle and RuBP
+      predictions that carry the gas-transport mechanism, so this checks downstream directions only. The rise of
+      leucine, isoleucine and valine and the fall of malate and 2-oxoglutarate hold at every threshold tried
+      ($nGridRows settings). The model gives the six starvation
       amino acids one shared fold change, but leucine responds $ratioLeuAsn–$ratioLeuVal times as strongly as valine or
       asparagine. It also leaves out $nNotPredictedRobust robust responses, among them malate ($malZhu) and
       2-oxoglutarate ($oxgZhu), both TCA-cycle acids whose direction it judged uncertain.</p>
@@ -110,8 +119,9 @@
       led by protein processing in the endoplasmic reticulum, and the rank correlation of all pathway p-values is
       $rhoOneA. Leucine, valine, isoleucine and glutamate stay metabolite hubs, and malate, 2-oxoglutarate, glutathione
       and ascorbate join them. The raw hub p-value is identical for every compound the two jobs share
-      ($nSharedHubSteps compound-steps): a hub is set by the differentially expressed genes around it, so the metabolite
-      layer contributes its compound list, not its values.</p>
+      ($nSharedHubSteps compound-steps). Control jobs confirm it: without any metabolite layer the same $nPathE pathways
+      pass, with effect-scaled values every hub p is unchanged, and the hubs vanish when either the gene or the protein
+      layer is removed. The metabolite layer contributes its list of relevant compounds, not their values.</p>
     <figure>
       <img src="figures/fig02_jobA_vs_job1.png" alt="Scatter of pathway p-values for two PaintOmics jobs and a hub comparison">
       <figcaption>a, combined Fisher p for every pathway, first study's job against the job with the measured layer.
@@ -128,8 +138,10 @@
     <p>The light contrast had $ratioDE times as many differentially expressed genes ($nDELight against $nDEDark) and more
       significant pathways ($nPathB against $nPathC). The branched-chain amino acids, glutamate and 2-oxoglutarate were
       hubs only in light, the direction the model expects, but every light hub sat just inside the threshold
-      (FDR $hubLightFDR) and the light contrast had far more genes to place around them. Photosynthesis was the most
-      significant pathway in the dark contrast.</p>
+      (FDR $hubLightFDR, one Benjamini–Hochberg value for raw p from $hubRawMinB to $hubRawMaxB). Cut at random to the
+      dark contrast's number of genes, the light contrast kept no hub at all. One model of all twelve samples found no
+      flight × light interaction for the starvation sets (z $zIntDin, $zIntBcaa), against the model's expectation, but
+      a large one for photosynthesis genes (z $zIntPhoto): flight raised them in darkness and lowered them in light.</p>
     <figure>
       <img src="figures/fig03_light_vs_dark.png" alt="Scatter of pathway p-values for light and dark flight and a hub comparison">
       <figcaption>The same reference layer with OSD-678 light and dark genes. Source: <code>results/tables/T04</code>–<code>T07</code>.</figcaption>
@@ -147,7 +159,9 @@
       reproduced here; a permutation of the twelve samples, which keeps the correlation between genes, weakens it. The
       strongest signals came from dark flights: DIN and branched-chain amino acid catabolism fell in BRIC-PDFU seedlings
       (OSD-321, q $qDinThreeTwoOne) and rose in the leaves of dark-grown CARA seedlings (OSD-678 dark, q $qDinDark). Gene sets from the
-      natural-variation GWAS loci showed nothing light-specific.</p>
+      natural-variation GWAS loci showed nothing light-specific. The genomic-rotation null is calibrated (median
+      type I error $typeOneRotRandom at α 0.05 on random sets, $typeOneRotBlock on genomic blocks), but with three plants
+      per arm a sample permutation cannot confirm the dark calls, and in OSD-678 dark one flight sample carries the DIN rise.</p>
     <figure>
       <img src="figures/fig04_geneset_tests.png" alt="Heat map of 36 pre-registered gene-set tests across three lit and three dark flight contrasts">
       <figcaption>Colour is the set statistic against its null (OSD-522: all 924 sample relabellings; others: genomic
@@ -182,17 +196,22 @@
     <p>OSDR's processed protein tables are truncated at $nOsdRows rows, the old spreadsheet limit. The membrane table's first
       block survives whole ($nProtMem proteins); only the top-ranked $nProtSol soluble proteins remain. Quantified with the
       paper's rules, the membrane layer gives $nPaperRule proteins at the paper's threshold, against the 103 it reports.</p>
-    <p>All four KEGG carbon pathways rose in the transcriptome but fell in the membrane proteome (q from $qMemCarbonMin to
-      $qMemCarbonMax), and that held against abundance-matched random protein sets. Branched-chain amino acid degradation did
-      not move at either level. On the ground, the BRIC-PDFU against a closed container showed no hypoxia or fermentation
-      signal. In PaintOmics, OSD-38's genes and proteins share only $nPathAD significant pathway with OSD-522's lit canister,
-      but $nHubAD metabolite hubs, including leucine, isoleucine and glutamate: the hubs the first study read as lit-canister
-      starvation appear in the dark too.</p>
+    <p>All four KEGG carbon pathways rose in the transcriptome but fell in the membrane fraction of the proteome (q from
+      $qMemCarbonMin to $qMemCarbonMax), robust to abundance-matched random sets and to a moderated t. The soluble subset
+      did not follow (ρ $rhoPartition between fractions), so this is a statement about the membrane fraction.
+      Branched-chain amino acid degradation did not move at either level.</p>
+    <p>In GeneLab's ground comparator (sealed BRIC-PDFU at Kennedy Space Center against foil-wrapped plates in air-tight
+      containers at Ohio University), the pre-registered hypoxia and fermentation sets were null. A positive control shows
+      why: the annotation-based hypoxia set does not respond to hypoxia at all, and the fermentation set hides PDC1, which
+      rose $foldPdcHw-fold. A hypoxia signature from independent data rose strongly in the BRIC (z $zHypUpHw, post hoc).
+      In PaintOmics, OSD-38 shares $nHubAD metabolite hubs with OSD-522's lit canister, including leucine, isoleucine and
+      glutamate, but two hub sets of these sizes share $hubOverlapExp by chance (P $hubOverlapP): hub calls do not separate
+      the lit from the dark canister.</p>
     <figure>
       <img src="figures/fig06_osd38.png" alt="Heat map of OSD-38 gene-set tests in four layers, a transcript-protein scatter and a flight-versus-hardware density plot">
       <figcaption>a, pre-registered tests in four layers (bold: BH q &lt; 0.05; boxed: significant and contrary to the
         prediction). b, transcript against membrane-protein change; red, the four carbon pathways. c, exploratory: the flight
-        effect against the ground hardware effect. Sources: <code>results/tables/T11</code>–<code>T13</code>.</figcaption>
+        effect against the GeneLab ground comparator. Sources: <code>results/tables/T11</code>–<code>T13</code>.</figcaption>
     </figure>
     <figure>
       <img src="figures/fig07_bric_lit_vs_dark.png" alt="Scatter of pathway p-values and hub comparison for the lit OSD-522 and dark OSD-38 BRIC jobs">
@@ -231,15 +250,18 @@
       The darkness reference is a far larger perturbation than the model's 9&nbsp;% assimilation deficit, so it fixes
       directions, not flight magnitudes. A source counted for a compound when at least 75&nbsp;% of accessions moved the
       same way (Zhu, Wu) or at Welch p &lt; 0.05 (Caldana). Compound names were matched to KEGG through its REST API and every
-      correction is recorded with the KEGG name that confirms it. The Caldana genotype is not stated in the sources read
-      here, and Wu's stress condition is taken from its supplement. The five flight contrasts other than OSD-522 were tested
-      against a genomic-rotation null, which is weaker than a sample permutation. OSD-678's light arm was ambient cabin light
+      correction is recorded with the KEGG name that confirms it; specialised metabolites map poorly, so secondary
+      metabolism is under-represented. The Caldana plants are Col-0 (authors' ArrayExpress deposit), and Wu's stress is
+      1,280 min of darkness at 32&nbsp;°C, treated as a separate dark+heat stratum. The five flight contrasts other than
+      OSD-522 were tested against a calibrated genomic-rotation null; with three plants per arm, sample permutation cannot
+      confirm them. OSD-678's light arm was ambient cabin light
       of 4–6 µmol m<sup>−2</sup> s<sup>−1</sup>, well below OSD-522's 60, so it is a weak test of the model's light dependence. PaintOmics hub
       counts rise with the number of differentially expressed genes. The GC-MS variance pools leaf and shoot studies from
       different laboratories. OSDR's OSD-38 protein tables are truncated, so the soluble layer is a top-ranked subset; iTRAQ
       compresses ratios, which shrinks protein changes but should not reverse them; OSD-38 has three replicates per arm, and
-      its BRIC-versus-container comparison also differs in site and handling. The pre-registration was written by the same analyst on the day of the tests, after the
+      its ground comparator also differs in site and handling. The pre-registration was written by the same analyst on the day of the tests, after the
       reference was built; the commit order shows that no prediction or setting changed after a flight result was seen.
+      The revision analyses are post hoc, planned in <code>prereg/revision1/</code> before they ran.
     </div>
   </div>
 </section>
@@ -257,7 +279,13 @@
       <tr><td>Gene-set tests</td><td><code>16</code></td><td><code>T08</code>, <code>T09</code>, fig04</td></tr>
       <tr><td>GC-MS power</td><td><code>17</code></td><td><code>T10</code>, fig05</td></tr>
       <tr><td>OSD-38 inputs, pre-registration, tests</td><td><code>20</code>–<code>22</code></td><td><code>prereg/osd38/</code>, <code>T11</code>–<code>T13</code>, fig06; PaintOmics job D, fig07</td></tr>
-      <tr><td>Manuscript numbers, this page</td><td><code>18</code>, <code>19</code></td><td><code>numbers.tex</code>, <code>docs/</code></td></tr>
+      <tr><td>Revision: reference strata, sensitivity, KEGG mapping</td><td><code>23</code></td><td><code>T14</code>–<code>T16</code>, figS1</td></tr>
+      <tr><td>Revision: OSD-678 flight × light</td><td><code>24</code></td><td><code>T19</code></td></tr>
+      <tr><td>Revision: gene-set diagnostics</td><td><code>25</code></td><td><code>T20</code>–<code>T22</code>, figS2, figS3</td></tr>
+      <tr><td>Revision: hypoxia positive control</td><td><code>26</code></td><td><code>T24</code>, <code>T25</code></td></tr>
+      <tr><td>Revision: OSD-38 proteome checks</td><td><code>27</code></td><td><code>T23</code></td></tr>
+      <tr><td>Revision: PaintOmics controls</td><td><code>28</code></td><td><code>T17</code>, <code>T18</code></td></tr>
+      <tr><td>Manuscript numbers, SI tables, this page</td><td><code>18</code>, <code>29</code>, <code>19</code></td><td><code>numbers.tex</code>, <code>supp_tables.tex</code>, <code>docs/</code></td></tr>
     </table></div>
     <h3 style="margin-top:26px">Data sources</h3>
     <ol class="refs">
