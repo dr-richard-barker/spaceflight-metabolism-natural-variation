@@ -11,3 +11,10 @@ Job A: osd522_* gene and protein files, byte-identical to the first study's job 
 Job B: osd678_light_genes_* (24474 genes, 7790 at GeneLab adjusted p < 0.05) + layer
 Job C: osd678_dark_genes_* (24474 genes, 2112 at GeneLab adjusted p < 0.05) + layer
 Job D: osd38_genes_* (27723 genes, 4226 at GeneLab adjusted p < 0.05) + osd38_membrane_proteins_* (2000 proteins, AGI loci; 97 at p <= 0.05 and |log2FC| > 0.2, from T11) + layer
+
+Revision 1 controls (post hoc, prereg/revision1 R6):
+Job E: job A without the metabolite layer
+Job F: job A with metabolomics_scaled_values.tab (direction x |reference_z| x 0.04157; median |value| over directional compounds 0.13052)
+Job G: job A genes + layer;  Job H: job A proteins + layer
+Job I: job D genes + layer;  Job J: job D membrane proteins + layer
+Job K1, K2: job B with osd678_light_genes_relevant_k1/k2.tab (2112 of 7790 relevant genes, random, seeds 1 and 2) + layer

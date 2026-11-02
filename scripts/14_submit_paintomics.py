@@ -1,4 +1,4 @@
-"""Submit jobs A, B and C to PaintOmics and recover their full records.
+"""Submit jobs A-D (and the revision 1 control jobs E-K) to PaintOmics and recover their full records.
 
 Adapted from the first study's scripts/05_submit_paintomics.py and its pa_recover_job helper
 (Photorespiration_multiomics_microgravity at 515226d, MIT, same author). Its notes still hold:
@@ -61,6 +61,22 @@ JOBS = {
             "relevant_file": "osd38_membrane_proteins_relevant.tab"}, METABOLITES],
           f"OSD-38 BRIC-20 dark-grown Arabidopsis seedlings, flight vs ground: OSDR transcriptome + membrane "
           f"proteome with a {LAYER}"),
+}
+# Revision 1 controls (post hoc, prereg/revision1/settings.json R6)
+A_GENES, A_PROT, D_GENES, D_PROT = JOBS["A"][0][0], JOBS["A"][0][1], JOBS["D"][0][0], JOBS["D"][0][1]
+CONTROL = "Revision 1 control job {}: {}"
+JOBS |= {
+    "E": ([A_GENES, A_PROT], CONTROL.format("E", "job A without the metabolite layer (OSD-522 transcriptome + proteome)")),
+    "F": ([A_GENES, A_PROT, {**METABOLITES, "file": "metabolomics_scaled_values.tab"}],
+          CONTROL.format("F", f"job A with effect-scaled values in the {LAYER}")),
+    "G": ([A_GENES, METABOLITES], CONTROL.format("G", f"OSD-522 transcriptome only, with the {LAYER}")),
+    "H": ([A_PROT, METABOLITES], CONTROL.format("H", f"OSD-522 proteome only, with the {LAYER}")),
+    "I": ([D_GENES, METABOLITES], CONTROL.format("I", f"OSD-38 transcriptome only, with the {LAYER}")),
+    "J": ([D_PROT, METABOLITES], CONTROL.format("J", f"OSD-38 membrane proteome only, with the {LAYER}")),
+    "K1": ([{**GENES, "file": "osd678_light_genes_values.tab", "relevant_file": "osd678_light_genes_relevant_k1.tab"},
+            METABOLITES], CONTROL.format("K1", f"job B with relevant genes downsampled to job C's count (seed 1), {LAYER}")),
+    "K2": ([{**GENES, "file": "osd678_light_genes_values.tab", "relevant_file": "osd678_light_genes_relevant_k2.tab"},
+            METABOLITES], CONTROL.format("K2", f"job B with relevant genes downsampled to job C's count (seed 2), {LAYER}")),
 }
 
 

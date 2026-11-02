@@ -15,12 +15,19 @@ uses; scripts/15_paintomics_tables.py checks every match against the intended ID
   C  OSD-678-dark genes, same rule, + layer
   D  OSD-38 (BRIC-20, dark sealed BRIC-PDFU) genes, same rule, + membrane proteins from T11 (relevant at the
      paper's rule, as pre-registered in prereg/osd38) + layer
+
+Revision 1 controls (post hoc, prereg/revision1 R6) reuse these files, plus two more inputs:
+  F  metabolomics_scaled_values.tab: direction x |reference_z|, rescaled so the median over directional
+     compounds is 0.13052; same names and relevant list as the layer
+  K  osd678_light_genes_relevant_k1.tab, _k2.tab: job B's relevant genes randomly downsampled to job
+     C's relevant count (seeds 1 and 2)
 """
 
 import hashlib
 import json
 import shutil
 
+import numpy as np
 import pandas as pd
 
 from genesets import kegg
@@ -91,6 +98,18 @@ def main():
         f"{r.locus}\t{r.log2fc:.6f}\n" for r in mem.itertuples()))
     (UPLOAD / "osd38_membrane_proteins_relevant.tab").write_text(
         "".join(f"{r.locus}\n" for r in mem[mem.relevant].itertuples()))
+    r6 = json.loads((PREREG / "revision1" / "settings.json").read_text())["R6_paintomics"]["jobs"]
+    assert "0.13052" in r6["F"] and "seed 1" in r6["K1"]
+    d_ = ref.status.isin(["robust", "single"])
+    scale = GAIN / ref.loc[d_, "reference_z"].abs().median()
+    scaled = (ref.direction * ref.reference_z.abs() * scale).where(d_, 0.0)
+    (UPLOAD / "metabolomics_scaled_values.tab").write_text("#compound\tFLT_vs_GC\n" + "".join(
+        f"{n}\t{v:.6f}\n" for n, v in zip(ref.kegg_name, scaled)))
+    rel_b = sorted((UPLOAD / "osd678_light_genes_relevant.tab").read_text().split())
+    n_c = len((UPLOAD / "osd678_dark_genes_relevant.tab").read_text().split())
+    for seed in (1, 2):
+        pick = sorted(np.random.default_rng(seed).choice(rel_b, n_c, replace=False))
+        (UPLOAD / f"osd678_light_genes_relevant_k{seed}.tab").write_text("".join(f"{g}\n" for g in pick))
     lines = [
         "PaintOmics upload bundles, built by scripts/13_build_layer.py",
         "",
@@ -107,6 +126,15 @@ def main():
         f"Job D: osd38_genes_* ({d[0]} genes, {d[1]} at GeneLab adjusted p < 0.05) + "
         f"osd38_membrane_proteins_* ({len(mem)} proteins, AGI loci; {int(mem.relevant.sum())} at p <= 0.05 and "
         "|log2FC| > 0.2, from T11) + layer",
+        "",
+        "Revision 1 controls (post hoc, prereg/revision1 R6):",
+        "Job E: job A without the metabolite layer",
+        f"Job F: job A with metabolomics_scaled_values.tab (direction x |reference_z| x {scale:.5f}; median "
+        f"|value| over directional compounds {GAIN})",
+        "Job G: job A genes + layer;  Job H: job A proteins + layer",
+        "Job I: job D genes + layer;  Job J: job D membrane proteins + layer",
+        f"Job K1, K2: job B with osd678_light_genes_relevant_k1/k2.tab ({n_c} of {len(rel_b)} relevant genes, "
+        "random, seeds 1 and 2) + layer",
     ]
     (UPLOAD / "METHOD.txt").write_text("\n".join(lines) + "\n")
     print("\n".join("  " + ln for ln in lines))
