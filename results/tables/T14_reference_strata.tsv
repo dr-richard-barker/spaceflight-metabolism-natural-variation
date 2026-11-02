@@ -1,0 +1,97 @@
+kegg_id	name	zhu_n	zhu_effect	zhu_support	zhu_qualifies	caldana_n	caldana_effect	caldana_support	caldana_qualifies	wu_stress_n	wu_stress_effect	wu_stress_support	wu_stress_qualifies	status_all	direction_all	status_dark_only	direction_dark_only	status_dark_heat	direction_dark_heat	dark_heat_only	flips_dark_only	in_model	verdict	verdict_dark_only
+C01026	N,N-Dimethylglycine	259	-0.589	1	True	18	0.925	0.0001563	True					conflicting	0	conflicting	0	absent	0	False	False	False		
+C00064	L-Glutamine									301	-0.02	0.505	False	none	0	absent	0	none	0	False	False	True	untested	untested
+C00073	Methionine									301	0.118	0.588	False	none	0	absent	0	none	0	False	False	False		
+C00114	Choline					18	0.005	0.9464	False					none	0	none	0	absent	0	False	False	False		
+C00170	5'-Deoxy-5'-(methylthio)adenosine					18	-0.054	0.58	False					none	0	none	0	absent	0	False	False	False		
+C00417	cis-Aconitic acid									301	0.135	0.5714	False	none	0	absent	0	none	0	False	False	False		
+C00475	Cytidine					18	-0.089	0.6105	False					none	0	none	0	absent	0	False	False	False		
+C00643	5-Hydroxy-L-tryptophan					17	-0.092	0.3808	False					none	0	none	0	absent	0	False	False	False		
+C00811	p-Coumaric acid					18	-0.139	0.4496	False					none	0	none	0	absent	0	False	False	False		
+C00818	Saccharic acid	259	-0.098	0.6795	False									none	0	none	0	absent	0	False	False	False		
+C01035	4-Guanidinobutyric acid					18	0.001	0.9956	False					none	0	none	0	absent	0	False	False	False		
+C01551	Allantoin					18	0.46	0.1461	False					none	0	none	0	absent	0	False	False	False		
+C01835	Maltotriose					18	-0.33	0.2728	False					none	0	none	0	absent	0	False	False	False		
+C02153	Benzyl glucosinolate									300	0.364	0.7267	False	none	0	absent	0	none	0	False	False	False		
+C02985	alpha-L-Fucose 1-phosphate					18	-0.017	0.9216	False					none	0	none	0	absent	0	False	False	False		
+C04695	5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside									295	-0.575	0.7458	False	none	0	absent	0	none	0	False	False	False		
+C05519	Allothreonine					18	-0.364	0.06772	False					none	0	none	0	absent	0	False	False	False		
+C05620	N-Acetyl-D-phenylalanine									301	-0.217	0.6512	False	none	0	absent	0	none	0	False	False	False		
+C05841	Nicotinate D-ribonucleoside									285	-0.085	0.5789	False	none	0	absent	0	none	0	False	False	False		
+C06455	Hydroxymethylphosphonic acid					14	0.056	0.6639	False					none	0	none	0	absent	0	False	False	False		
+C08401	5-methylthiopentylglucosinolate									298	0.513	0.6309	False	none	0	absent	0	none	0	False	False	False		
+C08403	4-pentenylglucosinolate									192	0.157	0.5312	False	none	0	absent	0	none	0	False	False	False		
+C08409	4-methylthiobutyl glucosinolate									264	0.008	0.5038	False	none	0	absent	0	none	0	False	False	False		
+C08411	3-methylsulfinylpropyl-glucosinolate									199	-0.961	0.7286	False	none	0	absent	0	none	0	False	False	False		
+C08412	3-methylthiopropyl-glucosinolate									269	-0.21	0.5688	False	none	0	absent	0	none	0	False	False	False		
+C08415	3-butenylglucosinolate									301	-0.036	0.5083	False	none	0	absent	0	none	0	False	False	False		
+C10164	2-Picolinic acid									301	0.217	0.7176	False	none	0	absent	0	none	0	False	False	False		
+C17252	7-methylthioheptyl glucosinolate									270	0.248	0.6259	False	none	0	absent	0	none	0	False	False	False		
+C17254	8-Methylthiooctyl glucosinolate									301	0.009	0.5083	False	none	0	absent	0	none	0	False	False	False		
+C15587	Purine	259	5.114	1	True									robust	1	robust	1	absent	0	False	False	False		
+C01879	Pyroglutamic acid	259	1.43	1	True									robust	1	robust	1	absent	0	False	False	False		
+C00123	Leucine	259	4.919	1	True	18	2.404	2.948e-08	True	301	4.74	1	True	robust	1	robust	1	robust	1	False	False	True	agrees	agrees
+C00082	Tyrosine	259	5.06	1	True	18	2.363	1.76e-06	True					robust	1	robust	1	absent	0	False	False	False		
+C00407	Isoleucine	259	3.15	1	True	18	2.171	2.692e-07	True	301	4.424	1	True	robust	1	robust	1	robust	1	False	False	True	agrees	agrees
+C04368	3-Amino-3-(4-hydroxyphenyl)propanoate									301	5.049	1	True	robust	1	absent	0	robust	1	True	False	False		
+C00499	Allantoic acid	259	4.014	1	True									robust	1	robust	1	absent	0	False	False	False		
+C02076	Sedoheptulose	259	1.455	1	True									robust	1	robust	1	absent	0	False	False	False		
+C00078	L-Tryptophan									301	5.41	1	True	robust	1	absent	0	robust	1	True	False	False		
+C00183	Valine					18	0.901	4.324e-05	True	301	2.491	1	True	robust	1	single	1	robust	1	False	False	True	agrees	agrees
+C00062	Arginine					18	2.577	1.752e-06	True	301	2.339	1	True	robust	1	single	1	robust	1	False	False	False		
+C00669	gamma-L-Glutamyl-L-cysteine									301	2.393	1	True	robust	1	absent	0	robust	1	True	False	False		
+C01433	Loganin	259	2.28	1	True									robust	1	robust	1	absent	0	False	False	False		
+C00864	Pantothenic acid (Vitamine B5)	259	1.263	1	True	18	0.254	0.01909	True	301	2.022	1	True	robust	1	robust	1	robust	1	False	False	False		
+C09789	Naringin	259	1.421	0.8842	True					298	0.365	0.8121	True	robust	1	single	1	single	1	False	False	False		
+C02043	Indole-3-lactic acid									301	1.004	0.9435	True	robust	1	absent	0	robust	1	True	False	False		
+C17256	2-Methylpropyl glucosinolate									284	1.264	0.9261	True	robust	1	absent	0	robust	1	True	False	False		
+C01020	6-Hydroxynicotinic acid									293	0.498	0.9181	True	robust	1	absent	0	robust	1	True	False	False		
+C08400	Glucoalyssin	259	-0.711	0.9614	True					301	0.135	0.5415	False	robust	-1	robust	-1	none	0	False	False	False		
+C08419	4-methylsulfinylbutyl glucosinolate									199	-1.19	0.9598	True	robust	-1	absent	0	robust	-1	True	False	False		
+C05837	3-indolymethyl glucosinolate									301	-0.511	0.9003	True	robust	-1	absent	0	robust	-1	True	False	False		
+C00147	Adenine									301	-0.897	0.9302	True	robust	-1	absent	0	robust	-1	True	False	False		
+C00153	Nicotinamide									301	-1.322	0.9169	True	robust	-1	absent	0	robust	-1	True	False	False		
+C00072	Ascorbic acid									274	-1.607	0.9161	True	robust	-1	absent	0	robust	-1	True	False	False		
+C01175	Sinapoylglucose	259	-0.73	0.9575	True									robust	-1	robust	-1	absent	0	False	False	False		
+C00049	D-Aspartic acid									301	-0.434	0.9203	True	robust	-1	absent	0	robust	-1	True	False	False		
+C01750	Quercitrin									298	-1.971	0.9899	True	robust	-1	absent	0	robust	-1	True	False	False		
+C00025	L-Glutamic acid					18	0.08	0.3365	False	301	-0.505	0.9668	True	robust	-1	none	0	robust	-1	True	False	True	disagrees	untested
+C00051	Glutathione	259	-0.465	0.9807	True					301	0.041	0.5415	False	robust	-1	robust	-1	none	0	False	False	False		
+C00387	Guanosine	259	-1.057	0.9923	True	18	-0.361	0.062	False	301	-0.933	0.897	True	robust	-1	robust	-1	single	-1	False	False	False		
+C01187	3-Deoxy-D-manno-2-octulosonic acid	259	-0.512	1	True									robust	-1	robust	-1	absent	0	False	False	False		
+C01077	O-Acetyl-L-Homoserine									301	-1.454	0.9967	True	robust	-1	absent	0	robust	-1	True	False	False		
+C00212	Adenosine									301	-1.321	0.9734	True	robust	-1	absent	0	robust	-1	True	False	False		
+C00016	Flavine adenine dinucleotide (FAD)	259	-0.796	1	True					300	0.284	0.6867	False	robust	-1	robust	-1	none	0	False	False	False		
+C00257	Gluconic acid	259	-0.38	0.9961	True									robust	-1	robust	-1	absent	0	False	False	False		
+C00255	Riboflavin	259	-1.114	1	True					301	-0.158	0.6478	False	robust	-1	robust	-1	none	0	False	False	False		
+C00003	beta-Nicotinamide adenine dinucleotide	259	-0.611	1	True					301	-0.003	0.505	False	robust	-1	robust	-1	none	0	False	False	False		
+C00061	Flavin Mononucleotide	259	-0.555	1	True									robust	-1	robust	-1	absent	0	False	False	False		
+C02504	2-Isopropylmalic acid	259	-0.732	0.9768	True									robust	-1	robust	-1	absent	0	False	False	False		
+C05625	Rutin	259	-0.992	0.9923	True					301	-0.633	0.814	True	robust	-1	robust	-1	single	-1	False	False	False		
+C00026	alpha-Ketoglutaric acid	259	-1.683	0.9961	True	18	-0.725	0.003301	True	301	0.115	0.5914	False	robust	-1	robust	-1	none	0	False	False	False		
+C00149	Malic acid	259	-1.187	1	True	18	-0.58	0.0007841	True					robust	-1	robust	-1	absent	0	False	False	False		
+C00624	Glutamic acid, N-acetyl-	259	-2.793	1	True									robust	-1	robust	-1	absent	0	False	False	False		
+C00052	Uridine-5'-diphosphogalactose	259	-1.91	1	True									robust	-1	robust	-1	absent	0	False	False	False		
+C07064	Lactulose	259	-4.126	1	True									robust	-1	robust	-1	absent	0	False	False	False		
+C00135	Histidine					18	1.503	3.974e-05	True					single	1	single	1	absent	0	False	False	False		
+C00152	L-Asparagine					18	1.514	0.0001404	True					single	1	single	1	absent	0	False	False	True	agrees	agrees
+C00956	D-2-Aminoadipic acid					18	0.789	0.02088	True					single	1	single	1	absent	0	False	False	False		
+C04608	Apigenin-7-O-glucoside									301	0.419	0.8206	True	single	1	absent	0	single	1	True	False	False		
+C00408	Pipecolic Acid									297	1.183	0.8249	True	single	1	absent	0	single	1	True	False	False		
+C00366	Uric acid	259	0.253	0.7413	False					301	0.558	0.8206	True	single	1	none	0	single	1	True	False	False		
+C01752	Scopoletin									301	-0.441	0.7973	True	single	-1	absent	0	single	-1	True	False	False		
+C00148	Proline									301	-0.476	0.7508	True	single	-1	absent	0	single	-1	True	False	False		
+C17271	Glucohirsutin	259	-0.262	0.8224	True					301	-0.097	0.588	False	single	-1	single	-1	none	0	False	False	False		
+C00482	3,5-Dimethoxy-4-hydroxycinnamic acid					15	-0.533	0.02159	True					single	-1	single	-1	absent	0	False	False	False		
+C06104	Adipic acid					18	-0.185	0.01456	True					single	-1	single	-1	absent	0	False	False	False		
+C00006	Nicotinamide adenine dinucleotide phosphate									275	-1.387	0.8909	True	single	-1	absent	0	single	-1	True	False	False		
+C00020	Adenosine 5'-monophosphate									301	-0.523	0.8771	True	single	-1	absent	0	single	-1	True	False	False		
+C01094	D-Fructose 1-phosphate					17	-0.826	0.02984	True					single	-1	single	-1	absent	0	False	False	False		
+C00109	2-Oxobutyric acid					18	-0.253	0.03496	True					single	-1	single	-1	absent	0	False	False	False		
+C00065	Serine	259	-0.287	0.8301	True									single	-1	single	-1	absent	0	False	False	True	not comparable	not comparable
+C00158	Citric acid	259	-0.123	0.7413	False	18	-0.727	0.00612	True	301	-0.028	0.5017	False	single	-1	single	-1	none	0	False	False	False		
+C01384	Maleic acid					18	-0.746	0.0007712	True					single	-1	single	-1	absent	0	False	False	False		
+C00168	beta-Hydoxypyruvic acid					18	-0.733	0.003398	True					single	-1	single	-1	absent	0	False	False	True	not comparable	not comparable
+C00330	2'-Deoxyguanosine					18	-0.91	0.001215	True					single	-1	single	-1	absent	0	False	False	False		
+C00327	L-Citrulline					18	-2.462	7.298e-06	True					single	-1	single	-1	absent	0	False	False	False		
+C00208	D-Maltose					18	-1.231	0.0009845	True					single	-1	single	-1	absent	0	False	False	True	agrees	agrees

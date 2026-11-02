@@ -5,7 +5,9 @@ assimilation (A) or carbon starvation are compared with the T02 consensus direct
 RuBP-driven predictions are listed as not comparable, because darkness stops oxygenation and
 carboxylation together. T02 was seen before the rule was written, so this is a consistency check.
 The table also lists every reference compound with a directional response that the model did not
-predict.
+predict. Revision 1 (post hoc, prereg/revision1) adds `verdict_detail`, which splits "untested" into
+"not measured" (no reference row) and "measured, no directional response" (status none or
+conflicting); the pre-registered `verdict` column is unchanged.
 """
 
 import json
@@ -20,10 +22,12 @@ BLOCK = {"Vo": "C2 cycle (Vo)", "A": "Photosynthate (A)", "RuBP": "RuBP",
          "starvation": "Starvation amino acids"}
 
 
-def build():
+def score(ref):
+    """Every model compound against a reference table (T02, or a T02-shaped stratum from script 23),
+    plus the reference's directional compounds that the model did not predict."""
     rule = json.loads((PREREG / "settings.json").read_text())["compound_rule"]
     model = pd.read_csv(PHOTORESP / "T06_predicted_compounds.tsv", sep="\t", comment="#")
-    ref = pd.read_csv(TABLES / "T02_light_dark_reference.tsv", sep="\t").set_index("kegg_id")
+    ref = ref.set_index("kegg_id")
     cols = ["status", "direction", "reference_z", "zhu_effect", "wu_stress_effect", "caldana_effect"]
     rows = []
     for r in model.itertuples():
@@ -35,19 +39,27 @@ def build():
             verdict = "untested"
         else:
             verdict = "agrees" if np.sign(r.log2FC_FLT_vs_GC) == hit.direction else "disagrees"
+        detail = verdict
+        if verdict == "untested":
+            detail = "not measured" if hit is None else "measured, no directional response"
         rows.append({"kegg_id": r.kegg_id, "compound": r.compound, "block": BLOCK[r.driver],
                      "model_log2FC": r.log2FC_FLT_vs_GC, "in_model": True,
                      **({c: hit[c] for c in cols} if hit is not None else {"status": "absent"}),
-                     "verdict": verdict})
+                     "verdict": verdict, "verdict_detail": detail})
     extra = ref[ref.status.isin(["robust", "single"]) & ~ref.index.isin(model.kegg_id)]
     for kid, h in extra.iterrows():
         rows.append({"kegg_id": kid, "compound": h["name"].strip(), "block": "not in model",
                      "model_log2FC": np.nan, "in_model": False, **{c: h[c] for c in cols},
-                     "verdict": "not predicted"})
-    t = pd.DataFrame(rows)
+                     "verdict": "not predicted", "verdict_detail": "not predicted"})
+    return pd.DataFrame(rows)
+
+
+def build():
+    t = score(pd.read_csv(TABLES / "T02_light_dark_reference.tsv", sep="\t"))
     t.to_csv(TABLES / "T03_model_vs_reference.tsv", sep="\t", index=False, float_format="%.4g")
     m = t[t.in_model]
-    print(f"  T03: {len(m)} model compounds {m.verdict.value_counts().to_dict()}; "
+    print(f"  T03: {len(m)} model compounds {m.verdict.value_counts().to_dict()} "
+          f"({m.verdict_detail.value_counts().to_dict()}); "
           f"{len(t) - len(m)} directional reference compounds not predicted "
           f"({int((t[~t.in_model].status == 'robust').sum())} robust)")
     return t

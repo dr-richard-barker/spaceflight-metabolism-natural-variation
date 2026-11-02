@@ -86,6 +86,7 @@ def fetch():
 def zhu_response():
     z = pd.read_csv(ATLAS / "darkness_metabolome.csv")
     w = z.pivot_table(index=["metabolite_id", "accession"], columns="timepoint", values="intensity")
+    possible = w[["0d darkness", "6d darkness"]].notna().any(axis=1).groupby(level=0).sum()
     d = (w["6d darkness"] - w["0d darkness"]).dropna()
     base = w["0d darkness"].dropna().groupby(level=0).std()
     names = z.drop_duplicates("metabolite_id").set_index("metabolite_id").metabolite_name
@@ -94,7 +95,8 @@ def zhu_response():
         med = s.median()
         rows.append({"source": "zhu", "source_id": mid, "name": names[mid], "n": len(s), "effect": med,
                      "frac_same": float((np.sign(s) == np.sign(med)).mean()) if med != 0 else 0.0,
-                     "spread": base.get(mid, np.nan), "p": np.nan})
+                     "spread": base.get(mid, np.nan), "p": np.nan,
+                     "n_possible": int(possible[mid]), "missing_frac": round(1 - len(s) / possible[mid], 4)})
     return pd.DataFrame(rows)
 
 
@@ -109,13 +111,15 @@ def wu_stress_response():
         if d.empty:
             continue
         med = d.median()
+        possible = int((g.control.notna() | g.stress.notna()).sum())
         rows.append({"source": "wu_stress", "source_id": name, "name": name, "n": len(d), "effect": med,
                      "frac_same": float((np.sign(d) == np.sign(med)).mean()) if med != 0 else 0.0,
-                     "spread": ctrl_sd.get(name, np.nan), "p": np.nan})
+                     "spread": ctrl_sd.get(name, np.nan), "p": np.nan,
+                     "n_possible": possible, "missing_frac": round(1 - len(d) / possible, 4)})
     return pd.DataFrame(rows)
 
 
-def caldana_response():
+def caldana_response(late_min=LATE_MIN):
     m8 = pd.read_excel(WU_CACHE / "mmc8.xlsx", header=1).rename(columns={"Peak ID": "peak"})
     m8["peak"] = m8.peak.astype(str).str.replace(r"[\sX]", "", regex=True)
     m8 = m8[m8["KEGG ID"].astype(str).str.match(r"^C\d{5}$")].drop_duplicates("peak")
@@ -129,11 +133,11 @@ def caldana_response():
             out = []
             for c in t.columns:
                 m = re.match(rf"^{cond}-(\d+)-\d+$", str(c))
-                if m and int(m.group(1)) >= LATE_MIN:
+                if m and int(m.group(1)) >= late_min:
                     out.append(c)
             return out
         dark, light = cols("20-D"), cols("20-L")
-        assert dark and light, f"{sheet}: no 20-D/20-L columns at >= {LATE_MIN} min"
+        assert dark and light, f"{sheet}: no 20-D/20-L columns at >= {late_min} min"
         info_by_peak = m8.set_index("peak")
         dark_vals = t[dark].apply(pd.to_numeric, errors="coerce")
         light_vals = t[light].apply(pd.to_numeric, errors="coerce")
@@ -145,6 +149,8 @@ def caldana_response():
             rows.append({"source": "caldana", "source_id": peak, "name": info.Metabolite,
                          "kegg_given": info["KEGG ID"], "n": len(a) + len(b), "effect": a.mean() - b.mean(),
                          "frac_same": np.nan, "spread": b.std(), "p": ttest_ind(a, b, equal_var=False).pvalue,
+                         "n_possible": len(dark) + len(light),
+                         "missing_frac": round(1 - (len(a) + len(b)) / (len(dark) + len(light)), 4),
                          "mean_intensity": pd.concat([a, b]).mean()})
     df = pd.DataFrame(rows)
     # one peak per metabolite: the most intense (fixed rule)
@@ -221,24 +227,42 @@ def kegg_overrides():
 
 # ---------- build ----------
 
-def qualifies(r):
+def qualifies(r, qualify_frac=QUALIFY_FRAC):
     if r.source == "caldana":
         return bool(r.p < P_CUT)
-    return bool(r.n >= MIN_N and r.effect != 0 and r.frac_same >= QUALIFY_FRAC)
+    return bool(r.n >= MIN_N and r.effect != 0 and r.frac_same >= qualify_frac)
 
 
-def build():
+def sources(qualify_frac=QUALIFY_FRAC, late_min=LATE_MIN):
+    """Every source response with its KEGG ID, qualification and standardised effect.
+    The defaults are the pre-registered settings; scripts/23_reference_strata.py varies them."""
     kmap = load_kegg()
-    src = pd.concat([zhu_response(), wu_stress_response(), caldana_response()], ignore_index=True)
+    src = pd.concat([zhu_response(), wu_stress_response(), caldana_response(late_min)], ignore_index=True)
     ovr = kegg_overrides()
     src["kegg_id"] = [ovr.get(r.name.strip(), r.kegg_given if r.source == "caldana" else kmap.get(r.name, ""))
                       for r in src.itertuples()]
-    src["qualifies"] = [qualifies(r) for r in src.itertuples()]
+    src["qualifies"] = [qualifies(r, qualify_frac) for r in src.itertuples()]
     src["z"] = src.effect / src.spread
-    src.round(4).to_csv(TABLES / "T01_light_dark_sources.tsv", sep="\t", index=False)
+    dup = src[src.kegg_id != ""].duplicated(["source", "kegg_id"], keep=False)
+    assert not dup.any(), f"one source maps twice to a KEGG ID: {src[src.kegg_id != ''][dup]}"
+    return src
 
+
+def build():
+    src = sources()
+    src.round(4).to_csv(TABLES / "T01_light_dark_sources.tsv", sep="\t", index=False)
+    ref = consensus(src)
+    ref.to_csv(TABLES / "T02_light_dark_reference.tsv", sep="\t", index=False, float_format="%.4g")
+    counts = ref.status.value_counts().to_dict()
+    print(f"  T01: {len(src)} source rows ({src.kegg_id.ne('').sum()} with KEGG IDs, {int(src.qualifies.sum())} qualifying)")
+    print(f"  T02: {len(ref)} KEGG compounds; {counts}; up {int((ref.direction > 0).sum())}, down {int((ref.direction < 0).sum())}")
+
+
+def consensus(src, use=("zhu", "wu_stress", "caldana")):
+    """The pre-registered consensus rule over the sources in `use` (the default is all three)."""
+    src = src[src.source.isin(use)]
     rows = []
-    for kid, g in src[src.kegg_id != ""].groupby("kegg_id"):
+    for kid, g in src[src.kegg_id.fillna("") != ""].groupby("kegg_id"):
         q = g[g.qualifies]
         signs = set(np.sign(q.effect))
         status = ("none" if q.empty else "conflicting" if len(signs) > 1 else
@@ -252,11 +276,7 @@ def build():
                      **{f"{s}_frac_same": round(float(g[g.source == s].frac_same.iloc[0]), 3) if (g.source == s).any() and s != "caldana" else np.nan
                         for s in ("zhu", "wu_stress")},
                      "caldana_p": float(g[g.source == "caldana"].p.iloc[0]) if (g.source == "caldana").any() else np.nan})
-    ref = pd.DataFrame(rows).sort_values(["status", "reference_z"], ascending=[True, False])
-    ref.to_csv(TABLES / "T02_light_dark_reference.tsv", sep="\t", index=False, float_format="%.4g")
-    counts = ref.status.value_counts().to_dict()
-    print(f"  T01: {len(src)} source rows ({src.kegg_id.ne('').sum()} with KEGG IDs, {int(src.qualifies.sum())} qualifying)")
-    print(f"  T02: {len(ref)} KEGG compounds; {counts}; up {int((ref.direction > 0).sum())}, down {int((ref.direction < 0).sum())}")
+    return pd.DataFrame(rows).sort_values(["status", "reference_z"], ascending=[True, False])
 
 
 if __name__ == "__main__":

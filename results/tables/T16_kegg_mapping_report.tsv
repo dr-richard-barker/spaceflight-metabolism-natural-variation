@@ -1,0 +1,38 @@
+section	item	n	of	note
+names	measured names sent to KEGG (Zhu and Wu)	112		
+names	from wu_stress	70	112	
+names	from zhu	42	112	
+KEGG find candidates	0 candidate(s)	48	112	rest.kegg.jp/find/compound on the name and on the name without a trailing bracket
+KEGG find candidates	1 candidate(s)	21	112	rest.kegg.jp/find/compound on the name and on the name without a trailing bracket
+KEGG find candidates	>1 candidate(s)	43	112	rest.kegg.jp/find/compound on the name and on the name without a trailing bracket
+rule match (exact synonym)	exact	56	112	
+rule match (exact synonym)	none	50	112	
+rule match (exact synonym)	exact (several hits, lowest ID kept)	4	112	
+rule match (exact synonym)	D-prefix	2	112	
+rule match (exact synonym)	mapped by the rule	62	112	
+reviewed overrides	rows in data/reference/kegg_overrides.tsv	24		
+reviewed overrides	rescued (rule found no exact synonym)	16	24	
+reviewed overrides	corrected (rule picked another entry)	6	24	
+reviewed overrides	Caldana peak only: Wu's given ID corrected	1	24	
+reviewed overrides	Caldana peak only: excluded	1	24	
+after overrides	measured names with a KEGG ID	78	112	
+after overrides	from wu_stress	45	70	
+after overrides	from zhu	33	42	
+after overrides	Caldana peaks (KEGG IDs given by Wu et al.)	35	36	
+after overrides	Caldana peaks whose given ID an override changed or removed	2	36	overrides apply by name to every source
+Wu class (after overrides)	Amine	1	2	
+Wu class (after overrides)	Amino acid	10	10	
+Wu class (after overrides)	Amino acid derivative	1	1	
+Wu class (after overrides)	Cofactor	1	1	
+Wu class (after overrides)	Dipeptide	1	1	
+Wu class (after overrides)	Flavonoid	1	6	
+Wu class (after overrides)	Glucoside	0	3	
+Wu class (after overrides)	Glucosinolate	14	27	
+Wu class (after overrides)	Nucleobase	1	1	
+Wu class (after overrides)	Nucleoside	1	1	
+Wu class (after overrides)	Nucleoside derivative	1	1	
+Wu class (after overrides)	Nucleotide	2	2	
+Wu class (after overrides)	Organic acid	7	7	
+Wu class (after overrides)	Phenylpropanoid	2	5	
+Wu class (after overrides)	Sugar	1	1	
+Wu class (after overrides)	Vitamin	1	1	

@@ -1,0 +1,31 @@
+stratum	agreement	caldana_min_minutes	preregistered	robust	single	conflicting	none	up	down	Leu	Ile	Val	Malate	2-OG	Glu	Gln	bcaa_up	malate_2og_down	model_agrees	model_disagrees	model_untested	robust_not_predicted
+all	0.6	60	False	45	31	3	17	27	49	robust up	robust up	robust up	robust down	robust down	conflicting	none	True	True	5	0	7	42
+dark_only	0.6	60	False	27	23	1	8	16	34	robust up	robust up	single up	robust down	robust down	single up	absent	True	True	6	0	6	25
+all	0.6	180	False	45	32	3	16	28	49	robust up	robust up	robust up	robust down	robust down	conflicting	none	True	True	5	0	7	42
+dark_only	0.6	180	False	27	24	1	7	17	34	robust up	robust up	single up	robust down	robust down	single up	absent	True	True	6	0	6	25
+all	0.6	360	False	46	28	2	20	28	46	robust up	robust up	robust up	robust down	robust down	robust down	none	True	True	5	1	6	42
+dark_only	0.6	360	False	27	19	1	12	16	30	robust up	robust up	single up	robust down	robust down	none	absent	True	True	5	0	7	25
+all	0.7	60	False	46	27	2	21	25	48	robust up	robust up	robust up	robust down	robust down	conflicting	none	True	True	5	0	7	43
+dark_only	0.7	60	False	27	22	1	9	16	33	robust up	robust up	single up	robust down	robust down	single up	absent	True	True	6	0	6	25
+all	0.7	180	False	46	28	2	20	26	48	robust up	robust up	robust up	robust down	robust down	conflicting	none	True	True	5	0	7	43
+dark_only	0.7	180	False	27	23	1	8	17	33	robust up	robust up	single up	robust down	robust down	single up	absent	True	True	6	0	6	25
+all	0.7	360	False	47	24	1	24	26	45	robust up	robust up	robust up	robust down	robust down	robust down	none	True	True	5	1	6	43
+dark_only	0.7	360	False	27	18	1	13	16	29	robust up	robust up	single up	robust down	robust down	none	absent	True	True	5	0	7	25
+all	0.75	60	False	44	25	2	25	23	46	robust up	robust up	robust up	robust down	robust down	conflicting	none	True	True	5	0	7	41
+dark_only	0.75	60	False	26	22	1	10	15	33	robust up	robust up	single up	robust down	robust down	single up	absent	True	True	6	0	6	24
+all	0.75	180	False	44	26	2	24	24	46	robust up	robust up	robust up	robust down	robust down	conflicting	none	True	True	5	0	7	41
+dark_only	0.75	180	False	26	23	1	9	16	33	robust up	robust up	single up	robust down	robust down	single up	absent	True	True	6	0	6	24
+all	0.75	360	True	45	22	1	28	24	43	robust up	robust up	robust up	robust down	robust down	robust down	none	True	True	5	1	6	41
+dark_only	0.75	360	True	26	18	1	14	15	29	robust up	robust up	single up	robust down	robust down	none	absent	True	True	5	0	7	24
+all	0.8	60	False	44	23	2	27	23	44	robust up	robust up	robust up	robust down	robust down	conflicting	none	True	True	5	0	7	41
+dark_only	0.8	60	False	26	22	1	10	15	33	robust up	robust up	single up	robust down	robust down	single up	absent	True	True	6	0	6	24
+all	0.8	180	False	44	24	2	26	24	44	robust up	robust up	robust up	robust down	robust down	conflicting	none	True	True	5	0	7	41
+dark_only	0.8	180	False	26	23	1	9	16	33	robust up	robust up	single up	robust down	robust down	single up	absent	True	True	6	0	6	24
+all	0.8	360	False	45	20	1	30	24	41	robust up	robust up	robust up	robust down	robust down	robust down	none	True	True	5	1	6	41
+dark_only	0.8	360	False	26	18	1	14	15	29	robust up	robust up	single up	robust down	robust down	none	absent	True	True	5	0	7	24
+all	0.9	60	False	43	16	2	35	19	40	robust up	robust up	robust up	robust down	robust down	conflicting	none	True	True	5	0	7	40
+dark_only	0.9	60	False	26	19	1	13	14	31	robust up	robust up	single up	robust down	robust down	single up	absent	True	True	6	0	6	24
+all	0.9	180	False	43	17	2	34	20	40	robust up	robust up	robust up	robust down	robust down	conflicting	none	True	True	5	0	7	40
+dark_only	0.9	180	False	26	20	1	12	15	31	robust up	robust up	single up	robust down	robust down	single up	absent	True	True	6	0	6	24
+all	0.9	360	False	44	13	1	38	20	37	robust up	robust up	robust up	robust down	robust down	robust down	none	True	True	5	1	6	40
+dark_only	0.9	360	False	26	15	1	17	14	27	robust up	robust up	single up	robust down	robust down	none	absent	True	True	5	0	7	24
