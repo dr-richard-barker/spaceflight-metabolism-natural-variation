@@ -403,6 +403,11 @@ def revision(m):
     m["nWuLoci"] = (len(pd.read_csv(DATA / "atlas" / "wu_gwas_loci.csv")), "data/atlas/wu_gwas_loci.csv")
     m["nWuRegions"] = (len(pd.read_csv(DATA / "atlas" / "wu_condition_regions.tsv", sep="\t")),
                        "data/atlas/wu_condition_regions.tsv")
+    zhu = set(pd.read_csv(DATA / "atlas" / "darkness_metabolome.csv", usecols=["accession"]).accession)
+    wua = set(pd.read_csv(DATA / "atlas" / "wu_leaf_identified_long.csv", usecols=["accession"]).accession)
+    m["nAccShared"] = (len(zhu & wua), "data/atlas darkness_metabolome, wu_leaf_identified_long")
+    m["nAccUnion"] = (len(zhu | wua), "data/atlas darkness_metabolome, wu_leaf_identified_long")
+    m["nAccSum"] = (m["nZhuAcc"][0] + m["nWuAcc"][0], "T01")
     rng = c17[("B", "", "hubs at FDR < 0.05: raw p range")].split("-")
     m["hubRawMinB"], m["hubRawMaxB"] = (_p(float(rng[0])), "T17"), (_p(float(rng[1])), "T17")
     t18 = t("T18_hub_overlap_null.tsv")

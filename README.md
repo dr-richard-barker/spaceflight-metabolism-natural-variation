@@ -1,9 +1,9 @@
-# Natural variation in *Arabidopsis* light/dark metabolism tests a spaceflight carbon-starvation model
+# Natural variation in *Arabidopsis* darkness metabolism tests a carbon starvation model of spaceflight transcriptomes
 
 **A gas-transport model of the BRIC-LED-001 flight (OSD-522) predicted that microgravity starves
 lit plants of carbon, so lit spaceflight transcriptomes should carry a carbon-starvation signature
-and dark ones should not. Measured light/dark metabolism from hundreds of natural accessions
-confirms the model's metabolic picture in outline and corrects it in detail. Pre-registered
+and dark ones should not. Measured extended-darkness metabolism from hundreds of natural
+accessions agrees with most of the model's testable compound directions and corrects it in detail. Pre-registered
 tests on six flight contrasts find the starvation signal strongest in the dark, where the model
 predicts none.**
 

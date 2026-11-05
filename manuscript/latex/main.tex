@@ -15,8 +15,8 @@
 
 \begin{document}
 
-\title[Light/dark metabolism tests a spaceflight carbon-starvation model]{Natural variation in
-\textit{Arabidopsis} light/dark metabolism tests a carbon-starvation model of plant spaceflight
+\title[Darkness metabolism tests a spaceflight carbon starvation model]{Natural variation in
+\textit{Arabidopsis} darkness metabolism tests a carbon starvation model of spaceflight
 transcriptomes}
 
 %% TODO AUTHORSHIP --- every field below except the corresponding author is a placeholder,
@@ -24,54 +24,39 @@ transcriptomes}
 \author*[1]{\fnm{Richard} \sur{Barker}}\email{dr.richard.barker@gmail.com}
 \affil[1]{\orgname{[TODO --- affiliation]}, \city{[TODO]}, \country{[TODO]}}
 
-\abstract{A gas-transport and photosynthesis model of the BRIC-LED-001 flight (OSD-522) predicted
-that microgravity lowers net assimilation whenever plants are lit, so that lit spaceflight
-transcriptomes should carry a carbon-starvation signature and dark ones should not. It also
-predicted metabolite shifts that could not be checked, because NASA's Open Science Data Repository
-holds no plant metabolome. Here we test that model against measured extended-darkness metabolism,
-used as a direction-of-change reference for carbon limitation: leaf metabolomes of \nZhuAcc{}
-accessions before and after six days of darkness, \nWuAcc{} accessions under control conditions
-and darkness at 32\,\textdegree C with their metabolite GWAS loci, and a light/dark time course.
-Darkness raised leucine and isoleucine in every accession of both natural-variation panels, under
-every qualification threshold we tried. Darkness can test only \nScored{} of the model's
-\nModelCompounds{} compound predictions, and \nComparable{} of those have a measured direction;
-\nModelAgree{} agreed. The one disagreement, a fall in glutamate, rests on the 32\,\textdegree C
-source alone, and \nNotPredictedRobust{} robust darkness responses, among them TCA-cycle acids and
-flavin and nicotinamide cofactors, were not predicted. In PaintOmics, replacing the model's
-metabolite layer with \nLayer{} measured compounds, removing it, or rescaling its values left the
-pathway result unchanged. The lit canister's hub calls needed the gene and protein layers together,
-and in OSD-678 the light contrast's hubs disappeared when its differentially expressed genes were
-cut to the dark contrast's number. Of
-\nTests{} pre-registered gene-set outcomes, \nMatch{} matched. No predicted lit-flight starvation
-signal reached significance, while carbon-starvation and branched-chain amino acid catabolism genes
-moved strongly in three dark flight contrasts, down in two BRIC canister experiments and up in the
-leaves of dark-grown CARA seedlings; these calls rest on a gene-level null that we show to be
-calibrated, because three plants per arm leave sample permutation too coarse to confirm them. In
-OSD-38, a dark sealed-BRIC flight with a proteome, the four KEGG carbon pathways rose in the
-transcriptome but fell in the membrane fraction of the proteome, and on the ground the BRIC-PDFU
-carried a strong low-oxygen transcript signature against an air-tight container. With six plants
-per arm a targeted GC-MS panel could detect only changes of about \detectMinFold-fold or larger;
-the model's predicted 0.13\,log$_2$ shifts would need \nQThousandMin{} to \nQThousandMax{} plants
-per arm. The carbon-starvation signal in plant spaceflight transcriptomes is real, but it is not
-specific to light, its sign differs between flight experiments, and where proteins were measured,
+\abstract{A gas-transport model of the BRIC-LED-001 flight (OSD-522) predicted that microgravity
+lowers net carbon assimilation in lit plants, so only lit spaceflight transcriptomes should show
+carbon starvation. We tested it with extended-darkness metabolomes from two
+natural-variation panels (\nZhuAcc{} and \nWuAcc{} \textit{Arabidopsis} accessions), a light/dark
+time course, six flight transcriptomes and one flight proteome. Darkness raised leucine and
+isoleucine in every accession. Of the \nComparable{} model predictions with measured darkness
+directions, \nModelAgree{} agreed; the exception, glutamate, rested on 32\,\textdegree C dark stress
+alone. Of \nTests{} pre-registered gene-set outcomes, \nMatch{} matched, but no lit flight showed a
+significant starvation signal, whereas three dark flights showed the strongest. In a dark flight
+proteome, carbon-pathway transcripts rose while their membrane proteins fell. A
+carbon-starvation-like signal is present in spaceflight transcriptomes, but it is
+not specific to light, its sign differs between experiments, and where proteins were measured,
 carbon metabolism moved against its transcripts.}
 
-\keywords{spaceflight, \textit{Arabidopsis}, natural variation, carbon starvation, darkness,
-metabolomics, proteomics, pre-registration}
+\keywords{\textit{Arabidopsis thaliana}, spaceflight, carbon starvation, extended darkness, plant
+metabolomics, transcriptomics, proteomics, natural variation}
 
 \maketitle
 
 \section{Introduction}\label{sec:intro}
 
-A companion study \citep{firststudy} coupled a lattice-Boltzmann model of leaf boundary-layer gas
-transport to a Farquhar--von Caemmerer--Berry model of photosynthesis and asked what the sealed,
-illuminated BRIC-LED canister of OSD-522 \citep{osd522} does to the CO$_2$ reaching Rubisco. It
-predicted that microgravity, by suppressing buoyant convection, leaves a persistent deficit in net
-assimilation whenever the plants photosynthesise, and that the flight transcriptome should
-therefore show a mild carbon-starvation response. Because there is no assimilation to lose in the
-dark, the same model predicts no such response in dark-grown flight experiments.
+A companion study \citep{firststudy} asked what the sealed, illuminated BRIC-LED canister of
+OSD-522 \citep{osd522} does to the CO$_2$ that reaches Rubisco, the enzyme that fixes carbon in
+photosynthesis. It coupled a lattice-Boltzmann simulation of gas movement in the thin layer of air
+over the leaf (the boundary layer) to the Farquhar--von Caemmerer--Berry model, the standard
+biochemical model of leaf photosynthesis. On Earth, air warmed by the leaf rises and is replaced, a
+buoyant convection that renews the boundary layer; in microgravity this flow is absent. The model
+therefore predicted a persistent deficit in net assimilation, the carbon a leaf fixes less what it
+releases again by respiration and photorespiration, whenever the plants photosynthesise, and so a
+mild carbon-starvation response in the flight transcriptome. Because there is no assimilation to
+lose in the dark, the same model predicts no such response in dark-grown flight experiments.
 
-That study left four things open. Its metabolite predictions could not be tested, because the NASA
+That study left four questions open, and this one takes them up. Its metabolite predictions could not be tested, because the NASA
 Open Science Data Repository \citep{osdr2025} contains no plant metabolome; it submitted them to
 PaintOmics \citep{paintomics4} as a predicted third layer instead. Its ``starvation amino acids''
 (asparagine, valine, leucine, isoleucine, glutamine and glutamate) were given one shared fold change
@@ -105,7 +90,10 @@ that respect gene correlation and with predictions committed before any test ran
 many plants a targeted metabolite panel on flight material would need. Finally, because OSD-38
 \citep{osd38} grew dark seedlings in the same sealed BRIC hardware with a proteome
 \citep{kruse2020} and a ground control outside the hardware \citep{basu2017}, we ask whether the
-dark signal reaches the proteins and whether the hardware alone produces it.
+dark signal reaches the proteins and whether the hardware alone produces it. In short, the measured
+darkness data agree with \nModelAgree{} of the \nComparable{} compound directions they can test, but the
+starvation signal it predicts for lit flight appears most strongly in dark flights, and in the one
+dark flight with a proteome, carbon-pathway proteins move against their transcripts.
 
 \section{Results}\label{sec:results}
 
@@ -121,11 +109,13 @@ Of these, \nRefRobust{} had a robust consensus (at least two sources agreeing, o
 of accessions), \nRefSingle{} a single qualifying source, \nRefNone{} none and \nRefConflicting{}
 conflicting sources; \nRefUp{} rose in darkness and \nRefDown{} fell.
 
-The branched-chain amino acids dominate. Leucine rose by \leuZhu{} log$_2$ units after six days of
-darkness and by \leuWu{} under the darkness stress, in every accession of both panels, and by
-\leuCaldana{} in the Caldana time course; isoleucine rose by \ileZhu{} and \ileWu{}. This is the
-response Caldana et al.\ attributed to protein degradation followed by amino acid catabolism as the
-main energy supply once photosynthesis stops \citep{caldana2011}.
+The branched-chain amino acids gave the largest and most consistent responses. Leucine rose by
+\leuZhu{} log$_2$ units after six days of darkness and by \leuWu{} under the darkness stress, in
+every accession of both panels, and by \leuCaldana{} in the Caldana time course; isoleucine rose by
+\ileZhu{} and \ileWu{}. Caldana et al.\ attributed this response to protein degradation followed by
+amino acid catabolism, which becomes the main energy supply once photosynthesis stops
+\citep{caldana2011}. It is the reference's clearest sign of carbon starvation, and the response the
+model's starvation block predicts.
 
 Because the Wu stress is darkness at 32\,\textdegree C, we rebuilt the consensus within two strata
 (post hoc; Supplementary Table~S2, Fig.~S1): darkness only (Zhu and Caldana) and dark+heat (Wu). No
@@ -201,7 +191,8 @@ threshold settings). They include malate ($\malZhu{}$ log$_2$) and
 direction under carbon limitation seemed uncertain; the reference says both fall. Also missing were
 the flavin and nicotinamide cofactors (FAD, FMN, riboflavin, NAD$^+$), adenosine and guanosine,
 glutathione and ascorbate, all of which fell, and aromatic amino acids, arginine, allantoate and
-purine, which rose.
+purine, which rose. The model thus gets the direction of most of what it predicts right, but it
+predicts only a small part of what darkness changes.
 
 \begin{figure}[t]
 \centering
@@ -224,7 +215,10 @@ We replaced the first study's metabolite layer in PaintOmics with the reference:
 compounds, each valued at the model's own carbon-deficit magnitude (0.13\,log$_2$) in its measured
 direction (0 for compounds without one), with the \nLayerRelevant{} robust compounds marked as
 changed. PaintOmics takes a metabolite layer as two files, a table of compound name and value and a
-list of ``relevant'' compounds; the relevant list is what its hub test uses. The gene and protein files
+list of ``relevant'' compounds. Its hub analysis tests each relevant compound with a binomial test of
+whether the share of differentially expressed genes linked to it in the KEGG network, directly or
+through up to three intermediate nodes (steps 1--4), exceeds the share in the whole dataset
+\citep{paintomics4}; the compound's own value does not enter the test. The gene and protein files
 were byte-identical to the first study's job, and the database, organism and settings unchanged
 (Methods). The layer is a ground reference, not a flight measurement: it says what carbon
 starvation does to these compounds, which is what the model claims lit flight is.
@@ -234,7 +228,8 @@ pathways passed a Benjamini--Hochberg false discovery rate \citep{bh1995} of 0.0
 in both by protein processing in the endoplasmic reticulum (combined $p \pErA$). The rank
 correlation of all combined $p$-values was \rhoOneA{}. Glyoxylate and dicarboxylate metabolism,
 where the C$_2$ cycle sits, moved from rank \rankGlyOne{} to \rankGlyA{}, still far from
-significance.
+significance. Which pathways PaintOmics calls therefore did not depend on the first study's
+unmeasured metabolite predictions.
 
 The metabolite hubs changed only where the compound list changed (Fig.~\ref{fig:paint}b). Leucine,
 valine, isoleucine and glutamate remained hubs, and malate, 2-oxoglutarate, glutathione,
@@ -254,7 +249,10 @@ followed the gene $p$ ($\rho = \rhoCombGene$) more closely than the protein ($\r
 metabolite $p$ ($\rhoCombMet$; \nPathMetP{} pathways have one). Hub status, by contrast, needed both
 gene-product layers: with genes alone (job G) or proteins alone (job H) and the same layer, none of
 job A's \nHubA{} hubs remained. In this integration the gene-product layers decide the outcome, and
-the metabolite layer contributes its list of relevant compounds, not their values.
+the metabolite layer contributes its list of relevant compounds, not their values, as the design of
+the hub test implies. Because that test is judged against the dataset-wide share of differentially
+expressed genes, hub calls also depend on how many genes a contrast supplies, which the next section
+tests.
 
 \begin{figure}[t]
 \centering
@@ -318,7 +316,7 @@ Before any gene-set statistic was computed on a flight contrast, we committed si
 predicted outcome for each in lit and dark flight contrasts, and every test setting
 (prereg/PREDICTIONS.md; Table~\ref{tab:sets}). Two sets are signed: the first study's
 carbon-starvation (DIN) set, re-tested here, and KEGG's valine, leucine and isoleucine degradation
-pathway (\nSetBcaa{} genes), the catabolic route of the strongest darkness response. Four come from
+pathway (ath00280, \nSetBcaa{} genes \citep{kanehisa2000,keggrest}), the catabolic route of the strongest darkness response. Four come from
 the Wu GWAS: genes in loci found only under control, only under the darkness stress, under both,
 and in the loci of metabolites with a directional darkness response. For OSD-522 the null was every
 one of the 924 ways to relabel its twelve samples. The other five contrasts were tested on GeneLab's
@@ -536,25 +534,24 @@ all pathways. \textbf{b}, Metabolite hubs at FDR $<0.05$ in either job.}
 
 \section{Discussion}\label{sec:discussion}
 
-\subsection{Compared with the first study}
-
-Table~\ref{tab:compare} sets the two studies side by side. The measured data support the model's
-metabolic picture in outline: under extended darkness the branched-chain amino acids and asparagine
-rise and maltose falls, as it predicted, at every threshold we tried. They correct it in detail.
+Table~\ref{tab:compare} sets the two studies side by side. Under extended darkness, the measured
+data show the branched-chain amino acids and asparagine rising and maltose falling, as the model
+predicted \citep{firststudy}, at every threshold we tried. They also correct the model in detail.
 Glutamine does not move, the starvation amino acids differ several-fold in how strongly they
 respond, and the TCA-cycle acids the model declined to predict fall consistently. Glutamate falls
 only in the 32\,\textdegree C source, so whether it contradicts the model is open. None of this
 tests the gas-transport mechanism itself: darkness cannot score the C$_2$-cycle and RuBP
 predictions that carry it.
 
-The light/dark prediction fares worse. The model's mechanism runs through photosynthesis, so its
-signature should appear in light and vanish in the dark. With nulls that respect gene correlation
+The light/dark prediction fares worse. Because the model's mechanism runs through photosynthesis,
+its signature is predicted to appear in light and vanish in the dark \citep{firststudy}. With nulls that respect gene correlation
 and predictions fixed in advance, no lit contrast produced a significant starvation signal, while
 three dark contrasts produced the strongest ones in the dataset, and a single model of OSD-678
-showed no larger starvation response to flight in light than in darkness. The first study reported that its
-starvation-over-photosynthesis contrast separated lit from dark experiments; a single-set test shows
-why that ordering is not a light effect. The starvation genes themselves move most in darkness, in
-opposite directions in BRIC-PDFU seedlings and in CARA leaves.
+showed no larger starvation response to flight in light than in darkness. The first study reported
+that the difference between its starvation and photosynthesis gene sets separated lit from dark
+experiments \citep{firststudy}. Testing the starvation set on its own shows why that ordering is not
+a light effect: the starvation genes themselves move most in darkness, in opposite directions in
+BRIC-PDFU seedlings and in CARA leaves.
 
 \begin{table}[t]
 \caption{\textbf{The first study and this one, claim by claim.}}
@@ -576,34 +573,35 @@ Enclosure atmosphere matters & Mass balance: a dark BRIC loses O$_2$ over days &
 \end{tabularx}
 \end{table}
 
-\subsection{What a proteome adds}
-
-Both the first study's starvation reading and every PaintOmics integration here read metabolism
-from gene products, mostly transcripts. OSD-38 is the one dark sealed-BRIC flight with a proteome, and there the carbon
+Both the first study's starvation reading \citep{firststudy} and every PaintOmics integration here
+read metabolism from gene products, mostly transcripts. OSD-38 is the one dark sealed-BRIC flight with a proteome, and there the carbon
 pathways' transcripts rose while their proteins fell in the membrane fraction; the soluble subset did
 not follow, so the result may reflect how these enzymes partition between fractions as much as how
 much of them was made. Kruse et al.\ saw the same decoupling
 gene by gene: nearly 30\,\% of the 17 genes that changed at both levels moved in opposite
 directions, and they pointed to post-transcriptional regulation \citep{kruse2020}. At the pathway
 level it means a transcript signature is not a reliable proxy for the enzyme complement, and still
-less for metabolite pools. The hub result points the same way. The branched-chain amino acid and
+less for metabolite pools, as broader surveys of mRNA and protein levels \citep{liu2016} and diurnal
+profiling of \textit{Arabidopsis} rosettes, in which enzyme activities change more slowly than their
+transcripts after transfer to darkness \citep{gibon2006}, also show. For spaceflight studies that infer
+metabolism from transcriptomes alone, including the first study, pathway calls are best read as
+statements about gene expression, not about enzyme or metabolite levels. The hub result points the same way. The branched-chain amino acid and
 glutamate hubs that the first study attributed to a lit-canister carbon deficit appear in a dark
 canister with no assimilation to lose, at an overlap no larger than chance, and in OSD-678 the light
 contrast's hubs disappeared when its gene list was cut to the dark contrast's length. Hub status
 reflects how many genes change around a compound in the network, not why they change.
 
-\subsection{Why the dark contrasts carry the signal}
-
-We cannot say from these data, and offer possibilities to test rather than conclusions. In all
+Why the dark contrasts carry the signal we cannot say from these data, and we offer possibilities
+to test rather than conclusions. In all
 three dark contrasts both arms are seedlings grown in darkness from germination
 \citep{osd38,osd321,osd678}, so the flight-versus-ground contrast compares two starved states, and
 a difference in the starvation programme means the flight seedlings were starved more, less or
 differently than their ground controls. The direction is not consistent: the programme is lower in
 flight in the two BRIC-PDFU canister experiments and higher in the CARA plates, which differ in
 hardware (a sealed canister against a plate on the cabin wall) and in what was sequenced (whole
-seedlings against dissected leaves). Either way, a carbon-starvation programme responds to
-spaceflight conditions that the boundary-layer mechanism cannot reach, because in the dark there
-is no assimilation for it to reduce. OSD-38's seedlings also grew on 1\,\% sucrose (OSDR protocol),
+seedlings against dissected leaves). Either way, a carbon-starvation programme may respond to
+spaceflight conditions other than those the boundary-layer mechanism addresses, because in the dark
+there is no assimilation for it to reduce. OSD-38's seedlings also grew on 1\,\% sucrose (OSDR protocol),
 which makes classical carbon starvation unlikely in either of its arms and leaves the cause of its
 DIN fall open. One candidate is oxygen. On the ground, seedlings in the sealed BRIC-PDFU carried a
 low-oxygen transcript signature relative to an air-tight container, and in flight that signature
@@ -613,9 +611,7 @@ carbon states. These signals also rest
 on gene-level nulls: with three plants per arm, sample permutation cannot confirm them, and in the
 OSD-678 dark contrast one flight sample carries the DIN rise.
 
-\subsection{Limitations}
-
-The reference is ground darkness, a far larger perturbation than a 9\,\% assimilation deficit and
+This study has limitations. The reference is ground darkness, a far larger perturbation than a 9\,\% assimilation deficit and
 one that also starts senescence and nitrogen remobilisation, so it fixes directions rather than
 flight magnitudes, and its use as a stand-in for flight rests on the first study's hypothesis. The
 sources differ in age, tissue, photoperiod, sampling time and platform (Table~\ref{tab:sources}),
@@ -624,7 +620,9 @@ and 30 where its text gives 21 and 32\,\textdegree C. The Caldana plants are Col
 authors' deposit \citep{emtab375} and Wu et al.\ \citep{wu2018}; we could not read the Caldana paper
 itself. The reference covers secondary metabolism poorly, because specialised metabolites map to
 KEGG poorly. Gene-set tests on GWAS regions include many genes that do not cause the association,
-which dilutes any signal. The five contrasts other than OSD-522 were tested with a rotation null;
+which dilutes any signal.
+
+The five contrasts other than OSD-522 were tested with a rotation null;
 it is calibrated on random sets and genomic blocks, but it treats genes, not plants, as the unit,
 and OSD-38 and OSD-678 have three replicates per arm, too few for a sample permutation to reach
 significance. OSD-678's light arm was
@@ -634,6 +632,7 @@ model's light dependence. PaintOmics hub counts rise with the number of
 differentially expressed genes, which differs \ratioDE-fold between the two OSD-678 contrasts; at
 equal numbers the light contrast had no hubs.
 The GC-MS variance pools leaf and shoot studies from different laboratories and timepoints.
+
 OSDR's OSD-38 protein tables are truncated, so the soluble layer is a top-ranked subset and the
 membrane layer one of two acquisitions; re-searching the raw iTRAQ files, which OSDR holds, would
 recover the rest and is left for future work. iTRAQ compresses ratios, which shrinks protein fold
@@ -790,23 +789,26 @@ and against 10{,}000 shuffles of hub labels within tertiles of KEGG reaction cou
 \textbf{Reproducibility.} \texttt{run\_all.sh} regenerates every table, figure and the numbers in
 this text from the vendored inputs; the PaintOmics step reads the vendored job records.
 
+\textbf{Use of AI tools.} [TODO --- the analysis code and the first draft of this text were prepared
+with an AI assistant (Claude); state its use as the journal requires. npj Microgravity asks for LLM
+use to be documented in Methods.]
+
 \backmatter
 
 \bmhead{Data availability} All derived data are in the repository
 (\url{https://github.com/dr-richard-barker/spaceflight-metabolism-natural-variation}). [TODO ---
-Zenodo DOI.] Source data: NASA OSDR (OSD-522, OSD-38, OSD-321, OSD-678, OSD-427), the Zhu and Wu
-natural-variation datasets as cited, and MetaboLights MTBLS22, 41, 42, 363, 2289 and 4066. OSDR's
+Zenodo DOI.] Source data: NASA OSDR (OSD-522, OSD-38, OSD-321, OSD-678, OSD-427, OSD-136), GEO
+GSE14502, ArrayExpress E-MTAB-375, the Zhu and Wu natural-variation datasets as cited, and
+MetaboLights MTBLS22, 41, 42, 363, 2289 and 4066. OSDR's
 processed OSD-38 protein tables stop at \nOsdRows{} rows; the protein values used here are in
 \texttt{results/tables/T11\_osd38\_proteome.tsv}.
 
 \bmhead{Code availability} Scripts are in the same repository under the MIT licence.
 
-\bmhead{Use of AI tools} [TODO --- the analysis code and the first draft of this text were
-prepared with an AI assistant (Claude); state its use as the journal requires.]
+\bmhead{Acknowledgements} [TODO --- acknowledgements and funding; npj Microgravity places funding
+here and permits no separate funding statement.]
 
 \bmhead{Author contributions} [TODO]
-
-\bmhead{Funding} [TODO]
 
 \bmhead{Competing interests} [TODO]
 
