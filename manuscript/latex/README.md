@@ -14,6 +14,14 @@ The response to the reviewer (`manuscript/response/`, built by its `build_respon
 `numbers.tex` is generated: every number in the prose is a macro read from a results table, and
 the comment beside each macro names the table. Edit the script, never the file.
 
+`main.tex` is set in `npjlayout.cls`, a two-column preprint layout modelled on the 2026 npj
+Microgravity Article PDF (sans-serif title block and abstract, two-column serif body, "Fig. 1 |"
+captions, superscript references). It carries no journal identity: no wordmark, DOI, citation line
+or "Article in Press"; the masthead and every footer say "Preprint, not peer reviewed". Change
+`\manuscriptstatus` only when that is no longer true (for example "Submitted to npj Microgravity"
+once it has been). For the Springer Nature submission template, switch the `\documentclass` line
+to `\documentclass[pdflatex,sn-nature]{sn-jnl}` and delete `main.aux` before rebuilding.
+
 `sn-jnl.cls` and `sn-nature.bst` are the Springer Nature template, copied already patched from
 the first study's manuscript (`Photorespiration_multiomics_microgravity/manuscript/latex`, whose
 README explains the two class patches TeX Live 2026 needs). `.latexmkrc` makes latexmk run BibTeX.

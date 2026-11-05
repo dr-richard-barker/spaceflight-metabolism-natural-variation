@@ -1,6 +1,10 @@
-%% Springer Nature LaTeX template, npj Microgravity style (sn-jnl.cls and sn-nature.bst copied,
-%% already patched, from the first study's manuscript; see README.md).
-\documentclass[pdflatex,sn-nature]{sn-jnl}
+%% Two-column preprint layout after npj Microgravity's Article PDF (npjlayout.cls; no journal
+%% identity, see the class header). For the Springer Nature submission template instead, use
+%% \documentclass[pdflatex,sn-nature]{sn-jnl} (sn-jnl.cls and sn-nature.bst are kept here).
+\documentclass{npjlayout}
+\manuscriptstatus{Preprint, not peer reviewed}
+\manuscriptversion{Revision 2, 5 November 2026}
+\manuscripturl{github.com/dr-richard-barker/spaceflight-metabolism-natural-variation}
 
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb,amsfonts}
@@ -137,7 +141,7 @@ matched a KEGG synonym exactly, and reviewed overrides rescued \nOverRescued{} a
 \wuClassGlucosinolate, flavonoids \wuClassFlavonoid), so the reference under-represents secondary
 metabolism.
 
-\begin{table}[t]
+\begin{table*}[t]
 \caption{\textbf{The three darkness sources.} Every entry is taken from the cited paper or data
 deposit; ``not stated'' marks what the sources do not report. Supplementary Table~S1 gives where
 each entry is stated.}
@@ -148,7 +152,7 @@ each entry is stated.}
  & Zhu et al.\ \citep{zhu2024,zhu2022} & Wu et al.\ \citep{wu2018} & Caldana et al.\ \citep{caldana2011}, via Wu\\
 \midrule
 Material & Leaf, one plant per accession per timepoint and season & Rosettes, three plants pooled per sample & Col-0 rosettes \citep{emtab375}\\
-Age, growth & 35\,d after germination; short days (8\,h, 250\,$\mu$E, 20/16\,\textdegree C, given in \citep{zhu2022}) & 42\,d; control 16\,h light, 150\,$\mu$E, 20/16\,\textdegree C & 4\,wk short days, 2\,wk long days; 21\,\textdegree C, 150\,$\mu$E\\
+Age, growth & 35\,d after germination; short days (8\,h, 250\,$\mu$E, 20/16\,\textdegree C, given in ref.~\citenum{zhu2022}) & 42\,d; control 16\,h light, 150\,$\mu$E, 20/16\,\textdegree C & 4\,wk short days, 2\,wk long days; 21\,\textdegree C, 150\,$\mu$E\\
 Contrast used & 6\,d darkness minus 0\,d; temperature in darkness not stated & 1{,}280\,min darkness at 32\,\textdegree C minus control & 21\,\textdegree C darkness minus 21\,\textdegree C light, 360--1{,}280\,min\\
 Sampling & 10:00 (GMT+2) & Control 4\,h into the light period & Time course\\
 Platform & UPLC--Orbitrap, negative mode & UPLC--Exactive, both modes, one used per metabolite & LC--MS (Wu re-profiling)\\
@@ -156,7 +160,7 @@ Values & BLUPs over two seasons & Day- and sample-median-normalised intensities 
 $n$ used & \nZhuAcc{} accessions & \wuNMin--\nWuAcc{} accessions per compound & \nCaldanaMin--\nCaldanaMax{} values per compound\\
 \botrule
 \end{tabularx}
-\end{table}
+\end{table*}
 
 \subsection{The model's compound predictions against measured darkness}
 
@@ -194,7 +198,7 @@ glutathione and ascorbate, all of which fell, and aromatic amino acids, arginine
 purine, which rose. The model thus gets the direction of most of what it predicts right, but it
 predicts only a small part of what darkness changes.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig01_model_vs_reference.pdf}
 \caption{\textbf{The first study's metabolite predictions set against measured darkness.}
@@ -207,7 +211,7 @@ was measured without a directional response. The glutamate call rests on the 32\
 source only (Supplementary Table~S2).
 \textbf{b}, Robust darkness responses the model did not predict.}
 \label{fig:model}
-\end{figure}
+\end{figure*}
 
 \subsection{A measured metabolite layer leaves the pathway result unchanged}
 
@@ -254,7 +258,7 @@ the hub test implies. Because that test is judged against the dataset-wide share
 expressed genes, hub calls also depend on how many genes a contrast supplies, which the next section
 tests.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig02_jobA_vs_job1.pdf}
 \caption{\textbf{Replacing the predicted metabolite layer with the measured reference.} OSD-522
@@ -262,7 +266,7 @@ genes and proteins are identical in both jobs (first study oK2h66740Q, job A 6kB
 \nPathTotal{} pathways; colours mark BH $q<0.05$. \textbf{b}, Metabolite hubs at FDR $<0.05$ in
 either job; open symbols mark compounds not entered in that job's hub test.}
 \label{fig:paint}
-\end{figure}
+\end{figure*}
 
 \subsection{Light and dark flight in the same hardware}
 
@@ -299,7 +303,7 @@ photosystem and light-harvesting set ($z = \zIntPhoto$, $q \qIntPhoto$) and for 
 carbon pathways ($z$ from $\zIntFix$ to $\zIntSta$), because flight raised photosynthesis genes in
 darkness ($z = \zLimmaPhotoDark$) and lowered them in light ($z = \zLimmaPhotoLight$).
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig03_light_vs_dark.pdf}
 \caption{\textbf{OSD-678 light and dark flight contrasts with the same reference layer.}
@@ -308,7 +312,7 @@ all pathways; the four most separated single-contrast pathways on each side are 
 \textbf{b}, Metabolite hubs at FDR $<0.05$ in either contrast; the light hubs share one
 Benjamini--Hochberg value (raw $p$ in Supplementary Table~S11).}
 \label{fig:lightdark}
-\end{figure}
+\end{figure*}
 
 \subsection{Pre-registered light/dark gene-set tests}
 
@@ -358,7 +362,7 @@ does not explain the dark results either: PyDESeq2 run on OSD-38's raw counts, a
 agreed with GeneLab's statistics (Spearman \pipeRhoStat{} over \pipeGenes{} genes), and the DIN fall
 strengthened ($p \pDinThirtyEightDeseq$).
 
-\begin{table}[t]
+\begin{table*}[t]
 \caption{\textbf{Pre-registered gene sets and predictions.} Statistic: signed sets test the mean
 gene statistic, unsigned sets the mean absolute statistic, each against the rest of the genome.
 Lit contrasts: OSD-522, OSD-678 light, OSD-427. Dark: OSD-38, OSD-321, OSD-678 dark. Members are
@@ -377,9 +381,9 @@ Wu control-only & \nSetWuControl & Genes of GWAS regions found only under contro
 Wu shared & \nSetWuShared & Genes of GWAS regions found under both & unsigned & none & none\\
 \botrule
 \end{tabularx}
-\end{table}
+\end{table*}
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig04_geneset_tests.pdf}
 \caption{\textbf{Pre-registered light/dark gene-set tests.} Colour: the set statistic against its
@@ -387,7 +391,7 @@ null as a $z$-score (OSD-522, sample permutation; others, genomic rotation). Eac
 observed outcome (bold where BH $q<0.05$ over the \nTests{} tests) and whether it equals ($=$) or
 contradicts ($\neq$) the prediction; boxes mark significant contradictions.}
 \label{fig:sets}
-\end{figure}
+\end{figure*}
 
 \subsection{What a targeted GC-MS panel would need}
 
@@ -411,7 +415,7 @@ Supplementary Table~S14. One of them, MTBLS363, is the deposit of a CAM study in
 day--night series; only that \textit{Arabidopsis} assay (\nMtblsThreeSixThreeGroups{} timepoints,
 \nMtblsThreeSixThree{} rosettes) was used.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=0.92\textwidth]{fig05_gcms_power.pdf}
 \caption{\textbf{Plants per arm for a targeted GC-MS panel.} Two-sided two-sample $t$-test, 80\,\%
@@ -420,7 +424,7 @@ compounds. Effects: the model's OSD-522 shift (\qSixtyLogTwo\,log$_2$) and its 0
 (0.585\,log$_2$) and two-fold. Variance from Col-0 control groups in MetaboLights GC-MS studies
 (Supplementary Table~S14). Asterisks mark compounds the first study predicted.}
 \label{fig:power}
-\end{figure}
+\end{figure*}
 
 \subsection{A dark sealed BRIC with a proteome}
 
@@ -508,7 +512,7 @@ significantly from other tested compounds in KEGG reaction count (Mann--Whitney 
 hubs largely survived with genes alone (\nHubI{} of \nHubD, job I) and vanished with membrane
 proteins alone (job J). Hub calls therefore do not separate the lit from the dark canister.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig06_osd38.pdf}
 \caption{\textbf{OSD-38: a dark sealed BRIC with a proteome.} \textbf{a}, Pre-registered gene-set
@@ -519,9 +523,9 @@ against membrane-protein log$_2$ fold change, flight vs ground; red, members of 
 carbon pathways. \textbf{c}, Exploratory: the flight effect against the GeneLab ground comparator (BRIC-PDFU vs
 air-tight container), all genes.}
 \label{fig:osd38}
-\end{figure}
+\end{figure*}
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig07_bric_lit_vs_dark.pdf}
 \caption{\textbf{Sealed BRIC, lit (OSD-522, job A 6kBOS7AN5K) against dark (OSD-38, job D
@@ -530,7 +534,7 @@ Es6j23q40o).} Both jobs carry genes, proteins and the same ground reference meta
 Table~S11). \textbf{a}, Combined Fisher $p$ for
 all pathways. \textbf{b}, Metabolite hubs at FDR $<0.05$ in either job.}
 \label{fig:bric}
-\end{figure}
+\end{figure*}
 
 \section{Discussion}\label{sec:discussion}
 
@@ -553,7 +557,7 @@ experiments \citep{firststudy}. Testing the starvation set on its own shows why 
 a light effect: the starvation genes themselves move most in darkness, in opposite directions in
 BRIC-PDFU seedlings and in CARA leaves.
 
-\begin{table}[t]
+\begin{table*}[t]
 \caption{\textbf{The first study and this one, claim by claim.}}
 \label{tab:compare}
 \begin{tabularx}{\textwidth}{@{}XXX@{}}
@@ -571,7 +575,7 @@ Starvation hubs mark the lit canister & Seven hubs at FDR $<0.05$, all starvatio
 Enclosure atmosphere matters & Mass balance: a dark BRIC loses O$_2$ over days & Ground comparator: pre-registered sets null, but an independent low-oxygen signature rises strongly in the BRIC-PDFU (post hoc)\\
 \botrule
 \end{tabularx}
-\end{table}
+\end{table*}
 
 Both the first study's starvation reading \citep{firststudy} and every PaintOmics integration here
 read metabolism from gene products, mostly transcripts. OSD-38 is the one dark sealed-BRIC flight with a proteome, and there the carbon
