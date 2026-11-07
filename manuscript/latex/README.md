@@ -33,12 +33,12 @@ README explains the two class patches TeX Live 2026 needs). `.latexmkrc` makes l
 
 Placeholders in `main.tex`; nothing was invented to fill them.
 
-- [ ] Affiliation, city, country; co-authors if any; ORCID
-- [ ] Author contributions, acknowledgements with funding (npj Microgravity allows no separate
-      funding statement), competing interests
-- [ ] Use of AI tools statement, now a placeholder in Methods as npj Microgravity requires (the
-      analysis code and first draft were prepared with an AI
-      assistant; the journal's policy decides the wording)
+- [x] Affiliations (Purdue Agricultural and Biological Engineering; The Collaborative Science
+      Environment, PBC), as Richard confirmed them on 7 November 2026; ORCID in the first-page footnote
+- [x] Acknowledgements with funding, author contributions, competing interests: the first study's
+      statements, reused at Richard's request (7 November 2026)
+- [x] Use of AI tools, in Methods: the first study's wording, naming Claude Code only (this
+      repository's history shows no other assistant)
 - [ ] Zenodo DOI in Data availability
 - [x] Caldana et al. (2011) genotype: Col-0 per the authors' ArrayExpress deposit E-MTAB-375 and
       Wu et al. (accepted manuscript, lines 476-478); the Caldana paper itself was not accessible

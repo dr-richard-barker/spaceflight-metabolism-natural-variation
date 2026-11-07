@@ -10,7 +10,7 @@
 %% class exists so that the layout can be had without that.
 %%
 %% It provides the sn-jnl commands main.tex uses (\title[short]{}, \author*[n]{}, \fnm, \sur,
-%% \email, \affil[n]{}, \orgname, \city, \country, \abstract{}, \keywords{}, \backmatter, \bmhead,
+%% \email, \orcid, \affil[n]{}, \orgname, \city, \country, \abstract{}, \keywords{}, \backmatter, \bmhead,
 %% \botrule), so the source still builds with sn-jnl.cls by changing the \documentclass line.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{npjlayout}[2026/11/05 two-column preprint layout after npj Microgravity Articles]
@@ -102,6 +102,8 @@
 \newcommand\city[1]{#1}
 \newcommand\country[1]{#1}
 \newcommand\email[1]{\gdef\@npjemail{#1}}
+\gdef\@npjorcid{}
+\newcommand\orcid[1]{\gdef\@npjorcid{#1}}
 \NewDocumentCommand\affil{o m}{\g@addto@macro\@npjaffils{\IfValueT{#1}{\textsuperscript{#1}}#2. }}
 \renewcommand\abstract[1]{\gdef\@abstract{#1}}
 \newcommand\keywords[1]{\gdef\@keywords{#1}}
@@ -151,7 +153,8 @@
   \thispagestyle{npjlfirst}%
   {\let\thefootnote\relax
    \footnotetext{\sffamily\fontsize{7}{8.5}\selectfont\@npjaffils
-     \ifx\@npjemail\@empty\else\Letter\ e-mail: \@npjemail\fi}}%
+     \ifx\@npjemail\@empty\else\Letter\ e-mail: \@npjemail\fi
+     \ifx\@npjorcid\@empty\else; ORCID \@npjorcid\fi}}%
   \setcounter{footnote}{0}}
 
 %% ---- links (after the document's own packages) ----------------------------------------------

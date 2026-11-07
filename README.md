@@ -137,6 +137,5 @@ Code: MIT (`LICENSE`).
 ## Open items
 
 - Zenodo deposit (manual)
-- Manuscript authorship, affiliation, funding and AI-use statements (`manuscript/latex/README.md`)
 - OSD-38's soluble proteome: only the top 437 protein groups survive OSDR's truncated table; the
   raw iTRAQ files in OSDR would have to be re-searched to recover the rest

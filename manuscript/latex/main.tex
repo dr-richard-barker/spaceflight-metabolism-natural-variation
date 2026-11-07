@@ -23,10 +23,12 @@
 \textit{Arabidopsis} darkness metabolism tests a carbon starvation model of spaceflight
 transcriptomes}
 
-%% TODO AUTHORSHIP --- every field below except the corresponding author is a placeholder,
-%% as in the first study's manuscript. See README.md for the checklist.
-\author*[1]{\fnm{Richard} \sur{Barker}}\email{dr.richard.barker@gmail.com}
-\affil[1]{\orgname{[TODO --- affiliation]}, \city{[TODO]}, \country{[TODO]}}
+%% Affiliations as Richard confirmed them on 7 November 2026 (Purdue department; CoSE as "PBC").
+\author*[1,2]{\fnm{Richard} \sur{Barker}}\email{dr.richard.barker@gmail.com}
+\orcid{0000-0001-5681-9857}
+\affil[1]{\orgname{Department of Agricultural and Biological Engineering, Purdue University},
+  \city{West Lafayette, IN}, \country{USA}}
+\affil[2]{\orgname{The Collaborative Science Environment, PBC}, \country{USA}}
 
 \abstract{A gas-transport model of the BRIC-LED-001 flight (OSD-522) predicted that microgravity
 lowers net carbon assimilation in lit plants, so only lit spaceflight transcriptomes should show
@@ -793,9 +795,9 @@ and against 10{,}000 shuffles of hub labels within tertiles of KEGG reaction cou
 \textbf{Reproducibility.} \texttt{run\_all.sh} regenerates every table, figure and the numbers in
 this text from the vendored inputs; the PaintOmics step reads the vendored job records.
 
-\textbf{Use of AI tools.} [TODO --- the analysis code and the first draft of this text were prepared
-with an AI assistant (Claude); state its use as the journal requires. npj Microgravity asks for LLM
-use to be documented in Methods.]
+\textbf{Use of AI tools.} Analysis scripts, figures and manuscript drafts were developed with an AI
+coding assistant (Claude Code, Anthropic) under the author's direction. The author verified all data,
+derivations and references, and takes full responsibility.
 
 \backmatter
 
@@ -809,12 +811,13 @@ processed OSD-38 protein tables stop at \nOsdRows{} rows; the protein values use
 
 \bmhead{Code availability} Scripts are in the same repository under the MIT licence.
 
-\bmhead{Acknowledgements} [TODO --- acknowledgements and funding; npj Microgravity places funding
-here and permits no separate funding statement.]
+\bmhead{Acknowledgements} The author thanks the NASA Open Science Data Repository team and the
+spaceflight plant biology community. This study received no external funding.
 
-\bmhead{Author contributions} [TODO]
+\bmhead{Author contributions} R.B. conceived the study, conducted the analyses and wrote the
+manuscript.
 
-\bmhead{Competing interests} [TODO]
+\bmhead{Competing interests} The author declares no competing financial or non-financial interests.
 
 \bibliography{references}
 
